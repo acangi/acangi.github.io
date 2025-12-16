@@ -2,7 +2,7 @@ project:
   type: website
   pre-render:
     - python scripts/openalex_to_yaml.py
-#    - sass styles/custom.scss:_site/styles/custom.css
+    - sass styles/custom.scss:_site/styles/custom.css
 
 jupyter:
   kernel: quarto-venv
