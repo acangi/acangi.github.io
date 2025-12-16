@@ -2,10 +2,10 @@ project:
   type: website
   pre-render:
     - python scripts/openalex_to_yaml.py
-    - sass styles/custom.scss:_site/styles/custom.css
+#    - sass styles/custom.scss:_site/styles/custom.css
 
 jupyter:
-  kernel: quarto-env
+  kernel: quarto-venv
 
 website:
   title: "Machine Learning for Materials Design<br>(Cangi Lab)"

@@ -1,0 +1,32 @@
+---
+title: "Vincent Martinetto"
+meta:
+  - name: description
+    content: "Profile of Vincent Martinetto from the Machine Learning for Materials Design (ML4MD) Lab."
+  - name: keywords
+    content: "ML4MD Lab, People, ZVincent Martinetto"
+sortby: "Martinetto, Vincent"
+subtitle: "Postdoctoral Researcher"
+image: ../person-circle.svg # Ensure this image has appropriate alt text if used directly in content
+toc: false
+#resources: 
+#  - "cv.pdf"
+started: "2025"
+ended: "Current"
+about:
+  id: person-profile
+  template: jolla
+  #links:
+  #  - icon: file-earmark-text
+  #    text: CV
+  #    href: ./people/phd_students/cv.pdf
+---
+
+:::{#person-profile}
+:::
+
+<!---
+## Biography
+## Experience
+## Education
+-->

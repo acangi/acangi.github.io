@@ -12,7 +12,8 @@ toc: false
 #resources: 
 #  - "cv_karan_shah.pdf"
 started: "2021"
-ended: "Current"
+ended: "2025"
+lkp: "Senior Software Engineer, Roblox, United States"
 about:
   id: person-profile
   template: jolla

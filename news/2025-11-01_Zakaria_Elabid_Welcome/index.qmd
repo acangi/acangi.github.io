@@ -1,0 +1,24 @@
+---
+title: "Welcome Zakaria!"
+meta:
+  - name: description
+    content: "News and updates from the Machine Learning for Materials Design (ML4MD) Lab: Welcome Zakaria!"
+  - name: keywords
+    content: "ML4MD Lab, News, Zakaria Elabid joins our group as a postdoctoral researcher."
+description: "Zakaria Elabid joins our group as a postdoctoral researcher"
+#author: "Attila Cangi"
+date: "2025-11-01"
+date-format: " "
+image: welcome_vincent.jpeg # Ensure this image has appropriate alt text if used directly in content
+draft: false
+categories:
+  - new staff
+format:
+  html:
+    page-layout: full
+    toc: false
+---
+
+We are pleased to welcome Zakaria Elabid as a postdoctoral researcher! 
+
+Zakaria recently obtained his PhD from the Sorbonne Center for Artificial Intelligence (SCAI) at Sorbonne University and has a background in AI, generative AI, and time-series forecasting, as well as industry experience with TotalEnergies.

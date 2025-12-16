@@ -1,0 +1,25 @@
+---
+title: "Welcome Vincent!"
+meta:
+  - name: description
+    content: "News and updates from the Machine Learning for Materials Design (ML4MD) Lab: Welcome Vincent!"
+  - name: keywords
+    content: "ML4MD Lab, News, Vincent Martinetto joins our group as a postdoctoral researcher."
+description: "Vincent Martinetto joins our group as a postdoctoral researcher"
+#author: "Attila Cangi"
+date: "2025-11-01"
+date-format: " "
+image: welcome_vincent.jpeg # Ensure this image has appropriate alt text if used directly in content
+draft: false
+categories:
+  -  new staff
+format:
+  html:
+    page-layout: full
+    toc: false
+---
+![](welcome_vincent.png){.news-thumbnail alt="Image for Welcome Vincent"}
+
+We are pleased to welcome Vincent Martinetto as a postdoctoral researcher. 
+
+Vincent had previously visited us during his PhD and is now beginning a joint appointment with our group and the HPC group in the Department of Information Services and Computing. Vincent joins us from UC Merced, where he recently completed his PhD in electronic structure theory.
