@@ -3,6 +3,8 @@ name: Build & Publish Quarto site → GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "0 2 * * *"
   workflow_dispatch:
 
 permissions:
