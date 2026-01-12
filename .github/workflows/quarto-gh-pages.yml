@@ -13,6 +13,7 @@ permissions:
 env:
   ORCID_ID: ${{ secrets.ORCID_ID }}
   OPENALEX_USER_AGENT: "acangi.github.io (mailto:attila.cangi@gmail.com)"
+  SKIP_OPENALEX: "1"
 
 jobs:
   deploy:

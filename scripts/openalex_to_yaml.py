@@ -307,6 +307,10 @@ def write_yaml_files(records: List[Dict[str, Any]], unpublished_preprints: Optio
 
 def main():
     """Main function to fetch, classify, and write publications."""
+    if os.getenv("SKIP_OPENALEX", "").lower() in {"1", "true", "yes"}:
+        print("SKIP_OPENALEX is set; skipping OpenAlex/arXiv fetch.")
+        return
+
     # Fetch from OpenAlex
     openalex_publications = fetch_publications(ORCID_ID)
     formatted_publications = [classify_and_format_publication(p) for p in openalex_publications]
