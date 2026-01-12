@@ -9,6 +9,7 @@
   journal: arXiv
   doi: null
   href: http://arxiv.org/abs/2511.16263v2
+  pdf: http://arxiv.org/pdf/2511.16263v2.pdf
   path: http://arxiv.org/abs/2511.16263v2
   kind: preprint
 - title: Machine Learning Time Propagators for Time-Dependent Density Functional Theory
@@ -19,6 +20,7 @@
   journal: arXiv
   doi: null
   href: http://arxiv.org/abs/2508.16554v3
+  pdf: http://arxiv.org/pdf/2508.16554v3.pdf
   path: http://arxiv.org/abs/2508.16554v3
   kind: preprint
 - title: The Relevance of Electronic Perturbations in the Warm Dense Electron Gas
@@ -29,6 +31,7 @@
   journal: arXiv
   doi: 10.1063/5.0062325
   href: http://arxiv.org/abs/2107.00631v2
+  pdf: http://arxiv.org/pdf/2107.00631v2.pdf
   path: 10.1063/5.0062325
   kind: preprint
 - title: Quantum-accurate magneto-elastic predictions with classical spin-lattice
@@ -40,6 +43,7 @@
   journal: arXiv
   doi: 10.1038/s41524-021-00617-2
   href: http://arxiv.org/abs/2101.07332v3
+  pdf: http://arxiv.org/pdf/2101.07332v3.pdf
   path: 10.1038/s41524-021-00617-2
   kind: preprint
 - title: 'Reduced Density Matrix Functional Theory at Finite Temperature: Theoretical
@@ -50,5 +54,6 @@
   journal: arXiv
   doi: null
   href: http://arxiv.org/abs/1208.4703v2
+  pdf: http://arxiv.org/pdf/1208.4703v2.pdf
   path: http://arxiv.org/abs/1208.4703v2
   kind: preprint

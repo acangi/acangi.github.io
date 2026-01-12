@@ -6,6 +6,7 @@
   journal: null
   doi: https://doi.org/10.1109/qce57702.2023.10240
   href: https://doi.org/10.1109/qce57702.2023.10240
+  pdf: null
   path: https://doi.org/10.1109/qce57702.2023.10240
   kind: talk
 - title: Leveraging Data Driven Frameworks to Build Transferable Interatomic Potentials
@@ -17,6 +18,7 @@
   journal: null
   doi: https://doi.org/10.2172/2430436
   href: https://doi.org/10.2172/2430436
+  pdf: http://dx.doi.org/10.2172/2430436
   path: https://doi.org/10.2172/2430436
   kind: talk
 - title: Deep Spiking Quantum Neural Network for Noisy Image Classification
@@ -27,6 +29,7 @@
   journal: null
   doi: https://doi.org/10.1109/ijcnn54540.2023.10191509
   href: https://doi.org/10.1109/ijcnn54540.2023.10191509
+  pdf: null
   path: https://doi.org/10.1109/ijcnn54540.2023.10191509
   kind: talk
 - title: Examining the Alpha-Epsilon Transition in Iron Using Molecular-spin Dynamics
@@ -37,6 +40,7 @@
   journal: null
   doi: https://doi.org/10.2172/2431651
   href: https://doi.org/10.2172/2431651
+  pdf: http://dx.doi.org/10.2172/2431651
   path: https://doi.org/10.2172/2431651
   kind: talk
 - title: Machine-Learning for Static and Dynamic Electronic Structure Theory
@@ -46,6 +50,7 @@
   journal: Chall. adv. comput. chem. phys.
   doi: https://doi.org/10.1007/978-3-031-37196-7_5
   href: https://doi.org/10.1007/978-3-031-37196-7_5
+  pdf: https://doi.org/10.1007/978-3-031-37196-7_5
   path: https://doi.org/10.1007/978-3-031-37196-7_5
   kind: chapter
 - title: Predicting the Electronic Structure of Matter on Ultra-Large Scales
@@ -56,6 +61,7 @@
   journal: null
   doi: https://doi.org/10.2172/1895024
   href: https://doi.org/10.2172/1895024
+  pdf: https://www.osti.gov/biblio/1895024
   path: https://doi.org/10.2172/1895024
   kind: report
 - title: Quantum-Accurate Multiscale Modeling of Shock Hugoniots, Ramp Compression
@@ -68,6 +74,7 @@
   journal: null
   doi: https://doi.org/10.2172/1898251
   href: https://doi.org/10.2172/1898251
+  pdf: https://www.osti.gov/biblio/1898251
   path: https://doi.org/10.2172/1898251
   kind: report
 - title: Improving Predictive Capability in REHEDS Simulations with Fast, Accurate,
@@ -80,6 +87,7 @@
   journal: null
   doi: https://doi.org/10.2172/1890268
   href: https://doi.org/10.2172/1890268
+  pdf: https://www.osti.gov/servlets/purl/1890268
   path: https://doi.org/10.2172/1890268
   kind: report
 - title: Accelerating Multiscale Materials Modeling with Machine Learning
@@ -90,6 +98,7 @@
   journal: null
   doi: https://doi.org/10.2172/1889336
   href: https://doi.org/10.2172/1889336
+  pdf: https://www.osti.gov/servlets/purl/1889336
   path: https://doi.org/10.2172/1889336
   kind: talk
 - title: Examining the shock response of iron using molecular-spin dynamics.
@@ -100,6 +109,7 @@
   journal: null
   doi: https://doi.org/10.2172/2003857
   href: https://doi.org/10.2172/2003857
+  pdf: http://dx.doi.org/10.2172/2003857
   path: https://doi.org/10.2172/2003857
   kind: talk
 - title: A machine learning surrogate for density functional theory based on the local
@@ -111,6 +121,7 @@
   journal: null
   doi: https://doi.org/10.2172/2003393
   href: https://doi.org/10.2172/2003393
+  pdf: http://dx.doi.org/10.2172/2003393
   path: https://doi.org/10.2172/2003393
   kind: talk
 - title: Finding Electronic Structure Machine Learning Surrogates without Training
@@ -121,6 +132,7 @@
   journal: null
   doi: https://doi.org/10.2172/1891948
   href: https://doi.org/10.2172/1891948
+  pdf: https://www.osti.gov/servlets/purl/1891948
   path: https://doi.org/10.2172/1891948
   kind: report
 - title: Effects of electron-ion collisions on stopping powers in warm dense matter.
@@ -131,6 +143,7 @@
   journal: null
   doi: https://doi.org/10.2172/2001867
   href: https://doi.org/10.2172/2001867
+  pdf: http://dx.doi.org/10.2172/2001867
   path: https://doi.org/10.2172/2001867
   kind: talk
 - title: Probing Structural and Magnetic Phase Changes in the Shock Response of Iron
@@ -142,6 +155,7 @@
   journal: null
   doi: https://doi.org/10.2172/2002085
   href: https://doi.org/10.2172/2002085
+  pdf: http://dx.doi.org/10.2172/2002085
   path: https://doi.org/10.2172/2002085
   kind: talk
 - title: Report on scipost_202106_00020v2
@@ -152,6 +166,7 @@
   journal: null
   doi: https://doi.org/10.21468/scipost.report.3820
   href: https://doi.org/10.21468/scipost.report.3820
+  pdf: https://scipost.org/preprints/scipost_202106_00020v2/
   path: https://doi.org/10.21468/scipost.report.3820
   kind: peer-review
 - title: E&amp;#64256;ects of electron-ion collisions on stopping powers in warm dense
@@ -163,6 +178,7 @@
   journal: null
   doi: https://doi.org/10.2172/1897018
   href: https://doi.org/10.2172/1897018
+  pdf: https://www.osti.gov/servlets/purl/1897018
   path: https://doi.org/10.2172/1897018
   kind: talk
 - title: Report on scipost_202106_00020v1
@@ -173,6 +189,7 @@
   journal: null
   doi: https://doi.org/10.21468/scipost.report.3456
   href: https://doi.org/10.21468/scipost.report.3456
+  pdf: https://doi.org/10.21468/scipost.report.3456
   path: https://doi.org/10.21468/scipost.report.3456
   kind: peer-review
 - title: Report on scipost_202106_00020v1
@@ -183,6 +200,7 @@
   journal: null
   doi: https://doi.org/10.21468/scipost.report.3324
   href: https://doi.org/10.21468/scipost.report.3324
+  pdf: https://scipost.org/preprints/scipost_202106_00020v1/
   path: https://doi.org/10.21468/scipost.report.3324
   kind: peer-review
 - title: An Introduction to the Materials Learning Algorithms Package (MALA).
@@ -192,6 +210,7 @@
   journal: null
   doi: https://doi.org/10.2172/1867139
   href: https://doi.org/10.2172/1867139
+  pdf: https://www.osti.gov/biblio/1867139
   path: https://doi.org/10.2172/1867139
   kind: talk
 - title: Comparison of DFT-based methods for electronic stopping in warm dense aluminum.
@@ -202,6 +221,7 @@
   journal: null
   doi: https://doi.org/10.2172/1855327
   href: https://doi.org/10.2172/1855327
+  pdf: https://www.osti.gov/biblio/1855327
   path: https://doi.org/10.2172/1855327
   kind: talk
 - title: Accelerating Multiscale Materials Modeling with Machine Learning.
@@ -212,6 +232,7 @@
   journal: null
   doi: https://doi.org/10.2172/1853873
   href: https://doi.org/10.2172/1853873
+  pdf: https://www.osti.gov/biblio/1853873
   path: https://doi.org/10.2172/1853873
   kind: talk
 - title: First-principles Modeling of Warm Dense Matter.
@@ -221,6 +242,7 @@
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: null
   href: https://openalex.org/W4287873620
+  pdf: https://www.osti.gov/biblio/1765305
   path: null
   kind: paratext
 - title: 'Collisions and Correlations in Warm Dense Matter: effects on electronic
@@ -232,6 +254,7 @@
   journal: null
   doi: https://doi.org/10.2172/1830065
   href: https://doi.org/10.2172/1830065
+  pdf: https://www.osti.gov/biblio/1830065
   path: https://doi.org/10.2172/1830065
   kind: talk
 - title: Accelerating Finite-temperature Kohn-Sham Density Functional Theory\ with
@@ -243,6 +266,7 @@
   journal: null
   doi: https://doi.org/10.2172/1677521
   href: https://doi.org/10.2172/1677521
+  pdf: https://www.osti.gov/biblio/1677521
   path: https://doi.org/10.2172/1677521
   kind: report
 - title: An exchange-correlation functional capturing bulk surface and confinement
@@ -253,6 +277,7 @@
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: null
   href: https://openalex.org/W4288548898
+  pdf: https://www.osti.gov/biblio/1639309
   path: null
   kind: paratext
 - title: Collisions and Correlation Effects in Warm Dense Matter
@@ -262,6 +287,7 @@
   journal: APS Div. Plasma Phys. Meet. Abstr.
   doi: null
   href: https://openalex.org/W3183220772
+  pdf: null
   path: null
   kind: talk
 - title: Semi-local Density Functional Approximations for Bulk, Surface, and Confinement
@@ -272,6 +298,7 @@
   journal: null
   doi: https://doi.org/10.2172/1569522
   href: https://doi.org/10.2172/1569522
+  pdf: https://www.osti.gov/biblio/1569522
   path: https://doi.org/10.2172/1569522
   kind: report
 - title: First-principles Stopping Power in Warm Dense Matter.
@@ -281,6 +308,7 @@
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: null
   href: https://openalex.org/W4297732077
+  pdf: https://www.osti.gov/biblio/1465022
   path: null
   kind: paratext
 - title: Modeling Materials at Extreme Conditions for High Energy-Density Science
@@ -291,6 +319,7 @@
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: null
   href: https://openalex.org/W2925181260
+  pdf: https://www.osti.gov/biblio/1639295
   path: null
   kind: talk
 - title: Magnetostriction and Long-Range Interactions in Coupled Spin and Lattice
@@ -302,6 +331,7 @@
   journal: Bull. Am. Phys. Soc.
   doi: null
   href: https://openalex.org/W2923868490
+  pdf: null
   path: null
   kind: talk
 - title: Modifying the Random Phase Approximation for the Average Atom
@@ -311,6 +341,7 @@
   journal: APS
   doi: null
   href: https://openalex.org/W3017649132
+  pdf: null
   path: null
   kind: talk
 - title: 'Summer Proceedings 2018: The Center for Computing Research at Sandia National
@@ -321,6 +352,7 @@
   journal: null
   doi: https://doi.org/10.2172/1762384
   href: https://doi.org/10.2172/1762384
+  pdf: https://www.osti.gov/biblio/1762384
   path: https://doi.org/10.2172/1762384
   kind: report
 - title: An Exchange-Correlation Functional Capturing Bulk Surface and Confinement
@@ -331,6 +363,7 @@
   journal: null
   doi: https://doi.org/10.2172/1530147
   href: https://doi.org/10.2172/1530147
+  pdf: https://www.osti.gov/biblio/1530147
   path: https://doi.org/10.2172/1530147
   kind: report
 - title: Computing Optical Conductivities of Warm Dense Matter with Time-Dependent
@@ -341,6 +374,7 @@
   journal: Bull. Am. Phys. Soc.
   doi: null
   href: https://openalex.org/W2903317593
+  pdf: null
   path: null
   kind: talk
 - title: Spin-lattice simulations of cobalt and iron-cobalt alloys with LAMMPS
@@ -351,6 +385,7 @@
   journal: Bull. Am. Phys. Soc.
   doi: null
   href: https://openalex.org/W2782728547
+  pdf: null
   path: null
   kind: talk
 - title: Developing Consistent Models for Matter in Extreme Conditions
@@ -361,6 +396,7 @@
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: null
   href: https://openalex.org/W3090318926
+  pdf: https://www.osti.gov/biblio/1569112
   path: null
   kind: talk
 - title: ECP-copa/ExaMiniMD
@@ -371,6 +407,7 @@
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: https://doi.org/10.11578/dc.20201102.5
   href: https://doi.org/10.11578/dc.20201102.5
+  pdf: https://www.osti.gov/biblio/1696908
   path: https://doi.org/10.11578/dc.20201102.5
   kind: talk
 - title: Stopping Power of Warm Dense Matter from Ehrenfest Molecular Dynamics
@@ -380,6 +417,7 @@
   journal: Bull. Am. Phys. Soc.
   doi: null
   href: https://openalex.org/W2755561050
+  pdf: null
   path: null
   kind: talk
 - title: Optical conductivity of magnetized warm dense matter using time-dependent
@@ -390,6 +428,7 @@
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: null
   href: https://openalex.org/W2755757758
+  pdf: https://www.osti.gov/biblio/1480198
   path: null
   kind: talk
 - title: Progress towards an {\it ab initio} real-time treatment of warm dense matter
@@ -399,6 +438,7 @@
   journal: Bull. Am. Phys. Soc.
   doi: null
   href: https://openalex.org/W2769594595
+  pdf: null
   path: null
   kind: talk
 - title: Semiclassical potential functionals for semiconductor quantum wells
@@ -408,6 +448,7 @@
   journal: Bull. Am. Phys. Soc.
   doi: null
   href: https://openalex.org/W2590075342
+  pdf: null
   path: null
   kind: talk
 - title: Semiclassical approach to the exchange energy from potential functional theory
@@ -417,6 +458,7 @@
   journal: Bull. Am. Phys. Soc.
   doi: null
   href: https://openalex.org/W2248662928
+  pdf: null
   path: null
   kind: talk
 - title: Non-Empirical Orbital-Free Approximations from Semiclassical Approaches
@@ -426,6 +468,7 @@
   journal: Bull. Am. Phys. Soc.
   doi: null
   href: https://openalex.org/W2241242473
+  pdf: null
   path: null
   kind: talk
 - title: Leading corrections to local approximations and their relevance to Density
@@ -436,6 +479,7 @@
   journal: PhDT
   doi: null
   href: https://openalex.org/W2995862921
+  pdf: null
   path: null
   kind: talk
 - title: 'The unreasonable accuracy of asymptotic expansions: Why density functional
@@ -446,6 +490,7 @@
   journal: APS March Meet. Abstr.
   doi: null
   href: https://openalex.org/W3096111671
+  pdf: null
   path: null
   kind: talk
 - title: Density Functional Theory and Semiclassical Methods
@@ -455,6 +500,7 @@
   journal: Bull. Am. Phys. Soc.
   doi: null
   href: https://openalex.org/W1614773731
+  pdf: null
   path: null
   kind: talk
 - title: Towards a semiclassical theory of electronic structure
@@ -464,6 +510,7 @@
   journal: Bull. Am. Phys. Soc.
   doi: null
   href: https://openalex.org/W142907370
+  pdf: null
   path: null
   kind: talk
 - title: Semiclassics in Density Functional Theory
@@ -473,6 +520,7 @@
   journal: Bull. Am. Phys. Soc.
   doi: null
   href: https://openalex.org/W1658238708
+  pdf: null
   path: null
   kind: talk
 - title: Semiclassical Approaches in Density Functional Theory
@@ -482,6 +530,7 @@
   journal: Bull. Am. Phys. Soc.
   doi: null
   href: https://openalex.org/W105216034
+  pdf: null
   path: null
   kind: talk
 - title: A new approach to density functional theory
@@ -491,5 +540,6 @@
   journal: Bull. Am. Phys. Soc.
   doi: https://doi.org/10.1016/j.ciresp.2010.12.012
   href: https://doi.org/10.1016/j.ciresp.2010.12.012
+  pdf: null
   path: https://doi.org/10.1016/j.ciresp.2010.12.012
   kind: talk

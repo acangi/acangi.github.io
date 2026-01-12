@@ -8,6 +8,7 @@ import requests
 import yaml
 import sys
 import pathlib
+import json
 from typing import List, Dict, Any, Optional
 from pyiso4.ltwa import Abbreviate
 import re
@@ -25,6 +26,8 @@ ARTICLES_FILE = OUTPUT_DIR / "articles.yml"
 PREPRINTS_FILE = OUTPUT_DIR / "preprints.yml"
 OTHERS_FILE = OUTPUT_DIR / "others.yml"
 PREPRINTS_UNPUBLISHED_FILE = OUTPUT_DIR / "preprints-unpublished.yml"
+ARTICLES_JSON_FILE = OUTPUT_DIR / "articles.json"
+PREPRINTS_JSON_FILE = OUTPUT_DIR / "preprints.json"
 TIMEOUT = 30
 OPENALEX_MAX_PAGES = int(os.getenv("OPENALEX_MAX_PAGES", "0"))
 OPENALEX_USER_AGENT = os.getenv("OPENALEX_USER_AGENT")
@@ -167,6 +170,9 @@ def format_arxiv_entry(entry: ET.Element) -> Dict[str, Any]:
                 doi = doi_url.split('doi.org/')[-1]
 
     href = entry.find('atom:id', ns).text
+    pdf = None
+    if href and "/abs/" in href:
+        pdf = href.replace("/abs/", "/pdf/") + ".pdf"
     
     title_element = entry.find('atom:title', ns)
     title = normalize_whitespace(title_element.text) if title_element is not None and title_element.text else None
@@ -184,6 +190,7 @@ def format_arxiv_entry(entry: ET.Element) -> Dict[str, Any]:
         "journal": "arXiv",
         "doi": doi,
         "href": href,
+        "pdf": pdf,
         "path": doi if doi else href,
         "kind": "preprint",
     }
@@ -222,6 +229,14 @@ def classify_and_format_publication(work: Dict[str, Any]) -> Dict[str, Any]:
     else:
         href = work.get("id")
 
+    best_oa = work.get("best_oa_location") or {}
+    pdf_url = best_oa.get("pdf_url")
+    if not pdf_url:
+        pdf_url = primary_location.get("pdf_url")
+    if not pdf_url:
+        open_access = work.get("open_access") or {}
+        pdf_url = open_access.get("oa_url")
+
     return {
         "title": work.get("title"),
         "author": authors,
@@ -230,6 +245,7 @@ def classify_and_format_publication(work: Dict[str, Any]) -> Dict[str, Any]:
         "journal": journal,
         "doi": doi,
         "href": href,
+        "pdf": pdf_url,
         "path": doi,
         "kind": kind,
     }
@@ -305,6 +321,36 @@ def write_yaml_files(records: List[Dict[str, Any]], unpublished_preprints: Optio
             yaml.dump(data, f, allow_unicode=True, sort_keys=False, indent=2)
         print(f"Wrote {len(data)} {name} to {path}")
 
+def write_json_files(articles: List[Dict[str, Any]], preprints: List[Dict[str, Any]]):
+    """Writes JSON files for journal articles and preprints."""
+    OUTPUT_DIR.mkdir(exist_ok=True, parents=True)
+
+    def serialize(records: List[Dict[str, Any]], kind: str) -> List[Dict[str, Any]]:
+        payload = []
+        for record in records:
+            payload.append({
+                "title": record.get("title") or "",
+                "year": record.get("year"),
+                "authors": (record.get("author") or "").replace("; ", ", "),
+                "venue": record.get("journal") or "",
+                "doi": normalize_doi(record.get("doi")) or "",
+                "url": record.get("href") or "",
+                "type": kind,
+                "pdf": record.get("pdf") or "",
+            })
+        return payload
+
+    articles_payload = serialize(articles, "journal")
+    preprints_payload = serialize(preprints, "preprint")
+
+    with ARTICLES_JSON_FILE.open("w", encoding="utf-8") as f:
+        json.dump(articles_payload, f, ensure_ascii=True, indent=2)
+    print(f"Wrote {len(articles_payload)} journal articles to {ARTICLES_JSON_FILE}")
+
+    with PREPRINTS_JSON_FILE.open("w", encoding="utf-8") as f:
+        json.dump(preprints_payload, f, ensure_ascii=True, indent=2)
+    print(f"Wrote {len(preprints_payload)} preprints to {PREPRINTS_JSON_FILE}")
+
 
 def main():
     """Main function to fetch, classify, and write publications."""
@@ -363,6 +409,9 @@ def main():
         formatted_publications.extend(unique_arxiv_pubs)
 
     write_yaml_files(formatted_publications, unpublished_preprints=unique_arxiv_pubs)
+    articles = [r for r in formatted_publications if r.get("kind") == "article"]
+    preprints = [r for r in formatted_publications if r.get("kind") == "preprint"]
+    write_json_files(articles, preprints)
 
 if __name__ == "__main__":
     main()
