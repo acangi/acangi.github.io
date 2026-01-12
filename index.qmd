@@ -15,7 +15,8 @@ toc: false
 css: /styles/custom.scss
 title-block-banner: false
 ---
-Attila Cangi is head of the Department of Machine Learning for Materials Design at the Center for Advanced Systems Understanding, Helmholtz-Zentrum Dresden-Rossendorf. With his team, he conducts research on the application of artificial intelligence and machine learning to computational materials modeling. His main goal is to develop AI-based solutions for sustainable materials, focusing on areas such as thermoelectric materials, spintronics, neuromorphic devices, and advanced semiconductor modeling. He received his Ph.D. in chemistry from the University of California, Irvine, and previously worked as a postdoctoral fellow at the Max Planck Institute of Microstructure Physics and as a staff member at Sandia National Laboratories.
+Attila Cangi is head of the Department of Machine Learning for Materials Design at the Center for Advanced Systems Understanding, Helmholtz-Zentrum Dresden-Rossendorf. With his team, he conducts research on the application of artificial intelligence and machine learning to computational materials modeling. He develops scalable machine learning methods that accelerate first-principles simulations of electronic and atomistic structures, with the overarching goal of discovering and designing novel materials.
+He received his Ph.D. in chemistry from the University of California, Irvine, and previously worked as a postdoctoral fellow at the Max Planck Institute of Microstructure Physics and as a staff member at Sandia National Laboratories.
 
 ## Research Focus
 
