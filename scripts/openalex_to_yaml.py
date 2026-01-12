@@ -18,7 +18,7 @@ import xml.etree.ElementTree as ET
 abbreviator = Abbreviate.create()
 
 # --- CONFIGURATION ---
-ORCID_ID = os.getenv("ORCID_ID", "0000-0001-9162-262X")
+ORCID_ID = (os.getenv("ORCID_ID") or "0000-0001-9162-262X").strip()
 ARXIV_AUTHOR_NAME = os.getenv("ARXIV_AUTHOR_NAME", "Attila Cangi")
 OUTPUT_DIR = pathlib.Path("data")
 ARTICLES_FILE = OUTPUT_DIR / "articles.yml"
@@ -28,6 +28,7 @@ PREPRINTS_UNPUBLISHED_FILE = OUTPUT_DIR / "preprints-unpublished.yml"
 TIMEOUT = 30
 OPENALEX_MAX_PAGES = int(os.getenv("OPENALEX_MAX_PAGES", "0"))
 OPENALEX_USER_AGENT = os.getenv("OPENALEX_USER_AGENT")
+ORCID_REGEX = re.compile(r"^\d{4}-\d{4}-\d{4}-\d{3}[\dX]$")
 
 KIND_MAP = {
     "journal-article": "article",
@@ -310,6 +311,15 @@ def main():
     if os.getenv("SKIP_OPENALEX", "").lower() in {"1", "true", "yes"}:
         print("SKIP_OPENALEX is set; skipping OpenAlex/arXiv fetch.")
         return
+
+    if not ORCID_ID or not ORCID_REGEX.match(ORCID_ID):
+        print(
+            f"Invalid ORCID_ID '{ORCID_ID}'. Set a valid ORCID_ID env var.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    print(f"Using ORCID_ID={ORCID_ID}")
 
     # Fetch from OpenAlex
     openalex_publications = fetch_publications(ORCID_ID)

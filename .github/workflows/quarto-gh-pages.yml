@@ -11,9 +11,9 @@ permissions:
   id-token: write        # needed by deploy-pages
 
 env:
-  ORCID_ID: ${{ secrets.ORCID_ID }}
+  ORCID_ID: ${{ secrets.ORCID_ID || '0000-0001-9162-262X' }}
   OPENALEX_USER_AGENT: "acangi.github.io (mailto:attila.cangi@gmail.com)"
-  SKIP_OPENALEX: "1"
+  SKIP_OPENALEX: "0"
 
 jobs:
   deploy:
