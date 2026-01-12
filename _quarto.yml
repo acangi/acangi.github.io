@@ -8,44 +8,27 @@ jupyter:
   kernel: quarto-venv
 
 website:
-  title: "Machine Learning for Materials Design<br>(Cangi Lab)"
-  site-url: "https://www.ml4md.de"
-  description: "Official website of Attila Cangi and the Machine Learning for Materials Design (ML4MD) Lab. Research focuses on artificial intelligence, machine learning, neural networks, electronic structure, density functional theory and atomistic simulations for materials science."
+  title: "Attila Cangi"
+  site-url: "https://acangi.github.io"
+  description: "Personal website of Attila Cangi."
   page-navigation: true
   open-graph: true                          # social cards
   search: true
   navbar:
     left:
-      #- href: index.qmd
-      #  text: Home
-      - href: news-archive.qmd
-        text: News
-        icon: chat-left-text                # Icons from https://icons.getbootstrap.com/
-      - text: Research
-        href: research/index.qmd
-        icon: rocket-takeoff
-        #menu:
-        #  - href: research/index.qmd
-        #    text: Overview
-        #  - href: research/highlights.qmd
-        #    text: Research Highlights
-      - href: people.qmd
-        text: People
-        icon: people-fill
+      - href: index.qmd
+        text: Home
       - href: publications.qmd
         text: Publications
         icon: book
       - href: teaching.qmd
         text: Teaching
         icon: mortarboard
-      - href: contact.qmd
-        text: Contact
-        icon: envelope
-      - href: https://codebase.helmholtz.cloud/casus/mlmd/info
-        text: Internal
-        icon: bi-box-arrow-in-down-left
+      - href: disclaimer.qmd
+        text: Disclaimer
+        icon: info-circle
   page-footer:
-    center: "© 2025 [Attila Cangi](https://www.hzdr.de/db/!ContMan.Visi.Card?pUser=139621&pNid=1227&pLang=en) · [Impressum](/disclaimer.qmd) · Built with [Quarto](https://quarto.org)"
+    center: "© 2025 Attila Cangi · [Impressum](/disclaimer.qmd) · Built with [Quarto](https://quarto.org)"
 
 format:
   html:

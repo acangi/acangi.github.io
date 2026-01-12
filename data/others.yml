@@ -29,16 +29,6 @@
   href: https://doi.org/10.1109/ijcnn54540.2023.10191509
   path: https://doi.org/10.1109/ijcnn54540.2023.10191509
   kind: talk
-- title: 'Cover Picture: Contrib. Plasma Phys. 06/2023'
-  author: M. Bönitz; K. Krieger; Garching Keudell; Péter Hartmann; Budapest Kovacevic;
-    Orléans Reiser; J.-P Van Helden; Greifswald Vorberger; Attila Cangi; J. Citrin
-  year: 2023
-  date: '2023-06-01'
-  journal: Contrib. Plasma Phys.
-  doi: https://doi.org/10.1002/ctpp.202390007
-  href: https://doi.org/10.1002/ctpp.202390007
-  path: https://doi.org/10.1002/ctpp.202390007
-  kind: paratext
 - title: Examining the Alpha-Epsilon Transition in Iron Using Molecular-spin Dynamics
   author: Svetoslav Nikolov; Julien Tranchida; Aidan P. Thompson; Attila Cangi; Kushal
     Ramakrishna; Andrew Rohskopf; Mitchell Wood
@@ -112,17 +102,6 @@
   href: https://doi.org/10.2172/2003857
   path: https://doi.org/10.2172/2003857
   kind: talk
-- title: Data-Driven Magneto-Elastic Predictions with Scalable Classical Spin-Lattice
-    Dynamics.
-  author: Julien Tranchida; Svetoslav Valeriev Nikolov; Mitchell Wood; Attila Cangi;
-    M. P. Desjarlais; Aidan P. Thompson
-  year: 2022
-  date: '2022-05-30'
-  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
-  doi: null
-  href: https://openalex.org/W4287189984
-  path: null
-  kind: paratext
 - title: A machine learning surrogate for density functional theory based on the local
     density of state.
   author: Normand A. Modine; Lenz Fiedler; Dayton J. Vogel; Aidan P. Thompson; Austin
@@ -268,7 +247,7 @@
   kind: report
 - title: An exchange-correlation functional capturing bulk surface and confinement
     physics.
-  author: Attila Cangi; Francisca Sagredo; Elizabeth Decolvenaere; Ann E. Mattsson
+  author: Attila Cangi
   year: 2020
   date: '2020-07-23'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
@@ -296,7 +275,7 @@
   path: https://doi.org/10.2172/1569522
   kind: report
 - title: First-principles Stopping Power in Warm Dense Matter.
-  author: Attila Cangi; Daniel S. Jensen; Andrew Baczewski
+  author: Attila Cangi
   year: 2019
   date: '2019-03-28'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)

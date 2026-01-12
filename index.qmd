@@ -1,6 +1,5 @@
 ---
-title: "Machine Learning for Materials Design"
-image: logo.webp
+title: "Attila Cangi"
 about: 
   template: solana #marquee #trestles #broadside #jolla
   image-shape: round
@@ -9,79 +8,19 @@ title-block-keywords: false
 title-block-description: false
 meta:
   - name: description
-    content: "Official website of Attila Cangi and the Machine Learning for Materials Design (ML4MD) Lab. Research focuses on artificial intelligence, machine learning, neural networks, electronic structure, density functional theory and atomistic simulations for materials science."
+    content: "Personal website of Attila Cangi."
   - name: keywords
-    content: "Attila Cangi, Machine Learning, Materials Design, AI, Artificial Intelligence, Cangi Lab, Electronic Structure, DFT, Atomistic Simulations, Novel Materials"
+    content: "Attila Cangi, Machine Learning, Materials Design, AI, Artificial Intelligence, Electronic Structure, DFT, Atomistic Simulations, Novel Materials"
 toc: false
 css: /styles/custom.scss
-listing:
-  id: news-listing
-  contents: "news/**/index.qmd"
-  sort: "date desc"
-  type: custom
-  template: "_includes/_news-slider-item.qmd"
-  categories: false
-  image-height: 150px
 title-block-banner: false
 ---
-Our lab leverages artificial intelligence and high-performance computing to accelerate the discovery and design of advanced materials. We focus on developing machine learning methods that advance first-principles simulations of electronic and atomistic structures, enabling unprecedented accuracy and efficiency in materials modeling.
+Attila Cangi is head of the Department of Machine Learning for Materials Design at the Center for Advanced Systems Understanding, Helmholtz-Zentrum Dresden-Rossendorf. With his team, he conducts research on the application of artificial intelligence and machine learning to computational materials modeling. His main goal is to develop AI-based solutions for sustainable materials, focusing on areas such as thermoelectric materials, spintronics, neuromorphic devices, and advanced semiconductor modeling. He received his Ph.D. in chemistry from the University of California, Irvine, and previously worked as a postdoctoral fellow at the Max Planck Institute of Microstructure Physics and as a staff member at Sandia National Laboratories.
 
----
+## Research Focus
 
-Driven by a passion for fundamental discovery, our research bridges theoretical research with developing practical solutions to address critical challenges in materials science.
+_Placeholder: add research focus summary here._
 
-To learn more about our work, read the latest [News](news-archive.qmd) from our lab, explore [Research](research/index.qmd) for detailed insights into ongoing projects, and get to know the [People](people.qmd) behind our research. Visit our [Publications](publications.qmd) page for a comprehensive overview of our scientific contributions, and find educational resources on machine learning and materials science under [Teaching](teaching.qmd).
+## CV
 
----
-
-Our lab is a [Research Department](https://www.casus.science/?page_id=4660){target="_blank"} of the [Center for Advanced Systems Understanding](https://www.casus.science){target="_blank"}, [Helmholtz-Zentrum Dresden-Rossendorf](https://www.hzdr.de){target="_blank"}.
-
----
-
-## Latest News
-
-<script>
-$(document).ready(function(){
-  console.log('DEBUG: DOM ready. Starting polling for .slide elements.');
-
-  let attempts = 0;
-  const maxAttempts = 100; // Increased attempts for more robustness (10 seconds total)
-
-  const checkSlidesInterval = setInterval(function() {
-    attempts++;
-    const slides = $('.slide');
-    console.log(`Polling attempt ${attempts}: Found ${slides.length} .slide elements.`);
-
-    if (slides.length > 0) {
-      clearInterval(checkSlidesInterval);
-      console.log('Slides found. Attempting to find parent and initialize slick.');
-
-      // Find the common parent of the slides, which should be the #news-listing div
-      const newsListingContainer = slides.first().parent();
-
-      if (newsListingContainer.length > 0 && typeof $.fn.slick === 'function') {
-        newsListingContainer.slick({
-          dots: false,
-          infinite: false,
-          autoplay: true,
-          speed: 1000,
-          vertical: true,
-        verticalSwiping: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        variableWidth: false,
-        focusOnSelect: true,
-        arrows: false
-        });
-        console.log('Slick slider initialized on parent container.');
-      } else {
-        console.error('Slick initialization failed: Parent container not found or slick.js not loaded.');
-      }
-    } else if (attempts >= maxAttempts) {
-      clearInterval(checkSlidesInterval);
-      console.error('Slick slider initialization timed out: No .slide elements found.');
-    }
-  }, 25); // Check every 25ms
-});
-</script>
-
+[Download CV (PDF)](CV_Attila_Cangi.pdf)

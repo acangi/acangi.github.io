@@ -11,17 +11,6 @@
   href: http://arxiv.org/abs/2511.16263v2
   path: http://arxiv.org/abs/2511.16263v2
   kind: preprint
-- title: Scalable Machine Learning Model for Energy Decomposition Analysis in Aqueous
-    Systems
-  author: Hossein Tahmasbi; Michael Beerbaum; Bartosz Brzoza; Attila Cangi; Thomas
-    D. Kühne
-  year: 2025
-  date: '2025-09-24'
-  journal: arXiv
-  doi: null
-  href: http://arxiv.org/abs/2509.19983v1
-  path: http://arxiv.org/abs/2509.19983v1
-  kind: preprint
 - title: Machine Learning Time Propagators for Time-Dependent Density Functional Theory
     Simulations
   author: Karan Shah; Attila Cangi
@@ -31,6 +20,27 @@
   doi: null
   href: http://arxiv.org/abs/2508.16554v3
   path: http://arxiv.org/abs/2508.16554v3
+  kind: preprint
+- title: The Relevance of Electronic Perturbations in the Warm Dense Electron Gas
+  author: Zhandos Moldabekov; Tobias Dornheim; Maximilian Böhme; Jan Vorberger; Attila
+    Cangi
+  year: 2021
+  date: '2021-07-01'
+  journal: arXiv
+  doi: 10.1063/5.0062325
+  href: http://arxiv.org/abs/2107.00631v2
+  path: 10.1063/5.0062325
+  kind: preprint
+- title: Quantum-accurate magneto-elastic predictions with classical spin-lattice
+    dynamics
+  author: Svetoslav Nikolov; Mitchell A. Wood; Attila Cangi; Jean-Bernard Maillet;
+    Mihai-Cosmin Marinica; Aidan P. Thompson; Michael P. Desjarlais; Julien Tranchida
+  year: 2021
+  date: '2021-01-18'
+  journal: arXiv
+  doi: 10.1038/s41524-021-00617-2
+  href: http://arxiv.org/abs/2101.07332v3
+  path: 10.1038/s41524-021-00617-2
   kind: preprint
 - title: 'Reduced Density Matrix Functional Theory at Finite Temperature: Theoretical
     Foundations'

@@ -11,17 +11,6 @@
   href: http://arxiv.org/abs/2511.16263v2
   path: http://arxiv.org/abs/2511.16263v2
   kind: preprint
-- title: Scalable Machine Learning Model for Energy Decomposition Analysis in Aqueous
-    Systems
-  author: Hossein Tahmasbi; Michael Beerbaum; Bartosz Brzoza; Attila Cangi; Thomas
-    D. Kühne
-  year: 2025
-  date: '2025-09-24'
-  journal: arXiv
-  doi: null
-  href: http://arxiv.org/abs/2509.19983v1
-  path: http://arxiv.org/abs/2509.19983v1
-  kind: preprint
 - title: Machine Learning Time Propagators for Time-Dependent Density Functional Theory
     Simulations
   author: Karan Shah; Attila Cangi
@@ -79,14 +68,14 @@
   kind: preprint
 - title: Effects of Mosaic Crystal Instrument Functions on X-ray Thomson Scattering
     Diagnostics
-  author: Thomas Gawne; Hannah Bellenbaum; L. B. Fletcher; Karen Appel; Carsten Baehtz;
-    V. Bouffetier; E. Brambrink; D. B. Brown; Attila Cangi; Adrien Descamps; Sebastian
-    Göde; N. J. Hartley; M. Herbert; Philipp Hesselbach; Hauke Höppner; Oliver Humphries;
-    Zuzana Konôpková; Alejandro Laso; Björn Lindqvist; J. Lütgert; M. J. MacDonald;
-    Mikako Makita; W. J. Martin; Mikhail Mishchenko; Zhandos A. Moldabekov; M. Nakatsutsumi;
-    Jean-Paul Naedler; P. Neumayer; A. Pełka; Chongbing Qu; Lisa Randolph; J. Rips;
-    T. Toncian; Jan Vorberger; L. Wollenweber; U. Zastrau; D. Kraus; Thomas R. Preston;
-    Tobias Dornheim
+  author: Thomas Gawne; Hannah M. Bellenbaum; L. B. Fletcher; Karen Appel; Carsten
+    Baehtz; V. Bouffetier; E. Brambrink; D. B. Brown; Attila Cangi; Adrien Descamps;
+    Sebastian Göde; N. J. Hartley; M. Herbert; Philipp Hesselbach; Hauke Höppner;
+    Oliver Humphries; Zuzana Konôpková; Alejandro Laso; Björn Lindqvist; J. Lütgert;
+    M. J. MacDonald; Mikako Makita; W. J. Martin; Mikhail Mishchenko; Zhandos A. Moldabekov;
+    M. Nakatsutsumi; Jean-Paul Naedler; P. Neumayer; A. Pełka; Chongbing Qu; Lisa
+    Randolph; J. Rips; T. Toncian; Jan Vorberger; L. Wollenweber; U. Zastrau; D. Kraus;
+    Thomas R. Preston; Tobias Dornheim
   year: 2024
   date: '2024-06-05'
   journal: arXiv (Cornell Univ.)
@@ -283,7 +272,7 @@
   path: https://doi.org/10.48550/arxiv.2206.03754
   kind: preprint
 - title: An \textit{ab initio} study of shock-compressed copper
-  author: Maximilian Schörner; B. B. L. Witte; Andrew Baczewski; Attila Cangi; Ronald
+  author: Maximilian Schörner; B. B. L. Witte; Andrew Baczewski; Attila Cangi; R.
     Redmer
   year: 2022
   date: '2022-05-13'
@@ -351,6 +340,16 @@
   href: https://doi.org/10.48550/arxiv.2110.00997
   path: https://doi.org/10.48550/arxiv.2110.00997
   kind: preprint
+- title: The Relevance of Electronic Perturbations in the Warm Dense Electron Gas
+  author: Zhandos Moldabekov; Tobias Dornheim; Maximilian Böhme; Jan Vorberger; Attila
+    Cangi
+  year: 2021
+  date: '2021-07-01'
+  journal: arXiv
+  doi: 10.1063/5.0062325
+  href: http://arxiv.org/abs/2107.00631v2
+  path: 10.1063/5.0062325
+  kind: preprint
 - title: Thermal Signals from Collective Electronic Excitations in Inhomogeneous Warm
     Dense Matter
   author: Zhandos A. Moldabekov; Tobias Dornheim; Attila Cangi
@@ -390,6 +389,17 @@
   doi: null
   href: https://openalex.org/W3136158772
   path: null
+  kind: preprint
+- title: Quantum-accurate magneto-elastic predictions with classical spin-lattice
+    dynamics
+  author: Svetoslav Nikolov; Mitchell A. Wood; Attila Cangi; Jean-Bernard Maillet;
+    Mihai-Cosmin Marinica; Aidan P. Thompson; Michael P. Desjarlais; Julien Tranchida
+  year: 2021
+  date: '2021-01-18'
+  journal: arXiv
+  doi: 10.1038/s41524-021-00617-2
+  href: http://arxiv.org/abs/2101.07332v3
+  path: 10.1038/s41524-021-00617-2
   kind: preprint
 - title: 'Reduced-density-matrix-functional theory at finite temperature: Theoretical
     foundations'
