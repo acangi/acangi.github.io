@@ -26,6 +26,8 @@ PREPRINTS_FILE = OUTPUT_DIR / "preprints.yml"
 OTHERS_FILE = OUTPUT_DIR / "others.yml"
 PREPRINTS_UNPUBLISHED_FILE = OUTPUT_DIR / "preprints-unpublished.yml"
 TIMEOUT = 30
+OPENALEX_MAX_PAGES = int(os.getenv("OPENALEX_MAX_PAGES", "0"))
+OPENALEX_USER_AGENT = os.getenv("OPENALEX_USER_AGENT")
 
 KIND_MAP = {
     "journal-article": "article",
@@ -67,10 +69,18 @@ def fetch_publications(orcid: str) -> List[Dict[str, Any]]:
     base_url = f"https://api.openalex.org/works?filter=author.orcid:{orcid}&per-page=200"
     url = base_url + "&cursor=*"
     print("Fetching publications from OpenAlex...")
-  
+
+    page_count = 0
+    seen_cursors = set()
+    headers = {"User-Agent": OPENALEX_USER_AGENT} if OPENALEX_USER_AGENT else {}
     while url:
+        page_count += 1
+        if OPENALEX_MAX_PAGES and page_count > OPENALEX_MAX_PAGES:
+            print(f"Reached OPENALEX_MAX_PAGES={OPENALEX_MAX_PAGES}, stopping early.")
+            break
+
         try:
-            response = requests.get(url, timeout=TIMEOUT)
+            response = requests.get(url, timeout=TIMEOUT, headers=headers)
             response.raise_for_status()
             page = response.json()
 
@@ -81,6 +91,12 @@ def fetch_publications(orcid: str) -> List[Dict[str, Any]]:
                 records.append(work)
 
             cursor = page.get("meta", {}).get("next_cursor")
+            print(f"OpenAlex page {page_count}: {len(records)} records total.")
+            if cursor and cursor in seen_cursors:
+                print("OpenAlex returned a repeated cursor; stopping to avoid a loop.")
+                break
+            if cursor:
+                seen_cursors.add(cursor)
             url = f"{base_url}&cursor={cursor}" if cursor else None
 
         except requests.exceptions.RequestException as e:
