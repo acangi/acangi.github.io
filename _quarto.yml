@@ -13,24 +13,24 @@ website:
   description: "Personal website of Attila Cangi."
   page-navigation: true
   open-graph: true                          # social cards
-  search: true
+  search: false
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+#      - href: index.qmd
+#        text: Home
       - href: publications.qmd
         text: Publications
         icon: book
-      - href: teaching.qmd
-        text: Teaching
-        icon: mortarboard
+#      - href: teaching.qmd
+#        text: Teaching
+#        icon: mortarboard
   page-footer:
-    center: "© 2026 · Attila Cangi · [Impressum (Disclaimer)](/disclaimer.qmd) · Built with [Quarto](https://quarto.org)"
+    center: "© 2026 · Attila Cangi · [Impressum (Disclaimer)](/disclaimer.qmd)"
 
 format:
   html:
     theme: cosmo
-    css: _site/styles/custom.css
+#    css: _site/styles/custom.css
     toc: false
     include-in-header: _includes/head_meta.html
     

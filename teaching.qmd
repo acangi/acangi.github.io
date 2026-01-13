@@ -5,13 +5,10 @@ meta:
     content: "Official website of the Machine Learning for Materials Design (ML4MD) Lab, led by Attila Cangi. Teaching materials and resources for machine learning and materials science."
   - name: keywords
     content: "Machine Learning, Materials Design, AI, Artificial Intelligence, Cangi Lab, Teaching, Education, Resources"
-toc: true
+toc: false
 title-block-author: false
 title-block-keywords: false
 title-block-description: false
-format:
-  html:
-    css: []
 listing:
   - id: summer_2025
     contents: teaching/summer_2025/*.qmd
@@ -43,7 +40,7 @@ listing:
     fields: [title, subtitle, date, image]
     sort: "date desc"
     categories: false
-title-block-banner: false
+title-block-banner: true
 ---
 
 ## Summer Semester 2025
