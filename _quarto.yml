@@ -25,7 +25,7 @@ website:
         text: Teaching
         icon: mortarboard
   page-footer:
-    center: "© 2025 Attila Cangi · [Impressum (Disclaimer)](/disclaimer.qmd) · Built with [Quarto](https://quarto.org)"
+    center: "© 2026 · Attila Cangi · [Impressum (Disclaimer)](/disclaimer.qmd) · Built with [Quarto](https://quarto.org)"
 
 format:
   html:
