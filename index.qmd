@@ -24,4 +24,4 @@ _Placeholder: add research focus summary here._
 
 ## CV
 
-[Download CV (PDF)](https://www.hzdr.de/db/Cms?pOid=67820)
+<a href="https://www.hzdr.de/db/Cms?pOid=67820" target="_blank">CV (PDF)</a>
