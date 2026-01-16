@@ -21,6 +21,9 @@ website:
       - href: publications.qmd
         text: Publications
         icon: book
+      - href: https://www.casus.science/?page_id=4660
+        text: Research
+        icon: rocket-takeoff
 #      - href: teaching.qmd
 #        text: Teaching
 #        icon: mortarboard
