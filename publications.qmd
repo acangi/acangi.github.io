@@ -9,8 +9,10 @@ listing:
   contents:
     - "data/articles.yml"                 # relative to this file
     - "data/preprints-unpublished.yml"
-  type: table                             # card layout :contentReference[oaicite:2]{index=2}
+  type: grid                             # card layout :contentReference[oaicite:2]{index=2}
   grid-columns: 1                         # tweak for your theme / screen
+  grid-item-border: true
+  grid-item-align: left
   sort: "date desc"
   date-format: "MMM, YYYY"
   fields: [date, title, author, journal]           # what appears on each card
@@ -19,5 +21,6 @@ listing:
   filter-ui: [title, author]              # search box
   #categories: true                       # auto side‑bar filters
   page-size: 10                           # pagination
-title-block-banner: true
+title-block-banner: false
+
 ---
