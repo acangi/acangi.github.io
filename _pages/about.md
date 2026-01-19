@@ -34,7 +34,7 @@ Together with his team, he conducts research on applying artificial intelligence
 
 He received his Ph.D. in Chemistry from the University of California, Irvine, and previously worked as a postdoctoral fellow at the Max Planck Institute of Microstructure Physics and as a staff member at Sandia National Laboratories.
 
-Information on his research, research group, teaching activities, and recent news is available on his <a href="https://www.casus.science/?page_id=4660" target="_blank">institutional website</a>.
+Information on his **research activities**, **research team**, **teaching activities**, and **recent news** is available on his <a href="https://www.casus.science/?page_id=4660" target="_blank">institutional website</a>.
 
 
 
