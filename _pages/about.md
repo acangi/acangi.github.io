@@ -2,16 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: 
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+#profile:
+#  align: right
+#  image: attila_cangi.webp
+#  image_circular: false # crops the image to make it circular
+#  more_info: >
+#    <p>Center for Advanced Systems Understanding</p>
+#    <p>Helmholtz-Zentrum Dresden-Rossendorf</p> 
+#    <p>Conrad-Schiedt-Straße 20</p>
+#    <p>02826 Görlitz</p>
 
 # selected_papers: true # includes a list of papers marked as "selected={true}"
 # social: true # includes social icons at the bottom of the page
@@ -27,8 +28,16 @@ profile:
 #   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Attila Cangi is the head of the <a href="https://www.casus.science/?page_id=4660" target="_blank">Department of Machine Learning for Materials Design</a> at the <a href="https://www.casus.science" target="_blank">Center for Advanced Systems Understanding</a>, <a href="https://www.hzdr.de" target="_blank">Helmholtz-Zentrum Dresden-Rossendorf</a>.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Together with his team, he conducts research on applying artificial intelligence and machine learning to computational materials modeling. He develops scalable machine-learning methods that accelerate first-principles simulations of electronic and atomistic structures, with the overarching goal of discovering and designing novel materials.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+He received his Ph.D. in Chemistry from the University of California, Irvine, and previously worked as a postdoctoral fellow at the Max Planck Institute of Microstructure Physics and as a staff member at Sandia National Laboratories.
+
+Information on his research, research group, teaching activities, and recent news is available on his <a href="https://www.casus.science/?page_id=4660" target="_blank">institutional website</a>.
+
+
+
+<object data="https://www.hzdr.de/db/Cms?pOid=67820" type="application/pdf" width="100%" height="800px">
+  <p>Your browser can't display this PDF. <a href="https://www.hzdr.de/db/Cms?pOid=67820">Download it instead</a>.</p>
+</object>

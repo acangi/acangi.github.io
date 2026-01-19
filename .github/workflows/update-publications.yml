@@ -1,0 +1,55 @@
+name: Update Publications (OpenAlex)
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # daily at 00:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update-publications:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      # See CUSTOMIZE.md for details on how to set up PAT for triggering subsequent workflows
+      #        with:
+      #          token: ${{ secrets.PAT }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Update Google Scholar citations cache
+        run: |
+          python bin/update_scholar_citations.py
+
+      - name: Generate publications from OpenAlex
+        env:
+          ORCID_ID: ${{ vars.ORCID_ID }}
+          ARXIV_AUTHOR_NAME: ${{ vars.ARXIV_AUTHOR_NAME }}
+          OPENALEX_USER_AGENT: ${{ vars.OPENALEX_USER_AGENT }}
+        run: |
+          python _scripts/openalex_to_yaml.py
+
+      - name: Configure Git
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+
+      - name: Commit and push if changed
+        run: |
+          git add _bibliography/papers.bib _data/articles.yml _data/preprints.yml _data/others.yml _data/articles.json _data/preprints.json _data/citations.yml
+          if [ -f _data/preprints-unpublished.yml ]; then
+            git add _data/preprints-unpublished.yml
+          fi
+          git diff --staged --quiet || (
+            git commit -m "Update publications from OpenAlex"
+            git push
+          )
