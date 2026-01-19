@@ -4,6 +4,7 @@ permalink: /blog/
 title: blog
 nav: true
 nav_order: 1
+published: false
 pagination:
   enabled: true
   collection: posts
@@ -15,6 +16,9 @@ pagination:
     before: 1 # The number of links before the current page
     after: 3 # The number of links after the current page
 ---
+
+{% comment %}
+Disabled for now; content preserved below.
 
 <div class="post">
 
@@ -37,7 +41,7 @@ pagination:
         <li>
           <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
         </li>
-        {% unless forloop.last %}
+      {% unless forloop.last %}
           <p>&bull;</p>
         {% endunless %}
       {% endfor %}
@@ -73,6 +77,7 @@ pagination:
 <div class="float-right">
 <i class="fa-solid fa-thumbtack fa-xs"></i>
 </div>
+{% endcomment %}
 <h3 class="card-title text-lowercase">{{ post.title }}</h3>
 <p class="card-text">{{ post.description }}</p>
 

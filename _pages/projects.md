@@ -5,9 +5,12 @@ permalink: /projects/
 description: A growing collection of your cool projects.
 nav: true
 nav_order: 3
+published: false
 display_categories: [work, fun]
 horizontal: false
 ---
+{% comment %}
+Disabled for now; content preserved below.
 
 <!-- pages/projects.md -->
 <div class="projects">
@@ -63,3 +66,4 @@ horizontal: false
   {% endif %}
 {% endif %}
 </div>
+{% endcomment %}

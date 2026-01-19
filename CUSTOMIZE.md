@@ -489,6 +489,28 @@ To add publications create a new entry in the [\_bibliography/papers.bib](_bibli
 
 You can add extra information to a publication, like a PDF file in the `assets/pdfs/` directory and add the path to the PDF file in the BibTeX entry with the `pdf` field. Some of the supported fields are: `abstract`, `altmetric`, `annotation`, `arxiv`, `bibtex_show`, `blog`, `code`, `dimensions`, `doi`, `eprint`, `hal`, `html`, `isbn`, `pdf`, `pmid`, `poster`, `slides`, `supp`, `video`, and `website`.
 
+### OpenAlex automation (manual + commit)
+
+If you want to generate your publications automatically from OpenAlex and commit the output:
+
+1. Install Python requirements:
+
+```sh
+pip install -r requirements.txt
+```
+
+2. Run the generator:
+
+```sh
+ORCID_ID=0000-0000-0000-0000 ARXIV_AUTHOR_NAME="Your Name" python _scripts/openalex_to_yaml.py
+```
+
+3. Commit the generated files:
+   - `_bibliography/papers.bib` (used by the publications page)
+   - `_data/articles.yml`, `_data/preprints.yml`, `_data/others.yml`, and JSON outputs (if you use them)
+
+The publications page already renders BibTeX entries via `{% bibliography %}`, so once `papers.bib` is updated and committed, it will show on `/publications/`.
+
 ### Author annotation
 
 In publications, the author entry for yourself is identified by string array `scholar:last_name` and string array `scholar:first_name` in [\_config.yml](_config.yml). For example, if you have the following entry in your [\_config.yml](_config.yml):
