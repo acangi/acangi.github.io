@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: 
 
@@ -36,8 +36,3 @@ He received his Ph.D. in Chemistry from the University of California, Irvine, an
 
 Information on his **research activities**, **research team**, **teaching activities**, and **recent news** is available on his <a href="https://www.casus.science/?page_id=4660" target="_blank">institutional website</a>.
 
-
-
-<object data="https://www.hzdr.de/db/Cms?pOid=67820" type="application/pdf" width="100%" height="800px">
-  <p>Your browser can't display this PDF. <a href="https://www.hzdr.de/db/Cms?pOid=67820">Download it instead</a>.</p>
-</object>
