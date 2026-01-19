@@ -38,6 +38,7 @@ Here we will give you some tips on how to customize the website. One important t
       - [Optional fields](#optional-fields)
     - [Collections with categories and tags](#collections-with-categories-and-tags)
   - [Adding a new publication](#adding-a-new-publication)
+    - [OpenAlex automation (manual + commit)](#openalex-automation-manual--commit)
     - [Author annotation](#author-annotation)
     - [Buttons (through custom bibtex keywords)](#buttons-through-custom-bibtex-keywords)
   - [Changing theme color](#changing-theme-color)
