@@ -829,6 +829,7 @@ footer.sticky-bottom {
 
       .badges {
         padding-bottom: 0.5rem;
+        line-height: 1;
         span {
           display: inline-block;
           color: $black-color;
@@ -839,6 +840,15 @@ footer.sticky-bottom {
           &:hover {
             text-decoration: underline;
           }
+        }
+        a,
+        span {
+          display: inline-flex;
+          align-items: center;
+          vertical-align: middle;
+        }
+        img {
+          vertical-align: middle;
         }
       }
 
