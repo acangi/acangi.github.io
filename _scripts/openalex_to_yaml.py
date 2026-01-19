@@ -31,6 +31,7 @@ OTHERS_FILE = OUTPUT_DIR / "others.yml"
 PREPRINTS_UNPUBLISHED_FILE = OUTPUT_DIR / "preprints-unpublished.yml"
 ARTICLES_JSON_FILE = OUTPUT_DIR / "articles.json"
 PREPRINTS_JSON_FILE = OUTPUT_DIR / "preprints.json"
+CITATIONS_FILE = OUTPUT_DIR / "citations.yml"
 
 # --- CONFIGURATION ---
 ORCID_ID = (os.getenv("ORCID_ID") or "0000-0001-9162-262X").strip()
@@ -87,6 +88,60 @@ def normalize_doi(doi: Optional[str]) -> Optional[str]:
         if normalized.startswith(prefix):
             normalized = normalized[len(prefix) :]
     return normalized
+
+
+def load_scholar_citation_index() -> Dict[str, List[Dict[str, Optional[str]]]]:
+    """Load Google Scholar IDs from the citations cache, keyed by normalized title."""
+    if not CITATIONS_FILE.exists():
+        return {}
+    try:
+        with CITATIONS_FILE.open("r", encoding="utf-8") as file:
+            data = yaml.safe_load(file) or {}
+    except yaml.YAMLError as exc:
+        print(f"Warning: Could not parse {CITATIONS_FILE}: {exc}", file=sys.stderr)
+        return {}
+
+    papers = data.get("papers") or {}
+    index: Dict[str, List[Dict[str, Optional[str]]]] = {}
+    for pub_id, info in papers.items():
+        title_norm = normalize_title(info.get("title"))
+        if not title_norm:
+            continue
+        year = info.get("year")
+        year_str = str(year) if year is not None else None
+        index.setdefault(title_norm, []).append({"year": year_str, "id": pub_id})
+    return index
+
+
+def attach_google_scholar_ids(
+    records: List[Dict[str, Any]],
+    citation_index: Dict[str, List[Dict[str, Optional[str]]]],
+) -> int:
+    """Attach google_scholar_id fields by matching titles (and years when possible)."""
+    if not citation_index:
+        return 0
+    matched = 0
+    for record in records:
+        title_norm = normalize_title(record.get("title"))
+        if not title_norm:
+            continue
+        candidates = citation_index.get(title_norm)
+        if not candidates:
+            continue
+        year_value = record.get("year") or (record.get("date") or "")[:4]
+        year_str = str(year_value) if year_value else None
+        pub_id = None
+        if year_str:
+            for candidate in candidates:
+                if candidate.get("year") == year_str:
+                    pub_id = candidate.get("id")
+                    break
+        if not pub_id and len(candidates) == 1:
+            pub_id = candidates[0].get("id")
+        if pub_id:
+            record["google_scholar_id"] = pub_id
+            matched += 1
+    return matched
 
 
 def fetch_publications(orcid: str) -> List[Dict[str, Any]]:
@@ -448,6 +503,9 @@ def write_bibtex_file(records: List[Dict[str, Any]]) -> None:
         journal = format_bibtex_value(record.get("journal"))
         doi = normalize_doi(record.get("doi"))
         url = record.get("href") or record.get("pdf")
+        google_scholar_id_value = record.get("google_scholar_id")
+        google_scholar_id = str(google_scholar_id_value) if google_scholar_id_value else None
+        badge_enabled = "true" if doi else None
 
         fields: Dict[str, Optional[str]] = {
             "title": title,
@@ -456,6 +514,9 @@ def write_bibtex_file(records: List[Dict[str, Any]]) -> None:
             "journal": journal if entry_type == "article" else journal,
             "doi": doi,
             "url": url,
+            "altmetric": badge_enabled,
+            "dimensions": badge_enabled,
+            "google_scholar_id": google_scholar_id,
         }
 
         lines = [f"@{entry_type}{{{key},"]
@@ -532,6 +593,11 @@ def main() -> None:
     if unique_arxiv_pubs:
         print(f"Found {len(unique_arxiv_pubs)} new unique publications from arXiv.")
         formatted_publications.extend(unique_arxiv_pubs)
+
+    citation_index = load_scholar_citation_index()
+    if citation_index:
+        matched = attach_google_scholar_ids(formatted_publications, citation_index)
+        print(f"Matched {matched} publications to Google Scholar IDs.")
 
     write_yaml_files(formatted_publications, unpublished_preprints=unique_arxiv_pubs)
     write_bibtex_file(formatted_publications)
