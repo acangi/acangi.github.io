@@ -498,8 +498,8 @@
   year: 2010
   date: '2010-02-06'
   journal: arXiv (Cornell Univ.)
-  doi: null
-  href: https://openalex.org/W11163850
+  doi: https://doi.org/10.1016/s0042-6989(00)00248-0
+  href: https://doi.org/10.1016/s0042-6989(00)00248-0
   pdf: https://arxiv.org/pdf/1002.1351
-  path: null
+  path: https://doi.org/10.1016/s0042-6989(00)00248-0
   kind: preprint
