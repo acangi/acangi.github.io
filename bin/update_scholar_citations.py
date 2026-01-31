@@ -7,6 +7,12 @@ from datetime import datetime
 from scholarly import scholarly
 
 
+def env_truthy(name: str) -> bool:
+    """Return True when the environment variable is set to a truthy value."""
+    value = os.getenv(name, "")
+    return value.strip().lower() in {"1", "true", "yes", "y", "on"}
+
+
 def load_scholar_user_id() -> str:
     """Load the Google Scholar user ID from the configuration file."""
     config_file = "_data/socials.yml"
@@ -32,14 +38,39 @@ def load_scholar_user_id() -> str:
         sys.exit(1)
 
 
-SCHOLAR_USER_ID: str = load_scholar_user_id()
 OUTPUT_FILE: str = "_data/citations.yml"
+
+
+def should_skip_fetch() -> bool:
+    """Return True when the citations fetch should be skipped."""
+    return env_truthy("SCHOLAR_SKIP_FETCH")
+
+
+def allow_failure() -> bool:
+    """Return True when fetch failures should not stop the workflow."""
+    return env_truthy("SCHOLAR_ALLOW_FAILURE")
+
+
+def fail_or_warn(message: str) -> None:
+    """Exit on failure unless SCHOLAR_ALLOW_FAILURE is enabled."""
+    if allow_failure():
+        print(f"Warning: {message} Keeping existing citation cache.")
+        return
+    print(message)
+    print("Tip: set SCHOLAR_ALLOW_FAILURE=1 to continue without failing.")
+    sys.exit(1)
 
 
 def get_scholar_citations() -> None:
     """Fetch and update Google Scholar citation data."""
-    print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
+    if should_skip_fetch():
+        print("Skipping Google Scholar fetch because SCHOLAR_SKIP_FETCH is set.")
+        return
+
+    scholar_user_id = load_scholar_user_id()
+    print(f"Fetching citations for Google Scholar ID: {scholar_user_id}")
     today = datetime.now().strftime("%Y-%m-%d")
+    existing_data = None
 
     # Check if the output file was already updated today
     if os.path.exists(OUTPUT_FILE):
@@ -65,23 +96,25 @@ def get_scholar_citations() -> None:
     scholarly.set_timeout(15)
     scholarly.set_retries(3)
     try:
-        author = scholarly.search_author_id(SCHOLAR_USER_ID)
+        author = scholarly.search_author_id(scholar_user_id)
         author_data = scholarly.fill(author)
     except Exception as e:
-        print(
-            f"Error fetching author data from Google Scholar for user ID '{SCHOLAR_USER_ID}': {e}. Please check your internet connection and Scholar user ID."
+        fail_or_warn(
+            f"Error fetching author data from Google Scholar for user ID '{scholar_user_id}': {e}. Please check your internet connection and Scholar user ID."
         )
-        sys.exit(1)
+        return
 
     if not author_data:
-        print(
-            f"Could not fetch author data for user ID '{SCHOLAR_USER_ID}'. Please verify the Scholar user ID and try again."
+        fail_or_warn(
+            f"Could not fetch author data for user ID '{scholar_user_id}'. Please verify the Scholar user ID and try again."
         )
-        sys.exit(1)
+        return
 
     if "publications" not in author_data:
-        print(f"No publications found in author data for user ID '{SCHOLAR_USER_ID}'.")
-        sys.exit(1)
+        fail_or_warn(
+            f"No publications found in author data for user ID '{scholar_user_id}'."
+        )
+        return
 
     for pub in author_data["publications"]:
         try:
