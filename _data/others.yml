@@ -9,6 +9,7 @@
   pdf: null
   path: https://doi.org/10.1109/qce57702.2023.10240
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:IRz6iEL74y4C
 - title: Leveraging Data Driven Frameworks to Build Transferable Interatomic Potentials
   author: Svetoslav Nikolov; John H. Carpenter; Mitchell Wood; Julien Tranchida; Kyle
     Cochrane; Normand A. Modine; Aidan P. Thompson; Attila Cangi; Kushal Ramakrishna;
@@ -21,6 +22,7 @@
   pdf: http://dx.doi.org/10.2172/2430436
   path: https://doi.org/10.2172/2430436
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:yMeIxYmEMEAC
 - title: Deep Spiking Quantum Neural Network for Noisy Image Classification
   author: Debanjan Konar; Vaneet Aggarwal; Aditya Das Sarma; Soham Bhandary; Siddhartha
     Bhattacharyya; Attila Cangi
@@ -32,6 +34,7 @@
   pdf: null
   path: https://doi.org/10.1109/ijcnn54540.2023.10191509
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:XvxMoLDsR5gC
 - title: Examining the Alpha-Epsilon Transition in Iron Using Molecular-spin Dynamics
   author: Svetoslav Nikolov; Julien Tranchida; Aidan P. Thompson; Attila Cangi; Kushal
     Ramakrishna; Andrew Rohskopf; Mitchell Wood
@@ -43,6 +46,7 @@
   pdf: http://dx.doi.org/10.2172/2431651
   path: https://doi.org/10.2172/2431651
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:3htObqc8RwsC
 - title: Machine-Learning for Static and Dynamic Electronic Structure Theory
   author: Lenz Fiedler; Karan Shah; Attila Cangi
   year: 2023
@@ -53,6 +57,7 @@
   pdf: https://doi.org/10.1007/978-3-031-37196-7_5
   path: https://doi.org/10.1007/978-3-031-37196-7_5
   kind: chapter
+  google_scholar_id: M84yoJgAAAAJ:sNmaIFBj_lkC
 - title: Predicting the Electronic Structure of Matter on Ultra-Large Scales
   author: Lenz Fiedler; Normand A. Modine; Steve Schmerler; Dayton J. Vogel; Gabriel
     Popoola; Aidan P. Thompson; Sivasankaran Rajamanickam; Attila Cangi
@@ -64,6 +69,7 @@
   pdf: https://www.osti.gov/biblio/1895024
   path: https://doi.org/10.2172/1895024
   kind: report
+  google_scholar_id: M84yoJgAAAAJ:ruyezt5ZtCIC
 - title: Quantum-Accurate Multiscale Modeling of Shock Hugoniots, Ramp Compression
     Paths, Structural and Magnetic Phase Transitions, and Transport Properties in
     Highly Compressed Metals
@@ -77,6 +83,7 @@
   pdf: https://www.osti.gov/biblio/1898251
   path: https://doi.org/10.2172/1898251
   kind: report
+  google_scholar_id: M84yoJgAAAAJ:hCrLmN-GePgC
 - title: Improving Predictive Capability in REHEDS Simulations with Fast, Accurate,
     and Consistent Non-Equilibrium Material Properties
   author: Stephanie B. Hansen; Andrew Baczewski; Thomas Gomez; Thomas Hentschel; Christopher
@@ -87,9 +94,10 @@
   journal: null
   doi: https://doi.org/10.2172/1890268
   href: https://doi.org/10.2172/1890268
-  pdf: https://www.osti.gov/servlets/purl/1890268
+  pdf: https://www.osti.gov/biblio/1890268
   path: https://doi.org/10.2172/1890268
   kind: report
+  google_scholar_id: M84yoJgAAAAJ:PVjk1bu6vJQC
 - title: Accelerating Multiscale Materials Modeling with Machine Learning
   author: Normand A. Modine; John A. Stephens; Laura Swiler; Aidan P. Thompson; Dayton
     J. Vogel; Lenz Feilder; Attila Cangi; Sivasankaran Rajamanickam
@@ -101,6 +109,7 @@
   pdf: https://www.osti.gov/servlets/purl/1889336
   path: https://doi.org/10.2172/1889336
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:FPJr55Dyh1AC
 - title: Examining the shock response of iron using molecular-spin dynamics.
   author: Svetoslav Nikolov; Julien Tranchida; Attila Cangi; Kushal Ramakrishna; Mani
     Lokamani; Mitchell Wood
@@ -112,6 +121,7 @@
   pdf: http://dx.doi.org/10.2172/2003857
   path: https://doi.org/10.2172/2003857
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
 - title: A machine learning surrogate for density functional theory based on the local
     density of state.
   author: Normand A. Modine; Lenz Fiedler; Dayton J. Vogel; Aidan P. Thompson; Austin
@@ -124,6 +134,7 @@
   pdf: http://dx.doi.org/10.2172/2003393
   path: https://doi.org/10.2172/2003393
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:6ZxmRoH8BuwC
 - title: Finding Electronic Structure Machine Learning Surrogates without Training
   author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel Popoola; Tamar Yovell;
     Vladyslav Oles; John Ellis; Sivasankaran Rajamanickam; Attila Cangi
@@ -135,6 +146,7 @@
   pdf: https://www.osti.gov/servlets/purl/1891948
   path: https://doi.org/10.2172/1891948
   kind: report
+  google_scholar_id: M84yoJgAAAAJ:5qfkUJPXOUwC
 - title: Effects of electron-ion collisions on stopping powers in warm dense matter.
   author: Tommy Hentschel; Alina Kononov; Andrew Baczewski; Attila Cangi; Stephanie
     B. Hansen
@@ -213,6 +225,7 @@
   pdf: https://www.osti.gov/biblio/1867139
   path: https://doi.org/10.2172/1867139
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:-FonjvnnhkoC
 - title: Comparison of DFT-based methods for electronic stopping in warm dense aluminum.
   author: Alina Kononov; Thomas Hentschel; Attila Cangi; Andrew Baczewski; Stephanie
     B. Hansen
@@ -257,6 +270,7 @@
   pdf: https://www.osti.gov/biblio/1830065
   path: https://doi.org/10.2172/1830065
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:EYYDruWGBe4C
 - title: Accelerating Finite-temperature Kohn-Sham Density Functional Theory\ with
     Deep Neural Networks
   author: John Ellis; Attila Cangi; Normand A. Modine; John A. Stephens; Aidan P.
@@ -290,6 +304,7 @@
   pdf: null
   path: null
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:-_dYPAW6P2MC
 - title: Semi-local Density Functional Approximations for Bulk, Surface, and Confinement
     Physics
   author: Attila Cangi; Francisca Sagredo; Elizabeth Decolvenaere; Ann E. Mattsson
@@ -301,6 +316,7 @@
   pdf: https://www.osti.gov/biblio/1569522
   path: https://doi.org/10.2172/1569522
   kind: report
+  google_scholar_id: M84yoJgAAAAJ:5awf1xo2G04C
 - title: First-principles Stopping Power in Warm Dense Matter.
   author: Attila Cangi
   year: 2019
@@ -355,6 +371,7 @@
   pdf: https://www.osti.gov/biblio/1762384
   path: https://doi.org/10.2172/1762384
   kind: report
+  google_scholar_id: M84yoJgAAAAJ:z_wVstp3MssC
 - title: An Exchange-Correlation Functional Capturing Bulk Surface and Confinement
     Physics
   author: Attila Cangi
@@ -366,6 +383,7 @@
   pdf: https://www.osti.gov/biblio/1530147
   path: https://doi.org/10.2172/1530147
   kind: report
+  google_scholar_id: M84yoJgAAAAJ:ZuybSZzF8UAC
 - title: Computing Optical Conductivities of Warm Dense Matter with Time-Dependent
     Density Functional Theory
   author: Daniel S. Jensen; Andrew Baczewski; Attila Cangi; Stephanie B. Hansen
@@ -410,6 +428,7 @@
   pdf: https://www.osti.gov/biblio/1696908
   path: https://doi.org/10.11578/dc.20201102.5
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:W5xh706n7nkC
 - title: Stopping Power of Warm Dense Matter from Ehrenfest Molecular Dynamics
   author: Attila Cangi; Daniel S. Jensen; Stephanie B. Hansen; Andrew Baczewski
   year: 2017
@@ -471,6 +490,7 @@
   pdf: null
   path: null
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:VLnqNzywnoUC
 - title: Leading corrections to local approximations and their relevance to Density
     Functional Theory
   author: Attila Cangi
@@ -493,6 +513,7 @@
   pdf: null
   path: null
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:BUYA1_V_uYcC
 - title: Density Functional Theory and Semiclassical Methods
   author: Peter Elliott; Donghyung Lee; Attila Cangi; Kieron Burke
   year: 2009
