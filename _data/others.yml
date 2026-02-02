@@ -317,16 +317,6 @@
   path: https://doi.org/10.2172/1569522
   kind: report
   google_scholar_id: M84yoJgAAAAJ:5awf1xo2G04C
-- title: First-principles Stopping Power in Warm Dense Matter.
-  author: Attila Cangi
-  year: 2019
-  date: '2019-03-28'
-  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
-  doi: null
-  href: https://openalex.org/W4297732077
-  pdf: https://www.osti.gov/biblio/1465022
-  path: null
-  kind: paratext
 - title: Modeling Materials at Extreme Conditions for High Energy-Density Science
   author: Stephanie B. Hansen; Taisuke Nagayama; Andrew Baczewski; Attila Cangi; Thomas
     Gomez
@@ -372,6 +362,16 @@
   path: https://doi.org/10.2172/1762384
   kind: report
   google_scholar_id: M84yoJgAAAAJ:z_wVstp3MssC
+- title: First-principles stopping power in warm dense matter.
+  author: Attila Cangi
+  year: 2018
+  date: '2018-08-22'
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  doi: null
+  href: https://openalex.org/W4297732077
+  pdf: https://www.osti.gov/biblio/1465022
+  path: null
+  kind: paratext
 - title: An Exchange-Correlation Functional Capturing Bulk Surface and Confinement
     Physics
   author: Attila Cangi
