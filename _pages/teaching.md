@@ -14,7 +14,7 @@ nav_order: 4
         <th scope="col">Semester</th>
         <th scope="col">Course Title</th>
         <th scope="col">Institution</th>
-        <th scope="col">Course description</th>
+        <th scope="col">Contribution</th>
         <th scope="col">Teaching materials</th>
       </tr>
     </thead>
