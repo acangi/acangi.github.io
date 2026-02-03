@@ -42,6 +42,16 @@
   path: https://doi.org/10.1088/2516-1075/adc054
   kind: article
   google_scholar_id: M84yoJgAAAAJ:r_AWSJRzSzQC
+- title: Towards all-electron treatment in electronic structure machine learning
+  author: Johannes Wasmer; Philipp Rüssmann; Stefano Sanvito; Attila Cangi; Ira Assent
+  year: 2025
+  date: '2025-01-01'
+  journal: JuSER Publ.
+  doi: https://doi.org/10.34734/fzj-2026-01614
+  href: https://doi.org/10.34734/fzj-2026-01614
+  pdf: https://doi.org/10.34734/fzj-2026-01614
+  path: https://doi.org/10.34734/fzj-2026-01614
+  kind: article
 - title: Probing iron in Earth’s core with molecular-spin dynamics
   author: Svetoslav Nikolov; Kushal Ramakrishna; Andrew Rohskopf; Mani Lokamani; Julien
     Tranchida; John H. Carpenter; Attila Cangi; Mitchell Wood
