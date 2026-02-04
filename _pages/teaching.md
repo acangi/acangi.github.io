@@ -21,7 +21,7 @@ nav_order: 4
       <!-- Copy this row to add new teaching activities. -->
       <tr>
         <td>2026 Summer Semester</td>
-        <td><a href="https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/25952256003/CourseNode/91449070526132">Festkörperphysikalische Grundlagen: Thermische Eigenschaften / Basics of Solid State Physics: Thermal Properties</a></td>
+        <td><a href="https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/25952256003/CourseNode/91449070526132">Festkörperphysikalische Grundlagen: Thermische Eigenschaften / Solid State Physics: Thermal Properties</a></td>
         <td>Dresden University of Technology (TU Dresden)</td>
         <td>Full course including lectures and exercise classes.</td>
       </tr>
