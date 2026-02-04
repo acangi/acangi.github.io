@@ -275,6 +275,7 @@
   pdf: null
   path: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
   kind: preprint
+  google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
 - title: Accelerating Equilibration in First-Principles Molecular Dynamics with Orbital-Free
     Density Functional Theory
   author: Lenz Fiedler; Zhandos A. Moldabekov; Xuecheng Shao; Kaili Jiang; Tobias
@@ -439,6 +440,7 @@
   pdf: https://arxiv.org/pdf/1208.4703
   path: https://doi.org/10.1103/physreva.92.052514
   kind: preprint
+  google_scholar_id: M84yoJgAAAAJ:PELIpwtuRlgC
 - title: Bypassing the malfunction junction in warm dense matter simulations
   author: Attila Cangi; Aurora Pribram−Jones
   year: 2014
