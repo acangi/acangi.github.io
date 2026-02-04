@@ -121,7 +121,6 @@
   pdf: http://dx.doi.org/10.2172/2003857
   path: https://doi.org/10.2172/2003857
   kind: talk
-  google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
 - title: A machine learning surrogate for density functional theory based on the local
     density of state.
   author: Normand A. Modine; Lenz Fiedler; Dayton J. Vogel; Aidan P. Thompson; Austin
@@ -362,7 +361,7 @@
   path: https://doi.org/10.2172/1762384
   kind: report
   google_scholar_id: M84yoJgAAAAJ:z_wVstp3MssC
-- title: First-principles stopping power in warm dense matter.
+- title: First-principles Stopping Power in Warm Dense Matter.
   author: Attila Cangi
   year: 2018
   date: '2018-08-22'

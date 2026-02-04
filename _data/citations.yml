@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-01-28'
+  last_updated: '2026-02-04'
 papers:
   M84yoJgAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -18,7 +18,7 @@ papers:
     title: Physics-enhanced neural networks for equation-of-state calculations
     year: '2023'
   M84yoJgAAAAJ:1yQoGdGgb4wC:
-    citations: 98
+    citations: 96
     title: Accelerating finite-temperature Kohn-Sham density functional theory with deep neural networks
     year: '2021'
   M84yoJgAAAAJ:2VqYfGB8ITEC:
@@ -74,7 +74,7 @@ papers:
     title: 'The unreasonable accuracy of asymptotic expansions: Why density functional theory works'
     year: '2010'
   M84yoJgAAAAJ:BwyfMAYsbu0C:
-    citations: 136
+    citations: 135
     title: Deep dive into machine learning density functional theory for materials science and chemistry
     year: '2022'
   M84yoJgAAAAJ:ClCfbGk0d_YC:
@@ -122,7 +122,7 @@ papers:
     title: "Inverting the Kohn\u2013Sham equations with physics-informed machine learning"
     year: '2024'
   M84yoJgAAAAJ:HbR8gkJAVGIC:
-    citations: 20
+    citations: 18
     title: Training-free hyperparameter optimization of neural networks for electronic structures in matter
     year: '2022'
   M84yoJgAAAAJ:HeT0ZceujKMC:
@@ -130,7 +130,7 @@ papers:
     title: 'Materials Learning Algorithms (MALA): Scalable machine learning for electronic structure calculations in large-scale atomistic simulations'
     year: '2025'
   M84yoJgAAAAJ:HtEfBTGE9r8C:
-    citations: 61
+    citations: 63
     title: Predicting electronic structures at any length scale with machine learning
     year: '2023'
   M84yoJgAAAAJ:HtS1dXgVpQUC:
@@ -176,7 +176,7 @@ papers:
   M84yoJgAAAAJ:LhH-TYMQEocC:
     citations: 1
     title: Publications repository-helmholtz-zentrum dresden-rossendorf
-    year: '2020'
+    year: '2023'
   M84yoJgAAAAJ:LjlpjdlvIbIC:
     citations: 0
     title: Time-dependent density functional theory under high energy density conditions.
@@ -223,8 +223,8 @@ papers:
     year: '2023'
   M84yoJgAAAAJ:PELIpwtuRlgC:
     citations: 42
-    title: 'Reduced Density Matrix Functional Theory at Finite Temperature: Theoretical Foundations'
-    year: '2012'
+    title: 'Reduced-density-matrix-functional theory at finite temperature: Theoretical foundations'
+    year: '2015'
   M84yoJgAAAAJ:PR6Y55bgFSsC:
     citations: 2
     title: Bypassing the malfunction junction in warm dense matter simulations
@@ -235,7 +235,7 @@ papers:
     year: '2022'
   M84yoJgAAAAJ:PoWvk5oyLR8C:
     citations: 0
-    title: Examining the shock response of iron using molecular-spin dynamics.
+    title: Examining the shock response of iron using molecular-spin dynamics
     year: '2022'
   M84yoJgAAAAJ:QYdC8u9Cj1oC:
     citations: 0
@@ -251,7 +251,7 @@ papers:
     year: '2021'
   M84yoJgAAAAJ:SdhP9T11ey4C:
     citations: 93
-    title: 'Effective static approximation: A fast and reliable tool for warm dense matter theory'
+    title: 'Effective static approximation: A fast and reliable tool for warm-dense matter theory'
     year: '2020'
   M84yoJgAAAAJ:SpbeaW3--B0C:
     citations: 31
@@ -334,7 +334,7 @@ papers:
     title: Almost exact exchange at almost no cost
     year: '2014'
   M84yoJgAAAAJ:_axFR9aDTf0C:
-    citations: 98
+    citations: 97
     title: Electronic density response of warm dense matter
     year: '2023'
   M84yoJgAAAAJ:anf4URPfarAC:
@@ -377,10 +377,6 @@ papers:
     citations: 3
     title: "Electrical conductivity of warm dense hydrogen from ohm\u2019s law and time-dependent density functional theory"
     year: '2024'
-  M84yoJgAAAAJ:gVv57TyPmFsC:
-    citations: 0
-    title: Publications Repository-Helmholtz-Zentrum Dresden-Rossendorf
-    year: '2022'
   M84yoJgAAAAJ:hCrLmN-GePgC:
     citations: 0
     title: Quantum-Accurate Multiscale Modeling of Shock Hugoniots, Ramp Compression Paths, Structural and Magnetic Phase Transitions, and Transport Properties in Highly Compressed Metals
@@ -412,7 +408,7 @@ papers:
   M84yoJgAAAAJ:lvd772isFD0C:
     citations: 0
     title: Publications Repository-Helmholtz-Zentrum Dresden-Rossendorf
-    year: '2014'
+    year: '2018'
   M84yoJgAAAAJ:mNrWkgRL2YcC:
     citations: 0
     title: Structure prediction of iron hydrides across pressure range with transferable machine-learned interatomic potential
@@ -434,7 +430,7 @@ papers:
     title: A Scalable 5, 6-Qubit Grover's Quantum Search Algorithm
     year: '2022'
   M84yoJgAAAAJ:p__nRnzSRKYC:
-    citations: 37
+    citations: 38
     title: Benchmarking exchange-correlation functionals in the spin-polarized inhomogeneous electron gas under warm dense conditions
     year: '2022'
   M84yoJgAAAAJ:q3CdL3IzO_QC:
@@ -466,7 +462,7 @@ papers:
     title: 'Real-Time TDDFT of Warm Dense Matter: Linear Response and Beyond.'
     year: '2017'
   M84yoJgAAAAJ:tKAzc9rXhukC:
-    citations: 41
+    citations: 42
     title: The relevance of electronic perturbations in the warm dense electron gas
     year: '2021'
   M84yoJgAAAAJ:tuHXwOkdijsC:
