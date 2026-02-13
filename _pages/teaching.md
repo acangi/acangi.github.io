@@ -46,7 +46,7 @@ nav_order: 4
       <tr>
         <td>2024</td>
         <td><a href="https://www.imprs-pks.mpg.de/events/former-schools-and-workshops">Machine Learning and Many-Body Systems in or out of Equilibrium</a></td>
-        <td>IMPRS Summer School</td>
+        <td>IMPRS for Quantum Dynamics and Control: Summer School</td>
         <td>Two lectures on introductory and advanced topics in machine learning.</td>
       </tr>
     </tbody>
