@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-02-18'
+  last_updated: '2026-02-20'
 papers:
   M84yoJgAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -74,7 +74,7 @@ papers:
     title: 'The unreasonable accuracy of asymptotic expansions: Why density functional theory works'
     year: '2010'
   M84yoJgAAAAJ:BwyfMAYsbu0C:
-    citations: 138
+    citations: 140
     title: Deep dive into machine learning density functional theory for materials science and chemistry
     year: '2022'
   M84yoJgAAAAJ:ClCfbGk0d_YC:
@@ -176,7 +176,7 @@ papers:
   M84yoJgAAAAJ:LhH-TYMQEocC:
     citations: 1
     title: Publications repository-helmholtz-zentrum dresden-rossendorf
-    year: '2019'
+    year: '2024'
   M84yoJgAAAAJ:LjlpjdlvIbIC:
     citations: 0
     title: Time-dependent density functional theory under high energy density conditions.
