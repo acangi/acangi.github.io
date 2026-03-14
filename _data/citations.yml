@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-11'
+  last_updated: '2026-03-14'
 papers:
   M84yoJgAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -218,7 +218,7 @@ papers:
     title: Accelerating electron dynamics simulations through machine learned time propagators
     year: '2024'
   M84yoJgAAAAJ:OTTXONDVkokC:
-    citations: 11
+    citations: 12
     title: Machine learning in molecular sciences
     year: '2023'
   M84yoJgAAAAJ:PELIpwtuRlgC:
@@ -334,7 +334,7 @@ papers:
     title: Almost exact exchange at almost no cost
     year: '2014'
   M84yoJgAAAAJ:_axFR9aDTf0C:
-    citations: 99
+    citations: 101
     title: Electronic density response of warm dense matter
     year: '2023'
   M84yoJgAAAAJ:anf4URPfarAC:
@@ -410,7 +410,7 @@ papers:
     title: Thermal signals from collective electronic excitations in inhomogeneous warm dense matter
     year: '2021'
   M84yoJgAAAAJ:lmc2jWPfTJgC:
-    citations: 22
+    citations: 23
     title: Electrical conductivity of iron in Earth's core from microscopic Ohm's law
     year: '2023'
   M84yoJgAAAAJ:mNrWkgRL2YcC:
@@ -466,7 +466,7 @@ papers:
     title: 'Real-Time TDDFT of Warm Dense Matter: Linear Response and Beyond.'
     year: '2017'
   M84yoJgAAAAJ:tKAzc9rXhukC:
-    citations: 42
+    citations: 43
     title: The relevance of electronic perturbations in the warm dense electron gas
     year: '2021'
   M84yoJgAAAAJ:tuHXwOkdijsC:
