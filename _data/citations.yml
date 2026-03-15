@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-14'
+  last_updated: '2026-03-15'
 papers:
   M84yoJgAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -334,7 +334,7 @@ papers:
     title: Almost exact exchange at almost no cost
     year: '2014'
   M84yoJgAAAAJ:_axFR9aDTf0C:
-    citations: 101
+    citations: 102
     title: Electronic density response of warm dense matter
     year: '2023'
   M84yoJgAAAAJ:anf4URPfarAC:
@@ -410,7 +410,7 @@ papers:
     title: Thermal signals from collective electronic excitations in inhomogeneous warm dense matter
     year: '2021'
   M84yoJgAAAAJ:lmc2jWPfTJgC:
-    citations: 23
+    citations: 22
     title: Electrical conductivity of iron in Earth's core from microscopic Ohm's law
     year: '2023'
   M84yoJgAAAAJ:mNrWkgRL2YcC:
@@ -424,13 +424,13 @@ papers:
   M84yoJgAAAAJ:nVrZBo8bIpAC:
     citations: 0
     title: Publications Repository-Helmholtz-Zentrum Dresden-Rossendorf
-    year: '2016'
+    year: '2026'
   M84yoJgAAAAJ:nZcligLrVowC:
     citations: 0
     title: Scalable machine learning model for energy decomposition analysis in aqueous systems
     year: '2025'
   M84yoJgAAAAJ:oNZyr7d5Mn4C:
-    citations: 11
+    citations: 12
     title: A scalable 5, 6-qubit Grover's quantum search algorithm
     year: '2022'
   M84yoJgAAAAJ:p__nRnzSRKYC:
