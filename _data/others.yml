@@ -221,7 +221,7 @@
   journal: null
   doi: https://doi.org/10.2172/1867139
   href: https://doi.org/10.2172/1867139
-  pdf: https://www.osti.gov/biblio/1867139
+  pdf: https://www.osti.gov/servlets/purl/1867139
   path: https://doi.org/10.2172/1867139
   kind: talk
   google_scholar_id: M84yoJgAAAAJ:-FonjvnnhkoC
@@ -324,7 +324,7 @@
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: null
   href: https://openalex.org/W2925181260
-  pdf: https://www.osti.gov/biblio/1639295
+  pdf: https://www.osti.gov/servlets/purl/1639295
   path: null
   kind: talk
 - title: Magnetostriction and Long-Range Interactions in Coupled Spin and Lattice
