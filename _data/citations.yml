@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-04-20'
+  last_updated: '2026-04-21'
 papers:
   M84yoJgAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -18,7 +18,7 @@ papers:
     title: Physics-enhanced neural networks for equation-of-state calculations
     year: '2023'
   M84yoJgAAAAJ:1yQoGdGgb4wC:
-    citations: 103
+    citations: 104
     title: Accelerating finite-temperature Kohn-Sham density functional theory with deep neural networks
     year: '2021'
   M84yoJgAAAAJ:2VqYfGB8ITEC:
@@ -58,7 +58,7 @@ papers:
     title: Non-empirical mixing coefficient for hybrid XC functionals from analysis of the XC kernel
     year: '2023'
   M84yoJgAAAAJ:8d8msizDQcsC:
-    citations: 84
+    citations: 85
     title: "A shallow hybrid classical\u2013quantum spiking feedforward neural network for noise-robust image classification"
     year: '2023'
   M84yoJgAAAAJ:9pM33mqn1YgC:
@@ -73,8 +73,12 @@ papers:
     citations: 0
     title: 'The unreasonable accuracy of asymptotic expansions: Why density functional theory works'
     year: '2010'
+  M84yoJgAAAAJ:Bg7qf7VwUHIC:
+    citations: 0
+    title: Publications Repository-Helmholtz-Zentrum Dresden-Rossendorf
+    year: '2021'
   M84yoJgAAAAJ:BwyfMAYsbu0C:
-    citations: 156
+    citations: 157
     title: Deep dive into machine learning density functional theory for materials science and chemistry
     year: '2022'
   M84yoJgAAAAJ:ClCfbGk0d_YC:
@@ -122,7 +126,7 @@ papers:
     title: "Inverting the Kohn\u2013Sham equations with physics-informed machine learning"
     year: '2024'
   M84yoJgAAAAJ:HbR8gkJAVGIC:
-    citations: 22
+    citations: 23
     title: Training-free hyperparameter optimization of neural networks for electronic structures in matter
     year: '2022'
   M84yoJgAAAAJ:HeT0ZceujKMC:
@@ -206,7 +210,7 @@ papers:
     title: The Quantum Bohm Potential for Many-Fermion Systems
     year: '2021'
   M84yoJgAAAAJ:NXb4pA-qfm4C:
-    citations: 16
+    citations: 17
     title: Machine learning the electronic structure of matter across temperatures
     year: '2023'
   M84yoJgAAAAJ:OP4eGU-M3BUC:
@@ -218,7 +222,7 @@ papers:
     title: Accelerating electron dynamics simulations through machine learned time propagators
     year: '2024'
   M84yoJgAAAAJ:OTTXONDVkokC:
-    citations: 12
+    citations: 13
     title: Machine learning in molecular sciences
     year: '2023'
   M84yoJgAAAAJ:PELIpwtuRlgC:
