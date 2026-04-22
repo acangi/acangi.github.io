@@ -56,11 +56,11 @@
   author: Thomas Gawne; Hannah M. Bellenbaum; L. B. Fletcher; Karen Appel; Carsten
     Baehtz; V. Bouffetier; E. Brambrink; D. B. Brown; Attila Cangi; Adrien Descamps;
     Sebastian Göde; N. J. Hartley; M. Herbert; Philipp Hesselbach; Hauke Höppner;
-    Oliver Humphries; Zuzana Konôpková; Alejandro Laso; Björn Lindqvist; J. Lütgert;
-    M. J. MacDonald; Mikako Makita; W. J. Martin; Mikhail Mishchenko; Zhandos A. Moldabekov;
-    M. Nakatsutsumi; Jean-Paul Naedler; P. Neumayer; A. Pełka; Chongbing Qu; Lisa
-    Randolph; J. Rips; T. Toncian; Jan Vorberger; L. Wollenweber; U. Zastrau; D. Kraus;
-    Thomas R. Preston; Tobias Dornheim
+    Oliver Humphries; Zuzana Konôpková; Garcia, Alejandro Laso; Björn Lindqvist; J.
+    Lütgert; M. J. MacDonald; Mikako Makita; W. J. Martin; Mikhail Mishchenko; Zhandos
+    A. Moldabekov; M. Nakatsutsumi; Jean-Paul Naedler; P. Neumayer; A. Pełka; Chongbing
+    Qu; Lisa Randolph; J. Rips; T. Toncian; Jan Vorberger; L. Wollenweber; U. Zastrau;
+    D. Kraus; Thomas R. Preston; Tobias Dornheim
   year: 2024
   date: '2024-06-05'
   journal: arXiv (Cornell Univ.)
@@ -279,7 +279,7 @@
 - title: Accelerating Equilibration in First-Principles Molecular Dynamics with Orbital-Free
     Density Functional Theory
   author: Lenz Fiedler; Zhandos A. Moldabekov; Xuecheng Shao; Kaili Jiang; Tobias
-    Dornheim; Marcelo Antonio Pavanello; Attila Cangi
+    Dornheim; Pavanello, Michele; Attila Cangi
   year: 2022
   date: '2022-06-08'
   journal: arXiv (Cornell Univ.)
