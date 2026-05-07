@@ -1,5 +1,15 @@
 [
   {
+    "title": "Machine learning time propagators for time-dependent density functional theory simulations",
+    "year": 2026,
+    "authors": "Karan Shah, Attila Cangi",
+    "venue": "Mach. Learn. Sci. Technol.",
+    "doi": "10.1088/2632-2153/ae68d4",
+    "url": "https://doi.org/10.1088/2632-2153/ae68d4",
+    "type": "journal",
+    "pdf": "https://doi.org/10.1088/2632-2153/ae68d4"
+  },
+  {
     "title": "Scalable machine learning model for energy decomposition analysis in aqueous systems",
     "year": 2025,
     "authors": "Hossein Tahmasbi, Michael Beerbaum, Bartosz Brzoza, Attila Cangi, Thomas D. K\u00fchne",
