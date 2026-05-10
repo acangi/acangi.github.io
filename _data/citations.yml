@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-04'
+  last_updated: '2026-05-10'
 papers:
   M84yoJgAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -18,7 +18,7 @@ papers:
     title: Physics-enhanced neural networks for equation-of-state calculations
     year: '2023'
   M84yoJgAAAAJ:1yQoGdGgb4wC:
-    citations: 103
+    citations: 101
     title: Accelerating finite-temperature Kohn-Sham density functional theory with deep neural networks
     year: '2021'
   M84yoJgAAAAJ:2VqYfGB8ITEC:
@@ -106,7 +106,7 @@ papers:
     title: Towards an ab initio real-time treatment of warm dense matter.
     year: '2017'
   M84yoJgAAAAJ:F9fV5C73w3QC:
-    citations: 2
+    citations: 1
     title: Machine Learning Time Propagators for Time-Dependent Density Functional Theory Simulations
     year: '2025'
   M84yoJgAAAAJ:FPJr55Dyh1AC:
@@ -118,7 +118,7 @@ papers:
     title: Data-driven magneto-inter-atomic potentials for iron-nickel alloys
     year: '2025'
   M84yoJgAAAAJ:GtLg2Ama23sC:
-    citations: 28
+    citations: 26
     title: 'Improving dynamic collision frequencies: Impacts on dynamic structure factors and stopping powers in warm dense matter'
     year: '2023'
   M84yoJgAAAAJ:HIFyuExEbWQC:
@@ -126,7 +126,7 @@ papers:
     title: "Inverting the Kohn\u2013Sham equations with physics-informed machine learning"
     year: '2024'
   M84yoJgAAAAJ:HbR8gkJAVGIC:
-    citations: 22
+    citations: 20
     title: Training-free hyperparameter optimization of neural networks for electronic structures in matter
     year: '2022'
   M84yoJgAAAAJ:HeT0ZceujKMC:
@@ -174,19 +174,19 @@ papers:
     title: "Accurate and efficient computation of mean ionization states with an average-atom Kubo\u2013Greenwood approach"
     year: '2022'
   M84yoJgAAAAJ:LO7wyVUgiFcC:
-    citations: 50
+    citations: 51
     title: 'Imaginary-time correlation function thermometry: A new, high-accuracy and model-free temperature analysis technique for x-ray Thomson scattering data'
     year: '2023'
   M84yoJgAAAAJ:LhH-TYMQEocC:
     citations: 1
     title: Publications repository-helmholtz-zentrum dresden-rossendorf
-    year: '2017'
+    year: '2018'
   M84yoJgAAAAJ:LjlpjdlvIbIC:
     citations: 0
     title: Time-dependent density functional theory under high energy density conditions.
     year: '2018'
   M84yoJgAAAAJ:LkGwnXOMwfcC:
-    citations: 37
+    citations: 38
     title: Potential functionals versus density functionals
     year: '2013'
   M84yoJgAAAAJ:M7yex6snE4oC:
@@ -210,7 +210,7 @@ papers:
     title: The Quantum Bohm Potential for Many-Fermion Systems
     year: '2021'
   M84yoJgAAAAJ:NXb4pA-qfm4C:
-    citations: 16
+    citations: 15
     title: Machine learning the electronic structure of matter across temperatures
     year: '2023'
   M84yoJgAAAAJ:OP4eGU-M3BUC:
@@ -254,7 +254,7 @@ papers:
     title: Data-Driven Magneto-Elastic Predictions with Scalable Classical Spin-Lattice Dynamics.
     year: '2021'
   M84yoJgAAAAJ:SdhP9T11ey4C:
-    citations: 102
+    citations: 104
     title: 'Effective static approximation: A fast and reliable tool for warm-dense matter theory'
     year: '2020'
   M84yoJgAAAAJ:SpbeaW3--B0C:
@@ -282,7 +282,7 @@ papers:
     title: Ecp-copa/examinimd
     year: '2018'
   M84yoJgAAAAJ:WF5omc3nYNoC:
-    citations: 54
+    citations: 55
     title: Electronic structure via potential functional approximations
     year: '2011'
   M84yoJgAAAAJ:WJVC3Jt7v1AC:
@@ -306,7 +306,7 @@ papers:
     title: Deep spiking quantum neural network for noisy image classification
     year: '2023'
   M84yoJgAAAAJ:YsMSGLbcyi4C:
-    citations: 120
+    citations: 121
     title: Semiclassical origins of density functionals
     year: '2008'
   M84yoJgAAAAJ:ZuybSZzF8UAC:
@@ -338,11 +338,11 @@ papers:
     title: Almost exact exchange at almost no cost
     year: '2014'
   M84yoJgAAAAJ:_axFR9aDTf0C:
-    citations: 110
+    citations: 111
     title: Electronic density response of warm dense matter
     year: '2023'
   M84yoJgAAAAJ:anf4URPfarAC:
-    citations: 15
+    citations: 16
     title: Transferable interatomic potential for aluminum from ambient conditions to warm dense matter
     year: '2023'
   M84yoJgAAAAJ:artPoR2Yc-kC:
@@ -370,7 +370,7 @@ papers:
     title: Efficient formalism for warm dense matter simulations
     year: '2015'
   M84yoJgAAAAJ:eQOLeE2rZwMC:
-    citations: 53
+    citations: 54
     title: Leading corrections to local approximations
     year: '2010'
   M84yoJgAAAAJ:e_rmSamDkqQC:
@@ -382,7 +382,7 @@ papers:
     title: First-principles modeling of plasmons in aluminum under ambient and extreme conditions
     year: '2021'
   M84yoJgAAAAJ:fFSKOagxvKUC:
-    citations: 6
+    citations: 5
     title: "Electrical conductivity of warm dense hydrogen from ohm\u2019s law and time-dependent density functional theory"
     year: '2024'
   M84yoJgAAAAJ:gKiMpY-AVTkC:
@@ -414,7 +414,7 @@ papers:
     title: Thermal signals from collective electronic excitations in inhomogeneous warm dense matter
     year: '2021'
   M84yoJgAAAAJ:lmc2jWPfTJgC:
-    citations: 25
+    citations: 24
     title: Electrical conductivity of iron in Earth's core from microscopic Ohm's law
     year: '2023'
   M84yoJgAAAAJ:mNrWkgRL2YcC:
@@ -428,7 +428,7 @@ papers:
   M84yoJgAAAAJ:nVrZBo8bIpAC:
     citations: 0
     title: Publications Repository-Helmholtz-Zentrum Dresden-Rossendorf
-    year: '2016'
+    year: '2017'
   M84yoJgAAAAJ:nZcligLrVowC:
     citations: 0
     title: Scalable machine learning model for energy decomposition analysis in aqueous systems
@@ -494,7 +494,7 @@ papers:
     title: Real-time TDDFT beyond the linear response regime.
     year: '2017'
   M84yoJgAAAAJ:umqufdRvDiIC:
-    citations: 8
+    citations: 7
     title: 'Impact of electronic correlations on high-pressure iron: Insights from time-dependent density functional theory'
     year: '2023'
   M84yoJgAAAAJ:vDZJ-YLwNdEC:
@@ -510,7 +510,7 @@ papers:
     title: 'Potential functional theory and approximations: An approach for describing the electronic structure of matter'
     year: '2011'
   M84yoJgAAAAJ:yFnVuubrUp4C:
-    citations: 31
+    citations: 30
     title: Ultrahigh resolution x-ray Thomson scattering measurements at the European X-ray Free Electron Laser
     year: '2024'
   M84yoJgAAAAJ:yMeIxYmEMEAC:
