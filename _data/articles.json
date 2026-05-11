@@ -1,5 +1,15 @@
 [
   {
+    "title": "Molecules Meet Language: Confound-Aware Representation Learning and Chemical Property Steering in Transformer-VAE Latent Spaces",
+    "year": 2026,
+    "authors": "Zakaria Elabid, Jan Andrzejewski, Bartosz Brzoza, Attila Cangi",
+    "venue": "ArXiv.org",
+    "doi": "",
+    "url": "https://openalex.org/W7160726583",
+    "type": "journal",
+    "pdf": "https://arxiv.org/pdf/2605.06303"
+  },
+  {
     "title": "Machine learning time propagators for time-dependent density functional theory simulations",
     "year": 2026,
     "authors": "Karan Shah, Attila Cangi",

@@ -23,6 +23,18 @@
   pdf: https://doi.org/10.14278/rodare.4169
   path: https://doi.org/10.14278/rodare.4169
   kind: dataset
+- title: 'Data publication: Scalable Machine Learning Model for Energy Decomposition
+    Analysis in Aqueous Systems'
+  author: Hossein Tahmasbi; Michael Beerbaum; Bartosz Brzoza; Attila Cangi; Thomas
+    Dae-Song Kühne
+  year: 2025
+  date: '2025-01-01'
+  journal: Open MIND
+  doi: null
+  href: https://openalex.org/W7160731519
+  pdf: https://rodare.hzdr.de/record/4170
+  path: null
+  kind: dataset
 - title: Random Quantum Neural Networks for Noisy Image Recognition
   author: Debanjan Konar; Erol Gelenbe; Soham Bhandary; Aditya Das Sarma; Attila Cangi
   year: 2023
