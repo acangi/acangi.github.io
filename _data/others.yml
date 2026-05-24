@@ -157,6 +157,7 @@
   pdf: http://dx.doi.org/10.2172/2003857
   path: https://doi.org/10.2172/2003857
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
 - title: A machine learning surrogate for density functional theory based on the local
     density of state.
   author: Normand A. Modine; Lenz Fiedler; Dayton J. Vogel; Aidan P. Thompson; Austin
@@ -193,6 +194,7 @@
   pdf: http://dx.doi.org/10.2172/2001867
   path: https://doi.org/10.2172/2001867
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:ClCfbGk0d_YC
 - title: Probing Structural and Magnetic Phase Changes in the Shock Response of Iron
     with Molecular Dynamics.
   author: Svetoslav Nikolov; Julien Tranchida; Attila Cangi; Kushal Ramakrishna; Mani
@@ -283,6 +285,7 @@
   pdf: https://www.osti.gov/biblio/1787726
   path: https://doi.org/10.2172/1853873
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:FPJr55Dyh1AC
 - title: First-principles Modeling of Warm Dense Matter.
   author: Attila Cangi
   year: 2021
@@ -318,6 +321,7 @@
   pdf: https://www.osti.gov/biblio/1677521
   path: https://doi.org/10.2172/1677521
   kind: report
+  google_scholar_id: M84yoJgAAAAJ:1yQoGdGgb4wC
 - title: An exchange-correlation functional capturing bulk surface and confinement
     physics.
   author: Attila Cangi
@@ -329,6 +333,7 @@
   pdf: https://www.osti.gov/biblio/1639309
   path: null
   kind: paratext
+  google_scholar_id: M84yoJgAAAAJ:ZuybSZzF8UAC
 - title: Collisions and Correlation Effects in Warm Dense Matter
   author: Thomas Hentschel; Attila Cangi; Andrew Baczewski; Stephanie B. Hansen
   year: 2020
@@ -363,6 +368,7 @@
   pdf: https://www.osti.gov/servlets/purl/1639295
   path: null
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:N5tVd3kTz84C
 - title: Magnetostriction and Long-Range Interactions in Coupled Spin and Lattice
     Dynamics
   author: Julien Tranchida; Mitchell Wood; Attila Cangi; Stan Moore; Pascal Thibaudeau;
@@ -452,6 +458,7 @@
   pdf: https://www.osti.gov/biblio/1569112
   path: null
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:WqliGbK-hY8C
 - title: ECP-copa/ExaMiniMD
   author: Aidan P. Thompson; Attila Cangi; Christian Robert Trott; Christoph Junghans;
     Stan Moore; Timothy C. Germann
@@ -485,6 +492,7 @@
   pdf: https://www.osti.gov/biblio/1480198
   path: null
   kind: talk
+  google_scholar_id: M84yoJgAAAAJ:VL0QpB8kHFEC
 - title: Progress towards an {\it ab initio} real-time treatment of warm dense matter
   author: Andrew Baczewski; Attila Cangi; Stephanie B. Hansen; Daniel S. Jensen
   year: 2017

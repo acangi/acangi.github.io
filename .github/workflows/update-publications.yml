@@ -47,10 +47,15 @@ jobs:
 
       - name: Commit and push if changed
         run: |
-          git add _bibliography/papers.bib _data/articles.yml _data/preprints.yml _data/others.yml _data/articles.json _data/preprints.json _data/citations.yml
-          if [ -f _data/preprints-unpublished.yml ]; then
-            git add _data/preprints-unpublished.yml
-          fi
+          git add \
+            _bibliography/papers.bib \
+            _data/articles.yml \
+            _data/preprints.yml \
+            _data/others.yml \
+            _data/preprints-unpublished.yml \
+            _data/articles.json \
+            _data/preprints.json \
+            _data/citations.yml
           git diff --staged --quiet || (
             git commit -m "Update publications from OpenAlex"
             git push

@@ -11,6 +11,36 @@
   path: https://doi.org/10.48550/arxiv.2605.06303
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:Ak0FvsSvgGUC
+  unpublished_preprint: true
+  publication_page: true
+- title: 'Molecules Meet Language: Confound-Aware Representation Learning and Chemical
+    Property Steering in Transformer-VAE Latent Spaces'
+  author: Zakaria Elabid; Jan Andrzejewski; Bartosz Brzoza; Attila Cangi
+  year: 2026
+  date: '2026-05-07'
+  journal: ArXiv.org
+  doi: null
+  href: https://openalex.org/W7160726583
+  pdf: https://arxiv.org/pdf/2605.06303
+  path: null
+  kind: preprint
+  google_scholar_id: M84yoJgAAAAJ:Ak0FvsSvgGUC
+- title: 'Prediction of atomic H adsorption energies in metalloid doped MSSe (M =
+    Mo/W) Janus layers: A combined DFT and machine learning study'
+  author: G. Tejaswini; Anjana E Sudheer; Amrendra Kumar; M. Vallinayagam; Pavan Kumar
+    Perepu; Attila Cangi; Mani Lokamani; M. Posselt; M. Zschornak; C. Kamal; D. Amaranatha
+    Reddy; D. Murali
+  year: 2025
+  date: '2025-11-20'
+  journal: arXiv
+  doi: null
+  href: http://arxiv.org/abs/2511.16263v2
+  pdf: http://arxiv.org/pdf/2511.16263v2.pdf
+  path: http://arxiv.org/abs/2511.16263v2
+  kind: preprint
+  google_scholar_id: M84yoJgAAAAJ:u-coK7KVo8oC
+  unpublished_preprint: true
+  publication_page: true
 - title: Strong geometry dependence of the X-ray Thomson Scattering Spectrum in single
     crystal silicon
   author: Thomas Gawne; Zhandos A. Moldabekov; Oliver Humphries; Karen Appel; Carsten
@@ -52,6 +82,7 @@
   pdf: https://arxiv.org/pdf/2409.15160
   path: https://doi.org/10.48550/arxiv.2409.15160
   kind: preprint
+  google_scholar_id: M84yoJgAAAAJ:fFSKOagxvKUC
 - title: Accelerating Electron Dynamics Simulations through Machine Learned Time Propagators
   author: Karan Shah; Attila Cangi
   year: 2024
@@ -63,6 +94,8 @@
   path: https://doi.org/10.48550/arxiv.2407.09628
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:OR75R8vi5nAC
+  unpublished_preprint: true
+  publication_page: true
 - title: Effects of Mosaic Crystal Instrument Functions on X-ray Thomson Scattering
     Diagnostics
   author: Thomas Gawne; Hannah M. Bellenbaum; L. B. Fletcher; Karen Appel; Carsten
@@ -98,6 +131,8 @@
   path: https://doi.org/10.48550/arxiv.2403.02776
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:yqoGN6RLRZoC
+  unpublished_preprint: true
+  publication_page: true
 - title: Inverting the Kohn-Sham equations with physics-informed machine learning
   author: Vincent Martinetto; Karan Shah; Attila Cangi; Aurora Pribram−Jones
   year: 2023
@@ -108,6 +143,7 @@
   pdf: https://arxiv.org/pdf/2312.15301
   path: https://doi.org/10.48550/arxiv.2312.15301
   kind: preprint
+  google_scholar_id: M84yoJgAAAAJ:HIFyuExEbWQC
 - title: Probing Iron in Earth's Core With Molecular-Spin Dynamics
   author: Svetoslav Nikolov; Kushal Ramakrishna; Andrew Rohskopf; Mani Lokamani; Julien
     Tranchida; John H. Carpenter; Attila Cangi; Mitchell Wood
@@ -119,6 +155,7 @@
   pdf: https://arxiv.org/pdf/2311.08737
   path: https://doi.org/10.48550/arxiv.2311.08737
   kind: preprint
+  google_scholar_id: M84yoJgAAAAJ:2VqYfGB8ITEC
 - title: Machine Learning-Driven Structure Prediction for Iron Hydrides
   author: Hossein Tahmasbi; Kushal Ramakrishna; Mani Lokamani; Attila Cangi
   year: 2023
@@ -141,6 +178,8 @@
   pdf: https://arxiv.org/pdf/2306.17554
   path: https://doi.org/10.48550/arxiv.2306.17554
   kind: preprint
+  unpublished_preprint: true
+  publication_page: true
 - title: Machine learning the electronic structure of matter across temperatures
   author: Lenz Fiedler; Normand A. Modine; Kyle D. Miller; Attila Cangi
   year: 2023
@@ -175,6 +214,8 @@
   pdf: https://arxiv.org/pdf/2304.09703
   path: https://doi.org/10.48550/arxiv.2304.09703
   kind: preprint
+  unpublished_preprint: true
+  publication_page: true
 - title: 'Improving dynamic collision frequencies: impacts on dynamic structure factors
     and stopping powers in warm dense matter'
   author: Thomas W. Hentschel; Alina Kononov; Alexandra Olmstead; Attila Cangi; Andrew
@@ -201,6 +242,8 @@
   path: https://doi.org/10.48550/arxiv.2212.10510
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:rmuvC79q63oC
+  unpublished_preprint: true
+  publication_page: true
 - title: Electronic Density Response of Warm Dense Matter
   author: Tobias Dornheim; Zhandos A. Moldabekov; Kushal Ramakrishna; P. Tolias; Andrew
     Baczewski; D. Kraus; Thomas R. Preston; D. A. Chapman; Maximilian Böhme; T. Döppner;
@@ -251,6 +294,8 @@
   pdf: https://arxiv.org/pdf/2210.12522
   path: https://doi.org/10.48550/arxiv.2210.12522
   kind: preprint
+  unpublished_preprint: true
+  publication_page: true
 - title: Predicting electronic structures at any length scale with machine learning
   author: Lenz Fiedler; Normand A. Modine; Steve Schmerler; Dayton J. Vogel; Gabriel
     Popoola; Aidan P. Thompson; Sivasankaran Rajamanickam; Attila Cangi
@@ -288,6 +333,8 @@
   path: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
+  unpublished_preprint: true
+  publication_page: true
 - title: Accelerating Equilibration in First-Principles Molecular Dynamics with Orbital-Free
     Density Functional Theory
   author: Lenz Fiedler; Zhandos A. Moldabekov; Xuecheng Shao; Kaili Jiang; Tobias
@@ -312,6 +359,8 @@
   pdf: https://arxiv.org/pdf/2205.06638
   path: https://doi.org/10.48550/arxiv.2205.06638
   kind: preprint
+  unpublished_preprint: true
+  publication_page: true
 - title: A Scalable 5,6-Qubit Grover's Quantum Search Algorithm
   author: Dinesh Reddy Vemula; Debanjan Konar; Sudeep Satheesan; Sri Mounica Kalidasu;
     Attila Cangi
@@ -323,6 +372,9 @@
   pdf: https://arxiv.org/pdf/2205.00117
   path: https://doi.org/10.48550/arxiv.2205.00117
   kind: preprint
+  google_scholar_id: M84yoJgAAAAJ:WZBGuue-350C
+  unpublished_preprint: true
+  publication_page: true
 - title: Effective electronic forces and potentials from ab initio path integral Monte
     Carlo simulations
   author: Tobias Dornheim; P. Tolias; Zhandos A. Moldabekov; Attila Cangi; Jan Vorberger
@@ -369,6 +421,8 @@
   path: https://doi.org/10.48550/arxiv.2203.01764
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:tuHXwOkdijsC
+  unpublished_preprint: true
+  publication_page: true
 - title: Training-free hyperparameter optimization of neural networks for electronic
     structures in matter
   author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel Popoola; Tamar Yovell;
@@ -393,6 +447,8 @@
   pdf: https://doi.org/10.48550/arxiv.2110.00997
   path: https://doi.org/10.48550/arxiv.2110.00997
   kind: preprint
+  unpublished_preprint: true
+  publication_page: true
 - title: Thermal Signals from Collective Electronic Excitations in Inhomogeneous Warm
     Dense Matter
   author: Zhandos A. Moldabekov; Tobias Dornheim; Attila Cangi
@@ -405,6 +461,8 @@
   path: https://doi.org/10.48550/arxiv.2105.09721
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:kzcrU_BdoSEC
+  unpublished_preprint: true
+  publication_page: true
 - title: A Machine-Learning Surrogate Model for ab initio Electronic Correlations
     at Extreme Conditions
   author: Tobias Dornheim; Zhandos A. Moldabekov; Attila Cangi
@@ -417,6 +475,8 @@
   path: https://doi.org/10.48550/arxiv.2104.02941
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:JQOojiI6XY0C
+  unpublished_preprint: true
+  publication_page: true
 - title: First-principles derivation and properties of density-functional average-atom
     models
   author: Timothy J. Callow; Stephanie B. Hansen; Eli Kraisler; Attila Cangi
@@ -441,6 +501,21 @@
   path: null
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:NJ774b8OgUMC
+  unpublished_preprint: true
+  publication_page: true
+- title: Quantum-accurate magneto-elastic predictions with classical spin-lattice
+    dynamics
+  author: Svetoslav Nikolov; Mitchell A. Wood; Attila Cangi; Jean-Bernard Maillet;
+    Mihai-Cosmin Marinica; Aidan P. Thompson; Michael P. Desjarlais; Julien Tranchida
+  year: 2021
+  date: '2021-01-18'
+  journal: arXiv
+  doi: 10.1038/s41524-021-00617-2
+  href: http://arxiv.org/abs/2101.07332v3
+  pdf: http://arxiv.org/pdf/2101.07332v3.pdf
+  path: 10.1038/s41524-021-00617-2
+  kind: preprint
+  google_scholar_id: M84yoJgAAAAJ:9pM33mqn1YgC
 - title: 'Reduced-density-matrix-functional theory at finite temperature: Theoretical
     foundations'
   author: Tim Baldsiefen; Attila Cangi; E. K. U. Gross
@@ -464,6 +539,8 @@
   path: https://doi.org/10.48550/arxiv.1411.1532
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:PR6Y55bgFSsC
+  unpublished_preprint: true
+  publication_page: true
 - title: Uniform approximations for fermionic densities
   author: Raphael F. Ribeiro; Donghyung Lee; Attila Cangi; Peter Elliott; Kieron Burke
   year: 2014
@@ -474,6 +551,8 @@
   pdf: https://arxiv.org/pdf/1409.6802
   path: null
   kind: preprint
+  unpublished_preprint: true
+  publication_page: true
 - title: Almost Exact Exchange At Almost No Cost
   author: Peter Elliott; Attila Cangi; Stefano Pittalis; E. K. U. Gross; Kieron Burke
   year: 2014
@@ -485,6 +564,8 @@
   path: https://doi.org/10.48550/arxiv.1408.2434
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:_Ybze24A_UAC
+  unpublished_preprint: true
+  publication_page: true
 - title: Reduced Density Matrix Functional Theory at Finite Temperature:\n Theoretical
     Foundations
   author: Tim Baldsiefen; Attila Cangi; E. K. U. Gross
@@ -496,6 +577,8 @@
   pdf: https://arxiv.org/pdf/1208.4703
   path: https://doi.org/10.48550/arxiv.1208.4703
   kind: preprint
+  unpublished_preprint: true
+  publication_page: true
 - title: Electronic structure via potential functional approximations
   author: Attila Cangi; Donghyung Lee; Peter Elliott; Kieron Burke; E. K. U. Gross
   year: 2011
@@ -517,3 +600,5 @@
   pdf: https://arxiv.org/pdf/1002.1351
   path: null
   kind: preprint
+  unpublished_preprint: true
+  publication_page: true

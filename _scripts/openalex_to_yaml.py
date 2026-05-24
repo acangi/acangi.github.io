@@ -11,6 +11,7 @@ import sys
 import pathlib
 import json
 import html
+import unicodedata
 from typing import List, Dict, Any, Optional
 from pyiso4.ltwa import Abbreviate
 import re
@@ -73,10 +74,18 @@ def format_bibtex_value(value: Optional[str]) -> Optional[str]:
 
 
 def normalize_title(title: Optional[str]) -> Optional[str]:
-    """Lower-case and normalize spacing for title comparisons."""
+    """Normalize title text for resilient publication/preprint comparisons."""
     if not title:
         return None
-    return normalize_whitespace(title).lower()
+    cleaned = format_bibtex_value(title)
+    if not cleaned:
+        return None
+    normalized = unicodedata.normalize("NFKD", cleaned)
+    normalized = normalized.replace("−", "-").replace("–", "-").replace("—", "-")
+    normalized = normalized.replace("’", "'").replace("‘", "'")
+    normalized = normalized.lower()
+    normalized = re.sub(r"[^a-z0-9]+", " ", normalized)
+    return normalize_whitespace(normalized)
 
 
 def normalize_doi(doi: Optional[str]) -> Optional[str]:
@@ -88,6 +97,20 @@ def normalize_doi(doi: Optional[str]) -> Optional[str]:
         if normalized.startswith(prefix):
             normalized = normalized[len(prefix) :]
     return normalized
+
+
+def has_published_version_doi(record: Dict[str, Any]) -> bool:
+    """Return True when a preprint advertises an apparent published-version DOI."""
+    doi_norm = normalize_doi(record.get("doi"))
+    if not doi_norm:
+        return False
+
+    journal = (record.get("journal") or "").lower()
+    href = (record.get("href") or "").lower()
+    is_arxiv_record = "arxiv" in journal or "arxiv.org" in href
+    is_arxiv_doi = doi_norm.startswith("10.48550/arxiv")
+    has_named_journal = bool(journal) and "arxiv" not in journal
+    return not is_arxiv_doi and (is_arxiv_record or has_named_journal)
 
 
 def load_scholar_citation_index() -> Dict[str, List[Dict[str, Optional[str]]]]:
@@ -301,7 +324,7 @@ def classify_and_format_publication(work: Dict[str, Any]) -> Dict[str, Any]:
         journal = "Phys. Rev. A"
 
     # Reclassify based on journal for specific cases
-    if journal and journal.startswith("arXiv"):
+    if journal and journal.lower().startswith("arxiv"):
         kind = "preprint"
     elif kind == "article" and (
         journal in [
@@ -346,59 +369,80 @@ def classify_and_format_publication(work: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
-def write_yaml_files(
-    records: List[Dict[str, Any]],
-    unpublished_preprints: Optional[List[Dict[str, Any]]] = None,
-) -> None:
+def mark_publication_page_records(records: List[Dict[str, Any]]) -> None:
+    """Mark records that should appear on the main publications page."""
+    articles = [record for record in records if record["kind"] == "article"]
+    article_dois = {
+        normalize_doi(record.get("doi"))
+        for record in articles
+        if record.get("doi")
+    }
+    article_titles = {
+        normalize_title(record.get("title"))
+        for record in articles
+        if record.get("title")
+    }
+    seen_unpublished_keys = set()
+    seen_unpublished_dois = set()
+    seen_unpublished_titles = set()
+
+    for record in records:
+        record.pop("publication_page", None)
+        record.pop("unpublished_preprint", None)
+
+        if record.get("kind") == "article":
+            record["publication_page"] = True
+            continue
+
+        if record.get("kind") != "preprint":
+            continue
+
+        doi_norm = normalize_doi(record.get("doi"))
+        title_norm = normalize_title(record.get("title"))
+
+        if has_published_version_doi(record):
+            continue
+
+        if doi_norm:
+            key = f"doi:{doi_norm}"
+        elif title_norm:
+            key = f"title:{title_norm}"
+        else:
+            key = record.get("href")
+
+        if doi_norm and doi_norm in article_dois:
+            continue
+        if title_norm and title_norm in article_titles:
+            continue
+        if doi_norm and doi_norm in seen_unpublished_dois:
+            continue
+        if title_norm and title_norm in seen_unpublished_titles:
+            continue
+        if key and key in seen_unpublished_keys:
+            continue
+
+        seen_unpublished_keys.add(key)
+        if doi_norm:
+            seen_unpublished_dois.add(doi_norm)
+        if title_norm:
+            seen_unpublished_titles.add(title_norm)
+        record["unpublished_preprint"] = True
+        record["publication_page"] = True
+
+
+def write_yaml_files(records: List[Dict[str, Any]]) -> None:
     """Sort records and write them to categorized YAML files."""
-    records.sort(key=lambda record: (record.get("year") or 0, record.get("date") or ""), reverse=True)
+    records.sort(
+        key=lambda record: (record.get("year") or 0, record.get("date") or ""),
+        reverse=True,
+    )
 
     articles = [record for record in records if record["kind"] == "article"]
     preprints = [record for record in records if record["kind"] == "preprint"]
     others = [record for record in records if record["kind"] not in ["article", "preprint"]]
-
-    preprints_unpublished: List[Dict[str, Any]] = []
-    if unpublished_preprints:
-        article_dois = {
-            normalize_doi(record.get("doi"))
-            for record in articles
-            if record.get("doi")
-        }
-        article_titles = {
-            normalize_title(record.get("title"))
-            for record in articles
-            if record.get("title")
-        }
-
-        seen_unpublished_keys = set()
-        for record in unpublished_preprints:
-            if record.get("kind") == "article":
-                continue
-
-            doi_norm = normalize_doi(record.get("doi"))
-            title_norm = normalize_title(record.get("title"))
-
-            if doi_norm:
-                key = f"doi:{doi_norm}"
-            elif title_norm:
-                key = f"title:{title_norm}"
-            else:
-                key = record.get("href")
-
-            if doi_norm and doi_norm in article_dois:
-                continue
-            if title_norm and title_norm in article_titles:
-                continue
-            if key and key in seen_unpublished_keys:
-                continue
-
-            seen_unpublished_keys.add(key)
-            preprints_unpublished.append(record)
-
-        preprints_unpublished.sort(
-            key=lambda record: (record.get("year") or 0, record.get("date") or ""),
-            reverse=True,
-        )
+    preprints_unpublished = [
+        record for record in preprints if record.get("unpublished_preprint")
+    ]
 
     OUTPUT_DIR.mkdir(exist_ok=True, parents=True)
 
@@ -408,10 +452,8 @@ def write_yaml_files(
         (ARTICLES_FILE, articles, "peer-reviewed articles"),
         (PREPRINTS_FILE, preprints, "preprints"),
         (OTHERS_FILE, others, "other publications"),
+        (PREPRINTS_UNPUBLISHED_FILE, preprints_unpublished, "unpublished preprints"),
     ]
-
-    if preprints_unpublished:
-        outputs.append((PREPRINTS_UNPUBLISHED_FILE, preprints_unpublished, "unpublished preprints"))
 
     for path, data, name in outputs:
         with path.open("w", encoding="utf-8") as file:
@@ -506,6 +548,8 @@ def write_bibtex_file(records: List[Dict[str, Any]]) -> None:
         google_scholar_id_value = record.get("google_scholar_id")
         google_scholar_id = str(google_scholar_id_value) if google_scholar_id_value else None
         badge_enabled = "true" if doi else None
+        publication_page = "true" if record.get("publication_page") else None
+        unpublished_preprint = "true" if record.get("unpublished_preprint") else None
 
         fields: Dict[str, Optional[str]] = {
             "title": title,
@@ -517,6 +561,8 @@ def write_bibtex_file(records: List[Dict[str, Any]]) -> None:
             "altmetric": badge_enabled,
             "dimensions": badge_enabled,
             "google_scholar_id": google_scholar_id,
+            "publication_page": publication_page,
+            "unpublished_preprint": unpublished_preprint,
         }
 
         lines = [f"@{entry_type}{{{key},"]
@@ -599,7 +645,8 @@ def main() -> None:
         matched = attach_google_scholar_ids(formatted_publications, citation_index)
         print(f"Matched {matched} publications to Google Scholar IDs.")
 
-    write_yaml_files(formatted_publications, unpublished_preprints=unique_arxiv_pubs)
+    mark_publication_page_records(formatted_publications)
+    write_yaml_files(formatted_publications)
     write_bibtex_file(formatted_publications)
     articles = [record for record in formatted_publications if record.get("kind") == "article"]
     preprints = [record for record in formatted_publications if record.get("kind") == "preprint"]

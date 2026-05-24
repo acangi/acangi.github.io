@@ -336,10 +336,12 @@ filtered_bibtex_keywords:
     pdf,
     pmid,
     poster,
+    publication_page,
     preview,
     selected,
     slides,
     supp,
+    unpublished_preprint,
     video,
     website,
   ]
