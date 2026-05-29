@@ -10,6 +10,16 @@
     "pdf": "https://doi.org/10.48550/arxiv.2605.25270"
   },
   {
+    "title": "Thermal PBE in warm dense matter: Does it matter and is it accurate?",
+    "year": 2026,
+    "authors": "Kushal Ramakrishna, Mani Lokamani, Zhandos A. Moldabekov, Tobias Dornheim, Kieron Burke, Attila Cangi",
+    "venue": "arXiv (Cornell Univ.)",
+    "doi": "",
+    "url": "https://openalex.org/W7162605726",
+    "type": "preprint",
+    "pdf": "https://arxiv.org/pdf/2605.25270"
+  },
+  {
     "title": "Molecules Meet Language: Confound-Aware Representation Learning and Chemical Property Steering in Transformer-VAE Latent Spaces",
     "year": 2026,
     "authors": "Zakaria Elabid, Jan Andrzejewski, Bartosz Brzoza, Attila Cangi",
@@ -444,8 +454,8 @@
     "year": 2010,
     "authors": "Attila Cangi, Donghyung Lee, Peter Elliott, Kieron Burke",
     "venue": "arXiv (Cornell Univ.)",
-    "doi": "",
-    "url": "https://openalex.org/W11163850",
+    "doi": "10.1016/s0042-6989(00)00248-0",
+    "url": "https://doi.org/10.1016/s0042-6989(00)00248-0",
     "type": "preprint",
     "pdf": "https://arxiv.org/pdf/1002.1351"
   }

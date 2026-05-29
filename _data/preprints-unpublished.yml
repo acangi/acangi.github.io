@@ -272,15 +272,3 @@
   kind: preprint
   unpublished_preprint: true
   publication_page: true
-- title: Leading Corrections to the Local Density Approximation
-  author: Attila Cangi; Donghyung Lee; Peter Elliott; Kieron Burke
-  year: 2010
-  date: '2010-02-06'
-  journal: arXiv (Cornell Univ.)
-  doi: null
-  href: https://openalex.org/W11163850
-  pdf: https://arxiv.org/pdf/1002.1351
-  path: null
-  kind: preprint
-  unpublished_preprint: true
-  publication_page: true
