@@ -12,6 +12,17 @@
   kind: preprint
   unpublished_preprint: true
   publication_page: true
+- title: Can MACE Potentials Accurately Describe Magnetism and Phase Stability in
+    Fe-Ni Alloys? A Systematic Benchmark
+  author: Kushal Ramakrishna; Mani Lokamani; Attila Cangi
+  year: 2026
+  date: '2026-05-27'
+  journal: arXiv (Cornell Univ.)
+  doi: null
+  href: https://openalex.org/W7162817613
+  pdf: https://arxiv.org/pdf/2605.28395
+  path: null
+  kind: preprint
 - title: 'Thermal PBE in warm dense matter: Does it matter and is it accurate?'
   author: Kushal Ramakrishna; Mani Lokamani; Zhandos A. Moldabekov; Tobias Dornheim;
     Kieron Burke; Attila Cangi
@@ -23,6 +34,7 @@
   pdf: https://doi.org/10.48550/arxiv.2605.25270
   path: https://doi.org/10.48550/arxiv.2605.25270
   kind: preprint
+  google_scholar_id: M84yoJgAAAAJ:LgRImbQfgY4C
   unpublished_preprint: true
   publication_page: true
 - title: 'Thermal PBE in warm dense matter: Does it matter and is it accurate?'
@@ -36,6 +48,7 @@
   pdf: https://arxiv.org/pdf/2605.25270
   path: null
   kind: preprint
+  google_scholar_id: M84yoJgAAAAJ:LgRImbQfgY4C
 - title: 'Molecules Meet Language: Confound-Aware Representation Learning and Chemical
     Property Steering in Transformer-VAE Latent Spaces'
   author: Zakaria Elabid; Jan Andrzejewski; Bartosz Brzoza; Attila Cangi
@@ -603,10 +616,8 @@
   year: 2010
   date: '2010-02-06'
   journal: arXiv (Cornell Univ.)
-  doi: null
-  href: https://openalex.org/W11163850
+  doi: https://doi.org/10.1016/s0042-6989(00)00248-0
+  href: https://doi.org/10.1016/s0042-6989(00)00248-0
   pdf: https://arxiv.org/pdf/1002.1351
-  path: null
+  path: https://doi.org/10.1016/s0042-6989(00)00248-0
   kind: preprint
-  unpublished_preprint: true
-  publication_page: true
