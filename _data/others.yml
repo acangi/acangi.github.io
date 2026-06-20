@@ -3,10 +3,10 @@
   author: Attila Cangi
   year: 2026
   date: '2026-06-17'
-  journal: Zenodo (CERN Eur. Organ. Nucl. Res.)
+  journal: Open MIND
   doi: https://doi.org/10.5281/zenodo.20733046
   href: https://doi.org/10.5281/zenodo.20733046
-  pdf: https://doi.org/10.5281/zenodo.20733046
+  pdf: https://github.com/acangi/lecture_notes_solids_thermal/tree/v1.0.2
   path: https://doi.org/10.5281/zenodo.20733046
   kind: other
 - title: Fundamentals in Solid-State Physics – Thermal Properties
