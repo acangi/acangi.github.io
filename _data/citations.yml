@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-06-21'
+  last_updated: '2026-06-24'
 papers:
   M84yoJgAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -86,7 +86,7 @@ papers:
     title: Publications Repository-Helmholtz-Zentrum Dresden-Rossendorf
     year: '2018'
   M84yoJgAAAAJ:BwyfMAYsbu0C:
-    citations: 165
+    citations: 166
     title: Deep dive into machine learning density functional theory for materials science and chemistry
     year: '2022'
   M84yoJgAAAAJ:ClCfbGk0d_YC:
@@ -138,7 +138,7 @@ papers:
     title: "Inverting the Kohn\u2013Sham equations with physics-informed machine learning"
     year: '2024'
   M84yoJgAAAAJ:HbR8gkJAVGIC:
-    citations: 23
+    citations: 22
     title: Training-free hyperparameter optimization of neural networks for electronic structures in matter
     year: '2022'
   M84yoJgAAAAJ:HeT0ZceujKMC:
@@ -146,7 +146,7 @@ papers:
     title: 'Materials Learning Algorithms (MALA): Scalable machine learning for electronic structure calculations in large-scale atomistic simulations'
     year: '2025'
   M84yoJgAAAAJ:HtEfBTGE9r8C:
-    citations: 68
+    citations: 69
     title: Predicting electronic structures at any length scale with machine learning
     year: '2023'
   M84yoJgAAAAJ:HtS1dXgVpQUC:
@@ -270,7 +270,7 @@ papers:
     title: Data-Driven Magneto-Elastic Predictions with Scalable Classical Spin-Lattice Dynamics.
     year: '2021'
   M84yoJgAAAAJ:SdhP9T11ey4C:
-    citations: 104
+    citations: 105
     title: 'Effective static approximation: A fast and reliable tool for warm-dense matter theory'
     year: '2020'
   M84yoJgAAAAJ:SpbeaW3--B0C:
@@ -354,7 +354,7 @@ papers:
     title: Almost exact exchange at almost no cost
     year: '2014'
   M84yoJgAAAAJ:_axFR9aDTf0C:
-    citations: 114
+    citations: 116
     title: Electronic density response of warm dense matter
     year: '2023'
   M84yoJgAAAAJ:anf4URPfarAC:
@@ -502,7 +502,7 @@ papers:
     title: Deconstructing density functional theory and approximations
     year: '2010'
   M84yoJgAAAAJ:uLbwQdceFCQC:
-    citations: 24
+    citations: 25
     title: First-principles derivation and properties of density-functional average-atom models
     year: '2022'
   M84yoJgAAAAJ:uWiczbcajpAC:
@@ -526,7 +526,7 @@ papers:
     title: 'Potential functional theory and approximations: An approach for describing the electronic structure of matter'
     year: '2011'
   M84yoJgAAAAJ:yFnVuubrUp4C:
-    citations: 33
+    citations: 34
     title: Ultrahigh resolution x-ray Thomson scattering measurements at the European X-ray Free Electron Laser
     year: '2024'
   M84yoJgAAAAJ:yMeIxYmEMEAC:
