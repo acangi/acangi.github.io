@@ -58,17 +58,6 @@
   kind: article
   google_scholar_id: M84yoJgAAAAJ:r_AWSJRzSzQC
   publication_page: true
-- title: Towards all-electron treatment in electronic structure machine learning
-  author: Johannes Wasmer; Philipp Rüssmann; Stefano Sanvito; Attila Cangi; Ira Assent
-  year: 2025
-  date: '2025-01-01'
-  journal: JuSER (Forschungszentrum Jül.)
-  doi: https://doi.org/10.34734/fzj-2026-01614
-  href: https://doi.org/10.34734/fzj-2026-01614
-  pdf: https://juser.fz-juelich.de/record/1053928
-  path: https://doi.org/10.34734/fzj-2026-01614
-  kind: article
-  publication_page: true
 - title: A Vision for a World-Leading Research Software Ecosystem for the Helmholtz
     Association
   author: R. Caspart; Bernadette Fritzsch; Peter Baumgärtel; Tobias Becher; Julian

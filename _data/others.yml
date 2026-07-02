@@ -8,7 +8,7 @@
   href: https://doi.org/10.5281/zenodo.20733046
   pdf: https://github.com/acangi/lecture_notes_solids_thermal/tree/v1.0.2
   path: https://doi.org/10.5281/zenodo.20733046
-  kind: other
+  kind: software
 - title: Fundamentals in Solid-State Physics – Thermal Properties
   author: Attila Cangi
   year: 2026
@@ -18,7 +18,7 @@
   href: https://doi.org/10.5281/zenodo.20733047
   pdf: https://doi.org/10.5281/zenodo.20733047
   path: https://doi.org/10.5281/zenodo.20733047
-  kind: other
+  kind: software
 - title: 'Data publication: Scalable Machine Learning Model for Energy Decomposition
     Analysis in Aqueous Systems'
   author: Tahmasbi, Hossein; Beerbaum, Michael; Brzoza, Bartosz; Cangi, Attila; Kühne,
@@ -43,6 +43,16 @@
   pdf: https://doi.org/10.14278/rodare.4169
   path: https://doi.org/10.14278/rodare.4169
   kind: dataset
+- title: Towards all-electron treatment in electronic structure machine learning
+  author: Johannes Wasmer; Philipp Rüssmann; Stefano Sanvito; Attila Cangi; Ira Assent
+  year: 2025
+  date: '2025-01-01'
+  journal: JuSER (Forschungszentrum Jül.)
+  doi: https://doi.org/10.34734/fzj-2026-01614
+  href: https://doi.org/10.34734/fzj-2026-01614
+  pdf: https://juser.fz-juelich.de/record/1053928
+  path: https://doi.org/10.34734/fzj-2026-01614
+  kind: conference-abstract
 - title: 'Data publication: Scalable Machine Learning Model for Energy Decomposition
     Analysis in Aqueous Systems'
   author: Hossein Tahmasbi; Michael Beerbaum; Bartosz Brzoza; Attila Cangi; Thomas
