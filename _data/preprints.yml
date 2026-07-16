@@ -357,20 +357,6 @@
   path: https://doi.org/10.48550/arxiv.2210.10132
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:umqufdRvDiIC
-- title: Examining the shock response of iron using molecular-spin dynamics
-  author: Svetoslav Nikolov; Julien Tranchida; Kushal Ramakrishna; Attila Cangi; Mitchell
-    Wood
-  year: 2022
-  date: '2022-07-07'
-  journal: null
-  doi: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
-  href: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
-  pdf: null
-  path: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
-  unpublished_preprint: true
-  publication_page: true
 - title: Accelerating Equilibration in First-Principles Molecular Dynamics with Orbital-Free
     Density Functional Theory
   author: Lenz Fiedler; Zhandos A. Moldabekov; Xuecheng Shao; Kaili Jiang; Tobias
@@ -411,18 +397,6 @@
   google_scholar_id: M84yoJgAAAAJ:WZBGuue-350C
   unpublished_preprint: true
   publication_page: true
-- title: Effective electronic forces and potentials from ab initio path integral Monte
-    Carlo simulations
-  author: Tobias Dornheim; P. Tolias; Zhandos A. Moldabekov; Attila Cangi; Jan Vorberger
-  year: 2022
-  date: '2022-04-29'
-  journal: PubMed
-  doi: https://doi.org/10.48550/arxiv.2204.14260
-  href: https://doi.org/10.48550/arxiv.2204.14260
-  pdf: https://arxiv.org/pdf/2204.14260
-  path: https://doi.org/10.48550/arxiv.2204.14260
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:M7yex6snE4oC
 - title: Improved calculations of mean ionization states with an average-atom model
   author: Timothy J. Callow; Eli Kraisler; Attila Cangi
   year: 2022
@@ -539,18 +513,6 @@
   google_scholar_id: M84yoJgAAAAJ:NJ774b8OgUMC
   unpublished_preprint: true
   publication_page: true
-- title: 'Reduced-density-matrix-functional theory at finite temperature: Theoretical
-    foundations'
-  author: Tim Baldsiefen; Attila Cangi; E. K. U. Gross
-  year: 2015
-  date: '2015-11-20'
-  journal: Phys. Rev. A
-  doi: https://doi.org/10.1103/physreva.92.052514
-  href: https://doi.org/10.1103/physreva.92.052514
-  pdf: https://arxiv.org/pdf/1208.4703
-  path: https://doi.org/10.1103/physreva.92.052514
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:PELIpwtuRlgC
 - title: Bypassing the malfunction junction in warm dense matter simulations
   author: Attila Cangi; Aurora Pribram−Jones
   year: 2014

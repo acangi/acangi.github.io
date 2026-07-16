@@ -300,6 +300,16 @@
     "pdf": "https://doi.org/10.1063/5.0097768"
   },
   {
+    "title": "Effective electronic forces and potentials from ab initio path integral Monte Carlo simulations",
+    "year": 2022,
+    "authors": "Tobias Dornheim, P. Tolias, Zhandos A. Moldabekov, Attila Cangi, Jan Vorberger",
+    "venue": "PubMed",
+    "doi": "10.48550/arxiv.2204.14260",
+    "url": "https://doi.org/10.48550/arxiv.2204.14260",
+    "type": "journal",
+    "pdf": "https://arxiv.org/pdf/2204.14260"
+  },
+  {
     "title": "First-principles derivation and properties of density-functional average-atom models",
     "year": 2022,
     "authors": "Timothy J. Callow, S. B. Hansen, Eli Kraisler, Attila Cangi",
@@ -360,16 +370,6 @@
     "pdf": "https://www.nature.com/articles/s41598-022-05034-z.pdf"
   },
   {
-    "title": "atoMEC: An open-source average-atom Python code",
-    "year": 2022,
-    "authors": "Timothy J. Callow, Daniel Kotik, Eli Kraisler, Attila Cangi",
-    "venue": "Proc. Python Sci. Conf.",
-    "doi": "10.25080/majora-212e5952-006",
-    "url": "https://doi.org/10.25080/majora-212e5952-006",
-    "type": "journal",
-    "pdf": "http://conference.scipy.org/proceedings/scipy2022/pdfs/Timothy_Callow.pdf"
-  },
-  {
     "title": "Higher harmonics in complex plasmas with alternating screening",
     "year": 2021,
     "authors": "Zhandos A. Moldabekov, Ye. K. Aldakul, N. Kh. Bastykova, Sita Sundar, Attila Cangi",
@@ -378,16 +378,6 @@
     "url": "https://doi.org/10.1103/physrevresearch.3.043187",
     "type": "journal",
     "pdf": "https://doi.org/10.1103/physrevresearch.3.043187"
-  },
-  {
-    "title": "Dataset and scripts for A Deep Dive into Machine Learning Density Functional Theory for Materials Science and Chemistry",
-    "year": 2021,
-    "authors": "Lenz Fiedler, Karan Shah, Attila Cangi, Michael Bu\u00dfmann",
-    "venue": "RODARE",
-    "doi": "10.14278/rodare.1197",
-    "url": "https://doi.org/10.14278/rodare.1197",
-    "type": "journal",
-    "pdf": "https://doi.org/10.14278/rodare.1197"
   },
   {
     "title": "The relevance of electronic perturbations in the warm dense electron gas",
@@ -400,16 +390,6 @@
     "pdf": "https://doi.org/10.1063/5.0062325"
   },
   {
-    "title": "Data associated with the publication \"The relevance of electronic perturbations in the warm dense electron gas\"",
-    "year": 2021,
-    "authors": "Zhandos A. Moldabekov, Tobias Dornheim, Maximilian B\u00f6hme, Jan Vorberger, Attila Cangi",
-    "venue": "RODARE",
-    "doi": "10.14278/rodare.1187",
-    "url": "https://doi.org/10.14278/rodare.1187",
-    "type": "journal",
-    "pdf": "https://doi.org/10.14278/rodare.1187"
-  },
-  {
     "title": "Accelerating finite-temperature Kohn-Sham density functional theory with deep neural networks",
     "year": 2021,
     "authors": "John Ellis, Lenz Fiedler, Gabriel A. Popoola, Normand A. Modine, J. A. Stephens, Aidan P. Thompson, Attila Cangi, Sivasankaran Rajamanickam",
@@ -418,16 +398,6 @@
     "url": "https://doi.org/10.1103/physrevb.104.035120",
     "type": "journal",
     "pdf": "http://link.aps.org/pdf/10.1103/PhysRevB.104.035120"
-  },
-  {
-    "title": "LDOS/SNAP data for MALA: Aluminium at 298K and 933K",
-    "year": 2021,
-    "authors": "John Ellis, Lenz Fiedler, Gabriel A. Popoola, Normand A. Modine, John A. Stephens, Aidan P. Thompson, Attila Cangi, S. Rajamanickam",
-    "venue": "RODARE",
-    "doi": "10.14278/rodare.1107",
-    "url": "https://doi.org/10.14278/rodare.1107",
-    "type": "journal",
-    "pdf": "https://doi.org/10.14278/rodare.1107"
   },
   {
     "title": "First-principles modeling of plasmons in aluminum under ambient and extreme conditions",
@@ -460,6 +430,16 @@
     "pdf": "http://link.aps.org/pdf/10.1103/PhysRevA.96.062508"
   },
   {
+    "title": "Reduced-density-matrix-functional theory at finite temperature: Theoretical foundations",
+    "year": 2015,
+    "authors": "Tim Baldsiefen, Attila Cangi, E. K. U. Gross",
+    "venue": "Phys. Rev. A",
+    "doi": "10.1103/physreva.92.052514",
+    "url": "https://doi.org/10.1103/physreva.92.052514",
+    "type": "journal",
+    "pdf": "https://arxiv.org/pdf/1208.4703"
+  },
+  {
     "title": "Efficient formalism for warm dense matter simulations",
     "year": 2015,
     "authors": "Attila Cangi, Aurora Pribram\u2212Jones",
@@ -478,16 +458,6 @@
     "url": "https://doi.org/10.1103/physreva.92.022513",
     "type": "journal",
     "pdf": "https://www.openaccessrepository.it/record/157102"
-  },
-  {
-    "title": "Corrections to Thomas-Fermi Densities at Turning Points and Beyond",
-    "year": 2015,
-    "authors": "Raphael F. Ribeiro, Donghyung Lee, Attila Cangi, Peter Elliott, Kieron Burke",
-    "venue": "Phys. Rev. Lett.",
-    "doi": "10.1103/physrevlett.114.050401",
-    "url": "https://doi.org/10.1103/physrevlett.114.050401",
-    "type": "journal",
-    "pdf": "https://arxiv.org/pdf/1409.6802"
   },
   {
     "title": "Virial theorem and exact properties of density functionals for periodic systems",

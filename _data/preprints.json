@@ -270,16 +270,6 @@
     "pdf": "https://arxiv.org/pdf/2210.10132"
   },
   {
-    "title": "Examining the shock response of iron using molecular-spin dynamics",
-    "year": 2022,
-    "authors": "Svetoslav Nikolov, Julien Tranchida, Kushal Ramakrishna, Attila Cangi, Mitchell Wood",
-    "venue": "",
-    "doi": "10.26226/m.62a9d1f09deaf4fdb6b3ff1e",
-    "url": "https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e",
-    "type": "preprint",
-    "pdf": ""
-  },
-  {
     "title": "Accelerating Equilibration in First-Principles Molecular Dynamics with Orbital-Free Density Functional Theory",
     "year": 2022,
     "authors": "Lenz Fiedler, Zhandos A. Moldabekov, Xuecheng Shao, Kaili Jiang, Tobias Dornheim, Pavanello, Michele, Attila Cangi",
@@ -308,16 +298,6 @@
     "url": "https://doi.org/10.48550/arxiv.2205.00117",
     "type": "preprint",
     "pdf": "https://arxiv.org/pdf/2205.00117"
-  },
-  {
-    "title": "Effective electronic forces and potentials from ab initio path integral Monte Carlo simulations",
-    "year": 2022,
-    "authors": "Tobias Dornheim, P. Tolias, Zhandos A. Moldabekov, Attila Cangi, Jan Vorberger",
-    "venue": "PubMed",
-    "doi": "10.48550/arxiv.2204.14260",
-    "url": "https://doi.org/10.48550/arxiv.2204.14260",
-    "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/2204.14260"
   },
   {
     "title": "Improved calculations of mean ionization states with an average-atom model",
@@ -408,16 +388,6 @@
     "url": "https://openalex.org/W3136158772",
     "type": "preprint",
     "pdf": "https://arxiv.org/abs/2103.08523"
-  },
-  {
-    "title": "Reduced-density-matrix-functional theory at finite temperature: Theoretical foundations",
-    "year": 2015,
-    "authors": "Tim Baldsiefen, Attila Cangi, E. K. U. Gross",
-    "venue": "Phys. Rev. A",
-    "doi": "10.1103/physreva.92.052514",
-    "url": "https://doi.org/10.1103/physreva.92.052514",
-    "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/1208.4703"
   },
   {
     "title": "Bypassing the malfunction junction in warm dense matter simulations",

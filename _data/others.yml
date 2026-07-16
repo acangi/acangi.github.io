@@ -52,7 +52,7 @@
   href: https://doi.org/10.34734/fzj-2026-01614
   pdf: https://juser.fz-juelich.de/record/1053928
   path: https://doi.org/10.34734/fzj-2026-01614
-  kind: conference-abstract
+  kind: conference-paper
 - title: A Vision for a World-Leading Research Software Ecosystem for the Helmholtz
     Association
   author: R. Caspart; Bernadette Fritzsch; Peter Baumgärtel; Tobias Becher; Julian
@@ -95,7 +95,7 @@
   href: https://doi.org/10.1109/qce57702.2023.10240
   pdf: null
   path: https://doi.org/10.1109/qce57702.2023.10240
-  kind: talk
+  kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:IRz6iEL74y4C
 - title: Leveraging Data Driven Frameworks to Build Transferable Interatomic Potentials
   author: Svetoslav Nikolov; John H. Carpenter; Mitchell Wood; Julien Tranchida; Kyle
@@ -108,7 +108,7 @@
   href: https://doi.org/10.2172/2430436
   pdf: http://dx.doi.org/10.2172/2430436
   path: https://doi.org/10.2172/2430436
-  kind: talk
+  kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:yMeIxYmEMEAC
 - title: Deep Spiking Quantum Neural Network for Noisy Image Classification
   author: Debanjan Konar; Vaneet Aggarwal; Aditya Das Sarma; Soham Bhandary; Siddhartha
@@ -120,7 +120,7 @@
   href: https://doi.org/10.1109/ijcnn54540.2023.10191509
   pdf: null
   path: https://doi.org/10.1109/ijcnn54540.2023.10191509
-  kind: talk
+  kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:XvxMoLDsR5gC
 - title: Examining the Alpha-Epsilon Transition in Iron Using Molecular-spin Dynamics
   author: Svetoslav Nikolov; Julien Tranchida; Aidan P. Thompson; Attila Cangi; Kushal
@@ -132,7 +132,7 @@
   href: https://doi.org/10.2172/2431651
   pdf: http://dx.doi.org/10.2172/2431651
   path: https://doi.org/10.2172/2431651
-  kind: talk
+  kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:3htObqc8RwsC
 - title: Machine-Learning for Static and Dynamic Electronic Structure Theory
   author: Lenz Fiedler; Karan Shah; Attila Cangi
@@ -195,8 +195,20 @@
   href: https://doi.org/10.2172/1889336
   pdf: https://www.osti.gov/servlets/purl/1889336
   path: https://doi.org/10.2172/1889336
-  kind: talk
+  kind: report
   google_scholar_id: M84yoJgAAAAJ:FPJr55Dyh1AC
+- title: Examining the shock response of iron using molecular-spin dynamics
+  author: Svetoslav Nikolov; Julien Tranchida; Kushal Ramakrishna; Attila Cangi; Mitchell
+    Wood
+  year: 2022
+  date: '2022-07-07'
+  journal: null
+  doi: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
+  href: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
+  pdf: null
+  path: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
+  kind: other
+  google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
 - title: Examining the shock response of iron using molecular-spin dynamics.
   author: Svetoslav Nikolov; Julien Tranchida; Attila Cangi; Kushal Ramakrishna; Mani
     Lokamani; Mitchell Wood
@@ -207,7 +219,7 @@
   href: https://doi.org/10.2172/2003857
   pdf: http://dx.doi.org/10.2172/2003857
   path: https://doi.org/10.2172/2003857
-  kind: talk
+  kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
 - title: A machine learning surrogate for density functional theory based on the local
     density of state.
@@ -220,7 +232,7 @@
   href: https://doi.org/10.2172/2003393
   pdf: http://dx.doi.org/10.2172/2003393
   path: https://doi.org/10.2172/2003393
-  kind: talk
+  kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:6ZxmRoH8BuwC
 - title: Finding Electronic Structure Machine Learning Surrogates without Training
   author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel Popoola; Tamar Yovell;
@@ -244,7 +256,7 @@
   href: https://doi.org/10.2172/2001867
   pdf: http://dx.doi.org/10.2172/2001867
   path: https://doi.org/10.2172/2001867
-  kind: talk
+  kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:ClCfbGk0d_YC
 - title: Probing Structural and Magnetic Phase Changes in the Shock Response of Iron
     with Molecular Dynamics.
@@ -257,7 +269,18 @@
   href: https://doi.org/10.2172/2002085
   pdf: http://dx.doi.org/10.2172/2002085
   path: https://doi.org/10.2172/2002085
-  kind: talk
+  kind: conference-paper
+- title: 'atoMEC: An open-source average-atom Python code'
+  author: Timothy J. Callow; Daniel Kotik; Eli Kraisler; Attila Cangi
+  year: 2022
+  date: '2022-01-01'
+  journal: Proc. Python Sci. Conf.
+  doi: https://doi.org/10.25080/majora-212e5952-006
+  href: https://doi.org/10.25080/majora-212e5952-006
+  pdf: http://conference.scipy.org/proceedings/scipy2022/pdfs/Timothy_Callow.pdf
+  path: https://doi.org/10.25080/majora-212e5952-006
+  kind: conference-paper
+  google_scholar_id: M84yoJgAAAAJ:i2xiXl-TujoC
 - title: Report on scipost_202106_00020v2
   author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank Graziani; M. Bönitz;
     Attila Cangi
@@ -280,7 +303,30 @@
   href: https://doi.org/10.2172/1897018
   pdf: https://www.osti.gov/servlets/purl/1897018
   path: https://doi.org/10.2172/1897018
-  kind: talk
+  kind: conference-paper
+- title: Dataset and scripts for A Deep Dive into Machine Learning Density Functional
+    Theory for Materials Science and Chemistry
+  author: Lenz Fiedler; Karan Shah; Attila Cangi; Michael Bußmann
+  year: 2021
+  date: '2021-10-01'
+  journal: RODARE
+  doi: https://doi.org/10.14278/rodare.1197
+  href: https://doi.org/10.14278/rodare.1197
+  pdf: https://doi.org/10.14278/rodare.1197
+  path: https://doi.org/10.14278/rodare.1197
+  kind: dataset
+- title: Data associated with the publication "The relevance of electronic perturbations
+    in the warm dense electron gas"
+  author: Zhandos A. Moldabekov; Tobias Dornheim; Maximilian Böhme; Jan Vorberger;
+    Attila Cangi
+  year: 2021
+  date: '2021-09-15'
+  journal: RODARE
+  doi: https://doi.org/10.14278/rodare.1187
+  href: https://doi.org/10.14278/rodare.1187
+  pdf: https://doi.org/10.14278/rodare.1187
+  path: https://doi.org/10.14278/rodare.1187
+  kind: dataset
 - title: Report on scipost_202106_00020v1
   author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank Graziani; M. Bönitz;
     Attila Cangi
@@ -303,6 +349,17 @@
   pdf: https://scipost.org/preprints/scipost_202106_00020v1/
   path: https://doi.org/10.21468/scipost.report.3324
   kind: peer-review
+- title: 'LDOS/SNAP data for MALA: Aluminium at 298K and 933K'
+  author: John Ellis; Lenz Fiedler; Gabriel A. Popoola; Normand A. Modine; John A.
+    Stephens; Aidan P. Thompson; Attila Cangi; S. Rajamanickam
+  year: 2021
+  date: '2021-07-08'
+  journal: RODARE
+  doi: https://doi.org/10.14278/rodare.1107
+  href: https://doi.org/10.14278/rodare.1107
+  pdf: https://doi.org/10.14278/rodare.1107
+  path: https://doi.org/10.14278/rodare.1107
+  kind: dataset
 - title: An Introduction to the Materials Learning Algorithms Package (MALA).
   author: Lenz Fiedler; Austin Ellis; Sivasankaran Rajamanickam; Attila Cangi
   year: 2021
@@ -312,7 +369,7 @@
   href: https://doi.org/10.2172/1867139
   pdf: https://www.osti.gov/servlets/purl/1867139
   path: https://doi.org/10.2172/1867139
-  kind: talk
+  kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:-FonjvnnhkoC
 - title: Comparison of DFT-based methods for electronic stopping in warm dense aluminum.
   author: Alina Kononov; Thomas Hentschel; Attila Cangi; Andrew Baczewski; Stephanie
@@ -324,7 +381,7 @@
   href: https://doi.org/10.2172/1855327
   pdf: https://www.osti.gov/biblio/1855327
   path: https://doi.org/10.2172/1855327
-  kind: talk
+  kind: conference-paper
 - title: Accelerating Multiscale Materials Modeling with Machine Learning.
   author: John Ellis; Sivasankaran Rajamanickam; Normand A. Modine; Aidan P. Thompson;
     John Stephens; Attila Cangi
@@ -335,7 +392,7 @@
   href: https://doi.org/10.2172/1853873
   pdf: https://www.osti.gov/biblio/1787726
   path: https://doi.org/10.2172/1853873
-  kind: talk
+  kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:FPJr55Dyh1AC
 - title: First-principles Modeling of Warm Dense Matter.
   author: Attila Cangi
@@ -346,7 +403,7 @@
   href: https://openalex.org/W4287873620
   pdf: https://www.osti.gov/biblio/1765305
   path: null
-  kind: paratext
+  kind: other
 - title: 'Collisions and Correlations in Warm Dense Matter: effects on electronic
     stopping.'
   author: Thomas Hentschel; Stephanie B. Hansen; Attila Cangi; Alina Kononov; Andrew
@@ -358,7 +415,7 @@
   href: https://doi.org/10.2172/1830065
   pdf: https://www.osti.gov/biblio/1830065
   path: https://doi.org/10.2172/1830065
-  kind: talk
+  kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:EYYDruWGBe4C
 - title: Accelerating Finite-temperature Kohn-Sham Density Functional Theory\ with
     Deep Neural Networks
@@ -383,7 +440,7 @@
   href: https://openalex.org/W4288548898
   pdf: https://www.osti.gov/biblio/1639309
   path: null
-  kind: paratext
+  kind: other
   google_scholar_id: M84yoJgAAAAJ:ZuybSZzF8UAC
 - title: Collisions and Correlation Effects in Warm Dense Matter
   author: Thomas Hentschel; Attila Cangi; Andrew Baczewski; Stephanie B. Hansen
@@ -394,7 +451,7 @@
   href: https://openalex.org/W3183220772
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
   google_scholar_id: M84yoJgAAAAJ:-_dYPAW6P2MC
 - title: Semi-local Density Functional Approximations for Bulk, Surface, and Confinement
     Physics
@@ -418,7 +475,7 @@
   href: https://openalex.org/W2925181260
   pdf: https://www.osti.gov/servlets/purl/1639295
   path: null
-  kind: talk
+  kind: other
   google_scholar_id: M84yoJgAAAAJ:N5tVd3kTz84C
 - title: Magnetostriction and Long-Range Interactions in Coupled Spin and Lattice
     Dynamics
@@ -463,7 +520,7 @@
   href: https://openalex.org/W4297732077
   pdf: https://www.osti.gov/servlets/purl/1465022
   path: null
-  kind: paratext
+  kind: other
 - title: An Exchange-Correlation Functional Capturing Bulk Surface and Confinement
     Physics
   author: Attila Cangi
@@ -508,7 +565,7 @@
   href: https://openalex.org/W3090318926
   pdf: https://www.osti.gov/biblio/1569112
   path: null
-  kind: talk
+  kind: other
   google_scholar_id: M84yoJgAAAAJ:WqliGbK-hY8C
 - title: ECP-copa/ExaMiniMD
   author: Aidan P. Thompson; Attila Cangi; Christian Robert Trott; Christoph Junghans;
@@ -520,7 +577,7 @@
   href: https://doi.org/10.11578/dc.20201102.5
   pdf: https://www.osti.gov/biblio/1696908
   path: https://doi.org/10.11578/dc.20201102.5
-  kind: talk
+  kind: other
   google_scholar_id: M84yoJgAAAAJ:W5xh706n7nkC
 - title: Stopping Power of Warm Dense Matter from Ehrenfest Molecular Dynamics
   author: Attila Cangi; Daniel S. Jensen; Stephanie B. Hansen; Andrew Baczewski
@@ -542,7 +599,7 @@
   href: https://openalex.org/W2755757758
   pdf: https://www.osti.gov/biblio/1480198
   path: null
-  kind: talk
+  kind: other
   google_scholar_id: M84yoJgAAAAJ:VL0QpB8kHFEC
 - title: Progress towards an {\it ab initio} real-time treatment of warm dense matter
   author: Andrew Baczewski; Attila Cangi; Stephanie B. Hansen; Daniel S. Jensen
@@ -564,6 +621,17 @@
   pdf: null
   path: null
   kind: talk
+- title: Corrections to Thomas-Fermi Densities at Turning Points and Beyond
+  author: Raphael F. Ribeiro; Donghyung Lee; Attila Cangi; Peter Elliott; Kieron Burke
+  year: 2015
+  date: '2015-02-04'
+  journal: Phys. Rev. Lett.
+  doi: https://doi.org/10.1103/physrevlett.114.050401
+  href: https://doi.org/10.1103/physrevlett.114.050401
+  pdf: https://arxiv.org/pdf/1409.6802
+  path: https://doi.org/10.1103/physrevlett.114.050401
+  kind: erratum
+  google_scholar_id: M84yoJgAAAAJ:roLk4NBRz8UC
 - title: Semiclassical approach to the exchange energy from potential functional theory
   author: Attila Cangi; Peter Elliott; Stefano Pittalis; E. K. U. Gross; Kieron Burke
   year: 2014
@@ -606,7 +674,7 @@
   href: https://openalex.org/W3096111671
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
   google_scholar_id: M84yoJgAAAAJ:BUYA1_V_uYcC
 - title: Density Functional Theory and Semiclassical Methods
   author: Peter Elliott; Donghyung Lee; Attila Cangi; Kieron Burke

@@ -127,20 +127,6 @@
   kind: preprint
   unpublished_preprint: true
   publication_page: true
-- title: Examining the shock response of iron using molecular-spin dynamics
-  author: Svetoslav Nikolov; Julien Tranchida; Kushal Ramakrishna; Attila Cangi; Mitchell
-    Wood
-  year: 2022
-  date: '2022-07-07'
-  journal: null
-  doi: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
-  href: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
-  pdf: null
-  path: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
-  unpublished_preprint: true
-  publication_page: true
 - title: An \textit{ab initio} study of shock-compressed copper
   author: Maximilian Schörner; B. B. L. Witte; Andrew Baczewski; Attila Cangi; R.
     Redmer
