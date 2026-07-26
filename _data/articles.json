@@ -1,5 +1,15 @@
 [
   {
+    "title": "2026 Roadmap on Digitalising Materials Science",
+    "year": 2026,
+    "authors": "Kevin Rossi, Federico Grasselli, Amila Akagi\u0107, Jesper Friis, Ivor Lon\u010dari\u0107, Theodoros Pavloudis, Joseph Kioseoglou, Johannes Wasmer, Attila Cangi, Stefan Bl\u00fcgel, Leticia A. Gracia, Bel\u00e9n Hern\u00e1ndez-Gasc\u00f3n, Amra Hase\u010di\u0107, Javier Heras\u2010Domingo, Francesco Mercuri, Alexei Kuzmin, Giovanni Bertoni, Paolo Rosi, Enzo Rotunno, Vincenzo Grillo, Muhammet Cahit Kula\u00e7 Kula\u00e7, Bahattin Ko\u00e7, Andy S. Anker, Jin Hyun Chang, Jelle Vekeman, Toon Verstraelen, Matteo Cobelli, Luke P. J. Gilligan, Stefano Sanvito, Sepideh Baghaee Ravari, Lei Zhang, Markus Stricker, Jonathan Schmidt, Dario Calvani, Amil Aligayev, Benjamin Udofia, Gauravkumar LAthiya, F. J. Dom\u00ednguez-Guti\u00e9rrez, Patr\u00edcia Ramos, Jos\u00e9 Manuel Oliveira, Silvia Bonfanti, Tero M\u00e4kinen, Mikko Alava, Dmytro Khomenko, Matthias Stosiek, Yuhao Zhang, Patrick Rinke, Milica Todorovi\u0107, Adrian Mirza, Nawaf Alampara, Siddhant Kumar, Elisa Molinari, Alice Ruini, Anagha Aneesh, Mara Schilling-Wilhelmi, Marti\u00f1o R\u00edos-Garc\u00eda, Kevin Maik Jablonka",
+    "venue": "J. Phys. Mater.",
+    "doi": "10.1088/2515-7639/ae9010",
+    "url": "https://doi.org/10.1088/2515-7639/ae9010",
+    "type": "journal",
+    "pdf": "https://doi.org/10.1088/2515-7639/ae9010"
+  },
+  {
     "title": "Machine learning time propagators for time-dependent density functional theory simulations",
     "year": 2026,
     "authors": "Karan Shah, Attila Cangi",
