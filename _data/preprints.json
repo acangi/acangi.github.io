@@ -1,5 +1,15 @@
 [
   {
+    "title": "MANDALA: An E(3)-Equivariant Graph Neural Network Framework for Learning Electronic-Structure Operators with Observable Guidance",
+    "year": 2026,
+    "authors": "Bartosz Brzoza, Wiktoria Szopa, Zakaria Elabid, Vincent Martinetto, Varadarajan Rengaraj, Mani Lokamani, Thomas D. K\u00fchne, Attila Cangi",
+    "venue": "arXiv (Cornell Univ.)",
+    "doi": "10.48550/arxiv.2607.24997",
+    "url": "https://doi.org/10.48550/arxiv.2607.24997",
+    "type": "preprint",
+    "pdf": "https://doi.org/10.48550/arxiv.2607.24997"
+  },
+  {
     "title": "Can MACE Potentials Accurately Describe Magnetism and Phase Stability in Fe-Ni Alloys? A Systematic Benchmark",
     "year": 2026,
     "authors": "Kushal Ramakrishna, Mani Lokamani, Attila Cangi",
