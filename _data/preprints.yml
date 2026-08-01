@@ -13,6 +13,18 @@
   kind: preprint
   unpublished_preprint: true
   publication_page: true
+- title: 'MANDALA: An E(3)-Equivariant Graph Neural Network Framework for Learning
+    Electronic-Structure Operators with Observable Guidance'
+  author: Bartosz Brzoza; Wiktoria Szopa; Zakaria Elabid; Vincent Martinetto; Varadarajan
+    Rengaraj; Mani Lokamani; Thomas D. Kühne; Attila Cangi
+  year: 2026
+  date: '2026-07-27'
+  journal: arXiv (Cornell Univ.)
+  doi: null
+  href: https://openalex.org/W7171902782
+  pdf: https://arxiv.org/pdf/2607.24997
+  path: null
+  kind: preprint
 - title: Can MACE Potentials Accurately Describe Magnetism and Phase Stability in
     Fe-Ni Alloys? A Systematic Benchmark
   author: Kushal Ramakrishna; Mani Lokamani; Attila Cangi
@@ -595,10 +607,8 @@
   year: 2010
   date: '2010-02-06'
   journal: arXiv (Cornell Univ.)
-  doi: null
-  href: https://openalex.org/W11163850
+  doi: https://doi.org/10.1016/s0042-6989(00)00248-0
+  href: https://doi.org/10.1016/s0042-6989(00)00248-0
   pdf: https://arxiv.org/pdf/1002.1351
-  path: null
+  path: https://doi.org/10.1016/s0042-6989(00)00248-0
   kind: preprint
-  unpublished_preprint: true
-  publication_page: true
