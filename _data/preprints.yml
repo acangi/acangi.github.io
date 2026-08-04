@@ -11,6 +11,7 @@
   pdf: https://doi.org/10.48550/arxiv.2607.24997
   path: https://doi.org/10.48550/arxiv.2607.24997
   kind: preprint
+  google_scholar_id: M84yoJgAAAAJ:6yz0xqPARnAC
   unpublished_preprint: true
   publication_page: true
 - title: 'MANDALA: An E(3)-Equivariant Graph Neural Network Framework for Learning
@@ -25,6 +26,7 @@
   pdf: https://arxiv.org/pdf/2607.24997
   path: null
   kind: preprint
+  google_scholar_id: M84yoJgAAAAJ:6yz0xqPARnAC
 - title: Can MACE Potentials Accurately Describe Magnetism and Phase Stability in
     Fe-Ni Alloys? A Systematic Benchmark
   author: Kushal Ramakrishna; Mani Lokamani; Attila Cangi
@@ -483,7 +485,6 @@
   pdf: https://doi.org/10.48550/arxiv.2110.00997
   path: https://doi.org/10.48550/arxiv.2110.00997
   kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:BwyfMAYsbu0C
   unpublished_preprint: true
   publication_page: true
 - title: Thermal Signals from Collective Electronic Excitations in Inhomogeneous Warm
@@ -607,8 +608,10 @@
   year: 2010
   date: '2010-02-06'
   journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.1016/s0042-6989(00)00248-0
-  href: https://doi.org/10.1016/s0042-6989(00)00248-0
+  doi: null
+  href: https://openalex.org/W11163850
   pdf: https://arxiv.org/pdf/1002.1351
-  path: https://doi.org/10.1016/s0042-6989(00)00248-0
+  path: null
   kind: preprint
+  unpublished_preprint: true
+  publication_page: true

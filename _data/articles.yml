@@ -117,7 +117,6 @@
   pdf: null
   path: https://doi.org/10.1038/s43588-024-00707-3
   kind: article
-  google_scholar_id: M84yoJgAAAAJ:KbBQZpvPDL4C
   publication_page: true
 - title: Effects of mosaic crystal instrument functions on x-ray Thomson scattering
     diagnostics
@@ -472,6 +471,7 @@
   pdf: https://arxiv.org/pdf/2110.00997
   path: https://doi.org/10.1103/physrevmaterials.6.040301
   kind: article
+  google_scholar_id: M84yoJgAAAAJ:BwyfMAYsbu0C
   publication_page: true
 - title: Towards a quantum fluid theory of correlated many-fermion systems from first
     principles
