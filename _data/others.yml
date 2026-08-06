@@ -378,7 +378,7 @@
   journal: null
   doi: https://doi.org/10.2172/1855327
   href: https://doi.org/10.2172/1855327
-  pdf: https://www.osti.gov/biblio/1855327
+  pdf: https://www.osti.gov/servlets/purl/1855327
   path: https://doi.org/10.2172/1855327
   kind: conference-paper
 - title: Accelerating Multiscale Materials Modeling with Machine Learning.
@@ -412,7 +412,7 @@
   journal: null
   doi: https://doi.org/10.2172/1830065
   href: https://doi.org/10.2172/1830065
-  pdf: https://www.osti.gov/biblio/1830065
+  pdf: https://www.osti.gov/servlets/purl/1830065
   path: https://doi.org/10.2172/1830065
   kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:EYYDruWGBe4C
