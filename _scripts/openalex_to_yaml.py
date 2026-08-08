@@ -36,7 +36,7 @@ CITATIONS_FILE = OUTPUT_DIR / "citations.yml"
 
 # --- CONFIGURATION ---
 ORCID_ID = (os.getenv("ORCID_ID") or "0000-0001-9162-262X").strip()
-ARXIV_AUTHOR_NAME = os.getenv("ARXIV_AUTHOR_NAME", "Attila Cangi")
+ARXIV_AUTHOR_NAME = (os.getenv("ARXIV_AUTHOR_NAME") or "Attila Cangi").strip()
 TIMEOUT = 30
 OPENALEX_MAX_PAGES = int(os.getenv("OPENALEX_MAX_PAGES", "0"))
 OPENALEX_USER_AGENT = os.getenv("OPENALEX_USER_AGENT")

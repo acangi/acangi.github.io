@@ -60,6 +60,11 @@ on:
       - "!INSTALL.md"
       - "!README.md"
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Update Publications (OpenAlex)"]
+    types: [completed]
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -67,6 +72,7 @@ permissions:
 jobs:
   deploy:
     # available images: https://github.com/actions/runner-images#available-images
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
