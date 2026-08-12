@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-08'
+  last_updated: '2026-08-12'
 papers:
   M84yoJgAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -22,7 +22,7 @@ papers:
     title: Physics-enhanced neural networks for equation-of-state calculations
     year: '2023'
   M84yoJgAAAAJ:1yQoGdGgb4wC:
-    citations: 103
+    citations: 102
     title: Accelerating finite-temperature Kohn-Sham density functional theory with deep neural networks
     year: '2021'
   M84yoJgAAAAJ:2VqYfGB8ITEC:
@@ -94,7 +94,7 @@ papers:
     title: Publications Repository-Helmholtz-Zentrum Dresden-Rossendorf
     year: '2018'
   M84yoJgAAAAJ:BwyfMAYsbu0C:
-    citations: 164
+    citations: 165
     title: Deep dive into machine learning density functional theory for materials science and chemistry
     year: '2022'
   M84yoJgAAAAJ:ClCfbGk0d_YC:
@@ -138,11 +138,11 @@ papers:
     title: Data-driven magneto-inter-atomic potentials for iron-nickel alloys
     year: '2025'
   M84yoJgAAAAJ:GtLg2Ama23sC:
-    citations: 27
+    citations: 28
     title: 'Improving dynamic collision frequencies: Impacts on dynamic structure factors and stopping powers in warm dense matter'
     year: '2023'
   M84yoJgAAAAJ:HIFyuExEbWQC:
-    citations: 11
+    citations: 12
     title: "Inverting the Kohn\u2013Sham equations with physics-informed machine learning"
     year: '2024'
   M84yoJgAAAAJ:HbR8gkJAVGIC:
@@ -202,7 +202,7 @@ papers:
     title: 'Thermal PBE in warm dense matter: Does it matter and is it accurate?'
     year: '2026'
   M84yoJgAAAAJ:LhH-TYMQEocC:
-    citations: 5
+    citations: 6
     title: Publications Repository-Helmholtz-Zentrum Dresden-Rossendorf
     year: '2019'
   M84yoJgAAAAJ:LjlpjdlvIbIC:
@@ -322,7 +322,7 @@ papers:
     title: Developing Consistent Models for Matter in Extreme Conditions
     year: '2018'
   M84yoJgAAAAJ:XoXfffV-tXoC:
-    citations: 19
+    citations: 20
     title: Physics-Informed Neural Networks as Solvers for the Time-Dependent Schr\" odinger Equation
     year: '2022'
   M84yoJgAAAAJ:XvxMoLDsR5gC:
@@ -342,11 +342,11 @@ papers:
     title: MALA
     year: '2024'
   M84yoJgAAAAJ:_5tno0g5mFcC:
-    citations: 9
+    citations: 10
     title: Machine learning-driven structure prediction for iron hydrides
     year: '2024'
   M84yoJgAAAAJ:_FM0Bhl9EiAC:
-    citations: 16
+    citations: 17
     title: Improved calculations of mean ionization states with an average-atom model
     year: '2023'
   M84yoJgAAAAJ:_FxGoFyzp5QC:
@@ -362,7 +362,7 @@ papers:
     title: Almost exact exchange at almost no cost
     year: '2014'
   M84yoJgAAAAJ:_axFR9aDTf0C:
-    citations: 122
+    citations: 124
     title: Electronic density response of warm dense matter
     year: '2023'
   M84yoJgAAAAJ:anf4URPfarAC:
@@ -418,7 +418,7 @@ papers:
     title: Data-driven magneto-elastic predictions with scalable classical spin-lattice dynamics
     year: '2021'
   M84yoJgAAAAJ:i2xiXl-TujoC:
-    citations: 6
+    citations: 7
     title: 'atoMEC: An open-source average-atom Python code'
     year: '2022'
   M84yoJgAAAAJ:k8Z6L05lTy4C:
@@ -450,7 +450,7 @@ papers:
     title: Scalable machine learning model for energy decomposition analysis in aqueous systems
     year: '2025'
   M84yoJgAAAAJ:oNZyr7d5Mn4C:
-    citations: 12
+    citations: 13
     title: A scalable 5, 6-qubit Grover's quantum search algorithm
     year: '2022'
   M84yoJgAAAAJ:p__nRnzSRKYC:
@@ -502,7 +502,7 @@ papers:
     title: Deconstructing density functional theory and approximations
     year: '2010'
   M84yoJgAAAAJ:uLbwQdceFCQC:
-    citations: 25
+    citations: 26
     title: First-principles derivation and properties of density-functional average-atom models
     year: '2022'
   M84yoJgAAAAJ:uWiczbcajpAC:
