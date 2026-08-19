@@ -97,7 +97,7 @@
     "doi": "10.1103/physrevb.109.l241112",
     "url": "https://doi.org/10.1103/physrevb.109.l241112",
     "type": "journal",
-    "pdf": "http://link.aps.org/pdf/10.1103/PhysRevB.109.L241112"
+    "pdf": "https://doi.org/10.1103/physrevb.109.l241112"
   },
   {
     "title": "Machine learning-driven structure prediction for iron hydrides",
@@ -117,7 +117,7 @@
     "doi": "10.1088/2632-2153/ad3159",
     "url": "https://doi.org/10.1088/2632-2153/ad3159",
     "type": "journal",
-    "pdf": "https://iopscience.iop.org/article/10.1088/2632-2153/ad3159/pdf"
+    "pdf": "https://doi.org/10.1088/2632-2153/ad3159"
   },
   {
     "title": "Physics-enhanced neural networks for equation-of-state calculations",
@@ -127,7 +127,7 @@
     "doi": "10.1088/2632-2153/ad13b9",
     "url": "https://doi.org/10.1088/2632-2153/ad13b9",
     "type": "journal",
-    "pdf": "https://iopscience.iop.org/article/10.1088/2632-2153/ad13b9/pdf"
+    "pdf": "https://doi.org/10.1088/2632-2153/ad13b9"
   },
   {
     "title": "<i>Ab initio</i> insights on the ultrafast strong-field dynamics of anatase <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"><mml:msub><mml:mi mathvariant=\"normal\">TiO</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math>",
@@ -207,7 +207,7 @@
     "doi": "10.1063/5.0139560",
     "url": "https://doi.org/10.1063/5.0139560",
     "type": "journal",
-    "pdf": "https://aip.scitation.org/doi/pdf/10.1063/5.0139560"
+    "pdf": "https://doi.org/10.1063/5.0139560"
   },
   {
     "title": "Electrical conductivity of iron in Earth's core from microscopic Ohm's law",
@@ -247,7 +247,7 @@
     "doi": "10.1063/5.0135729",
     "url": "https://doi.org/10.1063/5.0135729",
     "type": "journal",
-    "pdf": "https://aip.scitation.org/doi/pdf/10.1063/5.0135729"
+    "pdf": "https://doi.org/10.1063/5.0135729"
   },
   {
     "title": "Non-empirical Mixing Coefficient for Hybrid XC Functionals from Analysis of the XC Kernel",
