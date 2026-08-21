@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-13'
+  last_updated: '2026-08-21'
 papers:
   M84yoJgAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -11,7 +11,7 @@ papers:
     year: '2020'
   M84yoJgAAAAJ:0CzhzZyukY4C:
     citations: 0
-    title: First-principles Stopping Power in Warm Dense Matter
+    title: First-principles Modeling of Warm Dense Matter.
     year: '2020'
   M84yoJgAAAAJ:0N-VGjzr574C:
     citations: 30
@@ -22,7 +22,7 @@ papers:
     title: Physics-enhanced neural networks for equation-of-state calculations
     year: '2023'
   M84yoJgAAAAJ:1yQoGdGgb4wC:
-    citations: 102
+    citations: 103
     title: Accelerating finite-temperature Kohn-Sham density functional theory with deep neural networks
     year: '2021'
   M84yoJgAAAAJ:2VqYfGB8ITEC:
@@ -66,7 +66,7 @@ papers:
     title: Non-empirical mixing coefficient for hybrid XC functionals from analysis of the XC kernel
     year: '2023'
   M84yoJgAAAAJ:8d8msizDQcsC:
-    citations: 85
+    citations: 86
     title: "A shallow hybrid classical\u2013quantum spiking feedforward neural network for noise-robust image classification"
     year: '2023'
   M84yoJgAAAAJ:9pM33mqn1YgC:
@@ -94,7 +94,7 @@ papers:
     title: Publications Repository-Helmholtz-Zentrum Dresden-Rossendorf
     year: '2018'
   M84yoJgAAAAJ:BwyfMAYsbu0C:
-    citations: 165
+    citations: 172
     title: Deep dive into machine learning density functional theory for materials science and chemistry
     year: '2022'
   M84yoJgAAAAJ:ClCfbGk0d_YC:
@@ -142,11 +142,11 @@ papers:
     title: 'Improving dynamic collision frequencies: Impacts on dynamic structure factors and stopping powers in warm dense matter'
     year: '2023'
   M84yoJgAAAAJ:HIFyuExEbWQC:
-    citations: 12
+    citations: 13
     title: "Inverting the Kohn\u2013Sham equations with physics-informed machine learning"
     year: '2024'
   M84yoJgAAAAJ:HbR8gkJAVGIC:
-    citations: 20
+    citations: 21
     title: Training-free hyperparameter optimization of neural networks for electronic structures in matter
     year: '2022'
   M84yoJgAAAAJ:HeT0ZceujKMC:
@@ -202,7 +202,7 @@ papers:
     title: 'Thermal PBE in warm dense matter: Does it matter and is it accurate?'
     year: '2026'
   M84yoJgAAAAJ:LhH-TYMQEocC:
-    citations: 5
+    citations: 6
     title: Publications Repository-Helmholtz-Zentrum Dresden-Rossendorf
     year: '2019'
   M84yoJgAAAAJ:LjlpjdlvIbIC:
@@ -227,7 +227,7 @@ papers:
     year: '2021'
   M84yoJgAAAAJ:N5tVd3kTz84C:
     citations: 0
-    title: Modeling Materials at Extreme Conditions for High Energy-Density Science
+    title: Modeling Materials at Extreme Conditions for High Energy-Density Science.
     year: '2019'
   M84yoJgAAAAJ:NJ774b8OgUMC:
     citations: 1
@@ -246,7 +246,7 @@ papers:
     title: Accelerating electron dynamics simulations through machine learned time propagators
     year: '2024'
   M84yoJgAAAAJ:OTTXONDVkokC:
-    citations: 19
+    citations: 20
     title: Machine learning in molecular sciences
     year: '2023'
   M84yoJgAAAAJ:PELIpwtuRlgC:
@@ -287,7 +287,7 @@ papers:
     year: '2022'
   M84yoJgAAAAJ:UHK10RUVsp4C:
     citations: 0
-    title: Electronic Transport Properties of Warm Dense Matter from Time-Dependent Density Functional Theory.
+    title: Transport properties in warm dense matter using time-dependent density functional theory.
     year: '2019'
   M84yoJgAAAAJ:URolC5Kub84C:
     citations: 0
@@ -295,7 +295,7 @@ papers:
     year: '2018'
   M84yoJgAAAAJ:VL0QpB8kHFEC:
     citations: 0
-    title: Optical conductivity of magnetized warm dense matter using time-dependent density functional theory
+    title: Optical conductivity of magnetized warm dense matter using time-dependent density functional theory.
     year: '2017'
   M84yoJgAAAAJ:VLnqNzywnoUC:
     citations: 0
@@ -306,7 +306,7 @@ papers:
     title: Ecp-copa/examinimd
     year: '2018'
   M84yoJgAAAAJ:WF5omc3nYNoC:
-    citations: 55
+    citations: 56
     title: Electronic structure via potential functional approximations
     year: '2011'
   M84yoJgAAAAJ:WJVC3Jt7v1AC:
@@ -319,7 +319,7 @@ papers:
     year: '2022'
   M84yoJgAAAAJ:WqliGbK-hY8C:
     citations: 0
-    title: Developing Consistent Models for Matter in Extreme Conditions
+    title: Developing Consistent Models for Matter in Extreme Conditions.
     year: '2018'
   M84yoJgAAAAJ:XoXfffV-tXoC:
     citations: 20
@@ -335,8 +335,8 @@ papers:
     year: '2008'
   M84yoJgAAAAJ:ZuybSZzF8UAC:
     citations: 0
-    title: An exchange-correlation functional capturing bulk, surface, and confinement physics
-    year: '2019'
+    title: An Exchange-Correlation Functional Capturing Bulk Surface and Confinement Physics
+    year: '2018'
   M84yoJgAAAAJ:ZzlSgRqYykMC:
     citations: 1
     title: MALA
@@ -362,7 +362,7 @@ papers:
     title: Almost exact exchange at almost no cost
     year: '2014'
   M84yoJgAAAAJ:_axFR9aDTf0C:
-    citations: 124
+    citations: 123
     title: Electronic density response of warm dense matter
     year: '2023'
   M84yoJgAAAAJ:anf4URPfarAC:
@@ -446,7 +446,7 @@ papers:
     title: atomec, August 2021
     year: Unknown Year
   M84yoJgAAAAJ:nZcligLrVowC:
-    citations: 0
+    citations: 1
     title: Scalable machine learning model for energy decomposition analysis in aqueous systems
     year: '2025'
   M84yoJgAAAAJ:oNZyr7d5Mn4C:
@@ -535,8 +535,8 @@ papers:
     year: '2023'
   M84yoJgAAAAJ:ye4kPcJQO24C:
     citations: 0
-    title: Stopping Power of Warm Dense Matter from TDDFT-Ehrenfest Molecular Dynamics
-    year: '2018'
+    title: Stopping Power of Warm Dense Matter from TDDFT-Ehrenfest Molecular Dynamics.
+    year: '2017'
   M84yoJgAAAAJ:yqoGN6RLRZoC:
     citations: 1
     title: Ultrahigh Resolution X-ray Thomson Scattering Measurements at the European XFEL
