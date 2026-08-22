@@ -134,7 +134,7 @@
   path: https://doi.org/10.2172/2431651
   kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:3htObqc8RwsC
-- title: Machine-Learning for Static and Dynamic Electronic Structure Theory
+- title: Machine-Learning for Static and Dynamic Electronic Structure Theory
   author: Lenz Fiedler; Karan Shah; Attila Cangi
   year: 2023
   date: '2023-01-01'
@@ -291,8 +291,7 @@
   pdf: https://scipost.org/preprints/scipost_202106_00020v2/
   path: https://doi.org/10.21468/scipost.report.3820
   kind: peer-review
-- title: E&amp;#64256;ects of electron-ion collisions on stopping powers in warm dense
-    matter.
+- title: Eﬀects of electron-ion collisions on stopping powers in warm dense matter.
   author: Thomas Hentschel; Alina Kononov; Andrew Baczewski; Attila Cangi; Stephanie
     B. Hansen
   year: 2021
@@ -303,6 +302,7 @@
   pdf: https://www.osti.gov/servlets/purl/1897018
   path: https://doi.org/10.2172/1897018
   kind: conference-paper
+  google_scholar_id: M84yoJgAAAAJ:ClCfbGk0d_YC
 - title: Dataset and scripts for A Deep Dive into Machine Learning Density Functional
     Theory for Materials Science and Chemistry
   author: Lenz Fiedler; Karan Shah; Attila Cangi; Michael Bußmann
@@ -402,7 +402,7 @@
   href: https://openalex.org/W4287873620
   pdf: https://www.osti.gov/biblio/1765305
   path: null
-  kind: other
+  kind: talk
   google_scholar_id: M84yoJgAAAAJ:0CzhzZyukY4C
 - title: 'Collisions and Correlations in Warm Dense Matter: effects on electronic
     stopping.'
@@ -440,7 +440,7 @@
   href: https://openalex.org/W4288548898
   pdf: https://www.osti.gov/biblio/1639309
   path: null
-  kind: other
+  kind: talk
   google_scholar_id: M84yoJgAAAAJ:ZuybSZzF8UAC
 - title: Collisions and Correlation Effects in Warm Dense Matter
   author: Thomas Hentschel; Attila Cangi; Andrew Baczewski; Stephanie B. Hansen
@@ -475,7 +475,7 @@
   href: https://openalex.org/W2925181260
   pdf: https://www.osti.gov/servlets/purl/1639295
   path: null
-  kind: other
+  kind: talk
   google_scholar_id: M84yoJgAAAAJ:N5tVd3kTz84C
 - title: Magnetostriction and Long-Range Interactions in Coupled Spin and Lattice
     Dynamics
@@ -520,7 +520,7 @@
   href: https://openalex.org/W4297732077
   pdf: https://www.osti.gov/servlets/purl/1465022
   path: null
-  kind: other
+  kind: talk
 - title: An Exchange-Correlation Functional Capturing Bulk Surface and Confinement
     Physics
   author: Attila Cangi
@@ -565,7 +565,7 @@
   href: https://openalex.org/W3090318926
   pdf: https://www.osti.gov/biblio/1569112
   path: null
-  kind: other
+  kind: talk
   google_scholar_id: M84yoJgAAAAJ:WqliGbK-hY8C
 - title: ECP-copa/ExaMiniMD
   author: Aidan P. Thompson; Attila Cangi; Christian Robert Trott; Christoph Junghans;
@@ -599,7 +599,7 @@
   href: https://openalex.org/W2755757758
   pdf: https://www.osti.gov/biblio/1480198
   path: null
-  kind: other
+  kind: talk
   google_scholar_id: M84yoJgAAAAJ:VL0QpB8kHFEC
 - title: Progress towards an {\it ab initio} real-time treatment of warm dense matter
   author: Andrew Baczewski; Attila Cangi; Stephanie B. Hansen; Daniel S. Jensen

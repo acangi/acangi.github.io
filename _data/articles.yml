@@ -191,8 +191,7 @@
   kind: article
   google_scholar_id: M84yoJgAAAAJ:0izLItjtcgwC
   publication_page: true
-- title: <i>Ab initio</i> insights on the ultrafast strong-field dynamics of anatase
-    <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi mathvariant="normal">TiO</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math>
+- title: Ab initio insights on the ultrafast strong-field dynamics of anatase TiO2
   author: Sruthil Lal S. B.; Mani Lokamani; Kushal Ramakrishna; Attila Cangi; D. Murali;
     M. Posselt; Assa Aravindh Sasikala Devi; Alok Sharan
   year: 2023
@@ -239,7 +238,7 @@
   journal: Electron. Struct.
   doi: https://doi.org/10.1088/2516-1075/acfd75
   href: https://doi.org/10.1088/2516-1075/acfd75
-  pdf: http://dx.doi.org/10.1088/2516-1075/acfd75
+  pdf: https://doi.org/10.1088/2516-1075/acfd75
   path: https://doi.org/10.1088/2516-1075/acfd75
   kind: article
   google_scholar_id: M84yoJgAAAAJ:umqufdRvDiIC
@@ -408,7 +407,7 @@
   kind: article
   google_scholar_id: M84yoJgAAAAJ:HbR8gkJAVGIC
   publication_page: true
-- title: <i>Ab initio</i> study of shock-compressed copper
+- title: Ab initio study of shock-compressed copper
   author: Maximilian Schörner; B. B. L. Witte; Andrew Baczewski; Attila Cangi; R.
     Redmer
   year: 2022
@@ -421,8 +420,8 @@
   kind: article
   google_scholar_id: M84yoJgAAAAJ:e_rmSamDkqQC
   publication_page: true
-- title: Effective electronic forces and potentials from <i>ab initio</i> path integral
-    Monte Carlo simulations
+- title: Effective electronic forces and potentials from ab initio path integral Monte
+    Carlo simulations
   author: Tobias Dornheim; P. Tolias; Zhandos A. Moldabekov; Attila Cangi; Jan Vorberger
   year: 2022
   date: '2022-06-28'

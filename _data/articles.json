@@ -130,7 +130,7 @@
     "pdf": "https://doi.org/10.1088/2632-2153/ad13b9"
   },
   {
-    "title": "<i>Ab initio</i> insights on the ultrafast strong-field dynamics of anatase <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"><mml:msub><mml:mi mathvariant=\"normal\">TiO</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math>",
+    "title": "Ab initio insights on the ultrafast strong-field dynamics of anatase TiO2",
     "year": 2023,
     "authors": "Sruthil Lal S. B., Mani Lokamani, Kushal Ramakrishna, Attila Cangi, D. Murali, M. Posselt, Assa Aravindh Sasikala Devi, Alok Sharan",
     "venue": "Phys. Rev. B",
@@ -167,7 +167,7 @@
     "doi": "10.1088/2516-1075/acfd75",
     "url": "https://doi.org/10.1088/2516-1075/acfd75",
     "type": "journal",
-    "pdf": "http://dx.doi.org/10.1088/2516-1075/acfd75"
+    "pdf": "https://doi.org/10.1088/2516-1075/acfd75"
   },
   {
     "title": "Transferable interatomic potential for aluminum from ambient conditions to warm dense matter",
@@ -290,7 +290,7 @@
     "pdf": "https://iopscience.iop.org/article/10.1088/2632-2153/ac9956/pdf"
   },
   {
-    "title": "<i>Ab initio</i> study of shock-compressed copper",
+    "title": "Ab initio study of shock-compressed copper",
     "year": 2022,
     "authors": "Maximilian Sch\u00f6rner, B. B. L. Witte, Andrew Baczewski, Attila Cangi, R. Redmer",
     "venue": "Phys. Rev. B",
@@ -300,7 +300,7 @@
     "pdf": ""
   },
   {
-    "title": "Effective electronic forces and potentials from <i>ab initio</i> path integral Monte Carlo simulations",
+    "title": "Effective electronic forces and potentials from ab initio path integral Monte Carlo simulations",
     "year": 2022,
     "authors": "Tobias Dornheim, P. Tolias, Zhandos A. Moldabekov, Attila Cangi, Jan Vorberger",
     "venue": "J. Chem. Phys.",
