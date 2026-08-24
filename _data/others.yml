@@ -419,8 +419,9 @@
   google_scholar_id: M84yoJgAAAAJ:EYYDruWGBe4C
 - title: Accelerating Finite-temperature Kohn-Sham Density Functional Theory\ with
     Deep Neural Networks
-  author: John Ellis; Attila Cangi; Normand A. Modine; John A. Stephens; Aidan P.
-    Thompson; Sivasankaran Rajamanickam; Aidan P. Thompson; Sivasankaran Rajamanickam
+  author: "Sandia National Laboratories (SNL-NM), Albuquerque, NM (United \r\nStates);\
+    \ John Ellis; USDOE National Nuclear Security Administration (NNSA); Attila Cangi;\
+    \ Normand Modine; John Stephens; Aidan P. Thompson; Sivasankaran Rajamanickam"
   year: 2020
   date: '2020-10-13'
   journal: null
