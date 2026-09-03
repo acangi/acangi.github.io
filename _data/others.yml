@@ -3,10 +3,10 @@
   author: Attila Cangi
   year: 2026
   date: '2026-06-17'
-  journal: Open MIND
+  journal: Zenodo (CERN Eur. Organ. Nucl. Res.)
   doi: https://doi.org/10.5281/zenodo.20733046
   href: https://doi.org/10.5281/zenodo.20733046
-  pdf: https://github.com/acangi/lecture_notes_solids_thermal/tree/v1.0.2
+  pdf: https://doi.org/10.5281/zenodo.20733046
   path: https://doi.org/10.5281/zenodo.20733046
   kind: software
 - title: Fundamentals in Solid-State Physics – Thermal Properties
@@ -25,10 +25,10 @@
     Thomas Dae-Song
   year: 2025
   date: '2025-12-02'
-  journal: Open MIND
+  journal: RODARE
   doi: https://doi.org/10.14278/rodare.4170
   href: https://doi.org/10.14278/rodare.4170
-  pdf: https://www.hzdr.de/publications/Publ-41905
+  pdf: https://doi.org/10.14278/rodare.4170
   path: https://doi.org/10.14278/rodare.4170
   kind: dataset
 - title: 'Data publication: Scalable Machine Learning Model for Energy Decomposition
@@ -37,7 +37,7 @@
     Thomas Dae-Song
   year: 2025
   date: '2025-12-02'
-  journal: Open MIND
+  journal: null
   doi: https://doi.org/10.14278/rodare.4169
   href: https://doi.org/10.14278/rodare.4169
   pdf: https://rodare.hzdr.de/record/4170
