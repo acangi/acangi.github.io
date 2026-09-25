@@ -14,13 +14,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       # See CUSTOMIZE.md for details on how to set up PAT for triggering subsequent workflows
       #        with:
       #          token: ${{ secrets.PAT }}
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: "3.13"
 
@@ -30,6 +30,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Update Google Scholar citations cache
+        # Google Scholar can rate-limit GitHub-hosted runners. Keep the prior
+        # cache and continue generating publications from OpenAlex if it does.
+        continue-on-error: true
         env:
           SCHOLAR_ALLOW_FAILURE: "true"
         run: |

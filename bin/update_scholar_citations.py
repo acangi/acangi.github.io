@@ -2,9 +2,7 @@
 
 import os
 import sys
-import yaml
 from datetime import datetime
-from scholarly import scholarly
 
 
 def env_truthy(name: str) -> bool:
@@ -15,27 +13,26 @@ def env_truthy(name: str) -> bool:
 
 def load_scholar_user_id() -> str:
     """Load the Google Scholar user ID from the configuration file."""
+    import yaml
+
     config_file = "_data/socials.yml"
     if not os.path.exists(config_file):
-        print(
-            f"Configuration file {config_file} not found. Please ensure the file exists and contains your Google Scholar user ID."
+        raise FileNotFoundError(
+            f"Configuration file {config_file} not found. Please ensure it contains your Google Scholar user ID."
         )
-        sys.exit(1)
     try:
         with open(config_file, "r") as f:
             config = yaml.safe_load(f)
         scholar_user_id = config.get("scholar_userid")
         if not scholar_user_id:
-            print(
-                "No 'scholar_userid' found in the configuration file. Please add 'scholar_userid' to _data/socials.yml."
+            raise ValueError(
+                "No 'scholar_userid' found in the configuration file. Please add it to _data/socials.yml."
             )
-            sys.exit(1)
         return scholar_user_id
     except yaml.YAMLError as e:
-        print(
-            f"Error parsing YAML file {config_file}: {e}. Please check the file for correct YAML syntax."
-        )
-        sys.exit(1)
+        raise ValueError(
+            f"Error parsing YAML file {config_file}: {e}. Please check its YAML syntax."
+        ) from e
 
 
 OUTPUT_FILE: str = "_data/citations.yml"
@@ -66,6 +63,11 @@ def get_scholar_citations() -> None:
     if should_skip_fetch():
         print("Skipping Google Scholar fetch because SCHOLAR_SKIP_FETCH is set.")
         return
+
+    # Import lazily so SCHOLAR_ALLOW_FAILURE also covers unavailable or
+    # incompatible dependencies in CI.
+    import yaml
+    from scholarly import scholarly
 
     scholar_user_id = load_scholar_user_id()
     print(f"Fetching citations for Google Scholar ID: {scholar_user_id}")
@@ -146,20 +148,13 @@ def get_scholar_citations() -> None:
         print("No changes in citation data. Skipping file update.")
         return
 
-    try:
-        with open(OUTPUT_FILE, "w") as f:
-            yaml.dump(citation_data, f, width=1000, sort_keys=True)
-        print(f"Citation data saved to {OUTPUT_FILE}")
-    except Exception as e:
-        print(
-            f"Error writing citation data to {OUTPUT_FILE}: {e}. Please check file permissions and disk space."
-        )
-        sys.exit(1)
+    with open(OUTPUT_FILE, "w") as f:
+        yaml.dump(citation_data, f, width=1000, sort_keys=True)
+    print(f"Citation data saved to {OUTPUT_FILE}")
 
 
 if __name__ == "__main__":
     try:
         get_scholar_citations()
     except Exception as e:
-        print(f"Unexpected error: {e}")
-        sys.exit(1)
+        fail_or_warn(f"Unexpected error while updating the Google Scholar cache: {e}")
