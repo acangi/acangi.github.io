@@ -8,7 +8,7 @@
   journal: arXiv (Cornell Univ.)
   doi: https://doi.org/10.48550/arxiv.2607.24997
   href: https://doi.org/10.48550/arxiv.2607.24997
-  pdf: https://doi.org/10.48550/arxiv.2607.24997
+  pdf: https://arxiv.org/pdf/2607.24997
   path: https://doi.org/10.48550/arxiv.2607.24997
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:6yz0xqPARnAC
@@ -22,7 +22,7 @@
   journal: arXiv (Cornell Univ.)
   doi: https://doi.org/10.48550/arxiv.2605.28395
   href: https://doi.org/10.48550/arxiv.2605.28395
-  pdf: https://doi.org/10.48550/arxiv.2605.28395
+  pdf: https://arxiv.org/pdf/2605.28395
   path: https://doi.org/10.48550/arxiv.2605.28395
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:F1b5ZUV5XREC
@@ -36,7 +36,7 @@
   journal: arXiv (Cornell Univ.)
   doi: https://doi.org/10.48550/arxiv.2605.25270
   href: https://doi.org/10.48550/arxiv.2605.25270
-  pdf: https://doi.org/10.48550/arxiv.2605.25270
+  pdf: https://arxiv.org/pdf/2605.25270
   path: https://doi.org/10.48550/arxiv.2605.25270
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:LgRImbQfgY4C
@@ -50,7 +50,7 @@
   journal: arXiv (Cornell Univ.)
   doi: https://doi.org/10.48550/arxiv.2605.06303
   href: https://doi.org/10.48550/arxiv.2605.06303
-  pdf: https://doi.org/10.48550/arxiv.2605.06303
+  pdf: https://arxiv.org/pdf/2605.06303
   path: https://doi.org/10.48550/arxiv.2605.06303
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:Ak0FvsSvgGUC
@@ -119,7 +119,7 @@
 - title: Transferable Interatomic Potentials for Aluminum from Ambient Conditions
     to Warm Dense Matter
   author: Sandeep Kumar; Hossein Tahmasbi; Kushal Ramakrishna; Mani Lokamani; Svetoslav
-    Nikolov; Julien Tranchida; Mitchell Wood; Attila Cangi
+    Ganchev Nikolov; Julien Tranchida; Mitchell A. Wood; Attila Cangi
   year: 2023
   date: '2023-04-19'
   journal: arXiv (Cornell Univ.)
@@ -240,8 +240,8 @@
   unpublished_preprint: true
   publication_page: true
 - title: The Quantum Bohm Potential for Many-Fermion Systems
-  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank Graziani; M. Bönitz;
-    Attila Cangi
+  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank R. Graziani; M.
+    Bönitz; Attila Cangi
   year: 2021
   date: '2021-03-15'
   journal: arXiv (Cornell Univ.)
@@ -267,7 +267,8 @@
   unpublished_preprint: true
   publication_page: true
 - title: Uniform approximations for fermionic densities
-  author: Raphael F. Ribeiro; Donghyung Lee; Attila Cangi; Peter Elliott; Kieron Burke
+  author: Raphael F. Ribeiro; Donghyung Lee; Attila Cangi; Peter D. T. A. Elliott;
+    Kieron Burke
   year: 2014
   date: '2014-09-24'
   journal: arXiv (Cornell Univ.)
@@ -279,7 +280,8 @@
   unpublished_preprint: true
   publication_page: true
 - title: Almost Exact Exchange At Almost No Cost
-  author: Peter Elliott; Attila Cangi; Stefano Pittalis; E. K. U. Gross; Kieron Burke
+  author: Peter D. T. A. Elliott; Attila Cangi; Stefano Pittalis; Eberhard K. U. Gross;
+    Kieron Burke
   year: 2014
   date: '2014-08-11'
   journal: arXiv (Cornell Univ.)
@@ -305,7 +307,7 @@
   unpublished_preprint: true
   publication_page: true
 - title: Leading Corrections to the Local Density Approximation
-  author: Attila Cangi; Donghyung Lee; Peter Elliott; Kieron Burke
+  author: Attila Cangi; Donghyung Lee; Peter D. T. A. Elliott; Kieron Burke
   year: 2010
   date: '2010-02-06'
   journal: arXiv (Cornell Univ.)

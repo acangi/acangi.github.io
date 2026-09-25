@@ -4,15 +4,14 @@
     Theodoros Pavloudis; Joseph Kioseoglou; Johannes Wasmer; Attila Cangi; Stefan
     Blügel; Leticia A. Gracia; Belén Hernández-Gascón; Amra Hasečić; Javier Heras‐Domingo;
     Francesco Mercuri; Alexei Kuzmin; Giovanni Bertoni; Paolo Rosi; Enzo Rotunno;
-    Vincenzo Grillo; Muhammet Cahit Kulaç Kulaç; Bahattin Koç; Andy S. Anker; Jin
-    Hyun Chang; Jelle Vekeman; Toon Verstraelen; Matteo Cobelli; Luke P. J. Gilligan;
-    Stefano Sanvito; Sepideh Baghaee Ravari; Lei Zhang; Markus Stricker; Jonathan
-    Schmidt; Dario Calvani; Amil Aligayev; Benjamin Udofia; Gauravkumar LAthiya; F.
-    J. Domínguez-Gutiérrez; Patrícia Ramos; José Manuel Oliveira; Silvia Bonfanti;
-    Tero Mäkinen; Mikko Alava; Dmytro Khomenko; Matthias Stosiek; Yuhao Zhang; Patrick
-    Rinke; Milica Todorović; Adrian Mirza; Nawaf Alampara; Siddhant Kumar; Elisa Molinari;
-    Alice Ruini; Anagha Aneesh; Mara Schilling-Wilhelmi; Martiño Ríos-García; Kevin
-    Maik Jablonka
+    Vincenzo Grillo; Muhammet Cahit Kulaç; Bahattin Koç; Andy S. Anker; Jin Hyun Chang;
+    Jelle Vekeman; Toon Verstraelen; Matteo Cobelli; Luke P. J. Gilligan; Stefano
+    Sanvito; Sepideh Baghaee Ravari; Lei Zhang; Markus A. Stricker; Jonathan Schmidt;
+    Dario Calvani; Amil Aligayev; Benjamin Udofia; Gauravkumar LAthiya; F. J. Domínguez-Gutiérrez;
+    Patrícia Ramos; José Manuel Oliveira; Silvia Bonfanti; Tero Mäkinen; Mikko Alava;
+    Dmytro Khomenko; Matthias Stosiek; Yuhao Zhang; Patrick Rinke; Milica Todorović;
+    Adrian Mirza; Nawaf Alampara; Siddhant Kumar; Elisa Molinari; Alice Ruini; Anagha
+    Aneesh; Mara Schilling-Wilhelmi; Martiño Ríos-García; Kevin Maik Jablonka
   year: 2026
   date: '2026-07-24'
   journal: J. Phys. Mater.
@@ -82,8 +81,8 @@
   google_scholar_id: M84yoJgAAAAJ:r_AWSJRzSzQC
   publication_page: true
 - title: Probing iron in Earth’s core with molecular-spin dynamics
-  author: Svetoslav Nikolov; Kushal Ramakrishna; Andrew Rohskopf; Mani Lokamani; Julien
-    Tranchida; John H. Carpenter; Attila Cangi; Mitchell Wood
+  author: Svetoslav V. Nikolov; Kushal Ramakrishna; Andrew Rohskopf; Mani Lokamani;
+    Julien Tranchida; John H. Carpenter; Attila Cangi; Mitchell A. Wood
   year: 2024
   date: '2024-12-12'
   journal: Proc. Natl. Acad. Sci.
@@ -125,9 +124,9 @@
     Sebastian Goede; N. J. Hartley; M. Herbert; P. Hesselbach; Hauke Höppner; Oliver
     Humphries; Zuzana Konôpková; Alejandro Laso García; Björn Lindqvist; J. Lütgert;
     M. J. MacDonald; Mikako Makita; W. J. Martin; Mikhail Mishchenko; Zhandos A. Moldabekov;
-    M. Nakatsutsumi; Jean-Paul Naedler; P. Neumayer; A. Pełka; Chongbing Qu; Lisa
-    Randolph; J. Rips; T. Toncian; Jan Vorberger; L. Wollenweber; U. Zastrau; D. Kraus;
-    Thomas R. Preston; Tobias Dornheim
+    M. Nakatsutsumi; Jean-Paul Naedler; P. Neumayer; Alexander Pelka; Chongbing Qu;
+    Lisa Randolph; J. Rips; T. Toncian; Jan Vorberger; L. Wollenweber; U. Zastrau;
+    D. Kraus; Thomas R. Preston; Tobias Dornheim
   year: 2024
   date: '2024-09-09'
   journal: J. Appl. Phys.
@@ -192,7 +191,7 @@
   google_scholar_id: M84yoJgAAAAJ:0izLItjtcgwC
   publication_page: true
 - title: Ab initio insights on the ultrafast strong-field dynamics of anatase TiO2
-  author: Sruthil Lal S. B.; Mani Lokamani; Kushal Ramakrishna; Attila Cangi; D. Murali;
+  author: Sruthil Lal SB; Mani Lokamani; Kushal Ramakrishna; Attila Cangi; D. Murali;
     M. Posselt; Assa Aravindh Sasikala Devi; Alok Sharan
   year: 2023
   date: '2023-11-27'
@@ -246,7 +245,7 @@
 - title: Transferable interatomic potential for aluminum from ambient conditions to
     warm dense matter
   author: Sandeep Kumar; Hossein Tahmasbi; Kushal Ramakrishna; Mani Lokamani; Svetoslav
-    Nikolov; Julien Tranchida; Mitchell Wood; Attila Cangi
+    Ganchev Nikolov; Julien Tranchida; Mitchell A. Wood; Attila Cangi
   year: 2023
   date: '2023-09-06'
   journal: Phys. Rev. Res.
@@ -306,15 +305,15 @@
   journal: Phys. Rev. B
   doi: https://doi.org/10.1103/physrevb.107.115131
   href: https://doi.org/10.1103/physrevb.107.115131
-  pdf: https://www.osti.gov/biblio/1961489
+  pdf: null
   path: https://doi.org/10.1103/physrevb.107.115131
   kind: article
   google_scholar_id: M84yoJgAAAAJ:lmc2jWPfTJgC
   publication_page: true
 - title: Electronic density response of warm dense matter
-  author: Tobias Dornheim; Zhandos A. Moldabekov; Kushal Ramakrishna; P. Tolias; Andrew
-    Baczewski; D. Kraus; Thomas R. Preston; D. A. Chapman; Maximilian Böhme; T. Döppner;
-    Frank Graziani; M. Bönitz; Attila Cangi; Jan Vorberger
+  author: Tobias Dornheim; Zhandos A. Moldabekov; Kushal Ramakrishna; Panagiotis B.
+    Tolias; Andrew Baczewski; D. Kraus; Thomas R. Preston; D. A. Chapman; Maximilian
+    Böhme; T. Döppner; Frank R. Graziani; M. Bönitz; Attila Cangi; Jan Vorberger
   year: 2023
   date: '2023-03-01'
   journal: Phys. Plasmas
@@ -396,7 +395,7 @@
 - title: Training-free hyperparameter optimization of neural networks for electronic
     structures in matter
   author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel A. Popoola; Tamar
-    Yovell; Vladyslav Oles; John Ellis; Sivasankaran Rajamanickam; Attila Cangi
+    Yovell; Vladyslav Oles; John A. Ellis; Sivasankaran Rajamanickam; Attila Cangi
   year: 2022
   date: '2022-10-11'
   journal: Mach. Learn. Sci. Technol.
@@ -422,7 +421,8 @@
   publication_page: true
 - title: Effective electronic forces and potentials from ab initio path integral Monte
     Carlo simulations
-  author: Tobias Dornheim; P. Tolias; Zhandos A. Moldabekov; Attila Cangi; Jan Vorberger
+  author: Tobias Dornheim; Panagiotis B. Tolias; Zhandos A. Moldabekov; Attila Cangi;
+    Jan Vorberger
   year: 2022
   date: '2022-06-28'
   journal: J. Chem. Phys.
@@ -435,7 +435,8 @@
   publication_page: true
 - title: Effective electronic forces and potentials from ab initio path integral Monte
     Carlo simulations
-  author: Tobias Dornheim; P. Tolias; Zhandos A. Moldabekov; Attila Cangi; Jan Vorberger
+  author: Tobias Dornheim; Panagiotis B. Tolias; Zhandos A. Moldabekov; Attila Cangi;
+    Jan Vorberger
   year: 2022
   date: '2022-04-29'
   journal: PubMed
@@ -474,8 +475,8 @@
   publication_page: true
 - title: Towards a quantum fluid theory of correlated many-fermion systems from first
     principles
-  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank Graziani; M. Bönitz;
-    Attila Cangi
+  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank R. Graziani; M.
+    Bönitz; Attila Cangi
   year: 2022
   date: '2022-02-16'
   journal: SciPost Phys.
@@ -488,8 +489,8 @@
   publication_page: true
 - title: 'Dissociating the phononic, magnetic and electronic contributions to thermal
     conductivity: a computational study in alpha-iron'
-  author: Svetoslav Nikolov; Julien Tranchida; Kushal Ramakrishna; Mani Lokamani;
-    Attila Cangi; Mitchell Wood
+  author: Svetoslav V. Nikolov; Julien Tranchida; Kushal Ramakrishna; Mani Lokamani;
+    Attila Cangi; Mitchell A. Wood
   year: 2022
   date: '2022-02-03'
   journal: J. Mater. Sci.
@@ -553,8 +554,8 @@
   publication_page: true
 - title: Accelerating finite-temperature Kohn-Sham density functional theory with
     deep neural networks
-  author: John Ellis; Lenz Fiedler; Gabriel A. Popoola; Normand A. Modine; J. A. Stephens;
-    Aidan P. Thompson; Attila Cangi; Sivasankaran Rajamanickam
+  author: John A. Ellis; Lenz Fiedler; Gabriel A. Popoola; Normand A. Modine; J. A.
+    Stephens; Aidan P. Thompson; Attila Cangi; Sivasankaran Rajamanickam
   year: 2021
   date: '2021-07-08'
   journal: Phys. Rev. B
@@ -596,7 +597,7 @@
 - title: 'Exchange-correlation approximations for reduced-density-matrix-functional
     theory at finite temperature: Capturing magnetic phase transitions in the homogeneous
     electron gas'
-  author: Tim Baldsiefen; Attila Cangi; F. G. Eich; E. K. U. Gross
+  author: Tim Baldsiefen; Attila Cangi; F. G. Eich; Eberhard K. U. Gross
   year: 2017
   date: '2017-12-18'
   journal: Phys. Rev. A
@@ -609,7 +610,7 @@
   publication_page: true
 - title: 'Reduced-density-matrix-functional theory at finite temperature: Theoretical
     foundations'
-  author: Tim Baldsiefen; Attila Cangi; E. K. U. Gross
+  author: Tim Baldsiefen; Attila Cangi; Eberhard K. U. Gross
   year: 2015
   date: '2015-11-20'
   journal: Phys. Rev. A
@@ -633,20 +634,21 @@
   google_scholar_id: M84yoJgAAAAJ:dTyEYWd-f8wC
   publication_page: true
 - title: Almost exact exchange at almost no computational cost in electronic structure
-  author: Peter Elliott; Attila Cangi; Stefano Pittalis; E. K. U. Gross; Kieron Burke
+  author: Peter D. T. A. Elliott; Attila Cangi; Stefano Pittalis; Eberhard K. U. Gross;
+    Kieron Burke
   year: 2015
   date: '2015-08-27'
   journal: Phys. Rev. A
   doi: https://doi.org/10.1103/physreva.92.022513
   href: https://doi.org/10.1103/physreva.92.022513
-  pdf: https://www.openaccessrepository.it/record/157102
+  pdf: null
   path: https://doi.org/10.1103/physreva.92.022513
   kind: article
   google_scholar_id: M84yoJgAAAAJ:JoZmwDi-zQgC
   publication_page: true
 - title: Virial theorem and exact properties of density functionals for periodic systems
-  author: Hossein Mirhosseini; Attila Cangi; Tim Baldsiefen; Antonio Sanna; C. R.
-    Proetto; E. K. U. Gross
+  author: Hossein Mirhosseini; Attila Cangi; Tim Baldsiefen; Antonio Sanna; César
+    R. Proetto; Eberhard K. U. Gross
   year: 2014
   date: '2014-06-05'
   journal: Phys. Rev. B
@@ -658,7 +660,7 @@
   google_scholar_id: M84yoJgAAAAJ:_FxGoFyzp5QC
   publication_page: true
 - title: Potential functionals versus density functionals
-  author: Attila Cangi; E. K. U. Gross; Kieron Burke
+  author: Attila Cangi; Eberhard K. U. Gross; Kieron Burke
   year: 2013
   date: '2013-12-04'
   journal: Phys. Rev. A
@@ -670,7 +672,8 @@
   google_scholar_id: M84yoJgAAAAJ:LkGwnXOMwfcC
   publication_page: true
 - title: Electronic Structure via Potential Functional Approximations
-  author: Attila Cangi; Donghyung Lee; Peter Elliott; Kieron Burke; E. K. U. Gross
+  author: Attila Cangi; Donghyung Lee; Peter D. T. A. Elliott; Kieron Burke; Eberhard
+    K. U. Gross
   year: 2011
   date: '2011-06-10'
   journal: Phys. Rev. Lett.
@@ -682,7 +685,7 @@
   google_scholar_id: M84yoJgAAAAJ:WF5omc3nYNoC
   publication_page: true
 - title: Leading corrections to local approximations
-  author: Attila Cangi; Donghyung Lee; Peter Elliott; Kieron Burke
+  author: Attila Cangi; Donghyung Lee; Peter D. T. A. Elliott; Kieron Burke
   year: 2010
   date: '2010-06-24'
   journal: Phys. Rev. B
@@ -694,7 +697,7 @@
   google_scholar_id: M84yoJgAAAAJ:eQOLeE2rZwMC
   publication_page: true
 - title: Semiclassical Origins of Density Functionals
-  author: Peter Elliott; Donghyung Lee; Attila Cangi; Kieron Burke
+  author: Peter D. T. A. Elliott; Donghyung Lee; Attila Cangi; Kieron Burke
   year: 2008
   date: '2008-06-27'
   journal: Phys. Rev. Lett.

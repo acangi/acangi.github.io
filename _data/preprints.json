@@ -7,16 +7,6 @@
     "doi": "10.48550/arxiv.2607.24997",
     "url": "https://doi.org/10.48550/arxiv.2607.24997",
     "type": "preprint",
-    "pdf": "https://doi.org/10.48550/arxiv.2607.24997"
-  },
-  {
-    "title": "MANDALA: An E(3)-Equivariant Graph Neural Network Framework for Learning Electronic-Structure Operators with Observable Guidance",
-    "year": 2026,
-    "authors": "Bartosz Brzoza, Wiktoria Szopa, Zakaria Elabid, Vincent Martinetto, Varadarajan Rengaraj, Mani Lokamani, Thomas D. K\u00fchne, Attila Cangi",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "",
-    "url": "https://openalex.org/W7171902782",
-    "type": "preprint",
     "pdf": "https://arxiv.org/pdf/2607.24997"
   },
   {
@@ -26,16 +16,6 @@
     "venue": "arXiv (Cornell Univ.)",
     "doi": "10.48550/arxiv.2605.28395",
     "url": "https://doi.org/10.48550/arxiv.2605.28395",
-    "type": "preprint",
-    "pdf": "https://doi.org/10.48550/arxiv.2605.28395"
-  },
-  {
-    "title": "Can MACE Potentials Accurately Describe Magnetism and Phase Stability in Fe-Ni Alloys? A Systematic Benchmark",
-    "year": 2026,
-    "authors": "Kushal Ramakrishna, Mani Lokamani, Attila Cangi",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "",
-    "url": "https://openalex.org/W7162817613",
     "type": "preprint",
     "pdf": "https://arxiv.org/pdf/2605.28395"
   },
@@ -47,16 +27,6 @@
     "doi": "10.48550/arxiv.2605.25270",
     "url": "https://doi.org/10.48550/arxiv.2605.25270",
     "type": "preprint",
-    "pdf": "https://doi.org/10.48550/arxiv.2605.25270"
-  },
-  {
-    "title": "Thermal PBE in warm dense matter: Does it matter and is it accurate?",
-    "year": 2026,
-    "authors": "Kushal Ramakrishna, Mani Lokamani, Zhandos A. Moldabekov, Tobias Dornheim, Kieron Burke, Attila Cangi",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "",
-    "url": "https://openalex.org/W7162605726",
-    "type": "preprint",
     "pdf": "https://arxiv.org/pdf/2605.25270"
   },
   {
@@ -66,16 +36,6 @@
     "venue": "arXiv (Cornell Univ.)",
     "doi": "10.48550/arxiv.2605.06303",
     "url": "https://doi.org/10.48550/arxiv.2605.06303",
-    "type": "preprint",
-    "pdf": "https://doi.org/10.48550/arxiv.2605.06303"
-  },
-  {
-    "title": "Molecules Meet Language: Confound-Aware Representation Learning and Chemical Property Steering in Transformer-VAE Latent Spaces",
-    "year": 2026,
-    "authors": "Zakaria Elabid, Jan Andrzejewski, Bartosz Brzoza, Attila Cangi",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "",
-    "url": "https://openalex.org/W7160726583",
     "type": "preprint",
     "pdf": "https://arxiv.org/pdf/2605.06303"
   },
@@ -132,7 +92,7 @@
   {
     "title": "Effects of Mosaic Crystal Instrument Functions on X-ray Thomson Scattering Diagnostics",
     "year": 2024,
-    "authors": "Thomas Gawne, Hannah M. Bellenbaum, L. B. Fletcher, Karen Appel, Carsten Baehtz, V. Bouffetier, E. Brambrink, D. B. Brown, Attila Cangi, Adrien Descamps, Sebastian G\u00f6de, N. J. Hartley, M. Herbert, Philipp Hesselbach, Hauke H\u00f6ppner, Oliver Humphries, Zuzana Kon\u00f4pkov\u00e1, Garcia, Alejandro Laso, Bj\u00f6rn Lindqvist, J. L\u00fctgert, M. J. MacDonald, Mikako Makita, W. J. Martin, Mikhail Mishchenko, Zhandos A. Moldabekov, M. Nakatsutsumi, Jean-Paul Naedler, P. Neumayer, A. Pe\u0142ka, Chongbing Qu, Lisa Randolph, J. Rips, T. Toncian, Jan Vorberger, L. Wollenweber, U. Zastrau, D. Kraus, Thomas R. Preston, Tobias Dornheim",
+    "authors": "Thomas Gawne, Hannah M. Bellenbaum, L. B. Fletcher, Karen Appel, Carsten Baehtz, V. Bouffetier, E. Brambrink, D. B. Brown, Attila Cangi, Adrien Descamps, Sebastian G\u00f6de, N. J. Hartley, M. Herbert, P. Hesselbach, Hauke H\u00f6ppner, Oliver Humphries, Zuzana Kon\u00f4pkov\u00e1, Garcia, Alejandro Laso, Bj\u00f6rn Lindqvist, J. L\u00fctgert, M. J. MacDonald, Mikako Makita, W. J. Martin, Mikhail Mishchenko, Zhandos A. Moldabekov, M. Nakatsutsumi, Jean-Paul Naedler, P. Neumayer, Alexander Pelka, Chongbing Qu, Lisa Randolph, J. Rips, T. Toncian, Jan Vorberger, L. Wollenweber, U. Zastrau, D. Kraus, Thomas R. Preston, Tobias Dornheim",
     "venue": "arXiv (Cornell Univ.)",
     "doi": "10.48550/arxiv.2406.03301",
     "url": "https://doi.org/10.48550/arxiv.2406.03301",
@@ -162,7 +122,7 @@
   {
     "title": "Probing Iron in Earth's Core With Molecular-Spin Dynamics",
     "year": 2023,
-    "authors": "Svetoslav Nikolov, Kushal Ramakrishna, Andrew Rohskopf, Mani Lokamani, Julien Tranchida, John H. Carpenter, Attila Cangi, Mitchell Wood",
+    "authors": "Svetoslav Ganchev Nikolov, Kushal Ramakrishna, Andrew Rohskopf, Mani Lokamani, Julien Tranchida, John H. Carpenter, Attila Cangi, Mitchell A. Wood",
     "venue": "arXiv (Cornell Univ.)",
     "doi": "10.48550/arxiv.2311.08737",
     "url": "https://doi.org/10.48550/arxiv.2311.08737",
@@ -212,7 +172,7 @@
   {
     "title": "Transferable Interatomic Potentials for Aluminum from Ambient Conditions to Warm Dense Matter",
     "year": 2023,
-    "authors": "Sandeep Kumar, Hossein Tahmasbi, Kushal Ramakrishna, Mani Lokamani, Svetoslav Nikolov, Julien Tranchida, Mitchell Wood, Attila Cangi",
+    "authors": "Sandeep Kumar, Hossein Tahmasbi, Kushal Ramakrishna, Mani Lokamani, Svetoslav Ganchev Nikolov, Julien Tranchida, Mitchell A. Wood, Attila Cangi",
     "venue": "arXiv (Cornell Univ.)",
     "doi": "10.48550/arxiv.2304.09703",
     "url": "https://doi.org/10.48550/arxiv.2304.09703",
@@ -242,7 +202,7 @@
   {
     "title": "Electronic Density Response of Warm Dense Matter",
     "year": 2022,
-    "authors": "Tobias Dornheim, Zhandos A. Moldabekov, Kushal Ramakrishna, P. Tolias, Andrew Baczewski, D. Kraus, Thomas R. Preston, D. A. Chapman, Maximilian B\u00f6hme, T. D\u00f6ppner, Frank Graziani, M. B\u00f6nitz, Attila Cangi, Jan Vorberger",
+    "authors": "Tobias Dornheim, Zhandos A. Moldabekov, Kushal Ramakrishna, Panagiotis B. Tolias, Andrew Baczewski, D. Kraus, Thomas R. Preston, D. A. Chapman, Maximilian B\u00f6hme, T. D\u00f6ppner, Frank R. Graziani, M. B\u00f6nitz, Attila Cangi, Jan Vorberger",
     "venue": "arXiv (Cornell Univ.)",
     "doi": "10.48550/arxiv.2212.08326",
     "url": "https://doi.org/10.48550/arxiv.2212.08326",
@@ -362,7 +322,7 @@
   {
     "title": "Training-free hyperparameter optimization of neural networks for electronic structures in matter",
     "year": 2022,
-    "authors": "Lenz Fiedler, Nils Hoffmann, Parvez Mohammed, Gabriel Popoola, Tamar Yovell, Vladyslav Oles, John Ellis, S. Rajamanickam, Attila Cangi",
+    "authors": "Lenz Fiedler, Nils Hoffmann, Parvez Mohammed, Gabriel Popoola, Tamar Yovell, Vladyslav Oles, John A. Ellis, S. Rajamanickam, Attila Cangi",
     "venue": "arXiv (Cornell Univ.)",
     "doi": "10.48550/arxiv.2202.09186",
     "url": "https://doi.org/10.48550/arxiv.2202.09186",
@@ -412,7 +372,7 @@
   {
     "title": "The Quantum Bohm Potential for Many-Fermion Systems",
     "year": 2021,
-    "authors": "Zhandos A. Moldabekov, Tobias Dornheim, G. Gregori, Frank Graziani, M. B\u00f6nitz, Attila Cangi",
+    "authors": "Zhandos A. Moldabekov, Tobias Dornheim, G. Gregori, Frank R. Graziani, M. B\u00f6nitz, Attila Cangi",
     "venue": "arXiv (Cornell Univ.)",
     "doi": "",
     "url": "https://openalex.org/W3136158772",
@@ -442,7 +402,7 @@
   {
     "title": "Uniform approximations for fermionic densities",
     "year": 2014,
-    "authors": "Raphael F. Ribeiro, Donghyung Lee, Attila Cangi, Peter Elliott, Kieron Burke",
+    "authors": "Raphael F. Ribeiro, Donghyung Lee, Attila Cangi, Peter D. T. A. Elliott, Kieron Burke",
     "venue": "arXiv (Cornell Univ.)",
     "doi": "",
     "url": "https://openalex.org/W2521239918",
@@ -452,7 +412,7 @@
   {
     "title": "Almost Exact Exchange At Almost No Cost",
     "year": 2014,
-    "authors": "Peter Elliott, Attila Cangi, Stefano Pittalis, E. K. U. Gross, Kieron Burke",
+    "authors": "Peter D. T. A. Elliott, Attila Cangi, Stefano Pittalis, Eberhard K. U. Gross, Kieron Burke",
     "venue": "arXiv (Cornell Univ.)",
     "doi": "10.48550/arxiv.1408.2434",
     "url": "https://doi.org/10.48550/arxiv.1408.2434",
@@ -472,7 +432,7 @@
   {
     "title": "Electronic structure via potential functional approximations",
     "year": 2011,
-    "authors": "Attila Cangi, Donghyung Lee, Peter Elliott, Kieron Burke, E. K. U. Gross",
+    "authors": "Attila Cangi, Donghyung Lee, Peter D. T. A. Elliott, Kieron Burke, Eberhard K. U. Gross",
     "venue": "arXiv (Cornell Univ.)",
     "doi": "10.48550/arxiv.1102.3638",
     "url": "https://doi.org/10.48550/arxiv.1102.3638",
@@ -482,7 +442,7 @@
   {
     "title": "Leading Corrections to the Local Density Approximation",
     "year": 2010,
-    "authors": "Attila Cangi, Donghyung Lee, Peter Elliott, Kieron Burke",
+    "authors": "Attila Cangi, Donghyung Lee, Peter D. T. A. Elliott, Kieron Burke",
     "venue": "arXiv (Cornell Univ.)",
     "doi": "",
     "url": "https://openalex.org/W11163850",

@@ -50,7 +50,7 @@
   journal: JuSER (Forschungszentrum Jül.)
   doi: https://doi.org/10.34734/fzj-2026-01614
   href: https://doi.org/10.34734/fzj-2026-01614
-  pdf: https://juser.fz-juelich.de/record/1053928
+  pdf: https://juser.fz-juelich.de/record/1053929
   path: https://doi.org/10.34734/fzj-2026-01614
   kind: conference-paper
 - title: A Vision for a World-Leading Research Software Ecosystem for the Helmholtz
@@ -60,12 +60,12 @@
     Mohcine Chraibi; Edoardo Di Napoli; Katja Linnemann; Stephan Druskat; Christian
     Feld; Jakob Fritz; René Gassmöller; Markus Geimer; Paul Gierz; Roland Glück; Georg
     Hammerl; Jennifer Hardt; Lars Hoffmann; Tobias Schlauch; Marie Houillon; Thomas
-    Kleiner; Boris Koch; Marcel Koch; Martin Kühn; Susanne Kunkel; Vladimir Lipp;
+    Kleiner; Boris Koch; Marcel Koch; Martin Kühn; Susanne Kunkel; Vladimir P. Lipp;
     Elisabeth Lobe; Ulrich Loup; Christian Meeßen; Robert Speck; Jessica J. Mitchell;
     Lars Nerger; Fabian Plum; Federico Raimondo; Pavel Saviankou; Simon Spannagel;
-    Dorothee Stängle; Achim Streit; Eric Upschulte; Adina Wagner; Attila Cangi; Thomas
-    White; Claire Wyatt; Daniel Caviedes-Voullième; Claudia Comito; Markus Diesmann;
-    Julian Lenz
+    Dorothee Stängle; Achim Streit; Eric Upschulte; Adina Svenja Wagner; Attila Cangi;
+    Thomas White; Claire Wyatt; Daniel Caviedes-Voullième; Claudia Comito; Markus
+    Diesmann; Julian Lenz
   year: 2025
   date: '2025-01-01'
   journal: JuSER (Forschungszentrum Jül.)
@@ -86,8 +86,8 @@
   kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:IRz6iEL74y4C
 - title: Leveraging Data Driven Frameworks to Build Transferable Interatomic Potentials
-  author: Svetoslav Nikolov; John H. Carpenter; Mitchell Wood; Julien Tranchida; Kyle
-    Cochrane; Normand A. Modine; Aidan P. Thompson; Attila Cangi; Kushal Ramakrishna;
+  author: Svetoslav V. Nikolov; John H. Carpenter; Mitchell A. Wood; Julien Tranchida;
+    Kyle Cochrane; Normand A. Modine; Aidan P. Thompson; Attila Cangi; Kushal Ramakrishna;
     Andrew Rohskopf
   year: 2023
   date: '2023-08-01'
@@ -111,8 +111,8 @@
   kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:XvxMoLDsR5gC
 - title: Examining the Alpha-Epsilon Transition in Iron Using Molecular-spin Dynamics
-  author: Svetoslav Nikolov; Julien Tranchida; Aidan P. Thompson; Attila Cangi; Kushal
-    Ramakrishna; Andrew Rohskopf; Mitchell Wood
+  author: Svetoslav Ganchev Nikolov; Julien Tranchida; Aidan P. Thompson; Attila Cangi;
+    Kushal Ramakrishna; Andrew Rohskopf; Mitchell A. Wood
   year: 2023
   date: '2023-03-01'
   journal: null
@@ -148,8 +148,8 @@
 - title: Quantum-Accurate Multiscale Modeling of Shock Hugoniots, Ramp Compression
     Paths, Structural and Magnetic Phase Transitions, and Transport Properties in
     Highly Compressed Metals
-  author: Svetoslav Nikolov; Attila Cangi; Julien Tranchida; Andrew Rohskopf; M. P.
-    Desjarlais; Mitchell Wood
+  author: Svetoslav Ganchev Nikolov; Attila Cangi; Julien Tranchida; Andrew Rohskopf;
+    M. P. Desjarlais; Mitchell A. Wood
   year: 2022
   date: '2022-09-21'
   journal: null
@@ -163,19 +163,19 @@
     and Consistent Non-Equilibrium Material Properties
   author: Stephanie B. Hansen; Andrew Baczewski; Thomas Gomez; Thomas Hentschel; Christopher
     Jennings; Alina Kononov; Taisuke Nagayama; Kelsey Adler; Attila Cangi; Kyle Cochrane;
-    Brian Robinson; André Schleife
+    Brian J. Robinson; André Schleife
   year: 2022
   date: '2022-09-01'
   journal: null
   doi: https://doi.org/10.2172/1890268
   href: https://doi.org/10.2172/1890268
-  pdf: https://www.osti.gov/biblio/1890268
+  pdf: https://www.osti.gov/servlets/purl/1890268
   path: https://doi.org/10.2172/1890268
   kind: report
   google_scholar_id: M84yoJgAAAAJ:PVjk1bu6vJQC
 - title: Accelerating Multiscale Materials Modeling with Machine Learning
-  author: Normand A. Modine; John A. Stephens; Laura Swiler; Aidan P. Thompson; Dayton
-    J. Vogel; Lenz Feilder; Attila Cangi; Sivasankaran Rajamanickam
+  author: Normand A. Modine; John A. Stephens; Laura Painton Swiler; Aidan P. Thompson;
+    Dayton J. Vogel; Lenz Feilder; Attila Cangi; Sivasankaran Rajamanickam
   year: 2022
   date: '2022-09-01'
   journal: null
@@ -186,8 +186,8 @@
   kind: report
   google_scholar_id: M84yoJgAAAAJ:FPJr55Dyh1AC
 - title: Examining the shock response of iron using molecular-spin dynamics
-  author: Svetoslav Nikolov; Julien Tranchida; Kushal Ramakrishna; Attila Cangi; Mitchell
-    Wood
+  author: Svetoslav Ganchev Nikolov; Julien Tranchida; Kushal Ramakrishna; Attila
+    Cangi; Mitchell A. Wood
   year: 2022
   date: '2022-07-07'
   journal: null
@@ -198,8 +198,8 @@
   kind: other
   google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
 - title: Examining the shock response of iron using molecular-spin dynamics.
-  author: Svetoslav Nikolov; Julien Tranchida; Attila Cangi; Kushal Ramakrishna; Mani
-    Lokamani; Mitchell Wood
+  author: Svetoslav Ganchev Nikolov; Julien Tranchida; Attila Cangi; Kushal Ramakrishna;
+    Mani Lokamani; Mitchell A. Wood
   year: 2022
   date: '2022-07-01'
   journal: null
@@ -223,7 +223,7 @@
   kind: conference-paper
 - title: Finding Electronic Structure Machine Learning Surrogates without Training
   author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel Popoola; Tamar Yovell;
-    Vladyslav Oles; John Ellis; Sivasankaran Rajamanickam; Attila Cangi
+    Vladyslav Oles; John R. Ellis; Sivasankaran Rajamanickam; Attila Cangi
   year: 2022
   date: '2022-02-24'
   journal: null
@@ -247,8 +247,8 @@
   google_scholar_id: M84yoJgAAAAJ:ClCfbGk0d_YC
 - title: Probing Structural and Magnetic Phase Changes in the Shock Response of Iron
     with Molecular Dynamics.
-  author: Svetoslav Nikolov; Julien Tranchida; Attila Cangi; Kushal Ramakrishna; Mani
-    Lokamani; Mitchell Wood
+  author: Svetoslav Ganchev Nikolov; Julien Tranchida; Attila Cangi; Kushal Ramakrishna;
+    Mani Lokamani; Mitchell A. Wood
   year: 2022
   date: '2022-02-01'
   journal: null
@@ -269,8 +269,8 @@
   kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:i2xiXl-TujoC
 - title: Report on scipost_202106_00020v2
-  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank Graziani; M. Bönitz;
-    Attila Cangi
+  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank R. Graziani; M.
+    Bönitz; Attila Cangi
   year: 2021
   date: '2021-11-09'
   journal: null
@@ -315,8 +315,8 @@
   path: https://doi.org/10.14278/rodare.1187
   kind: dataset
 - title: Report on scipost_202106_00020v1
-  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank Graziani; M. Bönitz;
-    Attila Cangi
+  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank R. Graziani; M.
+    Bönitz; Attila Cangi
   year: 2021
   date: '2021-08-27'
   journal: null
@@ -326,8 +326,8 @@
   path: https://doi.org/10.21468/scipost.report.3456
   kind: peer-review
 - title: Report on scipost_202106_00020v1
-  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank Graziani; M. Bönitz;
-    Attila Cangi
+  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank R. Graziani; M.
+    Bönitz; Attila Cangi
   year: 2021
   date: '2021-08-01'
   journal: null
@@ -337,8 +337,8 @@
   path: https://doi.org/10.21468/scipost.report.3324
   kind: peer-review
 - title: 'LDOS/SNAP data for MALA: Aluminium at 298K and 933K'
-  author: John Ellis; Lenz Fiedler; Gabriel A. Popoola; Normand A. Modine; John A.
-    Stephens; Aidan P. Thompson; Attila Cangi; S. Rajamanickam
+  author: John A. Ellis; Lenz Fiedler; Gabriel A. Popoola; Normand A. Modine; John
+    A. Stephens; Aidan P. Thompson; Attila Cangi; S. Rajamanickam
   year: 2021
   date: '2021-07-08'
   journal: RODARE
@@ -370,14 +370,14 @@
   path: https://doi.org/10.2172/1855327
   kind: conference-paper
 - title: Accelerating Multiscale Materials Modeling with Machine Learning.
-  author: John Ellis; Sivasankaran Rajamanickam; Normand A. Modine; Aidan P. Thompson;
+  author: John R. Ellis; Sivasankaran Rajamanickam; Normand A. Modine; Aidan P. Thompson;
     John Stephens; Attila Cangi
   year: 2021
   date: '2021-03-01'
   journal: null
   doi: https://doi.org/10.2172/1853873
   href: https://doi.org/10.2172/1853873
-  pdf: https://www.osti.gov/biblio/1787726
+  pdf: https://www.osti.gov/servlets/purl/1787726
   path: https://doi.org/10.2172/1853873
   kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:FPJr55Dyh1AC
@@ -427,7 +427,7 @@
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: null
   href: https://openalex.org/W4288548898
-  pdf: https://www.osti.gov/biblio/1639309
+  pdf: https://www.osti.gov/servlets/purl/1639309
   path: null
   kind: talk
   google_scholar_id: M84yoJgAAAAJ:ZuybSZzF8UAC
@@ -471,7 +471,7 @@
   google_scholar_id: M84yoJgAAAAJ:N5tVd3kTz84C
 - title: Magnetostriction and Long-Range Interactions in Coupled Spin and Lattice
     Dynamics
-  author: Julien Tranchida; Mitchell Wood; Attila Cangi; Stan Moore; Pascal Thibaudeau;
+  author: Julien Tranchida; Mitchell A. Wood; Attila Cangi; Stan Moore; Pascal Thibaudeau;
     S. Reed Plimpton; A.L. Thompson
   year: 2019
   date: '2019-03-06'
@@ -542,7 +542,7 @@
   kind: talk
 - title: Spin-lattice simulations of cobalt and iron-cobalt alloys with LAMMPS
   author: Julien Tranchida; A.L. Thompson; Pascal Thibaudeau; Attila Cangi; Todd Monson;
-    Eric Langlois; Jamin Ryan Pillars
+    Eric Donald Langlois; Jamin Ryan Pillars
   year: 2018
   date: '2018-03-07'
   journal: Bull. Am. Phys. Soc.
@@ -559,7 +559,7 @@
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: null
   href: https://openalex.org/W3090318926
-  pdf: https://www.osti.gov/biblio/1569112
+  pdf: https://www.osti.gov/servlets/purl/1569112
   path: null
   kind: talk
   google_scholar_id: M84yoJgAAAAJ:WqliGbK-hY8C
@@ -593,7 +593,7 @@
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: null
   href: https://openalex.org/W2755757758
-  pdf: https://www.osti.gov/biblio/1480198
+  pdf: https://www.osti.gov/servlets/purl/1480198
   path: null
   kind: talk
   google_scholar_id: M84yoJgAAAAJ:VL0QpB8kHFEC
@@ -618,7 +618,8 @@
   path: null
   kind: talk
 - title: Corrections to Thomas-Fermi Densities at Turning Points and Beyond
-  author: Raphael F. Ribeiro; Donghyung Lee; Attila Cangi; Peter Elliott; Kieron Burke
+  author: Raphael F. Ribeiro; Donghyung Lee; Attila Cangi; Peter D. T. A. Elliott;
+    Kieron Burke
   year: 2015
   date: '2015-02-04'
   journal: Phys. Rev. Lett.
@@ -629,7 +630,8 @@
   kind: erratum
   google_scholar_id: M84yoJgAAAAJ:roLk4NBRz8UC
 - title: Semiclassical approach to the exchange energy from potential functional theory
-  author: Attila Cangi; Peter Elliott; Stefano Pittalis; E. K. U. Gross; Kieron Burke
+  author: Attila Cangi; Peter D. T. A. Elliott; Stefano Pittalis; Eberhard K. U. Gross;
+    Kieron Burke
   year: 2014
   date: '2014-03-05'
   journal: Bull. Am. Phys. Soc.
@@ -639,7 +641,8 @@
   path: null
   kind: talk
 - title: Non-Empirical Orbital-Free Approximations from Semiclassical Approaches
-  author: Stefano Pittalis; Attila Cangi; C. R. Proetto; E. K. U. Gross; Kieron Burke
+  author: Stefano Pittalis; Attila Cangi; César R. Proetto; Eberhard K. U. Gross;
+    Kieron Burke
   year: 2013
   date: '2013-03-21'
   journal: Bull. Am. Phys. Soc.
@@ -662,7 +665,7 @@
   kind: talk
 - title: 'The unreasonable accuracy of asymptotic expansions: Why density functional
     theory works'
-  author: Kieron Burke; Attila Cangi; Donghyung Lee; Peter Elliott
+  author: Kieron Burke; Attila Cangi; Donghyung Lee; Peter D. T. A. Elliott
   year: 2010
   date: '2010-03-01'
   journal: APS March Meet. Abstr.
@@ -673,7 +676,7 @@
   kind: conference-abstract
   google_scholar_id: M84yoJgAAAAJ:BUYA1_V_uYcC
 - title: Density Functional Theory and Semiclassical Methods
-  author: Peter Elliott; Donghyung Lee; Attila Cangi; Kieron Burke
+  author: Peter D. T. A. Elliott; Donghyung Lee; Attila Cangi; Kieron Burke
   year: 2009
   date: '2009-03-17'
   journal: Bull. Am. Phys. Soc.
@@ -683,7 +686,7 @@
   path: null
   kind: talk
 - title: Towards a semiclassical theory of electronic structure
-  author: Attila Cangi; Donghyung Lee; Peter Elliott; Kieron Burke
+  author: Attila Cangi; Donghyung Lee; Peter D. T. A. Elliott; Kieron Burke
   year: 2009
   date: '2009-03-16'
   journal: Bull. Am. Phys. Soc.
@@ -693,7 +696,7 @@
   path: null
   kind: talk
 - title: Semiclassics in Density Functional Theory
-  author: Donghyung Lee; Attila Cangi; Peter Elliott; Kieron Burke
+  author: Donghyung Lee; Attila Cangi; Peter D. T. A. Elliott; Kieron Burke
   year: 2009
   date: '2009-03-16'
   journal: Bull. Am. Phys. Soc.
@@ -703,7 +706,7 @@
   path: null
   kind: talk
 - title: Semiclassical Approaches in Density Functional Theory
-  author: Peter Elliott; Attila Cangi; Donghyung Lee; Kieron Burke
+  author: Peter D. T. A. Elliott; Attila Cangi; Donghyung Lee; Kieron Burke
   year: 2008
   date: '2008-03-11'
   journal: Bull. Am. Phys. Soc.
@@ -713,7 +716,7 @@
   path: null
   kind: talk
 - title: A new approach to density functional theory
-  author: Kieron Burke; Peter Elliott; Attila Cangi; Donghyung Lee
+  author: Kieron Burke; Peter D. T. A. Elliott; Attila Cangi; Donghyung Lee
   year: 2008
   date: '2008-03-11'
   journal: Bull. Am. Phys. Soc.
