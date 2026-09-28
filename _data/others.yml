@@ -44,7 +44,7 @@
   path: https://doi.org/10.14278/rodare.4169
   kind: dataset
 - title: Towards all-electron treatment in electronic structure machine learning
-  author: Johannes Wasmer; Philipp Rüssmann; Stefano Sanvito; Attila Cangi; Ira Assent
+  author: Johannes Wasmer; Philipp Rüßmann; Stefano Sanvito; Attila Cangi; Ira Assent
   year: 2025
   date: '2025-01-01'
   journal: JuSER (Forschungszentrum Jül.)
@@ -55,7 +55,7 @@
   kind: conference-paper
 - title: A Vision for a World-Leading Research Software Ecosystem for the Helmholtz
     Association
-  author: R. Caspart; Bernadette Fritzsch; Peter Baumgärtel; Tobias Becher; Julian
+  author: René Caspart; Bernadette Fritzsch; Peter Baumgärtel; Tobias Becher; Julian
     Belina; Sven Berger; Julia Bicker; Maik Boltes; Michael Bussmann; Mauro Cacace;
     Mohcine Chraibi; Edoardo Di Napoli; Katja Linnemann; Stephan Druskat; Christian
     Feld; Jakob Fritz; René Gassmöller; Markus Geimer; Paul Gierz; Roland Glück; Georg
@@ -174,7 +174,7 @@
   kind: report
   google_scholar_id: M84yoJgAAAAJ:PVjk1bu6vJQC
 - title: Accelerating Multiscale Materials Modeling with Machine Learning
-  author: Normand A. Modine; John A. Stephens; Laura Painton Swiler; Aidan P. Thompson;
+  author: Normand A. Modine; John Stephens; Laura Painton Swiler; Aidan P. Thompson;
     Dayton J. Vogel; Lenz Feilder; Attila Cangi; Sivasankaran Rajamanickam
   year: 2022
   date: '2022-09-01'
@@ -223,7 +223,7 @@
   kind: conference-paper
 - title: Finding Electronic Structure Machine Learning Surrogates without Training
   author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel Popoola; Tamar Yovell;
-    Vladyslav Oles; John R. Ellis; Sivasankaran Rajamanickam; Attila Cangi
+    Vladyslav Oles; J. Ellis; Sivasankaran Rajamanickam; Attila Cangi
   year: 2022
   date: '2022-02-24'
   journal: null
@@ -337,8 +337,8 @@
   path: https://doi.org/10.21468/scipost.report.3324
   kind: peer-review
 - title: 'LDOS/SNAP data for MALA: Aluminium at 298K and 933K'
-  author: John A. Ellis; Lenz Fiedler; Gabriel A. Popoola; Normand A. Modine; John
-    A. Stephens; Aidan P. Thompson; Attila Cangi; S. Rajamanickam
+  author: Ellis, J. Austin; Lenz Fiedler; Gabriel A. Popoola; Normand A. Modine; Stephens,
+    John A.; Aidan P. Thompson; Attila Cangi; S. Rajamanickam
   year: 2021
   date: '2021-07-08'
   journal: RODARE
@@ -370,7 +370,7 @@
   path: https://doi.org/10.2172/1855327
   kind: conference-paper
 - title: Accelerating Multiscale Materials Modeling with Machine Learning.
-  author: John R. Ellis; Sivasankaran Rajamanickam; Normand A. Modine; Aidan P. Thompson;
+  author: J. Ellis; Sivasankaran Rajamanickam; Normand A. Modine; Aidan P. Thompson;
     John Stephens; Attila Cangi
   year: 2021
   date: '2021-03-01'
@@ -566,7 +566,7 @@
   google_scholar_id: M84yoJgAAAAJ:WqliGbK-hY8C
 - title: ECP-copa/ExaMiniMD
   author: Aidan P. Thompson; Attila Cangi; Christian Robert Trott; Christoph Junghans;
-    Stan Moore; Timothy C. Germann
+    Stan Moore; Timothy Clark Germann
   year: 2018
   date: '2018-01-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
