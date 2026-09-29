@@ -508,19 +508,6 @@
   google_scholar_id: M84yoJgAAAAJ:NJ774b8OgUMC
   unpublished_preprint: true
   publication_page: true
-- title: Quantum-accurate magneto-elastic predictions with classical spin-lattice
-    dynamics
-  author: Svetoslav Nikolov; Mitchell A. Wood; Attila Cangi; Jean-Bernard Maillet;
-    Mihai-Cosmin Marinica; Aidan P. Thompson; Michael P. Desjarlais; Julien Tranchida
-  year: 2021
-  date: '2021-01-18'
-  journal: arXiv
-  doi: 10.1038/s41524-021-00617-2
-  href: http://arxiv.org/abs/2101.07332v3
-  pdf: http://arxiv.org/pdf/2101.07332v3.pdf
-  path: 10.1038/s41524-021-00617-2
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:9pM33mqn1YgC
 - title: Bypassing the malfunction junction in warm dense matter simulations
   author: Attila Cangi; Aurora Pribram−Jones
   year: 2014

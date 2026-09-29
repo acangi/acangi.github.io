@@ -540,6 +540,20 @@
   kind: article
   google_scholar_id: M84yoJgAAAAJ:L7CI7m0gUJcC
   publication_page: true
+- title: Data-driven magneto-elastic predictions with scalable classical spin-lattice
+    dynamics
+  author: Svetoslav Nikolov; Mitchell A. Wood; Attila Cangi; Jean-Bernard Maillet;
+    Mihai-Cosmin Marinica; Aidan P. Thompson; Michael P. Desjarlais; Julien Tranchida
+  year: 2021
+  date: '2021-09-28'
+  journal: npj Comput. Mater.
+  doi: https://doi.org/10.1038/s41524-021-00617-2
+  href: https://doi.org/10.1038/s41524-021-00617-2
+  pdf: https://www.nature.com/articles/s41524-021-00617-2.pdf
+  path: https://doi.org/10.1038/s41524-021-00617-2
+  kind: article
+  google_scholar_id: M84yoJgAAAAJ:MLfJN-KU85MC
+  publication_page: true
 - title: The relevance of electronic perturbations in the warm dense electron gas
   author: Zhandos Moldabekov; Tobias Dornheim; Maximilian Böhme; Jan Vorberger; Attila
     Cangi
