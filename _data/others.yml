@@ -61,7 +61,7 @@
     Feld; Jakob Fritz; René Gassmöller; Markus Geimer; Paul Gierz; Roland Glück; Georg
     Hammerl; Jennifer Hardt; Lars Hoffmann; Tobias Schlauch; Marie Houillon; Thomas
     Kleiner; Boris Koch; Marcel Koch; Martin Kühn; Susanne Kunkel; Vladimir P. Lipp;
-    Elisabeth Lobe; Ulrich Loup; Christian Meeßen; Robert Speck; Jessica J. Mitchell;
+    Elisabeth Lobe; Ulrich Loup; Christian Meeßen; Robert Speck; Mitchell, Jessica;
     Lars Nerger; Fabian Plum; Federico Raimondo; Pavel Saviankou; Simon Spannagel;
     Dorothee Stängle; Achim Streit; Eric Upschulte; Adina Svenja Wagner; Attila Cangi;
     Thomas White; Claire Wyatt; Daniel Caviedes-Voullième; Claudia Comito; Markus
@@ -111,8 +111,8 @@
   kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:XvxMoLDsR5gC
 - title: Examining the Alpha-Epsilon Transition in Iron Using Molecular-spin Dynamics
-  author: Svetoslav Ganchev Nikolov; Julien Tranchida; Aidan P. Thompson; Attila Cangi;
-    Kushal Ramakrishna; Andrew Rohskopf; Mitchell A. Wood
+  author: Svetoslav Nikolov; Julien Tranchida; Aidan P. Thompson; Attila Cangi; Kushal
+    Ramakrishna; Andrew Rohskopf; Mitchell A. Wood
   year: 2023
   date: '2023-03-01'
   journal: null
@@ -148,8 +148,8 @@
 - title: Quantum-Accurate Multiscale Modeling of Shock Hugoniots, Ramp Compression
     Paths, Structural and Magnetic Phase Transitions, and Transport Properties in
     Highly Compressed Metals
-  author: Svetoslav Ganchev Nikolov; Attila Cangi; Julien Tranchida; Andrew Rohskopf;
-    M. P. Desjarlais; Mitchell A. Wood
+  author: Svetoslav Nikolov; Attila Cangi; Julien Tranchida; Andrew Rohskopf; M. P.
+    Desjarlais; Mitchell A. Wood
   year: 2022
   date: '2022-09-21'
   journal: null
@@ -163,7 +163,7 @@
     and Consistent Non-Equilibrium Material Properties
   author: Stephanie B. Hansen; Andrew Baczewski; Thomas Gomez; Thomas Hentschel; Christopher
     Jennings; Alina Kononov; Taisuke Nagayama; Kelsey Adler; Attila Cangi; Kyle Cochrane;
-    Brian J. Robinson; André Schleife
+    Brian Robinson; André Schleife
   year: 2022
   date: '2022-09-01'
   journal: null
@@ -186,8 +186,8 @@
   kind: report
   google_scholar_id: M84yoJgAAAAJ:FPJr55Dyh1AC
 - title: Examining the shock response of iron using molecular-spin dynamics
-  author: Svetoslav Ganchev Nikolov; Julien Tranchida; Kushal Ramakrishna; Attila
-    Cangi; Mitchell A. Wood
+  author: Svetoslav Nikolov; Julien Tranchida; Kushal Ramakrishna; Attila Cangi; Mitchell
+    A. Wood
   year: 2022
   date: '2022-07-07'
   journal: null
@@ -198,8 +198,8 @@
   kind: other
   google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
 - title: Examining the shock response of iron using molecular-spin dynamics.
-  author: Svetoslav Ganchev Nikolov; Julien Tranchida; Attila Cangi; Kushal Ramakrishna;
-    Mani Lokamani; Mitchell A. Wood
+  author: Svetoslav Nikolov; Julien Tranchida; Attila Cangi; Kushal Ramakrishna; Mani
+    Lokamani; Mitchell A. Wood
   year: 2022
   date: '2022-07-01'
   journal: null
@@ -247,8 +247,8 @@
   google_scholar_id: M84yoJgAAAAJ:ClCfbGk0d_YC
 - title: Probing Structural and Magnetic Phase Changes in the Shock Response of Iron
     with Molecular Dynamics.
-  author: Svetoslav Ganchev Nikolov; Julien Tranchida; Attila Cangi; Kushal Ramakrishna;
-    Mani Lokamani; Mitchell A. Wood
+  author: Svetoslav Nikolov; Julien Tranchida; Attila Cangi; Kushal Ramakrishna; Mani
+    Lokamani; Mitchell A. Wood
   year: 2022
   date: '2022-02-01'
   journal: null
@@ -338,7 +338,7 @@
   kind: peer-review
 - title: 'LDOS/SNAP data for MALA: Aluminium at 298K and 933K'
   author: Ellis, J. Austin; Lenz Fiedler; Gabriel A. Popoola; Normand A. Modine; Stephens,
-    John A.; Aidan P. Thompson; Attila Cangi; S. Rajamanickam
+    John A.; Aidan P. Thompson; Attila Cangi; Rajamanickam, Siva
   year: 2021
   date: '2021-07-08'
   journal: RODARE
@@ -496,7 +496,7 @@
     Laboratories'
   author: Sandia National Laboratories (SNL), Albuquerque, NM (United States). New
     Mexico Small Business Assistance (NMSBA) Program, NM (United States); Attila Cangi;
-    USDOE Assistant Secretary for Human Resources and Administration; Michael L. Parks
+    USDOE Assistant Secretary for Human Resources and Administration; Michael Parks
   year: 2018
   date: '2018-12-06'
   journal: null

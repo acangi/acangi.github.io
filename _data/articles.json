@@ -82,7 +82,7 @@
   {
     "title": "Effects of mosaic crystal instrument functions on x-ray Thomson scattering diagnostics",
     "year": 2024,
-    "authors": "Thomas Gawne, Hannah M. Bellenbaum, L. B. Fletcher, Karen Appel, Carsten Baehtz, V. Bouffetier, E. Brambrink, D. B. Brown, Attila Cangi, Adrien Descamps, Sebastian Goede, N. J. Hartley, M. Herbert, P. Hesselbach, Hauke H\u00f6ppner, Oliver Humphries, Zuzana Kon\u00f4pkov\u00e1, Alejandro Laso Garc\u00eda, Bj\u00f6rn Lindqvist, J. L\u00fctgert, M. J. MacDonald, Mikako Makita, W. J. Martin, Mikhail Mishchenko, Zhandos A. Moldabekov, M. Nakatsutsumi, Jean-Paul Naedler, P. Neumayer, Alexander Pelka, Chongbing Qu, Lisa Randolph, J. Rips, T. Toncian, Jan Vorberger, L. Wollenweber, U. Zastrau, D. Kraus, Thomas R. Preston, Tobias Dornheim",
+    "authors": "Thomas Gawne, Hannah M. Bellenbaum, L. B. Fletcher, Karen Appel, Carsten Baehtz, V. Bouffetier, E. Brambrink, Danielle Brown, Attila Cangi, Adrien Descamps, Sebastian Goede, N. J. Hartley, M. Herbert, P. Hesselbach, Hauke H\u00f6ppner, Oliver Humphries, Zuzana Kon\u00f4pkov\u00e1, Alejandro Laso Garc\u00eda, Bj\u00f6rn Lindqvist, J. L\u00fctgert, M. J. MacDonald, Mikako Makita, W. J. Martin, Mikhail Mishchenko, Zhandos A. Moldabekov, M. Nakatsutsumi, Jean-Paul Naedler, P. Neumayer, Alexander Pelka, Chongbing Qu, Lisa Randolph, J. Rips, T. Toncian, Jan Vorberger, L. Wollenweber, U. Zastrau, D. Kraus, Thomas R. Preston, Tobias Dornheim",
     "venue": "J. Appl. Phys.",
     "doi": "10.1063/5.0222072",
     "url": "https://doi.org/10.1063/5.0222072",
@@ -107,7 +107,7 @@
     "doi": "10.1103/physrevmaterials.8.033803",
     "url": "https://doi.org/10.1103/physrevmaterials.8.033803",
     "type": "journal",
-    "pdf": ""
+    "pdf": "https://arxiv.org/pdf/2311.06010"
   },
   {
     "title": "Inverting the Kohn\u2013Sham equations with physics-informed machine learning",
@@ -137,7 +137,7 @@
     "doi": "10.1103/physrevb.108.195149",
     "url": "https://doi.org/10.1103/physrevb.108.195149",
     "type": "journal",
-    "pdf": ""
+    "pdf": "https://arxiv.org/pdf/2306.17554"
   },
   {
     "title": "International Conference on \u201cStrongly Coupled Coulomb Systems\u201d (July 24\u201329, 2022, G\u00f6rlitz, Germany)",
@@ -157,7 +157,7 @@
     "doi": "10.1103/physrevb.108.125146",
     "url": "https://doi.org/10.1103/physrevb.108.125146",
     "type": "journal",
-    "pdf": ""
+    "pdf": "https://arxiv.org/pdf/2306.06032"
   },
   {
     "title": "Impact of electronic correlations on high-pressure iron: insights from time-dependent density functional theory",
@@ -172,7 +172,7 @@
   {
     "title": "Transferable interatomic potential for aluminum from ambient conditions to warm dense matter",
     "year": 2023,
-    "authors": "Sandeep Kumar, Hossein Tahmasbi, Kushal Ramakrishna, Mani Lokamani, Svetoslav Ganchev Nikolov, Julien Tranchida, Mitchell A. Wood, Attila Cangi",
+    "authors": "Sandeep Kumar, Hossein Tahmasbi, Kushal Ramakrishna, Mani Lokamani, Svetoslav Nikolov, Julien Tranchida, Mitchell A. Wood, Attila Cangi",
     "venue": "Phys. Rev. Res.",
     "doi": "10.1103/physrevresearch.5.033162",
     "url": "https://doi.org/10.1103/physrevresearch.5.033162",
@@ -197,7 +197,7 @@
     "doi": "10.1063/5.0143738",
     "url": "https://doi.org/10.1063/5.0143738",
     "type": "journal",
-    "pdf": "https://www.osti.gov/servlets/purl/2566724"
+    "pdf": "https://arxiv.org/pdf/2301.09700"
   },
   {
     "title": "Imaginary-time correlation function thermometry: A new, high-accuracy and model-free temperature analysis technique for x-ray Thomson scattering data",
@@ -217,7 +217,7 @@
     "doi": "10.1103/physrevb.107.115131",
     "url": "https://doi.org/10.1103/physrevb.107.115131",
     "type": "journal",
-    "pdf": ""
+    "pdf": "https://arxiv.org/pdf/2203.06025"
   },
   {
     "title": "Electronic density response of warm dense matter",
@@ -282,7 +282,7 @@
   {
     "title": "Training-free hyperparameter optimization of neural networks for electronic structures in matter",
     "year": 2022,
-    "authors": "Lenz Fiedler, Nils Hoffmann, Parvez Mohammed, Gabriel A. Popoola, Tamar Yovell, Vladyslav Oles, John A. Ellis, Sivasankaran Rajamanickam, Attila Cangi",
+    "authors": "Lenz Fiedler, Nils Hoffmann, Parvez Mohammed, Gabriel A. Popoola, Tamar Yovell, Vladyslav Oles, J Austin Ellis, Sivasankaran Rajamanickam, Attila Cangi",
     "venue": "Mach. Learn. Sci. Technol.",
     "doi": "10.1088/2632-2153/ac9956",
     "url": "https://doi.org/10.1088/2632-2153/ac9956",
@@ -412,7 +412,7 @@
   {
     "title": "Accelerating finite-temperature Kohn-Sham density functional theory with deep neural networks",
     "year": 2021,
-    "authors": "John A. Ellis, Lenz Fiedler, Gabriel A. Popoola, Normand A. Modine, J. A. Stephens, Aidan P. Thompson, Attila Cangi, Sivasankaran Rajamanickam",
+    "authors": "J. A. Ellis, Lenz Fiedler, Gabriel A. Popoola, Normand A. Modine, J. A. Stephens, Aidan P. Thompson, Attila Cangi, Sivasankaran Rajamanickam",
     "venue": "Phys. Rev. B",
     "doi": "10.1103/physrevb.104.035120",
     "url": "https://doi.org/10.1103/physrevb.104.035120",

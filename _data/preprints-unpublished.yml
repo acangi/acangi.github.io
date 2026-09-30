@@ -44,7 +44,7 @@
   publication_page: true
 - title: 'Molecules Meet Language: Confound-Aware Representation Learning and Chemical
     Property Steering in Transformer-VAE Latent Spaces'
-  author: Zakaria Elabid; Jan Andrzejewski; Bartosz Brzoza; Attila Cangi
+  author: Zakaria Elabid; Andrzejewski, Jan; Bartosz Brzoza; Attila Cangi
   year: 2026
   date: '2026-05-07'
   journal: arXiv (Cornell Univ.)
@@ -73,7 +73,7 @@
   unpublished_preprint: true
   publication_page: true
 - title: Accelerating Electron Dynamics Simulations through Machine Learned Time Propagators
-  author: Karan Shah; Attila Cangi
+  author: Shah, Karan; Attila Cangi
   year: 2024
   date: '2024-07-12'
   journal: arXiv (Cornell Univ.)
@@ -103,23 +103,10 @@
   google_scholar_id: M84yoJgAAAAJ:yqoGN6RLRZoC
   unpublished_preprint: true
   publication_page: true
-- title: Ab initio insights on the ultrafast strong-field dynamics of anatase TiO$_2$
-  author: Sruthil Lal S. B; Lokamani; Kushal Ramakrishna; Attila Cangi; D. Murali;
-    M. Posselt; Assa Aravindh Sasikala Devi; Alok Sharan
-  year: 2023
-  date: '2023-06-30'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2306.17554
-  href: https://doi.org/10.48550/arxiv.2306.17554
-  pdf: https://arxiv.org/pdf/2306.17554
-  path: https://doi.org/10.48550/arxiv.2306.17554
-  kind: preprint
-  unpublished_preprint: true
-  publication_page: true
 - title: Transferable Interatomic Potentials for Aluminum from Ambient Conditions
     to Warm Dense Matter
-  author: Sandeep Kumar; Hossein Tahmasbi; Kushal Ramakrishna; Mani Lokamani; Svetoslav
-    Ganchev Nikolov; Julien Tranchida; Mitchell A. Wood; Attila Cangi
+  author: Sandeep Kumar; Hossein Tahmasbi; Kushal Ramakrishna; Mani Lokamani; Nikolov,
+    Svetoslav; Julien Tranchida; Mitchell A. Wood; Attila Cangi
   year: 2023
   date: '2023-04-19'
   journal: arXiv (Cornell Univ.)
@@ -131,9 +118,8 @@
   unpublished_preprint: true
   publication_page: true
 - title: Temperature analysis of X-ray Thomson scattering data
-  author: Tobias Dornheim; Maximilian Böhme; David A. Chapman; D. Kraus; Thomas R.
-    Preston; Zhandos A. Moldabekov; Niclas Schlünzen; Attila Cangi; T. Döppner; Jan
-    Vorberger
+  author: Tobias Dornheim; Maximilian Böhme; Chapman, Dave; D. Kraus; Thomas R. Preston;
+    Zhandos A. Moldabekov; Niclas Schlünzen; Attila Cangi; T. Döppner; Jan Vorberger
   year: 2022
   date: '2022-12-20'
   journal: arXiv (Cornell Univ.)
@@ -147,7 +133,7 @@
   publication_page: true
 - title: Physics-Informed Neural Networks as Solvers for the Time-Dependent Schrödinger
     Equation
-  author: Karan Shah; Patrick Stiller; Nico Hoffmann; Attila Cangi
+  author: Shah, Karan; Patrick Stiller; Nico Hoffmann; Attila Cangi
   year: 2022
   date: '2022-10-22'
   journal: arXiv (Cornell Univ.)
@@ -200,7 +186,7 @@
   publication_page: true
 - title: A Deep Dive into Machine Learning Density Functional Theory for Materials
     Science and Chemistry
-  author: Lenz Fiedler; Karan Shah; Michael Bußmann; Attila Cangi
+  author: Lenz Fiedler; Shah, Karan; Michael Bußmann; Attila Cangi
   year: 2021
   date: '2021-10-03'
   journal: arXiv (Cornell Univ.)

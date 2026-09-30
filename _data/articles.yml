@@ -121,7 +121,7 @@
 - title: Effects of mosaic crystal instrument functions on x-ray Thomson scattering
     diagnostics
   author: Thomas Gawne; Hannah M. Bellenbaum; L. B. Fletcher; Karen Appel; Carsten
-    Baehtz; V. Bouffetier; E. Brambrink; D. B. Brown; Attila Cangi; Adrien Descamps;
+    Baehtz; V. Bouffetier; E. Brambrink; Danielle Brown; Attila Cangi; Adrien Descamps;
     Sebastian Goede; N. J. Hartley; M. Herbert; P. Hesselbach; Hauke Höppner; Oliver
     Humphries; Zuzana Konôpková; Alejandro Laso García; Björn Lindqvist; J. Lütgert;
     M. J. MacDonald; Mikako Makita; W. J. Martin; Mikhail Mishchenko; Zhandos A. Moldabekov;
@@ -162,7 +162,7 @@
   journal: Phys. Rev. Mater.
   doi: https://doi.org/10.1103/physrevmaterials.8.033803
   href: https://doi.org/10.1103/physrevmaterials.8.033803
-  pdf: null
+  pdf: https://arxiv.org/pdf/2311.06010
   path: https://doi.org/10.1103/physrevmaterials.8.033803
   kind: article
   google_scholar_id: M84yoJgAAAAJ:_5tno0g5mFcC
@@ -199,7 +199,7 @@
   journal: Phys. Rev. B
   doi: https://doi.org/10.1103/physrevb.108.195149
   href: https://doi.org/10.1103/physrevb.108.195149
-  pdf: null
+  pdf: https://arxiv.org/pdf/2306.17554
   path: https://doi.org/10.1103/physrevb.108.195149
   kind: article
   google_scholar_id: M84yoJgAAAAJ:HtS1dXgVpQUC
@@ -224,7 +224,7 @@
   journal: Phys. Rev. B
   doi: https://doi.org/10.1103/physrevb.108.125146
   href: https://doi.org/10.1103/physrevb.108.125146
-  pdf: null
+  pdf: https://arxiv.org/pdf/2306.06032
   path: https://doi.org/10.1103/physrevb.108.125146
   kind: article
   google_scholar_id: M84yoJgAAAAJ:NXb4pA-qfm4C
@@ -246,7 +246,7 @@
 - title: Transferable interatomic potential for aluminum from ambient conditions to
     warm dense matter
   author: Sandeep Kumar; Hossein Tahmasbi; Kushal Ramakrishna; Mani Lokamani; Svetoslav
-    Ganchev Nikolov; Julien Tranchida; Mitchell A. Wood; Attila Cangi
+    Nikolov; Julien Tranchida; Mitchell A. Wood; Attila Cangi
   year: 2023
   date: '2023-09-06'
   journal: Phys. Rev. Res.
@@ -279,7 +279,7 @@
   journal: Phys. Plasmas
   doi: https://doi.org/10.1063/5.0143738
   href: https://doi.org/10.1063/5.0143738
-  pdf: https://www.osti.gov/servlets/purl/2566724
+  pdf: https://arxiv.org/pdf/2301.09700
   path: https://doi.org/10.1063/5.0143738
   kind: article
   google_scholar_id: M84yoJgAAAAJ:GtLg2Ama23sC
@@ -306,7 +306,7 @@
   journal: Phys. Rev. B
   doi: https://doi.org/10.1103/physrevb.107.115131
   href: https://doi.org/10.1103/physrevb.107.115131
-  pdf: null
+  pdf: https://arxiv.org/pdf/2203.06025
   path: https://doi.org/10.1103/physrevb.107.115131
   kind: article
   google_scholar_id: M84yoJgAAAAJ:lmc2jWPfTJgC
@@ -396,7 +396,7 @@
 - title: Training-free hyperparameter optimization of neural networks for electronic
     structures in matter
   author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel A. Popoola; Tamar
-    Yovell; Vladyslav Oles; John A. Ellis; Sivasankaran Rajamanickam; Attila Cangi
+    Yovell; Vladyslav Oles; J Austin Ellis; Sivasankaran Rajamanickam; Attila Cangi
   year: 2022
   date: '2022-10-11'
   journal: Mach. Learn. Sci. Technol.
@@ -569,7 +569,7 @@
   publication_page: true
 - title: Accelerating finite-temperature Kohn-Sham density functional theory with
     deep neural networks
-  author: John A. Ellis; Lenz Fiedler; Gabriel A. Popoola; Normand A. Modine; J. A.
+  author: J. A. Ellis; Lenz Fiedler; Gabriel A. Popoola; Normand A. Modine; J. A.
     Stephens; Aidan P. Thompson; Attila Cangi; Sivasankaran Rajamanickam
   year: 2021
   date: '2021-07-08'

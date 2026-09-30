@@ -44,7 +44,7 @@
   publication_page: true
 - title: 'Molecules Meet Language: Confound-Aware Representation Learning and Chemical
     Property Steering in Transformer-VAE Latent Spaces'
-  author: Zakaria Elabid; Jan Andrzejewski; Bartosz Brzoza; Attila Cangi
+  author: Zakaria Elabid; Andrzejewski, Jan; Bartosz Brzoza; Attila Cangi
   year: 2026
   date: '2026-05-07'
   journal: arXiv (Cornell Univ.)
@@ -102,20 +102,8 @@
   path: https://doi.org/10.48550/arxiv.2411.19617
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:HeT0ZceujKMC
-- title: Electrical Conductivity of Warm Dense Hydrogen from Ohm's Law and Time-Dependent
-    Density Functional Theory
-  author: Kushal Ramakrishna; Mani Lokamani; Attila Cangi
-  year: 2024
-  date: '2024-09-23'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2409.15160
-  href: https://doi.org/10.48550/arxiv.2409.15160
-  pdf: https://arxiv.org/pdf/2409.15160
-  path: https://doi.org/10.48550/arxiv.2409.15160
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:fFSKOagxvKUC
 - title: Accelerating Electron Dynamics Simulations through Machine Learned Time Propagators
-  author: Karan Shah; Attila Cangi
+  author: Shah, Karan; Attila Cangi
   year: 2024
   date: '2024-07-12'
   journal: arXiv (Cornell Univ.)
@@ -130,9 +118,9 @@
 - title: Effects of Mosaic Crystal Instrument Functions on X-ray Thomson Scattering
     Diagnostics
   author: Thomas Gawne; Hannah M. Bellenbaum; L. B. Fletcher; Karen Appel; Carsten
-    Baehtz; V. Bouffetier; E. Brambrink; D. B. Brown; Attila Cangi; Adrien Descamps;
+    Baehtz; V. Bouffetier; E. Brambrink; Brown, Danielle; Attila Cangi; Adrien Descamps;
     Sebastian Göde; N. J. Hartley; M. Herbert; P. Hesselbach; Hauke Höppner; Oliver
-    Humphries; Zuzana Konôpková; Garcia, Alejandro Laso; Björn Lindqvist; J. Lütgert;
+    Humphries; Zuzana Konôpková; Garcia, Alejandro Laso; Lindqvist, Björn; J. Lütgert;
     M. J. MacDonald; Mikako Makita; W. J. Martin; Mikhail Mishchenko; Zhandos A. Moldabekov;
     M. Nakatsutsumi; Jean-Paul Naedler; P. Neumayer; Alexander Pelka; Chongbing Qu;
     Lisa Randolph; J. Rips; T. Toncian; Jan Vorberger; L. Wollenweber; U. Zastrau;
@@ -164,19 +152,8 @@
   google_scholar_id: M84yoJgAAAAJ:yqoGN6RLRZoC
   unpublished_preprint: true
   publication_page: true
-- title: Inverting the Kohn-Sham equations with physics-informed machine learning
-  author: Vincent Martinetto; Karan Shah; Attila Cangi; Aurora Pribram−Jones
-  year: 2023
-  date: '2023-12-23'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2312.15301
-  href: https://doi.org/10.48550/arxiv.2312.15301
-  pdf: https://arxiv.org/pdf/2312.15301
-  path: https://doi.org/10.48550/arxiv.2312.15301
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:HIFyuExEbWQC
 - title: Probing Iron in Earth's Core With Molecular-Spin Dynamics
-  author: Svetoslav Ganchev Nikolov; Kushal Ramakrishna; Andrew Rohskopf; Mani Lokamani;
+  author: Nikolov, Svetoslav; Kushal Ramakrishna; Andrew Rohskopf; Mani Lokamani;
     Julien Tranchida; John H. Carpenter; Attila Cangi; Mitchell A. Wood
   year: 2023
   date: '2023-11-15'
@@ -187,56 +164,10 @@
   path: https://doi.org/10.48550/arxiv.2311.08737
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:2VqYfGB8ITEC
-- title: Machine Learning-Driven Structure Prediction for Iron Hydrides
-  author: Hossein Tahmasbi; Kushal Ramakrishna; Mani Lokamani; Attila Cangi
-  year: 2023
-  date: '2023-11-10'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2311.06010
-  href: https://doi.org/10.48550/arxiv.2311.06010
-  pdf: https://arxiv.org/pdf/2311.06010
-  path: https://doi.org/10.48550/arxiv.2311.06010
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:_5tno0g5mFcC
-- title: Ab initio insights on the ultrafast strong-field dynamics of anatase TiO$_2$
-  author: Sruthil Lal S. B; Lokamani; Kushal Ramakrishna; Attila Cangi; D. Murali;
-    M. Posselt; Assa Aravindh Sasikala Devi; Alok Sharan
-  year: 2023
-  date: '2023-06-30'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2306.17554
-  href: https://doi.org/10.48550/arxiv.2306.17554
-  pdf: https://arxiv.org/pdf/2306.17554
-  path: https://doi.org/10.48550/arxiv.2306.17554
-  kind: preprint
-  unpublished_preprint: true
-  publication_page: true
-- title: Machine learning the electronic structure of matter across temperatures
-  author: Lenz Fiedler; Normand A. Modine; Kyle D. Miller; Attila Cangi
-  year: 2023
-  date: '2023-06-09'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2306.06032
-  href: https://doi.org/10.48550/arxiv.2306.06032
-  pdf: https://arxiv.org/pdf/2306.06032
-  path: https://doi.org/10.48550/arxiv.2306.06032
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:NXb4pA-qfm4C
-- title: Physics-enhanced neural networks for equation-of-state calculations
-  author: Timothy J. Callow; Jan Nikl; Eli Kraisler; Attila Cangi
-  year: 2023
-  date: '2023-05-11'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2305.06856
-  href: https://doi.org/10.48550/arxiv.2305.06856
-  pdf: https://arxiv.org/pdf/2305.06856
-  path: https://doi.org/10.48550/arxiv.2305.06856
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:0izLItjtcgwC
 - title: Transferable Interatomic Potentials for Aluminum from Ambient Conditions
     to Warm Dense Matter
-  author: Sandeep Kumar; Hossein Tahmasbi; Kushal Ramakrishna; Mani Lokamani; Svetoslav
-    Ganchev Nikolov; Julien Tranchida; Mitchell A. Wood; Attila Cangi
+  author: Sandeep Kumar; Hossein Tahmasbi; Kushal Ramakrishna; Mani Lokamani; Nikolov,
+    Svetoslav; Julien Tranchida; Mitchell A. Wood; Attila Cangi
   year: 2023
   date: '2023-04-19'
   journal: arXiv (Cornell Univ.)
@@ -247,23 +178,9 @@
   kind: preprint
   unpublished_preprint: true
   publication_page: true
-- title: 'Improving dynamic collision frequencies: impacts on dynamic structure factors
-    and stopping powers in warm dense matter'
-  author: Thomas W. Hentschel; Alina Kononov; Alexandra Olmstead; Attila Cangi; Andrew
-    Baczewski; Stephanie B. Hansen
-  year: 2023
-  date: '2023-01-23'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2301.09700
-  href: https://doi.org/10.48550/arxiv.2301.09700
-  pdf: https://arxiv.org/pdf/2301.09700
-  path: https://doi.org/10.48550/arxiv.2301.09700
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:GtLg2Ama23sC
 - title: Temperature analysis of X-ray Thomson scattering data
-  author: Tobias Dornheim; Maximilian Böhme; David A. Chapman; D. Kraus; Thomas R.
-    Preston; Zhandos A. Moldabekov; Niclas Schlünzen; Attila Cangi; T. Döppner; Jan
-    Vorberger
+  author: Tobias Dornheim; Maximilian Böhme; Chapman, Dave; D. Kraus; Thomas R. Preston;
+    Zhandos A. Moldabekov; Niclas Schlünzen; Attila Cangi; T. Döppner; Jan Vorberger
   year: 2022
   date: '2022-12-20'
   journal: arXiv (Cornell Univ.)
@@ -275,48 +192,9 @@
   google_scholar_id: M84yoJgAAAAJ:rmuvC79q63oC
   unpublished_preprint: true
   publication_page: true
-- title: Electronic Density Response of Warm Dense Matter
-  author: Tobias Dornheim; Zhandos A. Moldabekov; Kushal Ramakrishna; Panagiotis B.
-    Tolias; Andrew Baczewski; D. Kraus; Thomas R. Preston; D. A. Chapman; Maximilian
-    Böhme; T. Döppner; Frank R. Graziani; M. Bönitz; Attila Cangi; Jan Vorberger
-  year: 2022
-  date: '2022-12-16'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2212.08326
-  href: https://doi.org/10.48550/arxiv.2212.08326
-  pdf: https://arxiv.org/pdf/2212.08326
-  path: https://doi.org/10.48550/arxiv.2212.08326
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:_axFR9aDTf0C
-- title: Non-empirical mixing coefficient for hybrid XC functionals from analysis
-    of the XC kernel
-  author: Zhandos A. Moldabekov; Mani Lokamani; Jan Vorberger; Attila Cangi; Tobias
-    Dornheim
-  year: 2022
-  date: '2022-12-01'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2212.00644
-  href: https://doi.org/10.48550/arxiv.2212.00644
-  pdf: https://arxiv.org/pdf/2212.00644
-  path: https://doi.org/10.48550/arxiv.2212.00644
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:86PQX7AUzd4C
-- title: Assessing the accuracy of hybrid exchange-correlation functionals for the
-    density response of warm dense electrons
-  author: Zhandos A. Moldabekov; Mani Lokamani; Jan Vorberger; Attila Cangi; Tobias
-    Dornheim
-  year: 2022
-  date: '2022-11-21'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2211.11688
-  href: https://doi.org/10.48550/arxiv.2211.11688
-  pdf: https://arxiv.org/pdf/2211.11688
-  path: https://doi.org/10.48550/arxiv.2211.11688
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:0N-VGjzr574C
 - title: Physics-Informed Neural Networks as Solvers for the Time-Dependent Schrödinger
     Equation
-  author: Karan Shah; Patrick Stiller; Nico Hoffmann; Attila Cangi
+  author: Shah, Karan; Patrick Stiller; Nico Hoffmann; Attila Cangi
   year: 2022
   date: '2022-10-22'
   journal: arXiv (Cornell Univ.)
@@ -327,44 +205,6 @@
   kind: preprint
   unpublished_preprint: true
   publication_page: true
-- title: Predicting electronic structures at any length scale with machine learning
-  author: Lenz Fiedler; Normand A. Modine; Steve Schmerler; Dayton J. Vogel; Gabriel
-    Popoola; Aidan P. Thompson; Sivasankaran Rajamanickam; Attila Cangi
-  year: 2022
-  date: '2022-10-20'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2210.11343
-  href: https://doi.org/10.48550/arxiv.2210.11343
-  pdf: https://arxiv.org/pdf/2210.11343
-  path: https://doi.org/10.48550/arxiv.2210.11343
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:HtEfBTGE9r8C
-- title: 'Impact of Electronic Correlations on High-Pressure Iron: Insights from Time-Dependent
-    Density Functional Theory'
-  author: Kushal Ramakrishna; Mani Lokamani; Andrew Baczewski; Jan Vorberger; Attila
-    Cangi
-  year: 2022
-  date: '2022-10-18'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2210.10132
-  href: https://doi.org/10.48550/arxiv.2210.10132
-  pdf: https://arxiv.org/pdf/2210.10132
-  path: https://doi.org/10.48550/arxiv.2210.10132
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:umqufdRvDiIC
-- title: Accelerating Equilibration in First-Principles Molecular Dynamics with Orbital-Free
-    Density Functional Theory
-  author: Lenz Fiedler; Zhandos A. Moldabekov; Xuecheng Shao; Kaili Jiang; Tobias
-    Dornheim; Pavanello, Michele; Attila Cangi
-  year: 2022
-  date: '2022-06-08'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2206.03754
-  href: https://doi.org/10.48550/arxiv.2206.03754
-  pdf: https://arxiv.org/pdf/2206.03754
-  path: https://doi.org/10.48550/arxiv.2206.03754
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:SpbeaW3--B0C
 - title: An \textit{ab initio} study of shock-compressed copper
   author: Maximilian Schörner; B. B. L. Witte; Andrew Baczewski; Attila Cangi; R.
     Redmer
@@ -392,29 +232,6 @@
   google_scholar_id: M84yoJgAAAAJ:WZBGuue-350C
   unpublished_preprint: true
   publication_page: true
-- title: Improved calculations of mean ionization states with an average-atom model
-  author: Timothy J. Callow; Eli Kraisler; Attila Cangi
-  year: 2022
-  date: '2022-03-11'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2203.05863
-  href: https://doi.org/10.48550/arxiv.2203.05863
-  pdf: https://arxiv.org/pdf/2203.05863
-  path: https://doi.org/10.48550/arxiv.2203.05863
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:_FM0Bhl9EiAC
-- title: Electrical Conductivity of Iron in Earth's Core from Microscopic Ohm's Law
-  author: Kushal Ramakrishna; Mani Lokamani; Andrew Baczewski; Jan Vorberger; Attila
-    Cangi
-  year: 2022
-  date: '2022-03-11'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2203.06025
-  href: https://doi.org/10.48550/arxiv.2203.06025
-  pdf: https://arxiv.org/pdf/2203.06025
-  path: https://doi.org/10.48550/arxiv.2203.06025
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:lmc2jWPfTJgC
 - title: Random Quantum Neural Networks (RQNN) for Noisy Image Recognition
   author: Debanjan Konar; Erol Gelenbe; Soham Bhandary; Aditya Das Sarma; Attila Cangi
   year: 2022
@@ -428,22 +245,9 @@
   google_scholar_id: M84yoJgAAAAJ:tuHXwOkdijsC
   unpublished_preprint: true
   publication_page: true
-- title: Training-free hyperparameter optimization of neural networks for electronic
-    structures in matter
-  author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel Popoola; Tamar Yovell;
-    Vladyslav Oles; John A. Ellis; S. Rajamanickam; Attila Cangi
-  year: 2022
-  date: '2022-02-18'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2202.09186
-  href: https://doi.org/10.48550/arxiv.2202.09186
-  pdf: https://arxiv.org/pdf/2202.09186
-  path: https://doi.org/10.48550/arxiv.2202.09186
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:HbR8gkJAVGIC
 - title: A Deep Dive into Machine Learning Density Functional Theory for Materials
     Science and Chemistry
-  author: Lenz Fiedler; Karan Shah; Michael Bußmann; Attila Cangi
+  author: Lenz Fiedler; Shah, Karan; Michael Bußmann; Attila Cangi
   year: 2021
   date: '2021-10-03'
   journal: arXiv (Cornell Univ.)
@@ -482,18 +286,6 @@
   google_scholar_id: M84yoJgAAAAJ:JQOojiI6XY0C
   unpublished_preprint: true
   publication_page: true
-- title: First-principles derivation and properties of density-functional average-atom
-    models
-  author: Timothy J. Callow; Stephanie B. Hansen; Eli Kraisler; Attila Cangi
-  year: 2021
-  date: '2021-03-17'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2103.09928
-  href: https://doi.org/10.48550/arxiv.2103.09928
-  pdf: https://doi.org/10.48550/arxiv.2103.09928
-  path: https://doi.org/10.48550/arxiv.2103.09928
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:uLbwQdceFCQC
 - title: The Quantum Bohm Potential for Many-Fermion Systems
   author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank R. Graziani; M.
     Bönitz; Attila Cangi
@@ -561,18 +353,6 @@
   kind: preprint
   unpublished_preprint: true
   publication_page: true
-- title: Electronic structure via potential functional approximations
-  author: Attila Cangi; Donghyung Lee; Peter D. T. A. Elliott; Kieron Burke; Eberhard
-    K. U. Gross
-  year: 2011
-  date: '2011-02-17'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.1102.3638
-  href: https://doi.org/10.48550/arxiv.1102.3638
-  pdf: https://doi.org/10.48550/arxiv.1102.3638
-  path: https://doi.org/10.48550/arxiv.1102.3638
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:WF5omc3nYNoC
 - title: Leading Corrections to the Local Density Approximation
   author: Attila Cangi; Donghyung Lee; Peter D. T. A. Elliott; Kieron Burke
   year: 2010
