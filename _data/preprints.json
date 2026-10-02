@@ -40,16 +40,6 @@
     "pdf": "https://arxiv.org/pdf/2605.06303"
   },
   {
-    "title": "Prediction of atomic H adsorption energies in metalloid doped MSSe (M = Mo/W) Janus layers: A combined DFT and machine learning study",
-    "year": 2025,
-    "authors": "G. Tejaswini, Anjana E Sudheer, Amrendra Kumar, M. Vallinayagam, Pavan Kumar Perepu, Attila Cangi, Mani Lokamani, M. Posselt, M. Zschornak, C. Kamal, D. Amaranatha Reddy, D. Murali",
-    "venue": "arXiv",
-    "doi": "",
-    "url": "http://arxiv.org/abs/2511.16263v2",
-    "type": "preprint",
-    "pdf": "http://arxiv.org/pdf/2511.16263v2.pdf"
-  },
-  {
     "title": "Strong geometry dependence of the X-ray Thomson Scattering Spectrum in single crystal silicon",
     "year": 2025,
     "authors": "Thomas Gawne, Zhandos A. Moldabekov, Oliver Humphries, Karen Appel, Carsten Baehtz, V. Bouffetier, E. Brambrink, Attila Cangi, C\u00e9line Cr\u00e9pisson, Sebastian G\u00f6de, Zuzana Kon\u00f4pkov\u00e1, Mikako Makita, Mikhail Mishchenko, M. Nakatsutsumi, Lisa Randolph, Sebastian Schwalbe, Jan Vorberger, U. Zastrau, Tobias Dornheim, Thomas R. Preston",
@@ -110,16 +100,6 @@
     "pdf": "https://arxiv.org/pdf/2311.08737"
   },
   {
-    "title": "Transferable Interatomic Potentials for Aluminum from Ambient Conditions to Warm Dense Matter",
-    "year": 2023,
-    "authors": "Sandeep Kumar, Hossein Tahmasbi, Kushal Ramakrishna, Mani Lokamani, Nikolov, Svetoslav, Julien Tranchida, Mitchell A. Wood, Attila Cangi",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.2304.09703",
-    "url": "https://doi.org/10.48550/arxiv.2304.09703",
-    "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/2304.09703"
-  },
-  {
     "title": "Temperature analysis of X-ray Thomson scattering data",
     "year": 2022,
     "authors": "Tobias Dornheim, Maximilian B\u00f6hme, Chapman, Dave, D. Kraus, Thomas R. Preston, Zhandos A. Moldabekov, Niclas Schl\u00fcnzen, Attila Cangi, T. D\u00f6ppner, Jan Vorberger",
@@ -138,16 +118,6 @@
     "url": "https://doi.org/10.48550/arxiv.2210.12522",
     "type": "preprint",
     "pdf": "https://arxiv.org/pdf/2210.12522"
-  },
-  {
-    "title": "An \\textit{ab initio} study of shock-compressed copper",
-    "year": 2022,
-    "authors": "Maximilian Sch\u00f6rner, B. B. L. Witte, Andrew Baczewski, Attila Cangi, R. Redmer",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.2205.06638",
-    "url": "https://doi.org/10.48550/arxiv.2205.06638",
-    "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/2205.06638"
   },
   {
     "title": "A Scalable 5,6-Qubit Grover's Quantum Search Algorithm",
@@ -180,16 +150,6 @@
     "pdf": "https://doi.org/10.48550/arxiv.2110.00997"
   },
   {
-    "title": "Thermal Signals from Collective Electronic Excitations in Inhomogeneous Warm Dense Matter",
-    "year": 2021,
-    "authors": "Zhandos A. Moldabekov, Tobias Dornheim, Attila Cangi",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.2105.09721",
-    "url": "https://doi.org/10.48550/arxiv.2105.09721",
-    "type": "preprint",
-    "pdf": "http://export.arxiv.org/pdf/2105.09721"
-  },
-  {
     "title": "A Machine-Learning Surrogate Model for ab initio Electronic Correlations at Extreme Conditions",
     "year": 2021,
     "authors": "Tobias Dornheim, Zhandos A. Moldabekov, Attila Cangi",
@@ -210,16 +170,6 @@
     "pdf": "https://arxiv.org/abs/2103.08523"
   },
   {
-    "title": "Bypassing the malfunction junction in warm dense matter simulations",
-    "year": 2014,
-    "authors": "Attila Cangi, Aurora Pribram\u2212Jones",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.1411.1532",
-    "url": "https://doi.org/10.48550/arxiv.1411.1532",
-    "type": "preprint",
-    "pdf": "https://doi.org/10.48550/arxiv.1411.1532"
-  },
-  {
     "title": "Uniform approximations for fermionic densities",
     "year": 2014,
     "authors": "Raphael F. Ribeiro, Donghyung Lee, Attila Cangi, Peter D. T. A. Elliott, Kieron Burke",
@@ -238,16 +188,6 @@
     "url": "https://doi.org/10.48550/arxiv.1408.2434",
     "type": "preprint",
     "pdf": "https://arxiv.org/pdf/1408.2434"
-  },
-  {
-    "title": "Reduced Density Matrix Functional Theory at Finite Temperature:\\n Theoretical Foundations",
-    "year": 2012,
-    "authors": "Tim Baldsiefen, Attila Cangi, E. K. U. Gross",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.1208.4703",
-    "url": "https://doi.org/10.48550/arxiv.1208.4703",
-    "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/1208.4703"
   },
   {
     "title": "Leading Corrections to the Local Density Approximation",
