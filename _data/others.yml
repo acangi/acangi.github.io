@@ -25,18 +25,6 @@
     Thomas Dae-Song
   year: 2025
   date: '2025-12-02'
-  journal: RODARE
-  doi: https://doi.org/10.14278/rodare.4170
-  href: https://doi.org/10.14278/rodare.4170
-  pdf: https://doi.org/10.14278/rodare.4170
-  path: https://doi.org/10.14278/rodare.4170
-  kind: dataset
-- title: 'Data publication: Scalable Machine Learning Model for Energy Decomposition
-    Analysis in Aqueous Systems'
-  author: Tahmasbi, Hossein; Beerbaum, Michael; Brzoza, Bartosz; Cangi, Attila; Kühne,
-    Thomas Dae-Song
-  year: 2025
-  date: '2025-12-02'
   journal: null
   doi: https://doi.org/10.14278/rodare.4169
   href: https://doi.org/10.14278/rodare.4169
@@ -291,29 +279,6 @@
   path: https://doi.org/10.2172/1897018
   kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:ClCfbGk0d_YC
-- title: Dataset and scripts for A Deep Dive into Machine Learning Density Functional
-    Theory for Materials Science and Chemistry
-  author: Lenz Fiedler; Karan Shah; Attila Cangi; Michael Bußmann
-  year: 2021
-  date: '2021-10-01'
-  journal: RODARE
-  doi: https://doi.org/10.14278/rodare.1197
-  href: https://doi.org/10.14278/rodare.1197
-  pdf: https://doi.org/10.14278/rodare.1197
-  path: https://doi.org/10.14278/rodare.1197
-  kind: dataset
-- title: Data associated with the publication "The relevance of electronic perturbations
-    in the warm dense electron gas"
-  author: Zhandos A. Moldabekov; Tobias Dornheim; Maximilian Böhme; Jan Vorberger;
-    Attila Cangi
-  year: 2021
-  date: '2021-09-15'
-  journal: RODARE
-  doi: https://doi.org/10.14278/rodare.1187
-  href: https://doi.org/10.14278/rodare.1187
-  pdf: https://doi.org/10.14278/rodare.1187
-  path: https://doi.org/10.14278/rodare.1187
-  kind: dataset
 - title: Report on scipost_202106_00020v1
   author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank R. Graziani; M.
     Bönitz; Attila Cangi
@@ -336,17 +301,6 @@
   pdf: https://scipost.org/preprints/scipost_202106_00020v1/
   path: https://doi.org/10.21468/scipost.report.3324
   kind: peer-review
-- title: 'LDOS/SNAP data for MALA: Aluminium at 298K and 933K'
-  author: Ellis, J. Austin; Lenz Fiedler; Gabriel A. Popoola; Normand A. Modine; Stephens,
-    John A.; Aidan P. Thompson; Attila Cangi; Rajamanickam, Siva
-  year: 2021
-  date: '2021-07-08'
-  journal: RODARE
-  doi: https://doi.org/10.14278/rodare.1107
-  href: https://doi.org/10.14278/rodare.1107
-  pdf: https://doi.org/10.14278/rodare.1107
-  path: https://doi.org/10.14278/rodare.1107
-  kind: dataset
 - title: An Introduction to the Materials Learning Algorithms Package (MALA).
   author: Lenz Fiedler; Austin Ellis; Sivasankaran Rajamanickam; Attila Cangi
   year: 2021
