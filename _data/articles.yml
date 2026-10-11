@@ -434,20 +434,6 @@
   kind: article
   google_scholar_id: M84yoJgAAAAJ:M7yex6snE4oC
   publication_page: true
-- title: Effective electronic forces and potentials from ab initio path integral Monte
-    Carlo simulations
-  author: Tobias Dornheim; Panagiotis B. Tolias; Zhandos A. Moldabekov; Attila Cangi;
-    Jan Vorberger
-  year: 2022
-  date: '2022-04-29'
-  journal: PubMed
-  doi: https://doi.org/10.48550/arxiv.2204.14260
-  href: https://doi.org/10.48550/arxiv.2204.14260
-  pdf: https://arxiv.org/pdf/2204.14260
-  path: https://doi.org/10.48550/arxiv.2204.14260
-  kind: article
-  google_scholar_id: M84yoJgAAAAJ:M7yex6snE4oC
-  publication_page: true
 - title: First-principles derivation and properties of density-functional average-atom
     models
   author: Timothy J. Callow; S. B. Hansen; Eli Kraisler; Attila Cangi
