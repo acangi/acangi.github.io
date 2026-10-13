@@ -2,7 +2,7 @@
   {
     "title": "2026 Roadmap on Digitalising Materials Science",
     "year": 2026,
-    "authors": "Kevin Rossi, Federico Grasselli, Amila Akagi\u0107, Jesper Friis, Ivor Lon\u010dari\u0107, Theodoros Pavloudis, Joseph Kioseoglou, Johannes Wasmer, Attila Cangi, Stefan Bl\u00fcgel, Leticia A. Gracia, Bel\u00e9n Hern\u00e1ndez-Gasc\u00f3n, Amra Hase\u010di\u0107, Javier Heras\u2010Domingo, Francesco Mercuri, Alexei Kuzmin, Giovanni Bertoni, Paolo Rosi, Enzo Rotunno, Vincenzo Grillo, Muhammet Cahit Kula\u00e7, Bahattin Ko\u00e7, Andy S. Anker, Jin Hyun Chang, Jelle Vekeman, Toon Verstraelen, Matteo Cobelli, Luke P. J. Gilligan, Stefano Sanvito, Sepideh Baghaee Ravari, Lei Zhang, Markus A. Stricker, Jonathan Schmidt, Dario Calvani, Amil Aligayev, Benjamin Udofia, Gauravkumar LAthiya, Francisco Javier Dominguez-Gutierrez, Patr\u00edcia Ramos, Jos\u00e9 Manuel Oliveira, Silvia Bonfanti, Tero M\u00e4kinen, Mikko Alava, Dmytro Khomenko, Matthias Stosiek, Yuhao Zhang, Patrick Rinke, Milica Todorovi\u0107, Adrian Mirza, Nawaf Alampara, Siddhant Kumar, Elisa Molinari, Alice Ruini, Anagha Aneesh, Mara Schilling-Wilhelmi, Marti\u00f1o R\u00edos-Garc\u00eda, Kevin Maik Jablonka",
+    "authors": "Kevin Rossi, Federico Grasselli, Amila Akagi\u0107, Jesper Friis, Ivor Lon\u010dari\u0107, Theodoros Pavloudis, Joseph Kioseoglou, Johannes Wasmer, Attila Cangi, Stefan Bl\u00fcgel, Leticia A. Gracia, Bel\u00e9n Hern\u00e1ndez-Gasc\u00f3n, Amra Hase\u010di\u0107, Javier Heras\u2010Domingo, Francesco Mercuri, Alexei Kuzmin, Giovanni Bertoni, Paolo Rosi, Enzo Rotunno, Vincenzo Grillo, Muhammet Cahit Kula\u00e7, Bahattin Ko\u00e7, Andy S. Anker, Jin Hyun Chang, Jelle Vekeman, Toon Verstraelen, Matteo Cobelli, Luke P. J. Gilligan, Stefano Sanvito, Sepideh Baghaee Ravari, Lei Zhang, Markus A. Stricker, Jonathan Schmidt, Dario Calvani, Amil Aligayev, Benjamin Udofia, Gauravkumar LAthiya, Francisco Javier Dominguez-Gutierrez, Patr\u00edcia Ramos, Jos\u00e9 Manuel Oliveira, Silvia Bonfanti, Tero M\u00e4kinen, Mikko J. Alava, Dmytro Khomenko, Matthias Stosiek, Yuhao Zhang, Patrick Rinke, Milica Todorovi\u0107, Adrian Mirza, Nawaf Alampara, Siddhant Kumar, Elisa Molinari, Alice Ruini, Anagha Aneesh, Mara Schilling-Wilhelmi, Marti\u00f1o R\u00edos-Garc\u00eda, Kevin Maik Jablonka",
     "venue": "J. Phys. Mater.",
     "doi": "10.1088/2515-7639/ae9010",
     "url": "https://doi.org/10.1088/2515-7639/ae9010",
@@ -82,7 +82,7 @@
   {
     "title": "Effects of mosaic crystal instrument functions on x-ray Thomson scattering diagnostics",
     "year": 2024,
-    "authors": "Thomas Gawne, Hannah M. Bellenbaum, L. B. Fletcher, Karen Appel, Carsten Baehtz, V. Bouffetier, E. Brambrink, Danielle Brown, Attila Cangi, Adrien Descamps, Sebastian Goede, N. J. Hartley, M. Herbert, P. Hesselbach, Hauke H\u00f6ppner, Oliver Humphries, Zuzana Kon\u00f4pkov\u00e1, Alejandro Laso Garc\u00eda, Bj\u00f6rn Lindqvist, J. L\u00fctgert, M. J. MacDonald, Mikako Makita, W. J. Martin, Mikhail Mishchenko, Zhandos A. Moldabekov, M. Nakatsutsumi, Jean-Paul Naedler, P. Neumayer, Alexander Pelka, Chongbing Qu, Lisa Randolph, J. Rips, T. Toncian, Jan Vorberger, L. Wollenweber, U. Zastrau, D. Kraus, Thomas R. Preston, Tobias Dornheim",
+    "authors": "Thomas Gawne, Hannah M. Bellenbaum, L. B. Fletcher, Karen Appel, Carsten Baehtz, V. Bouffetier, E. Brambrink, Danielle Brown, Attila Cangi, Adrien Descamps, Sebastian G\u00f6de, N. J. Hartley, M. Herbert, P. Hesselbach, Hauke H\u00f6ppner, Oliver Humphries, Zuzana Kon\u00f4pkov\u00e1, Alejandro Laso Garc\u00eda, Bj\u00f6rn Lindqvist, J. L\u00fctgert, M. J. MacDonald, Mikako Makita, W. J. Martin, Mikhail Mishchenko, Zhandos A. Moldabekov, M. Nakatsutsumi, Jean-Paul Naedler, P. Neumayer, Alexander Pelka, Chongbing Qu, Lisa Randolph, J. Rips, T. Toncian, Jan Vorberger, L. Wollenweber, U. Zastrau, D. Kraus, Thomas R. Preston, Tobias Dornheim",
     "venue": "J. Appl. Phys.",
     "doi": "10.1063/5.0222072",
     "url": "https://doi.org/10.1063/5.0222072",
@@ -132,7 +132,7 @@
   {
     "title": "Ab initio insights on the ultrafast strong-field dynamics of anatase TiO2",
     "year": 2023,
-    "authors": "Sruthil Lal SB, Mani Lokamani, Kushal Ramakrishna, Attila Cangi, D. Murali, M. Posselt, Assa Aravindh Sasikala Devi, Alok Sharan",
+    "authors": "Sruthil Lal S. B, Mani Lokamani, Kushal Ramakrishna, Attila Cangi, D. Murali, M. Posselt, Assa Aravindh Sasikala Devi, Alok Sharan",
     "venue": "Phys. Rev. B",
     "doi": "10.1103/physrevb.108.195149",
     "url": "https://doi.org/10.1103/physrevb.108.195149",
@@ -282,7 +282,7 @@
   {
     "title": "Training-free hyperparameter optimization of neural networks for electronic structures in matter",
     "year": 2022,
-    "authors": "Lenz Fiedler, Nils Hoffmann, Parvez Mohammed, Gabriel A. Popoola, Tamar Yovell, Vladyslav Oles, J Austin Ellis, Sivasankaran Rajamanickam, Attila Cangi",
+    "authors": "Lenz Fiedler, Nils Hoffmann, Parvez Mohammed, Gabriel Popoola, Tamar Yovell, Vladyslav Oles, J Austin Ellis, Sivasankaran Rajamanickam, Attila Cangi",
     "venue": "Mach. Learn. Sci. Technol.",
     "doi": "10.1088/2632-2153/ac9956",
     "url": "https://doi.org/10.1088/2632-2153/ac9956",
@@ -382,7 +382,7 @@
   {
     "title": "Data-driven magneto-elastic predictions with scalable classical spin-lattice dynamics",
     "year": 2021,
-    "authors": "Svetoslav Nikolov, Mitchell A. Wood, Attila Cangi, Jean-Bernard Maillet, Mihai-Cosmin Marinica, Aidan P. Thompson, Michael P. Desjarlais, Julien Tranchida",
+    "authors": "Svetoslav Nikolov, Mitchell A. Wood, Attila Cangi, Jean\u2010Bernard Maillet, Mihai\u2010Cosmin Marinica, Aidan P. Thompson, Michael P. Desjarlais, Julien Tranchida",
     "venue": "npj Comput. Mater.",
     "doi": "10.1038/s41524-021-00617-2",
     "url": "https://doi.org/10.1038/s41524-021-00617-2",
@@ -402,7 +402,7 @@
   {
     "title": "Accelerating finite-temperature Kohn-Sham density functional theory with deep neural networks",
     "year": 2021,
-    "authors": "J. A. Ellis, Lenz Fiedler, Gabriel A. Popoola, Normand A. Modine, J. A. Stephens, Aidan P. Thompson, Attila Cangi, Sivasankaran Rajamanickam",
+    "authors": "J. A. Ellis, Lenz Fiedler, Gabriel Popoola, Normand A. Modine, J. A. Stephens, Aidan P. Thompson, Attila Cangi, Sivasankaran Rajamanickam",
     "venue": "Phys. Rev. B",
     "doi": "10.1103/physrevb.104.035120",
     "url": "https://doi.org/10.1103/physrevb.104.035120",

@@ -9,10 +9,10 @@
     Sanvito; Sepideh Baghaee Ravari; Lei Zhang; Markus A. Stricker; Jonathan Schmidt;
     Dario Calvani; Amil Aligayev; Benjamin Udofia; Gauravkumar LAthiya; Francisco
     Javier Dominguez-Gutierrez; Patrícia Ramos; José Manuel Oliveira; Silvia Bonfanti;
-    Tero Mäkinen; Mikko Alava; Dmytro Khomenko; Matthias Stosiek; Yuhao Zhang; Patrick
-    Rinke; Milica Todorović; Adrian Mirza; Nawaf Alampara; Siddhant Kumar; Elisa Molinari;
-    Alice Ruini; Anagha Aneesh; Mara Schilling-Wilhelmi; Martiño Ríos-García; Kevin
-    Maik Jablonka
+    Tero Mäkinen; Mikko J. Alava; Dmytro Khomenko; Matthias Stosiek; Yuhao Zhang;
+    Patrick Rinke; Milica Todorović; Adrian Mirza; Nawaf Alampara; Siddhant Kumar;
+    Elisa Molinari; Alice Ruini; Anagha Aneesh; Mara Schilling-Wilhelmi; Martiño Ríos-García;
+    Kevin Maik Jablonka
   year: 2026
   date: '2026-07-24'
   journal: J. Phys. Mater.
@@ -122,7 +122,7 @@
     diagnostics
   author: Thomas Gawne; Hannah M. Bellenbaum; L. B. Fletcher; Karen Appel; Carsten
     Baehtz; V. Bouffetier; E. Brambrink; Danielle Brown; Attila Cangi; Adrien Descamps;
-    Sebastian Goede; N. J. Hartley; M. Herbert; P. Hesselbach; Hauke Höppner; Oliver
+    Sebastian Göde; N. J. Hartley; M. Herbert; P. Hesselbach; Hauke Höppner; Oliver
     Humphries; Zuzana Konôpková; Alejandro Laso García; Björn Lindqvist; J. Lütgert;
     M. J. MacDonald; Mikako Makita; W. J. Martin; Mikhail Mishchenko; Zhandos A. Moldabekov;
     M. Nakatsutsumi; Jean-Paul Naedler; P. Neumayer; Alexander Pelka; Chongbing Qu;
@@ -192,7 +192,7 @@
   google_scholar_id: M84yoJgAAAAJ:0izLItjtcgwC
   publication_page: true
 - title: Ab initio insights on the ultrafast strong-field dynamics of anatase TiO2
-  author: Sruthil Lal SB; Mani Lokamani; Kushal Ramakrishna; Attila Cangi; D. Murali;
+  author: Sruthil Lal S. B; Mani Lokamani; Kushal Ramakrishna; Attila Cangi; D. Murali;
     M. Posselt; Assa Aravindh Sasikala Devi; Alok Sharan
   year: 2023
   date: '2023-11-27'
@@ -395,8 +395,8 @@
   publication_page: true
 - title: Training-free hyperparameter optimization of neural networks for electronic
     structures in matter
-  author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel A. Popoola; Tamar
-    Yovell; Vladyslav Oles; J Austin Ellis; Sivasankaran Rajamanickam; Attila Cangi
+  author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel Popoola; Tamar Yovell;
+    Vladyslav Oles; J Austin Ellis; Sivasankaran Rajamanickam; Attila Cangi
   year: 2022
   date: '2022-10-11'
   journal: Mach. Learn. Sci. Technol.
@@ -528,8 +528,8 @@
   publication_page: true
 - title: Data-driven magneto-elastic predictions with scalable classical spin-lattice
     dynamics
-  author: Svetoslav Nikolov; Mitchell A. Wood; Attila Cangi; Jean-Bernard Maillet;
-    Mihai-Cosmin Marinica; Aidan P. Thompson; Michael P. Desjarlais; Julien Tranchida
+  author: Svetoslav Nikolov; Mitchell A. Wood; Attila Cangi; Jean‐Bernard Maillet;
+    Mihai‐Cosmin Marinica; Aidan P. Thompson; Michael P. Desjarlais; Julien Tranchida
   year: 2021
   date: '2021-09-28'
   journal: npj Comput. Mater.
@@ -555,8 +555,8 @@
   publication_page: true
 - title: Accelerating finite-temperature Kohn-Sham density functional theory with
     deep neural networks
-  author: J. A. Ellis; Lenz Fiedler; Gabriel A. Popoola; Normand A. Modine; J. A.
-    Stephens; Aidan P. Thompson; Attila Cangi; Sivasankaran Rajamanickam
+  author: J. A. Ellis; Lenz Fiedler; Gabriel Popoola; Normand A. Modine; J. A. Stephens;
+    Aidan P. Thompson; Attila Cangi; Sivasankaran Rajamanickam
   year: 2021
   date: '2021-07-08'
   journal: Phys. Rev. B

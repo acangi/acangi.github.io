@@ -87,9 +87,9 @@
   publication_page: true
 - title: Ultrahigh Resolution X-ray Thomson Scattering Measurements at the European
     XFEL
-  author: Thomas Gawne; Zhandos A. Moldabekov; Oliver Humphries; Karen Appel; C. Bähtz;
-    V. Bouffetier; E. Brambrink; Attila Cangi; Sebastian Göde; Zuzana Konôpková; Mikako
-    Makita; Mikhail Mishchenko; M. Nakatsutsumi; Kushal Ramakrishna; Lisa Randolph;
+  author: Thomas Gawne; Zhandos A. Moldabekov; Oliver Humphries; Karen Appel; Carsten
+    Baehtz; V. Bouffetier; E. Brambrink; Attila Cangi; Sebastian Göde; Zuzana Konôpková;
+    Mikako Makita; Mikhail Mishchenko; M. Nakatsutsumi; Kushal Ramakrishna; Lisa Randolph;
     Sebastian Schwalbe; Jan Vorberger; L. Wollenweber; U. Zastrau; Tobias Dornheim;
     Thomas R. Preston
   year: 2024
@@ -135,11 +135,11 @@
     Attila Cangi
   year: 2022
   date: '2022-04-30'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2205.00117
-  href: https://doi.org/10.48550/arxiv.2205.00117
-  pdf: https://arxiv.org/pdf/2205.00117
-  path: https://doi.org/10.48550/arxiv.2205.00117
+  journal: arXiv
+  doi: null
+  href: http://arxiv.org/abs/2205.00117v1
+  pdf: http://arxiv.org/pdf/2205.00117v1.pdf
+  path: http://arxiv.org/abs/2205.00117v1
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:WZBGuue-350C
   unpublished_preprint: true

@@ -92,22 +92,12 @@
   {
     "title": "Ultrahigh Resolution X-ray Thomson Scattering Measurements at the European XFEL",
     "year": 2024,
-    "authors": "Thomas Gawne, Zhandos A. Moldabekov, Oliver Humphries, Karen Appel, C. B\u00e4htz, V. Bouffetier, E. Brambrink, Attila Cangi, Sebastian G\u00f6de, Zuzana Kon\u00f4pkov\u00e1, Mikako Makita, Mikhail Mishchenko, M. Nakatsutsumi, Kushal Ramakrishna, Lisa Randolph, Sebastian Schwalbe, Jan Vorberger, L. Wollenweber, U. Zastrau, Tobias Dornheim, Thomas R. Preston",
+    "authors": "Thomas Gawne, Zhandos A. Moldabekov, Oliver Humphries, Karen Appel, Carsten Baehtz, V. Bouffetier, E. Brambrink, Attila Cangi, Sebastian G\u00f6de, Zuzana Kon\u00f4pkov\u00e1, Mikako Makita, Mikhail Mishchenko, M. Nakatsutsumi, Kushal Ramakrishna, Lisa Randolph, Sebastian Schwalbe, Jan Vorberger, L. Wollenweber, U. Zastrau, Tobias Dornheim, Thomas R. Preston",
     "venue": "arXiv (Cornell Univ.)",
     "doi": "10.48550/arxiv.2403.02776",
     "url": "https://doi.org/10.48550/arxiv.2403.02776",
     "type": "preprint",
     "pdf": "https://arxiv.org/pdf/2403.02776"
-  },
-  {
-    "title": "Probing Iron in Earth's Core With Molecular-Spin Dynamics",
-    "year": 2023,
-    "authors": "Nikolov, Svetoslav, Kushal Ramakrishna, Andrew Rohskopf, Mani Lokamani, Julien Tranchida, John H. Carpenter, Attila Cangi, Mitchell A. Wood",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.2311.08737",
-    "url": "https://doi.org/10.48550/arxiv.2311.08737",
-    "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/2311.08737"
   },
   {
     "title": "Temperature analysis of X-ray Thomson scattering data",
@@ -133,11 +123,11 @@
     "title": "A Scalable 5,6-Qubit Grover's Quantum Search Algorithm",
     "year": 2022,
     "authors": "Dinesh Reddy Vemula, Debanjan Konar, Sudeep Satheesan, Sri Mounica Kalidasu, Attila Cangi",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.2205.00117",
-    "url": "https://doi.org/10.48550/arxiv.2205.00117",
+    "venue": "arXiv",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2205.00117v1",
     "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/2205.00117"
+    "pdf": "http://arxiv.org/pdf/2205.00117v1.pdf"
   },
   {
     "title": "Random Quantum Neural Networks (RQNN) for Noisy Image Recognition",

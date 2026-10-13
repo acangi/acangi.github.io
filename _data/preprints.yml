@@ -136,9 +136,9 @@
   google_scholar_id: M84yoJgAAAAJ:bKqednn6t2AC
 - title: Ultrahigh Resolution X-ray Thomson Scattering Measurements at the European
     XFEL
-  author: Thomas Gawne; Zhandos A. Moldabekov; Oliver Humphries; Karen Appel; C. Bähtz;
-    V. Bouffetier; E. Brambrink; Attila Cangi; Sebastian Göde; Zuzana Konôpková; Mikako
-    Makita; Mikhail Mishchenko; M. Nakatsutsumi; Kushal Ramakrishna; Lisa Randolph;
+  author: Thomas Gawne; Zhandos A. Moldabekov; Oliver Humphries; Karen Appel; Carsten
+    Baehtz; V. Bouffetier; E. Brambrink; Attila Cangi; Sebastian Göde; Zuzana Konôpková;
+    Mikako Makita; Mikhail Mishchenko; M. Nakatsutsumi; Kushal Ramakrishna; Lisa Randolph;
     Sebastian Schwalbe; Jan Vorberger; L. Wollenweber; U. Zastrau; Tobias Dornheim;
     Thomas R. Preston
   year: 2024
@@ -152,18 +152,6 @@
   google_scholar_id: M84yoJgAAAAJ:yqoGN6RLRZoC
   unpublished_preprint: true
   publication_page: true
-- title: Probing Iron in Earth's Core With Molecular-Spin Dynamics
-  author: Nikolov, Svetoslav; Kushal Ramakrishna; Andrew Rohskopf; Mani Lokamani;
-    Julien Tranchida; John H. Carpenter; Attila Cangi; Mitchell A. Wood
-  year: 2023
-  date: '2023-11-15'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2311.08737
-  href: https://doi.org/10.48550/arxiv.2311.08737
-  pdf: https://arxiv.org/pdf/2311.08737
-  path: https://doi.org/10.48550/arxiv.2311.08737
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:2VqYfGB8ITEC
 - title: Temperature analysis of X-ray Thomson scattering data
   author: Tobias Dornheim; Maximilian Böhme; Chapman, Dave; D. Kraus; Thomas R. Preston;
     Zhandos A. Moldabekov; Niclas Schlünzen; Attila Cangi; T. Döppner; Jan Vorberger
@@ -196,11 +184,11 @@
     Attila Cangi
   year: 2022
   date: '2022-04-30'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2205.00117
-  href: https://doi.org/10.48550/arxiv.2205.00117
-  pdf: https://arxiv.org/pdf/2205.00117
-  path: https://doi.org/10.48550/arxiv.2205.00117
+  journal: arXiv
+  doi: null
+  href: http://arxiv.org/abs/2205.00117v1
+  pdf: http://arxiv.org/pdf/2205.00117v1.pdf
+  path: http://arxiv.org/abs/2205.00117v1
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:WZBGuue-350C
   unpublished_preprint: true
