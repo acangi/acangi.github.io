@@ -145,7 +145,8 @@
   unpublished_preprint: true
   publication_page: true
 - title: Random Quantum Neural Networks (RQNN) for Noisy Image Recognition
-  author: Debanjan Konar; Erol Gelenbe; Soham Bhandary; Aditya Das Sarma; Attila Cangi
+  author: Debanjan Konar; Erol Gelenbe A; Soham Bhandary; Aditya Das Sarma; Attila
+    Cangi
   year: 2022
   date: '2022-03-03'
   journal: arXiv (Cornell Univ.)
