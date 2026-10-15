@@ -6,7 +6,7 @@
     Francesco Mercuri; Alexei Kuzmin; Giovanni Bertoni; Paolo Rosi; Enzo Rotunno;
     Vincenzo Grillo; Muhammet Cahit Kulaç; Bahattin Koç; Andy S. Anker; Jin Hyun Chang;
     Jelle Vekeman; Toon Verstraelen; Matteo Cobelli; Luke P. J. Gilligan; Stefano
-    Sanvito; Sepideh Baghaee Ravari; Lei Zhang; Markus A. Stricker; Jonathan Schmidt;
+    Sanvito; Sepideh Baghaee Ravari; Lei Zhang; Markus Stricker; Jonathan Schmidt;
     Dario Calvani; Amil Aligayev; Benjamin Udofia; Gauravkumar LAthiya; Francisco
     Javier Dominguez-Gutierrez; Patrícia Ramos; José Manuel Oliveira; Silvia Bonfanti;
     Tero Mäkinen; Mikko J. Alava; Dmytro Khomenko; Matthias Stosiek; Yuhao Zhang;
@@ -259,7 +259,7 @@
   publication_page: true
 - title: Predicting electronic structures at any length scale with machine learning
   author: Lenz Fiedler; Normand A. Modine; Steve Schmerler; Dayton J. Vogel; Gabriel
-    Popoola; Aidan P. Thompson; Sivasankaran Rajamanickam; Attila Cangi
+    A Popoola; Aidan P. Thompson; Sivasankaran Rajamanickam; Attila Cangi
   year: 2023
   date: '2023-06-27'
   journal: npj Comput. Mater.
@@ -395,7 +395,7 @@
   publication_page: true
 - title: Training-free hyperparameter optimization of neural networks for electronic
     structures in matter
-  author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel Popoola; Tamar Yovell;
+  author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel A Popoola; Tamar Yovell;
     Vladyslav Oles; J Austin Ellis; Sivasankaran Rajamanickam; Attila Cangi
   year: 2022
   date: '2022-10-11'
@@ -555,7 +555,7 @@
   publication_page: true
 - title: Accelerating finite-temperature Kohn-Sham density functional theory with
     deep neural networks
-  author: J. A. Ellis; Lenz Fiedler; Gabriel Popoola; Normand A. Modine; J. A. Stephens;
+  author: J. A. Ellis; Lenz Fiedler; Gabriel A Popoola; Normand A. Modine; J. A. Stephens;
     Aidan P. Thompson; Attila Cangi; Sivasankaran Rajamanickam
   year: 2021
   date: '2021-07-08'

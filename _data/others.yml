@@ -11,8 +11,8 @@
   kind: software
 - title: 'Data publication: Scalable Machine Learning Model for Energy Decomposition
     Analysis in Aqueous Systems'
-  author: Tahmasbi, Hossein; Beerbaum, Michael; Brzoza, Bartosz; Cangi, Attila; Kühne,
-    Thomas Dae-Song
+  author: Tahmasbi, Hossein; Beerbaum, Michael; Brzoza, Bartosz; Cangi, Attila; Thomas
+    D. Kühne
   year: 2025
   date: '2025-12-02'
   journal: null
@@ -114,7 +114,7 @@
   google_scholar_id: M84yoJgAAAAJ:sNmaIFBj_lkC
 - title: Predicting the Electronic Structure of Matter on Ultra-Large Scales
   author: Lenz Fiedler; Normand A. Modine; Steve Schmerler; Dayton J. Vogel; Gabriel
-    Popoola; Aidan P. Thompson; Sivasankaran Rajamanickam; Attila Cangi
+    A Popoola; Aidan P. Thompson; Sivasankaran Rajamanickam; Attila Cangi
   year: 2022
   date: '2022-10-20'
   journal: null
@@ -201,7 +201,7 @@
   path: https://doi.org/10.2172/2003393
   kind: conference-paper
 - title: Finding Electronic Structure Machine Learning Surrogates without Training
-  author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel Popoola; Tamar Yovell;
+  author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel A Popoola; Tamar Yovell;
     Vladyslav Oles; J. Ellis; Sivasankaran Rajamanickam; Attila Cangi
   year: 2022
   date: '2022-02-24'
@@ -439,9 +439,8 @@
   kind: talk
 - title: 'Summer Proceedings 2018: The Center for Computing Research at Sandia National
     Laboratories'
-  author: Sandia National Laboratories (SNL), Albuquerque, NM (United States). New
-    Mexico Small Business Assistance (NMSBA) Program, NM (United States); Attila Cangi;
-    USDOE Assistant Secretary for Human Resources and Administration; Michael Parks
+  author: Sandia National Labs., Albuquerque, NM (United States); Attila Cangi; USDOE
+    Assistant Secretary for Human Resources and Administration; Michael Parks
   year: 2018
   date: '2018-12-06'
   journal: null
@@ -463,9 +462,8 @@
   kind: talk
 - title: An Exchange-Correlation Functional Capturing Bulk Surface and Confinement
     Physics
-  author: Sandia National Laboratories (SNL), Albuquerque, NM (United States). New
-    Mexico Small Business Assistance (NMSBA) Program, NM (United States); Attila Cangi;
-    USDOE Assistant Secretary for Human Resources and Administration
+  author: Sandia National Labs., Albuquerque, NM (United States); Attila Cangi; USDOE
+    Assistant Secretary for Human Resources and Administration
   year: 2018
   date: '2018-07-01'
   journal: null
