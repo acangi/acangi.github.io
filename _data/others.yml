@@ -495,18 +495,6 @@
   pdf: null
   path: null
   kind: talk
-- title: Developing Consistent Models for Matter in Extreme Conditions
-  author: Stephanie B. Hansen; Taisuke Nagayama; Thomas Gomez; Andrew Baczewski; Attila
-    Cangi
-  year: 2018
-  date: '2018-01-01'
-  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
-  doi: null
-  href: https://openalex.org/W3090318926
-  pdf: https://www.osti.gov/servlets/purl/1569112
-  path: null
-  kind: talk
-  google_scholar_id: M84yoJgAAAAJ:WqliGbK-hY8C
 - title: ECP-copa/ExaMiniMD
   author: Aidan P. Thompson; Attila Cangi; Christian Robert Trott; Christoph Junghans;
     Stan Moore; Timothy Clark Germann
@@ -519,6 +507,18 @@
   path: https://doi.org/10.11578/dc.20201102.5
   kind: talk
   google_scholar_id: M84yoJgAAAAJ:W5xh706n7nkC
+- title: Developing Consistent Models for Matter in Extreme Conditions
+  author: Stephanie B. Hansen; Taisuke Nagayama; Thomas Gomez; Andrew Baczewski; Attila
+    Cangi
+  year: 2018
+  date: '2018-01-01'
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  doi: null
+  href: https://openalex.org/W3090318926
+  pdf: https://www.osti.gov/servlets/purl/1569112
+  path: null
+  kind: talk
+  google_scholar_id: M84yoJgAAAAJ:WqliGbK-hY8C
 - title: Stopping Power of Warm Dense Matter from Ehrenfest Molecular Dynamics
   author: Attila Cangi; Daniel S. Jensen; Stephanie B. Hansen; Andrew Baczewski
   year: 2017
