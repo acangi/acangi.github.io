@@ -257,17 +257,6 @@
   path: https://doi.org/10.25080/majora-212e5952-006
   kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:i2xiXl-TujoC
-- title: Report on scipost_202106_00020v2
-  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank R. Graziani; M.
-    Bönitz; Attila Cangi
-  year: 2021
-  date: '2021-11-09'
-  journal: SciPost Phys.
-  doi: https://doi.org/10.21468/scipost.report.3820
-  href: https://doi.org/10.21468/scipost.report.3820
-  pdf: https://scipost.org/preprints/scipost_202106_00020v2/
-  path: https://doi.org/10.21468/scipost.report.3820
-  kind: peer-review
 - title: Eﬀects of electron-ion collisions on stopping powers in warm dense matter.
   author: Thomas Hentschel; Alina Kononov; Andrew Baczewski; Attila Cangi; Stephanie
     B. Hansen
@@ -280,28 +269,6 @@
   path: https://doi.org/10.2172/1897018
   kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:ClCfbGk0d_YC
-- title: Report on scipost_202106_00020v1
-  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank R. Graziani; M.
-    Bönitz; Attila Cangi
-  year: 2021
-  date: '2021-08-27'
-  journal: SciPost Phys.
-  doi: https://doi.org/10.21468/scipost.report.3456
-  href: https://doi.org/10.21468/scipost.report.3456
-  pdf: https://doi.org/10.21468/scipost.report.3456
-  path: https://doi.org/10.21468/scipost.report.3456
-  kind: peer-review
-- title: Report on scipost_202106_00020v1
-  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank R. Graziani; M.
-    Bönitz; Attila Cangi
-  year: 2021
-  date: '2021-08-01'
-  journal: SciPost Phys.
-  doi: https://doi.org/10.21468/scipost.report.3324
-  href: https://doi.org/10.21468/scipost.report.3324
-  pdf: https://scipost.org/preprints/scipost_202106_00020v1/
-  path: https://doi.org/10.21468/scipost.report.3324
-  kind: peer-review
 - title: An Introduction to the Materials Learning Algorithms Package (MALA).
   author: Lenz Fiedler; Austin Ellis; Sivasankaran Rajamanickam; Attila Cangi
   year: 2021
