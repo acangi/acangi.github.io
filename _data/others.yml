@@ -329,10 +329,10 @@
   google_scholar_id: M84yoJgAAAAJ:EYYDruWGBe4C
 - title: Accelerating Finite-temperature Kohn-Sham Density Functional Theory\ with
     Deep Neural Networks
-  author: "Sandia National Laboratories (SNL-NM), Albuquerque, NM (United \r\nStates);\
-    \ John Ellis; USDOE Assistant Secretary for Human Resources and Administration;\
-    \ Attila Cangi; Normand A. Modine; John Stephens; Aidan P. Thompson; Sivasankaran\
-    \ Rajamanickam"
+  author: Sandia National Laboratories (SNL-NM), Albuquerque, NM (United States);
+    John Ellis; USDOE Assistant Secretary for Human Resources and Administration;
+    Attila Cangi; Normand A. Modine; John Stephens; Aidan P. Thompson; Sivasankaran
+    Rajamanickam
   year: 2020
   date: '2020-10-13'
   journal: null
