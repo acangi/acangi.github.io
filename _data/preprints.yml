@@ -207,19 +207,6 @@
   google_scholar_id: M84yoJgAAAAJ:tuHXwOkdijsC
   unpublished_preprint: true
   publication_page: true
-- title: A Deep Dive into Machine Learning Density Functional Theory for Materials
-    Science and Chemistry
-  author: Lenz Fiedler; Shah, Karan; Michael Bußmann; Attila Cangi
-  year: 2021
-  date: '2021-10-03'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2110.00997
-  href: https://doi.org/10.48550/arxiv.2110.00997
-  pdf: https://doi.org/10.48550/arxiv.2110.00997
-  path: https://doi.org/10.48550/arxiv.2110.00997
-  kind: preprint
-  unpublished_preprint: true
-  publication_page: true
 - title: A Machine-Learning Surrogate Model for ab initio Electronic Correlations
     at Extreme Conditions
   author: Tobias Dornheim; Zhandos A. Moldabekov; Attila Cangi

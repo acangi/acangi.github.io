@@ -140,16 +140,6 @@
     "pdf": "https://arxiv.org/pdf/2203.01764"
   },
   {
-    "title": "A Deep Dive into Machine Learning Density Functional Theory for Materials Science and Chemistry",
-    "year": 2021,
-    "authors": "Lenz Fiedler, Shah, Karan, Michael Bu\u00dfmann, Attila Cangi",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.2110.00997",
-    "url": "https://doi.org/10.48550/arxiv.2110.00997",
-    "type": "preprint",
-    "pdf": "https://doi.org/10.48550/arxiv.2110.00997"
-  },
-  {
     "title": "A Machine-Learning Surrogate Model for ab initio Electronic Correlations at Extreme Conditions",
     "year": 2021,
     "authors": "Tobias Dornheim, Zhandos A. Moldabekov, Attila Cangi",
