@@ -107,17 +107,6 @@
   kind: article
   google_scholar_id: M84yoJgAAAAJ:fFSKOagxvKUC
   publication_page: true
-- title: Bridging the gap in electronic structure calculations via machine learning
-  author: Attila Cangi
-  year: 2024
-  date: '2024-10-10'
-  journal: Nat. Comput. Sci.
-  doi: https://doi.org/10.1038/s43588-024-00707-3
-  href: https://doi.org/10.1038/s43588-024-00707-3
-  pdf: null
-  path: https://doi.org/10.1038/s43588-024-00707-3
-  kind: article
-  publication_page: true
 - title: Effects of mosaic crystal instrument functions on x-ray Thomson scattering
     diagnostics
   author: Thomas Gawne; Hannah M. Bellenbaum; L. B. Fletcher; Karen Appel; Carsten
