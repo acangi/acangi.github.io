@@ -50,64 +50,34 @@
     "pdf": "http://arxiv.org/pdf/2511.16263v2.pdf"
   },
   {
-    "title": "Strong geometry dependence of the X-ray Thomson Scattering Spectrum in single crystal silicon",
-    "year": 2025,
-    "authors": "Thomas Gawne, Zhandos A. Moldabekov, Oliver Humphries, Karen Appel, Carsten Baehtz, V. Bouffetier, E. Brambrink, Attila Cangi, C\u00e9line Cr\u00e9pisson, Sebastian G\u00f6de, Zuzana Kon\u00f4pkov\u00e1, Mikako Makita, Mikhail Mishchenko, M. Nakatsutsumi, Lisa Randolph, Sebastian Schwalbe, Jan Vorberger, U. Zastrau, Tobias Dornheim, Thomas R. Preston",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.2501.19276",
-    "url": "https://doi.org/10.48550/arxiv.2501.19276",
-    "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/2501.19276"
-  },
-  {
-    "title": "Materials Learning Algorithms (MALA): Scalable Machine Learning for Electronic Structure Calculations in Large-Scale Atomistic Simulations",
-    "year": 2024,
-    "authors": "Attila Cangi, Lenz Fiedler, Bartosz Brzoza, Karan Shah, Timothy J. Callow, Daniel Kotik, Steve Schmerler, Matthew C. Barry, James Goff, Andrew Rohskopf, Dayton J. Vogel, Normand A. Modine, Aidan P. Thompson, Sivasankaran Rajamanickam",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.2411.19617",
-    "url": "https://doi.org/10.48550/arxiv.2411.19617",
-    "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/2411.19617"
-  },
-  {
     "title": "Accelerating Electron Dynamics Simulations through Machine Learned Time Propagators",
     "year": 2024,
-    "authors": "Shah, Karan, Attila Cangi",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.2407.09628",
-    "url": "https://doi.org/10.48550/arxiv.2407.09628",
+    "authors": "Karan Shah, Attila Cangi",
+    "venue": "arXiv",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2407.09628v2",
     "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/2407.09628"
-  },
-  {
-    "title": "Effects of Mosaic Crystal Instrument Functions on X-ray Thomson Scattering Diagnostics",
-    "year": 2024,
-    "authors": "Thomas Gawne, Hannah M. Bellenbaum, L. B. Fletcher, Karen Appel, Carsten Baehtz, V. Bouffetier, E. Brambrink, Brown, Danielle, Attila Cangi, Adrien Descamps, Sebastian G\u00f6de, N. J. Hartley, M. Herbert, P. Hesselbach, Hauke H\u00f6ppner, Oliver Humphries, Zuzana Kon\u00f4pkov\u00e1, Garcia, Alejandro Laso, Lindqvist, Bj\u00f6rn, J. L\u00fctgert, M. J. MacDonald, Mikako Makita, W. J. Martin, Mikhail Mishchenko, Zhandos A. Moldabekov, M. Nakatsutsumi, Jean-Paul Naedler, P. Neumayer, Alexander Pelka, Chongbing Qu, Lisa Randolph, J. Rips, T. Toncian, Jan Vorberger, L. Wollenweber, U. Zastrau, D. Kraus, Thomas R. Preston, Tobias Dornheim",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.2406.03301",
-    "url": "https://doi.org/10.48550/arxiv.2406.03301",
-    "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/2406.03301"
+    "pdf": "http://arxiv.org/pdf/2407.09628v2.pdf"
   },
   {
     "title": "Ultrahigh Resolution X-ray Thomson Scattering Measurements at the European XFEL",
     "year": 2024,
-    "authors": "Thomas Gawne, Zhandos A. Moldabekov, Oliver Humphries, Karen Appel, Carsten Baehtz, V. Bouffetier, E. Brambrink, Attila Cangi, Sebastian G\u00f6de, Zuzana Kon\u00f4pkov\u00e1, Mikako Makita, Mikhail Mishchenko, M. Nakatsutsumi, Kushal Ramakrishna, Lisa Randolph, Sebastian Schwalbe, Jan Vorberger, L. Wollenweber, U. Zastrau, Tobias Dornheim, Thomas R. Preston",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.2403.02776",
-    "url": "https://doi.org/10.48550/arxiv.2403.02776",
+    "authors": "Thomas Gawne, Zhandos A. Moldabekov, Oliver S. Humphries, Karen Appel, Carsten B\u00e4htz, Victorien Bouffetier, Erik Brambrink, Attila Cangi, Sebastian G\u00f6de, Zuzana Kon\u00f4pkov\u00e1, Mikako Makita, Mikhail Mishchenko, Motoaki Nakatsutsumi, Kushal Ramakrishna, Lisa Randolph, Sebastian Schwalbe, Jan Vorberger, Lennart Wollenweber, Ulf Zastrau, Tobias Dornheim, Thomas R. Preston",
+    "venue": "arXiv",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2403.02776v3",
     "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/2403.02776"
+    "pdf": "http://arxiv.org/pdf/2403.02776v3.pdf"
   },
   {
     "title": "Temperature analysis of X-ray Thomson scattering data",
     "year": 2022,
-    "authors": "Tobias Dornheim, Maximilian B\u00f6hme, Chapman, Dave, D. Kraus, Thomas R. Preston, Zhandos A. Moldabekov, Niclas Schl\u00fcnzen, Attila Cangi, T. D\u00f6ppner, Jan Vorberger",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.2212.10510",
-    "url": "https://doi.org/10.48550/arxiv.2212.10510",
+    "authors": "Tobias Dornheim, Maximilian B\u00f6hme, Dave Chapman, Dominik Kraus, Thomas R. Preston, Zhandos Moldabekov, Niclas Schl\u00fcnzen, Attila Cangi, Tilo D\u00f6ppner, Jan Vorberger",
+    "venue": "arXiv",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2212.10510v1",
     "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/2212.10510"
+    "pdf": "http://arxiv.org/pdf/2212.10510v1.pdf"
   },
   {
     "title": "Physics-Informed Neural Networks as Solvers for the Time-Dependent Schr\u00f6dinger Equation",
@@ -150,16 +120,6 @@
     "pdf": "https://arxiv.org/pdf/2104.02941"
   },
   {
-    "title": "The Quantum Bohm Potential for Many-Fermion Systems",
-    "year": 2021,
-    "authors": "Zhandos A. Moldabekov, Tobias Dornheim, G. Gregori, Frank R. Graziani, M. B\u00f6nitz, Attila Cangi",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "",
-    "url": "https://openalex.org/W3136158772",
-    "type": "preprint",
-    "pdf": "https://arxiv.org/abs/2103.08523"
-  },
-  {
     "title": "Uniform approximations for fermionic densities",
     "year": 2014,
     "authors": "Raphael F. Ribeiro, Donghyung Lee, Attila Cangi, Peter D. T. A. Elliott, Kieron Burke",
@@ -168,25 +128,5 @@
     "url": "https://openalex.org/W2521239918",
     "type": "preprint",
     "pdf": "https://arxiv.org/pdf/1409.6802"
-  },
-  {
-    "title": "Almost Exact Exchange At Almost No Cost",
-    "year": 2014,
-    "authors": "Peter D. T. A. Elliott, Attila Cangi, Stefano Pittalis, Eberhard K. U. Gross, Kieron Burke",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.1408.2434",
-    "url": "https://doi.org/10.48550/arxiv.1408.2434",
-    "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/1408.2434"
-  },
-  {
-    "title": "Leading Corrections to the Local Density Approximation",
-    "year": 2010,
-    "authors": "Attila Cangi, Donghyung Lee, Peter D. T. A. Elliott, Kieron Burke",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "",
-    "url": "https://openalex.org/W11163850",
-    "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/1002.1351"
   }
 ]

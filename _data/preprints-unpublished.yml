@@ -73,46 +73,47 @@
   unpublished_preprint: true
   publication_page: true
 - title: Accelerating Electron Dynamics Simulations through Machine Learned Time Propagators
-  author: Shah, Karan; Attila Cangi
+  author: Karan Shah; Attila Cangi
   year: 2024
   date: '2024-07-12'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2407.09628
-  href: https://doi.org/10.48550/arxiv.2407.09628
-  pdf: https://arxiv.org/pdf/2407.09628
-  path: https://doi.org/10.48550/arxiv.2407.09628
+  journal: arXiv
+  doi: null
+  href: http://arxiv.org/abs/2407.09628v2
+  pdf: http://arxiv.org/pdf/2407.09628v2.pdf
+  path: http://arxiv.org/abs/2407.09628v2
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:OR75R8vi5nAC
   unpublished_preprint: true
   publication_page: true
 - title: Ultrahigh Resolution X-ray Thomson Scattering Measurements at the European
     XFEL
-  author: Thomas Gawne; Zhandos A. Moldabekov; Oliver Humphries; Karen Appel; Carsten
-    Baehtz; V. Bouffetier; E. Brambrink; Attila Cangi; Sebastian Göde; Zuzana Konôpková;
-    Mikako Makita; Mikhail Mishchenko; M. Nakatsutsumi; Kushal Ramakrishna; Lisa Randolph;
-    Sebastian Schwalbe; Jan Vorberger; L. Wollenweber; U. Zastrau; Tobias Dornheim;
-    Thomas R. Preston
+  author: Thomas Gawne; Zhandos A. Moldabekov; Oliver S. Humphries; Karen Appel; Carsten
+    Bähtz; Victorien Bouffetier; Erik Brambrink; Attila Cangi; Sebastian Göde; Zuzana
+    Konôpková; Mikako Makita; Mikhail Mishchenko; Motoaki Nakatsutsumi; Kushal Ramakrishna;
+    Lisa Randolph; Sebastian Schwalbe; Jan Vorberger; Lennart Wollenweber; Ulf Zastrau;
+    Tobias Dornheim; Thomas R. Preston
   year: 2024
   date: '2024-03-05'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2403.02776
-  href: https://doi.org/10.48550/arxiv.2403.02776
-  pdf: https://arxiv.org/pdf/2403.02776
-  path: https://doi.org/10.48550/arxiv.2403.02776
+  journal: arXiv
+  doi: null
+  href: http://arxiv.org/abs/2403.02776v3
+  pdf: http://arxiv.org/pdf/2403.02776v3.pdf
+  path: http://arxiv.org/abs/2403.02776v3
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:yqoGN6RLRZoC
   unpublished_preprint: true
   publication_page: true
 - title: Temperature analysis of X-ray Thomson scattering data
-  author: Tobias Dornheim; Maximilian Böhme; Chapman, Dave; D. Kraus; Thomas R. Preston;
-    Zhandos A. Moldabekov; Niclas Schlünzen; Attila Cangi; T. Döppner; Jan Vorberger
+  author: Tobias Dornheim; Maximilian Böhme; Dave Chapman; Dominik Kraus; Thomas R.
+    Preston; Zhandos Moldabekov; Niclas Schlünzen; Attila Cangi; Tilo Döppner; Jan
+    Vorberger
   year: 2022
   date: '2022-12-20'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2212.10510
-  href: https://doi.org/10.48550/arxiv.2212.10510
-  pdf: https://arxiv.org/pdf/2212.10510
-  path: https://doi.org/10.48550/arxiv.2212.10510
+  journal: arXiv
+  doi: null
+  href: http://arxiv.org/abs/2212.10510v1
+  pdf: http://arxiv.org/pdf/2212.10510v1.pdf
+  path: http://arxiv.org/abs/2212.10510v1
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:rmuvC79q63oC
   unpublished_preprint: true
@@ -172,20 +173,6 @@
   google_scholar_id: M84yoJgAAAAJ:JQOojiI6XY0C
   unpublished_preprint: true
   publication_page: true
-- title: The Quantum Bohm Potential for Many-Fermion Systems
-  author: Zhandos A. Moldabekov; Tobias Dornheim; G. Gregori; Frank R. Graziani; M.
-    Bönitz; Attila Cangi
-  year: 2021
-  date: '2021-03-15'
-  journal: arXiv (Cornell Univ.)
-  doi: null
-  href: https://openalex.org/W3136158772
-  pdf: https://arxiv.org/abs/2103.08523
-  path: null
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:NJ774b8OgUMC
-  unpublished_preprint: true
-  publication_page: true
 - title: Uniform approximations for fermionic densities
   author: Raphael F. Ribeiro; Donghyung Lee; Attila Cangi; Peter D. T. A. Elliott;
     Kieron Burke
@@ -195,32 +182,6 @@
   doi: null
   href: https://openalex.org/W2521239918
   pdf: https://arxiv.org/pdf/1409.6802
-  path: null
-  kind: preprint
-  unpublished_preprint: true
-  publication_page: true
-- title: Almost Exact Exchange At Almost No Cost
-  author: Peter D. T. A. Elliott; Attila Cangi; Stefano Pittalis; Eberhard K. U. Gross;
-    Kieron Burke
-  year: 2014
-  date: '2014-08-11'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.1408.2434
-  href: https://doi.org/10.48550/arxiv.1408.2434
-  pdf: https://arxiv.org/pdf/1408.2434
-  path: https://doi.org/10.48550/arxiv.1408.2434
-  kind: preprint
-  google_scholar_id: M84yoJgAAAAJ:_Ybze24A_UAC
-  unpublished_preprint: true
-  publication_page: true
-- title: Leading Corrections to the Local Density Approximation
-  author: Attila Cangi; Donghyung Lee; Peter D. T. A. Elliott; Kieron Burke
-  year: 2010
-  date: '2010-02-06'
-  journal: arXiv (Cornell Univ.)
-  doi: null
-  href: https://openalex.org/W11163850
-  pdf: https://arxiv.org/pdf/1002.1351
   path: null
   kind: preprint
   unpublished_preprint: true
