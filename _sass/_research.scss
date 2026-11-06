@@ -1,0 +1,50 @@
+.research-areas {
+  margin-top: 1.5rem;
+}
+
+.research-area {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.research-area-icon {
+  width: 100px;
+  height: 100px;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: #f4f8fa;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.research-area-content {
+  h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .research-area {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .research-area-icon {
+    width: 80px;
+    height: 80px;
+  }
+}

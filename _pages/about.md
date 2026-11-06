@@ -30,9 +30,11 @@ subtitle:
 
 Attila Cangi is the head of the <a href="https://www.casus.science/?page_id=4660" target="_blank">Department of Machine Learning for Materials Design</a> at the <a href="https://www.casus.science" target="_blank">Center for Advanced Systems Understanding</a>, <a href="https://www.hzdr.de" target="_blank">Helmholtz-Zentrum Dresden-Rossendorf</a>.
 
-Together with his team, he conducts research on applying artificial intelligence and machine learning to computational materials modeling. He develops scalable machine-learning methods that accelerate first-principles simulations of electronic and atomistic structures, with the overarching goal of discovering and designing novel materials.
+His research group combines quantum-mechanical theory, physics-informed machine learning, and high-performance computing to understand, predict, and design materials and molecular systems. Their work spans electronic structure, chemical representation learning, quantum dynamics, magnetic materials, and THz-driven matter.
+
+[Explore our research →]({{ '/research/' | relative_url }})
 
 He received his Ph.D. in Chemistry from the University of California, Irvine, and previously worked as a postdoctoral fellow at the Max Planck Institute of Microstructure Physics and as a staff member at Sandia National Laboratories.
 
-Information on his **research activities**, **research team**, **teaching activities**, and **recent news** is available on his <a href="https://www.casus.science/?page_id=4660" target="_blank">institutional website</a>.
+Information on his **research team** and **recent news** is available on his <a href="https://www.casus.science/?page_id=4660" target="_blank">institutional website</a>.
 
