@@ -38,3 +38,5 @@ He received his Ph.D. in Chemistry from the University of California, Irvine, an
 
 Information on his **research team** and **recent news** is available on his <a href="https://www.casus.science/?page_id=4660" target="_blank">institutional website</a>.
 
+{% include latent_dynamics.liquid %}
+

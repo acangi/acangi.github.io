@@ -1,0 +1,23 @@
+<figure
+  class="latent-dynamics"
+  id="latent-dynamics"
+  tabindex="0"
+  aria-label="Interactive three-dimensional dynamics in a learned representation"
+  aria-describedby="latent-dynamics-description"
+>
+  <canvas class="latent-dynamics-canvas" role="img" aria-label="Slowly rotating clouds of shaded particles with selected trajectory trails.">
+    An illustration of thermal motion in three energy basins, projected into a learned three-dimensional representation.
+  </canvas>
+  <div class="latent-dynamics-tooltip" id="latent-dynamics-description" role="tooltip">
+    <strong>Dynamics in a learned space</strong>
+    <p>
+      Each sphere represents a configuration evolving in a model energy landscape with three stable basins. Inertial Langevin dynamics combine forces,
+      friction, and thermal fluctuations; colors identify the nearest basin, and trails trace selected configurations.
+    </p>
+    <p>
+      A fixed principal-component analysis (PCA) of nonlinear descriptors maps configurations into three dimensions. Move horizontally to bias an external
+      field, or vertically to change the temperature. This is a synthetic illustration of physical and representation-learning principles.
+    </p>
+  </div>
+</figure>
+<script defer src="{{ '/assets/js/latent-dynamics.js' | relative_url | bust_file_cache }}"></script>
