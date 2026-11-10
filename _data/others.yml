@@ -41,7 +41,7 @@
   kind: software
 - title: 'Data publication: Scalable Machine Learning Model for Energy Decomposition
     Analysis in Aqueous Systems'
-  author: Tahmasbi, Hossein; Beerbaum, Michael; Brzoza, Bartosz; Cangi, Attila; Thomas
+  author: Tahmasbi, Hossein; Beerbaum, Michael; Brzoza, Bartosz; Attila Cangi; Thomas
     D. Kühne
   year: 2025
   date: '2025-12-02'
@@ -51,6 +51,30 @@
   pdf: https://rodare.hzdr.de/record/4170
   path: https://doi.org/10.14278/rodare.4169
   kind: dataset
+- title: Scalable Machine Learning Model for Energy Decomposition Analysis in Aqueous
+    Systems
+  author: Tahmasbi, Hossein; Beerbaum, Michael; Thomas D. Kühne; Brzoza, Bartosz;
+    Attila Cangi
+  year: 2025
+  date: '2025-01-01'
+  journal: AIP Publ.
+  doi: https://doi.org/10.60893/figshare.jcp.c.8144699
+  href: https://doi.org/10.60893/figshare.jcp.c.8144699
+  pdf: https://doi.org/10.60893/figshare.jcp.c.8144699
+  path: https://doi.org/10.60893/figshare.jcp.c.8144699
+  kind: other
+  google_scholar_id: M84yoJgAAAAJ:nZcligLrVowC
+- title: Supplementary materials
+  author: Admin, AIP; Tahmasbi, Hossein; Beerbaum, Michael; Brzoza, Bartosz; Attila
+    Cangi; Thomas D. Kühne
+  year: 2025
+  date: '2025-01-01'
+  journal: AIP Publ.
+  doi: https://doi.org/10.60893/figshare.jcp.30606164
+  href: https://doi.org/10.60893/figshare.jcp.30606164
+  pdf: https://doi.org/10.60893/figshare.jcp.30606164
+  path: https://doi.org/10.60893/figshare.jcp.30606164
+  kind: supplementary-materials
 - title: Towards all-electron treatment in electronic structure machine learning
   author: Johannes Wasmer; Philipp Rüßmann; Stefano Sanvito; Attila Cangi; Ira Assent
   year: 2025
@@ -110,7 +134,7 @@
     Andrew Rohskopf
   year: 2023
   date: '2023-08-01'
-  journal: null
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: https://doi.org/10.2172/2430436
   href: https://doi.org/10.2172/2430436
   pdf: http://dx.doi.org/10.2172/2430436
@@ -134,7 +158,7 @@
     Ramakrishna; Andrew Rohskopf; Mitchell A. Wood
   year: 2023
   date: '2023-03-01'
-  journal: null
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: https://doi.org/10.2172/2431651
   href: https://doi.org/10.2172/2431651
   pdf: http://dx.doi.org/10.2172/2431651
@@ -221,7 +245,7 @@
     Lokamani; Mitchell A. Wood
   year: 2022
   date: '2022-07-01'
-  journal: null
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: https://doi.org/10.2172/2003857
   href: https://doi.org/10.2172/2003857
   pdf: http://dx.doi.org/10.2172/2003857
@@ -234,7 +258,7 @@
     Ellis; J.J. Stephens; Gabe Popoola; Attila Cangi; Sivasankaran Rajamanickam
   year: 2022
   date: '2022-05-01'
-  journal: null
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: https://doi.org/10.2172/2003393
   href: https://doi.org/10.2172/2003393
   pdf: http://dx.doi.org/10.2172/2003393
@@ -257,7 +281,7 @@
     B. Hansen
   year: 2022
   date: '2022-02-01'
-  journal: null
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: https://doi.org/10.2172/2001867
   href: https://doi.org/10.2172/2001867
   pdf: http://dx.doi.org/10.2172/2001867
@@ -270,7 +294,7 @@
     Lokamani; Mitchell A. Wood
   year: 2022
   date: '2022-02-01'
-  journal: null
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: https://doi.org/10.2172/2002085
   href: https://doi.org/10.2172/2002085
   pdf: http://dx.doi.org/10.2172/2002085
@@ -292,7 +316,7 @@
     B. Hansen
   year: 2021
   date: '2021-11-01'
-  journal: null
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: https://doi.org/10.2172/1897018
   href: https://doi.org/10.2172/1897018
   pdf: https://www.osti.gov/servlets/purl/1897018
@@ -303,7 +327,7 @@
   author: Lenz Fiedler; Austin Ellis; Sivasankaran Rajamanickam; Attila Cangi
   year: 2021
   date: '2021-05-01'
-  journal: null
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: https://doi.org/10.2172/1867139
   href: https://doi.org/10.2172/1867139
   pdf: https://www.osti.gov/servlets/purl/1867139
@@ -315,7 +339,7 @@
     B. Hansen
   year: 2021
   date: '2021-03-01'
-  journal: null
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: https://doi.org/10.2172/1855327
   href: https://doi.org/10.2172/1855327
   pdf: https://www.osti.gov/servlets/purl/1855327
@@ -326,7 +350,7 @@
     John Stephens; Attila Cangi
   year: 2021
   date: '2021-03-01'
-  journal: null
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: https://doi.org/10.2172/1853873
   href: https://doi.org/10.2172/1853873
   pdf: https://www.osti.gov/servlets/purl/1787726
@@ -350,7 +374,7 @@
     Baczewski
   year: 2020
   date: '2020-11-01'
-  journal: null
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   doi: https://doi.org/10.2172/1830065
   href: https://doi.org/10.2172/1830065
   pdf: https://www.osti.gov/servlets/purl/1830065
