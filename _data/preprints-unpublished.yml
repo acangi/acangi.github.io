@@ -19,11 +19,11 @@
   author: Kushal Ramakrishna; Mani Lokamani; Attila Cangi
   year: 2026
   date: '2026-05-27'
-  journal: arXiv (Cornell Univ.)
-  doi: https://doi.org/10.48550/arxiv.2605.28395
-  href: https://doi.org/10.48550/arxiv.2605.28395
-  pdf: https://arxiv.org/pdf/2605.28395
-  path: https://doi.org/10.48550/arxiv.2605.28395
+  journal: arXiv
+  doi: null
+  href: http://arxiv.org/abs/2605.28395v1
+  pdf: http://arxiv.org/pdf/2605.28395v1.pdf
+  path: http://arxiv.org/abs/2605.28395v1
   kind: preprint
   google_scholar_id: M84yoJgAAAAJ:F1b5ZUV5XREC
   unpublished_preprint: true

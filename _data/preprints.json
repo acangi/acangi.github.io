@@ -13,11 +13,11 @@
     "title": "Can MACE Potentials Accurately Describe Magnetism and Phase Stability in Fe-Ni Alloys? A Systematic Benchmark",
     "year": 2026,
     "authors": "Kushal Ramakrishna, Mani Lokamani, Attila Cangi",
-    "venue": "arXiv (Cornell Univ.)",
-    "doi": "10.48550/arxiv.2605.28395",
-    "url": "https://doi.org/10.48550/arxiv.2605.28395",
+    "venue": "arXiv",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2605.28395v1",
     "type": "preprint",
-    "pdf": "https://arxiv.org/pdf/2605.28395"
+    "pdf": "http://arxiv.org/pdf/2605.28395v1.pdf"
   },
   {
     "title": "Thermal PBE in warm dense matter: Does it matter and is it accurate?",
