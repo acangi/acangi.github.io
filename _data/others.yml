@@ -116,6 +116,17 @@
   pdf: null
   path: https://doi.org/10.1038/s43588-024-00707-3
   kind: other
+- title: Machine-Learning for Static and Dynamic Electronic Structure Theory
+  author: Lenz Fiedler; Karan Shah; Attila Cangi
+  year: 2023
+  date: '2023-10-01'
+  journal: Chall. adv. comput. chem. phys.
+  doi: https://doi.org/10.1007/978-3-031-37196-7_5
+  href: https://doi.org/10.1007/978-3-031-37196-7_5
+  pdf: https://doi.org/10.1007/978-3-031-37196-7_5
+  path: https://doi.org/10.1007/978-3-031-37196-7_5
+  kind: chapter
+  google_scholar_id: M84yoJgAAAAJ:sNmaIFBj_lkC
 - title: Random Quantum Neural Networks for Noisy Image Recognition
   author: Debanjan Konar; Erol Gelenbe A; Soham Bhandary; Aditya Das Sarma; Attila
     Cangi
@@ -165,17 +176,6 @@
   path: https://doi.org/10.2172/2431651
   kind: conference-paper
   google_scholar_id: M84yoJgAAAAJ:3htObqc8RwsC
-- title: Machine-Learning for Static and Dynamic Electronic Structure Theory
-  author: Lenz Fiedler; Karan Shah; Attila Cangi
-  year: 2023
-  date: '2023-01-01'
-  journal: Chall. adv. comput. chem. phys.
-  doi: https://doi.org/10.1007/978-3-031-37196-7_5
-  href: https://doi.org/10.1007/978-3-031-37196-7_5
-  pdf: https://doi.org/10.1007/978-3-031-37196-7_5
-  path: https://doi.org/10.1007/978-3-031-37196-7_5
-  kind: chapter
-  google_scholar_id: M84yoJgAAAAJ:sNmaIFBj_lkC
 - title: Predicting the Electronic Structure of Matter on Ultra-Large Scales
   author: Lenz Fiedler; Normand A. Modine; Steve Schmerler; Dayton J. Vogel; Gabriel
     A Popoola; Aidan P. Thompson; Sivasankaran Rajamanickam; Attila Cangi
