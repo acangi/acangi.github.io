@@ -319,19 +319,29 @@
             ></span>
           {% endif %}
           {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
+            {% assign scholar_userid = site.data.socials.scholar_userid %}
+            {% comment %}
+              `google_scholar_id` in the bibliography already carries the Scholar
+              user prefix (e.g. "M84yoJgAAAAJ:-FonjvnnhkoC"), so it must not be
+              prefixed a second time or every citation link breaks. The `latex`
+              bibtex filter also rewrites a literal `--` in the ID into an en
+              dash, which corrupts IDs that contain double hyphens, so undo that.
+            {% endcomment %}
+            {% assign scholar_entry_id = entry.google_scholar_id | replace: '–', '--' %}
+            {% if scholar_entry_id contains ':' %}
+              {% assign scholar_citation_id = scholar_entry_id %}
+            {% else %}
+              {% assign scholar_citation_id = scholar_userid | append: ':' | append: scholar_entry_id %}
+            {% endif %}
             <a
-              href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}"
+              href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ scholar_userid }}&citation_for_view={{ scholar_citation_id }}"
               aria-label="Google Scholar link"
               role="button"
             >
               {% assign citation_count = 0 %}
-              {% assign scholar_id_key = site.scholar_userid | append: ':' | append: entry.google_scholar_id %}
-              {% assign publication_key = entry.google_scholar_id %}
 
-              {% if site.data.citations.papers[scholar_id_key] %}
-                {% assign citation_count = site.data.citations.papers[scholar_id_key].citations %}
-              {% elsif site.data.citations.papers[publication_key] %}
-                {% assign citation_count = site.data.citations.papers[publication_key].citations %}
+              {% if site.data.citations.papers[scholar_citation_id] %}
+                {% assign citation_count = site.data.citations.papers[scholar_citation_id].citations %}
               {% else %}
                 {% for paper in site.data.citations.papers %}
                   {% assign paper_key = paper[0] %}
