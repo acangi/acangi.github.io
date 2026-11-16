@@ -7,6 +7,7 @@
 $max-content-width: {{ site.max_width }};
 
 @import
+  "fonts",
   "variables",
   "themes",
   "layout",
@@ -25,5 +26,7 @@ $max-content-width: {{ site.max_width }};
   "font-awesome/regular",
   "tabler-icons/tabler-icons.scss",
   "tabler-icons/tabler-icons-filled.scss",
-  "tabler-icons/tabler-icons-outline.scss"
+  "tabler-icons/tabler-icons-outline.scss",
+  // Custom Nordic Academic theme last so it overrides stock palette and type.
+  "custom-theme"
 ;
