@@ -2,8 +2,8 @@
 layout: page
 title: CV
 permalink: /cv/
-nav: true
-nav_order: 6
+nav: false # reachable from the footer, keeps the top nav to eight items
+nav_order: 9
 ---
 
 # Curriculum Vitae
