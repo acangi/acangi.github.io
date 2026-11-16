@@ -7,7 +7,8 @@ first_name: Attila
 middle_name:
 last_name: Cangi
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Email is the best way to reach me — for research collaborations, talks, and
+  questions about open positions in the group.
 description: "Attila Cangi — Machine Learning for Materials Design, CASUS / Helmholtz-Zentrum Dresden-Rossendorf"
 footer_text: >
 #  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
@@ -92,6 +93,11 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
+# Homepage sections are configured per page, in the front matter of _pages/about.md:
+#   announcements:    list of _news/ items (the news feature)
+#   selected_papers:  papers marked selected={true} in _bibliography/papers.bib
+#   latest_posts:     recent entries from _posts/ (the blog)
+# There is intentionally no site-wide switch for these.
 
 # blog_name: al-folio # blog_name will be displayed in your blog page
 blog_description: a simple whitespace theme for academics
@@ -158,6 +164,9 @@ newsletter:
 collections:
   books:
     output: true
+  # News items live in _news/ as YYYY-MM-DD-title.md. They are listed on the
+  # /news/ page (_pages/news.md) and, optionally, on the homepage through the
+  # `announcements` block in the front matter of _pages/about.md.
   news:
     defaults:
       layout: post
