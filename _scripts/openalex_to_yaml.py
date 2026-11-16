@@ -53,6 +53,17 @@ KIND_MAP = {
     "proceedings-article": "talk",
 }
 
+# Publications highlighted on the homepage (selected_papers in _pages/about.md).
+# Tracked by DOI so the flags survive a regeneration of papers.bib.
+SELECTED_DOIS = {
+    "10.1016/j.cpc.2025.109654",  # MALA, Comput. Phys. Commun. 314, 109654 (2025)
+    "10.1038/s43588-024-00707-3",  # Bridging the gap in electronic structure calculations, Nat. Comput. Sci. (2024)
+    "10.1073/pnas.2408897121",  # Probing iron in Earth's core, PNAS (2024)
+    "10.1088/2632-2153/ad3159",  # Inverting the Kohn-Sham equations, MLST (2024)
+    "10.1038/s41524-023-01070-z",  # Predicting electronic structures at any length scale, npj Comput. Mater. (2023)
+    "10.25080/majora-212e5952-006",  # atoMEC, SciPy proceedings (2022)
+}
+
 
 def normalize_whitespace(value: str) -> str:
     """Collapse repeated whitespace and strip surrounding spaces."""
@@ -553,6 +564,7 @@ def write_bibtex_file(records: List[Dict[str, Any]]) -> None:
         badge_enabled = "true" if doi else None
         publication_page = "true" if record.get("publication_page") else None
         unpublished_preprint = "true" if record.get("unpublished_preprint") else None
+        selected = "true" if doi in SELECTED_DOIS else None
 
         fields: Dict[str, Optional[str]] = {
             "title": title,
@@ -566,6 +578,7 @@ def write_bibtex_file(records: List[Dict[str, Any]]) -> None:
             "google_scholar_id": google_scholar_id,
             "publication_page": publication_page,
             "unpublished_preprint": unpublished_preprint,
+            "selected": selected,
         }
 
         lines = [f"@{entry_type}{{{key},"]
