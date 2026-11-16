@@ -15,6 +15,12 @@ nav_order: 4
 
 <div class="publications">
 
-{% bibliography --query @*[publication_page=true]* %}
+{% comment %}
+  Show every publication type: articles, book chapters, conference
+  proceedings (inproceedings) and reports (techreport). A plain
+  `@*[publication_page=true]` query silently dropped the proceedings
+  and report entries.
+{% endcomment %}
+{% bibliography --query @*[publication_page=true] || @inproceedings || @techreport || @incollection %}
 
 </div>

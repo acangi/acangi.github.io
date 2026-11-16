@@ -390,7 +390,10 @@ def mark_publication_page_records(records: List[Dict[str, Any]]) -> None:
         record.pop("publication_page", None)
         record.pop("unpublished_preprint", None)
 
-        if record.get("kind") == "article":
+        # Every published output type belongs on the publications page:
+        # articles, reports (techreport), talks/conference papers
+        # (inproceedings), book chapters (incollection) and books.
+        if record.get("kind") in {"article", "report", "talk", "chapter", "book"}:
             record["publication_page"] = True
             continue
 
