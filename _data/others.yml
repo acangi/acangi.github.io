@@ -96,7 +96,7 @@
     Elisabeth Lobe; Ulrich Loup; Christian Meeßen; Robert Speck; Jessica Mitchell;
     Lars Nerger; Fabian Plum; Federico Raimondo; Pavel Saviankou; Simon Spannagel;
     Dorothee Stängle; Achim Streit; Eric Upschulte; Adina Svenja Wagner; Attila Cangi;
-    Thomas White; Claire Wyatt; Daniel Caviedes-Voullième; Claudia Comito; Markus
+    Thomas A. White; Claire Wyatt; Daniel Caviedes-Voullième; Claudia Comito; Markus
     Diesmann; Julian Lenz
   year: 2025
   date: '2025-01-01'
@@ -457,7 +457,7 @@
   href: https://openalex.org/W2923868490
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
 - title: Modifying the Random Phase Approximation for the Average Atom
   author: Thomas Hentschel; Stephanie B. Hansen; Attila Cangi; Andrew Baczewski
   year: 2019
@@ -467,7 +467,7 @@
   href: https://openalex.org/W3017649132
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
 - title: 'Summer Proceedings 2018: The Center for Computing Research at Sandia National
     Laboratories'
   author: Sandia National Labs., Albuquerque, NM (United States); Attila Cangi; USDOE
@@ -514,7 +514,7 @@
   href: https://openalex.org/W2903317593
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
 - title: Spin-lattice simulations of cobalt and iron-cobalt alloys with LAMMPS
   author: Julien Tranchida; A.L. Thompson; Pascal Thibaudeau; Attila Cangi; Todd Monson;
     Eric Donald Langlois; Jamin Ryan Pillars
@@ -525,7 +525,7 @@
   href: https://openalex.org/W2782728547
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
 - title: ECP-copa/ExaMiniMD
   author: Aidan P. Thompson; Attila Cangi; Christian Robert Trott; Christoph Junghans;
     Stan Moore; Timothy Clark Germann
@@ -559,7 +559,7 @@
   href: https://openalex.org/W2755561050
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
 - title: Optical conductivity of magnetized warm dense matter using time-dependent
     density functional theory
   author: Daniel S. Jensen; Andrew Baczewski; Attila Cangi; Stephanie B. Hansen
@@ -581,7 +581,7 @@
   href: https://openalex.org/W2769594595
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
 - title: Semiclassical potential functionals for semiconductor quantum wells
   author: Attila Cangi
   year: 2016
@@ -591,7 +591,7 @@
   href: https://openalex.org/W2590075342
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
 - title: Corrections to Thomas-Fermi Densities at Turning Points and Beyond
   author: Raphael F. Ribeiro; Donghyung Lee; Attila Cangi; Peter D. T. A. Elliott;
     Kieron Burke
@@ -614,7 +614,7 @@
   href: https://openalex.org/W2248662928
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
 - title: Non-Empirical Orbital-Free Approximations from Semiclassical Approaches
   author: Stefano Pittalis; Attila Cangi; César R. Proetto; Eberhard K. U. Gross;
     Kieron Burke
@@ -625,7 +625,7 @@
   href: https://openalex.org/W2241242473
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
   google_scholar_id: M84yoJgAAAAJ:VLnqNzywnoUC
 - title: Leading corrections to local approximations and their relevance to Density
     Functional Theory
@@ -637,7 +637,7 @@
   href: https://openalex.org/W2995862921
   pdf: null
   path: null
-  kind: talk
+  kind: dissertation
 - title: 'The unreasonable accuracy of asymptotic expansions: Why density functional
     theory works'
   author: Kieron Burke; Attila Cangi; Donghyung Lee; Peter D. T. A. Elliott
@@ -659,7 +659,7 @@
   href: https://openalex.org/W1614773731
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
 - title: Towards a semiclassical theory of electronic structure
   author: Attila Cangi; Donghyung Lee; Peter D. T. A. Elliott; Kieron Burke
   year: 2009
@@ -669,7 +669,7 @@
   href: https://openalex.org/W142907370
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
 - title: Semiclassics in Density Functional Theory
   author: Donghyung Lee; Attila Cangi; Peter D. T. A. Elliott; Kieron Burke
   year: 2009
@@ -679,7 +679,7 @@
   href: https://openalex.org/W1658238708
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
 - title: Semiclassical Approaches in Density Functional Theory
   author: Peter D. T. A. Elliott; Attila Cangi; Donghyung Lee; Kieron Burke
   year: 2008
@@ -689,7 +689,7 @@
   href: https://openalex.org/W105216034
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
 - title: A new approach to density functional theory
   author: Kieron Burke; Peter D. T. A. Elliott; Attila Cangi; Donghyung Lee
   year: 2008
@@ -699,4 +699,4 @@
   href: https://openalex.org/W21397216
   pdf: null
   path: null
-  kind: talk
+  kind: conference-abstract
