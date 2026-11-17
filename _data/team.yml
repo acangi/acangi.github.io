@@ -1,0 +1,184 @@
+# Team roster. Fields per person: name, role, email, start_year, end_year,
+# last_position, photo (optional). Active members carry no years; alumni carry
+# the period they spent in the department. The head of department comes first
+# under "Current members"; the rest of that list is ordered by surname, and
+# alumni are ordered by end_year descending (most recent first), then surname
+# alphabetical with diacritics folded for sorting only (names keep them).
+- title: Current members
+  members:
+    - name: Attila Cangi
+      role: Head of Department
+      email: a.cangi@hzdr.de
+      photo: /assets/img/team/Attila_Cangi.jpg
+    - name: Jan Andrzejewski
+      role: Student Research Assistant (Scultetus Early Career Fellow)
+      email: j.andrzejewski@hzdr.de
+    - name: Bartosz Brzoza
+      role: PhD Candidate
+      email: b.brzoza@hzdr.de
+      photo: /assets/img/team/Bartosz_Brzoza.jpg
+    - name: Zakaria Elabid
+      role: Postdoctoral Researcher
+      email: z.elabid@hzdr.de
+      photo: /assets/img/team/Zakaria_Elabid.jpg
+    - name: Tejaswini Golla
+      role: PhD Candidate (DAAD Research Scholar)
+      email: t.golla@hzdr.de
+      photo: /assets/img/team/Tejaswini_Golla.jpg
+    - name: Vincent Martinetto
+      role: Postdoctoral Researcher
+      email: v.martinetto@hzdr.de
+      photo: /assets/img/team/Vincent_Marinetto.jpg
+    - name: Wiktoria Szopa
+      role: PhD Candidate
+      email: w.szopa@hzdr.de
+      photo: /assets/img/team/Wiktoria_Szopa.jpg
+    - name: Damar Wicaksono
+      role: Postdoctoral Researcher
+      email: d.wicaksono@hzdr.de
+      photo: /assets/img/team/Damar_Wicaksono.jpg
+- title: Alumni
+  members:
+    - name: Amine Kazdar
+      role: Student Research Assistant (HZDR Summer Student Program)
+      start_year: 2026
+      end_year: 2026
+    - name: Lenz Fiedler
+      photo: /assets/img/team/lenz_fiedler.jpg
+      role: PhD Candidate
+      start_year: 2020
+      end_year: 2025
+      last_position: "Head of Data Management, Center for the Transformation of Chemistry, Leipzig, Germany"
+    - name: Kushal Ramakrishna
+      photo: /assets/img/team/kushal_ramakrishna.jpg
+      role: Postdoctoral Researcher
+      start_year: 2020
+      end_year: 2025
+      last_position: "Postdoctoral Researcher, Helmholtz-Zentrum Dresden-Rossendorf, Germany"
+    - name: Karan Shah
+      photo: /assets/img/team/karan_shah.jpg
+      role: PhD Candidate
+      start_year: 2021
+      end_year: 2025
+      last_position: "Senior Software Engineer, Roblox, United States"
+    - name: Johannes Wasmer
+      photo: /assets/img/team/johannes_wasmer.jpg
+      role: PhD Candidate (Visiting)
+      start_year: 2025
+      end_year: 2025
+      last_position: "PhD Candidate, Forschungszentrum Jülich, Germany"
+    - name: Timothy Callow
+      photo: /assets/img/team/timothy_callow.jpg
+      role: Postdoctoral Researcher
+      start_year: 2020
+      end_year: 2024
+      last_position: "Data Scientist, Featurespace, Cambridge, United Kingdom"
+    - name: Uwe Hernandez-Acosta
+      photo: /assets/img/team/uwe_hernandez_acosta.jpg
+      role: Postdoctoral Researcher
+      start_year: 2020
+      end_year: 2024
+      last_position: "Postdoctoral Researcher, Helmholtz-Zentrum Dresden-Rossendorf, Germany"
+    - name: Tom Jungnickel
+      photo: /assets/img/team/tom_jungnickel.jpg
+      role: Student Research Assistant
+      start_year: 2023
+      end_year: 2024
+    - name: Anton Reinhard
+      role: Student Research Assistant
+      start_year: 2023
+      end_year: 2024
+    - name: Niclas Schlünzen
+      photo: /assets/img/team/niclas_schlunzen.jpg
+      role: Postdoctoral Researcher
+      start_year: 2022
+      end_year: 2024
+      last_position: "IT Consultant, Consist Software Solutions GmbH, Germany"
+    - name: Hossein Tahmasbi
+      photo: /assets/img/team/hossein_tahmasbi.jpg
+      role: Postdoctoral Researcher
+      start_year: 2021
+      end_year: 2024
+      last_position: "Postdoctoral Researcher, Helmholtz-Zentrum Dresden-Rossendorf, Germany"
+    - name: Debanjan Konar
+      photo: /assets/img/team/debanjan_konar.jpg
+      role: Postdoctoral Researcher
+      start_year: 2021
+      end_year: 2023
+      last_position: "Senior Chief Engineer and Head of Quantum AI, Samsung R&D Institute India, Bangalore, India"
+    - name: Somashekhar Kulkarni
+      photo: /assets/img/team/somashekhar_kulkarni.jpg
+      role: Student Research Assistant
+      start_year: 2023
+      end_year: 2023
+      last_position: "MLOps Engineer, HLRS - High-Performance Computing Center Stuttgart, Germany"
+    - name: Sandeep Kumar
+      photo: /assets/img/team/sandeep_kumar.jpg
+      role: Postdoctoral Researcher
+      start_year: 2021
+      end_year: 2023
+      last_position: "Postdoctoral Researcher, University of South Florida, United States"
+    - name: Sruthil Lal Sumabalakrishnan
+      role: PhD Candidate (Visiting)
+      start_year: 2023
+      end_year: 2023
+    - name: Maximilian Wenger
+      photo: /assets/img/team/maximilian_wenger.jpg
+      role: Student Research Assistant
+      start_year: 2022
+      end_year: 2023
+    - name: Krishna Chaitanya Palaparthy
+      photo: /assets/img/team/krishna_chaitanya_palaparthy.jpg
+      role: Student Research Assistant
+      start_year: 2021
+      end_year: 2022
+      last_position: "PhD Candidate, Helmholtz-Zentrum Dresden-Rossendorf, Germany"
+    - name: Nathan Rahat
+      role: Student Research Assistant
+      start_year: 2022
+      end_year: 2022
+    - name: Defne Circi
+      photo: /assets/img/team/defne_circi.jpg
+      role: Student Research Assistant
+      start_year: 2021
+      end_year: 2021
+      last_position: "PhD Candidate, Duke University, United States"
+    - name: Omar Faruk
+      photo: /assets/img/team/omar_faruk.jpg
+      role: Student Research Assistant
+      start_year: 2021
+      end_year: 2021
+    - name: Nils Hoffmann
+      role: Student Research Assistant
+      start_year: 2021
+      end_year: 2021
+    - name: Parvez Mohammed
+      photo: /assets/img/team/parvez_mohammed.jpg
+      role: Student Research Assistant
+      start_year: 2021
+      end_year: 2021
+      last_position: "Machine Learning Engineer, Hochschule Reutlingen, Germany"
+    - name: Sneha Verma Prakash
+      photo: /assets/img/team/sneha_verma_prakash.jpg
+      role: Student Research Assistant
+      start_year: 2021
+      end_year: 2021
+      last_position: "Machine Learning and Cloud Consultant, IAV GmbH, Germany"
+    - name: Varun Shitole
+      photo: /assets/img/team/varun_shitole.jpg
+      role: Student Research Assistant
+      start_year: 2020
+      end_year: 2021
+      last_position: "Machine Learning Engineer, REWE Group, Germany"
+    - name: Ekaterina Hristova Stankulova
+      photo: /assets/img/team/ekaterina_stankulova.jpg
+      role: Student Research Assistant
+      start_year: 2021
+      end_year: 2021
+      last_position: "Data Scientist, BBVA, Spain"
+    - name: Tamar Yovell
+      photo: /assets/img/team/tamar_yovell.jpg
+      role: Student Research Assistant
+      start_year: 2021
+      end_year: 2021
+      last_position: "Data Scientist, Top Employers Institute, Netherlands"

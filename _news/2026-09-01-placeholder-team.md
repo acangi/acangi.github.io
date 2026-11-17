@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: "New team member joining — placeholder news item"
 date: 2026-09-01
 inline: true

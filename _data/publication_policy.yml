@@ -1,0 +1,33 @@
+# Hand-maintained publication-page overrides. Not generated, never overwritten.
+#
+# The publications page lists journal articles and preprints that have not been
+# published in a journal. The importer hides a preprint when it can prove a
+# journal version exists: an arXiv journal reference, a publisher DOI, an exact
+# DOI/title match with a journal article, or an arXiv identifier listed among
+# the journal article's OpenAlex locations.
+#
+# Older bibliography entries do not carry an arXiv identifier, so a few
+# preprints are only linked to their published version through that OpenAlex
+# location data. List them here until papers.bib is regenerated: each entry
+# must name the preprint (arXiv id and/or exact title) and the journal version,
+# so the decision is documented and reversible. Nothing is deleted from the
+# bibliography; the record simply stays off the publications page.
+#
+# Note: `published_as` is informational (used by curators and reviewers); the
+# matching itself uses `arxiv` and `title`.
+superseded_preprints:
+  - title: "Can MACE Potentials Accurately Describe Magnetism and Phase Stability in Fe-Ni Alloys? A Systematic Benchmark"
+    arxiv: "2605.28395"
+    published_as: "10.1088/1361-651x/aec186"
+  - title: "Accelerating Electron Dynamics Simulations through Machine Learned Time Propagators"
+    arxiv: "2407.09628"
+    published_as: "10.1088/2632-2153/ae68d4"
+  - title: "Ultrahigh Resolution X-ray Thomson Scattering Measurements at the European XFEL"
+    arxiv: "2403.02776"
+    published_as: "10.1103/physrevb.109.l241112"
+  - title: "Temperature analysis of X-ray Thomson scattering data"
+    arxiv: "2212.10510"
+    published_as: "10.1063/5.0139560"
+  - title: "Uniform approximations for fermionic densities"
+    arxiv: "1409.6802"
+    published_as: "10.1103/physrevlett.114.050401"

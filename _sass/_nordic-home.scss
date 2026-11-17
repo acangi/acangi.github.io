@@ -1,0 +1,1180 @@
+/*******************************************************************************
+ * Nordic Academic — homepage composition
+ *
+ * Layout language borrowed from mockup A (large serif name + monogram, statement
+ * band, three tinted research cards, five-column area index, rule-separated news
+ * and publication rows, software panel with install snippet).
+ *
+ * Everything here is scoped to the homepage: the content wrapper `.nh-home`
+ * lives in _pages/about.md and `body:has(.nh-home)` keeps the layout-level
+ * selectors (hidden duplicate header, news table, bibliography) from leaking
+ * onto the other pages that also use `.post`.
+ *
+ * No imagery is introduced: the portrait slot of the mockup is an initials
+ * monogram, and the only rendered graphic is the existing latent-dynamics
+ * canvas.
+ ******************************************************************************/
+
+// Local tints for the three research cards and the software panel ------------
+
+.nh-home {
+  --nh-card-1: #edefe7;
+  --nh-card-2: #f2efe9;
+  --nh-card-3: #e9eeee;
+  --nh-panel: #f4f1ec;
+  --nh-code-bg: #1f2628;
+  --nh-code-ink: #dfe4e2;
+  --nh-code-muted: rgba(223, 228, 226, 0.45);
+  --nh-teal-deep: #546f70;
+
+  display: block;
+
+  :target {
+    scroll-margin-top: 5.5rem;
+  }
+}
+
+html[data-theme="dark"] .nh-home {
+  --nh-card-1: #222a27;
+  --nh-card-2: #262a27;
+  --nh-card-3: #1f292a;
+  --nh-panel: #222a29;
+  --nh-teal-deep: #8fb3b4;
+}
+
+// Homepage containers are wider than the 930px reading column the rest of the
+// site uses; navbar and footer are widened with them so the rules line up.
+body:has(.nh-home) {
+  > .container,
+  #navbar > .container,
+  footer .container {
+    max-width: 1180px;
+  }
+
+  // The about layout prints the site title above the content; the hero carries
+  // the name instead, so the duplicate header is removed from layout and from
+  // the accessibility tree.
+  .post > header {
+    display: none;
+  }
+
+  .post > article {
+    max-width: none;
+    font-size: 1rem;
+
+    > p,
+    > ul,
+    > ol,
+    > blockquote {
+      max-width: none;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Hero
+// -----------------------------------------------------------------------------
+
+#nordic-home {
+  // Keep in-page anchors clear of the fixed navbar.
+  [id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  .nh-hero {
+    padding: clamp(2.6rem, 5.5vw, 4.8rem) 0 clamp(1.8rem, 2.6vw, 2.6rem);
+  }
+
+  .nh-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 0 1.35rem;
+    font-family: $font-sans;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--nordic-ink-muted);
+
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      width: 26px;
+      height: 1px;
+      background: var(--nordic-sage);
+    }
+  }
+
+  .nh-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 0.7fr);
+    gap: clamp(1.75rem, 5vw, 4rem);
+    align-items: end;
+  }
+
+  .nh-name {
+    margin: 0;
+    font-family: $font-serif;
+    font-size: clamp(3.2rem, 7.4vw, 6rem);
+    font-weight: 400;
+    line-height: 0.94;
+    letter-spacing: -0.022em;
+    margin-left: -0.02em;
+    text-wrap: balance;
+    color: var(--nordic-ink);
+  }
+
+  .nh-role {
+    max-width: 46ch;
+    margin-top: 1.5rem;
+    padding-top: 1.15rem;
+    border-top: 1px solid var(--nordic-rule);
+    font-size: 0.82rem;
+    line-height: 1.75;
+    color: var(--nordic-ink-soft);
+
+    strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 0.005em;
+      color: var(--nordic-ink);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-color: var(--nordic-link-underline);
+
+      &:hover {
+        color: var(--nordic-ink);
+      }
+    }
+  }
+
+  // Portrait slot of the mockup, rendered as an initials disc — no photograph.
+  .nh-monogram {
+    justify-self: end;
+    text-align: right;
+  }
+
+  .nh-monogram-disc {
+    display: grid;
+    place-items: center;
+    width: clamp(7rem, 12vw, 9.9rem);
+    aspect-ratio: 1;
+    border: 1px solid var(--nordic-rule-strong);
+    border-radius: 50%;
+    background: var(--nordic-paper-alt);
+    box-shadow:
+      inset 0 0 0 6px var(--nordic-paper),
+      inset 0 0 0 7px var(--nordic-rule);
+    font-family: $font-serif;
+    font-size: clamp(1.9rem, 3.4vw, 2.65rem);
+    letter-spacing: 0.03em;
+    color: var(--nordic-sage-deep);
+    transition:
+      border-color 0.4s ease,
+      box-shadow 0.4s ease;
+
+    &:hover {
+      border-color: var(--nordic-sage);
+      box-shadow:
+        inset 0 0 0 6px var(--nordic-paper),
+        inset 0 0 0 7px var(--nordic-sage);
+    }
+  }
+
+  .nh-monogram-meta {
+    margin: 0.85rem 0 0;
+    font-family: $font-sans;
+    font-size: 0.56rem;
+    line-height: 1.9;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--nordic-ink-muted);
+  }
+
+  // Statement band -------------------------------------------------------------
+
+  .nh-statement {
+    display: grid;
+    grid-template-columns: 128px minmax(0, 1fr);
+    gap: clamp(1.25rem, 4vw, 3.25rem);
+    margin-top: clamp(2.6rem, 5vw, 4.2rem);
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--nordic-rule);
+  }
+
+  .nh-statement-label {
+    align-self: start;
+    margin: 0;
+    padding-top: 0.45rem;
+    font-family: $font-sans;
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--nordic-ink-muted);
+  }
+
+  .nh-statement-text {
+    max-width: 46ch;
+    margin: 0;
+    font-family: $font-serif;
+    font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+    line-height: 1.42;
+    letter-spacing: -0.005em;
+    color: var(--nordic-ink);
+  }
+
+  .nh-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.9rem 1.75rem;
+    margin-top: clamp(1.5rem, 2.4vw, 2rem);
+  }
+
+  .nh-link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid var(--nordic-rule-strong);
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    color: var(--nordic-ink);
+    text-decoration: none;
+    transition:
+      border-color 0.25s ease,
+      color 0.25s ease;
+
+    span {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: var(--nordic-ink);
+      border-color: var(--nordic-sage-deep);
+      text-decoration: none;
+
+      span {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  .nh-hero-open {
+    font-size: 0.76rem;
+    line-height: 1.6;
+    color: var(--nordic-ink-muted);
+
+    b {
+      font-weight: 500;
+      color: var(--nh-teal-deep);
+    }
+
+    a {
+      color: inherit;
+      text-decoration-color: var(--nordic-link-underline);
+    }
+  }
+
+  .nh-hero-note {
+    max-width: 62ch;
+    margin: 1.35rem 0 0;
+    font-size: 0.76rem;
+    line-height: 1.7;
+    color: var(--nordic-ink-muted);
+  }
+
+  .nh-hero-links {
+    margin-top: 0.55rem;
+    font-size: 0.72rem;
+
+    a {
+      color: var(--nordic-ink-soft);
+      text-decoration-color: var(--nordic-link-underline);
+
+      &:hover {
+        color: var(--nordic-ink);
+      }
+    }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Section heads
+  // -----------------------------------------------------------------------------
+
+  .nh-section {
+    padding-top: clamp(3rem, 5.5vw, 4.6rem);
+  }
+
+  .nh-sec-head {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.1rem;
+    margin-bottom: clamp(1.4rem, 2.6vw, 2.2rem);
+    padding-top: 1.05rem;
+    border-top: 1px solid var(--nordic-rule-strong);
+
+    h2 {
+      margin: 0;
+      font-family: $font-serif;
+      font-size: clamp(1.7rem, 2.4vw, 2.05rem);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+    }
+  }
+
+  .nh-sec-num {
+    font-family: $font-sans;
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    color: var(--nordic-ink-muted);
+  }
+
+  .nh-sec-note {
+    margin-left: auto;
+    font-size: 0.76rem;
+    color: var(--nordic-ink-muted);
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+
+      &:hover {
+        color: var(--nordic-ink);
+        border-color: var(--nordic-rule-strong);
+      }
+    }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Research cards
+  // -----------------------------------------------------------------------------
+
+  .nh-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(0.9rem, 1.8vw, 1.4rem);
+  }
+
+  .nh-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: clamp(1.35rem, 2.3vw, 2rem);
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background: var(--nh-card-1);
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease,
+      border-color 0.4s ease;
+
+    &:nth-child(2) {
+      background: var(--nh-card-2);
+    }
+
+    &:nth-child(3) {
+      background: var(--nh-card-3);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: clamp(1.35rem, 2.3vw, 2rem);
+      width: 34px;
+      height: 1px;
+      background: var(--nordic-sage-deep);
+      opacity: 0.55;
+      transition:
+        width 0.45s ease,
+        opacity 0.45s ease;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      border-color: var(--nordic-rule);
+      box-shadow: var(--nordic-shadow);
+
+      &::before {
+        width: calc(100% - 2 * clamp(1.35rem, 2.3vw, 2rem));
+        opacity: 0.9;
+      }
+    }
+
+    h3 {
+      max-width: 32ch;
+      margin: 0;
+      font-family: $font-serif;
+      font-size: clamp(1.2rem, 1.55vw, 1.42rem);
+      font-weight: 400;
+      line-height: 1.25;
+      min-height: 2.5em;
+      text-wrap: balance;
+      letter-spacing: -0.005em;
+      color: var(--nordic-ink);
+    }
+
+    p {
+      max-width: 58ch;
+      margin: 0;
+      font-size: 0.83rem;
+      line-height: 1.7;
+      color: var(--nordic-ink-soft);
+    }
+  }
+
+  .nh-card-kicker {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6rem;
+    margin: 0 !important;
+    font-family: $font-sans;
+    font-size: 0.57rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--nordic-ink-muted);
+  }
+
+  .nh-card-foot {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: auto;
+    padding-top: 0.7rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.02em;
+    color: var(--nordic-ink-soft);
+    text-decoration: none;
+    transition: color 0.25s ease;
+
+    span {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: var(--nordic-ink);
+      text-decoration: none;
+
+      span {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  // Five-column index of all research areas ------------------------------------
+
+  .nh-area-index {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin: clamp(1.6rem, 3vw, 2.4rem) 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--nordic-rule);
+
+    li {
+      padding: 1.15rem 1.1rem 0.25rem 0;
+      border-right: 1px solid var(--nordic-rule);
+      font-size: 0.74rem;
+      line-height: 1.55;
+      color: var(--nordic-ink-soft);
+
+      &:last-child {
+        border-right: 0;
+        padding-right: 0;
+      }
+    }
+
+    b {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-family: $font-sans;
+      font-weight: 400;
+      font-size: 0.57rem;
+      letter-spacing: 0.14em;
+      color: var(--nordic-sage-deep);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--nordic-ink);
+      }
+    }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Latent dynamics (existing visualization, re-framed)
+  // -----------------------------------------------------------------------------
+
+  .nh-viz {
+    .latent-dynamics {
+      height: clamp(300px, 38vw, 430px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Software panel
+  // -----------------------------------------------------------------------------
+
+  .nh-software {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: clamp(1.6rem, 4vw, 3.25rem);
+    padding: clamp(1.6rem, 3.2vw, 2.9rem);
+    border: 1px solid var(--nordic-rule);
+    border-radius: 2px;
+    background: var(--nh-panel);
+  }
+
+  .nh-kicker {
+    margin: 0 0 0.9rem;
+    font-family: $font-sans;
+    font-size: 0.57rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--nordic-ink-muted);
+  }
+
+  .nh-software-title {
+    margin: 0;
+    font-family: $font-serif;
+    font-size: clamp(1.75rem, 2.6vw, 2.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
+  }
+
+  .nh-software-sub {
+    margin: 0.35rem 0 0;
+    font-family: $font-sans;
+    font-size: 0.58rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--nordic-ink-muted);
+  }
+
+  .nh-software-body {
+    max-width: 44ch;
+    margin: 1.1rem 0 0;
+    font-size: 0.84rem;
+    line-height: 1.75;
+    color: var(--nordic-ink-soft);
+  }
+
+  .nh-feats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 1.1rem;
+    margin: 1.15rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.73rem;
+    color: var(--nordic-ink-soft);
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.42rem;
+
+      &::before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--nordic-sage-deep);
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .nh-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.55rem 1.1rem;
+    border: 1px solid var(--nordic-ink);
+    border-radius: 2px;
+    background: var(--nordic-ink);
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+    color: var(--nordic-paper);
+    text-decoration: none;
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      border-color 0.25s ease;
+
+    &:hover {
+      background: transparent;
+      color: var(--nordic-ink);
+      text-decoration: none;
+    }
+  }
+
+  .nh-btn-ghost {
+    background: transparent;
+    border-color: var(--nordic-rule-strong);
+    color: var(--nordic-ink);
+
+    &:hover {
+      border-color: var(--nordic-ink);
+      background: transparent;
+    }
+  }
+
+  .nh-software-also {
+    max-width: 52ch;
+    margin: 1.3rem 0 0;
+    font-size: 0.74rem;
+    line-height: 1.65;
+    color: var(--nordic-ink-soft);
+  }
+
+  .nh-code {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    padding: 1.25rem 1.35rem 1.1rem;
+    border-radius: 2px;
+    background: var(--nh-code-bg);
+    box-shadow: 0 20px 40px -32px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+  }
+
+  .nh-code-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 1rem;
+
+    i {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    span {
+      margin-left: auto;
+      font-family: $font-sans;
+      font-size: 0.55rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--nh-code-muted);
+    }
+  }
+
+  .nh-code pre {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-family: $font-mono;
+    font-size: 0.72rem;
+    line-height: 1.9;
+    color: var(--nh-code-ink);
+    overflow-x: auto;
+
+    code {
+      background: transparent;
+      padding: 0;
+      color: inherit;
+      font-size: inherit;
+      white-space: pre;
+    }
+  }
+
+  .nh-code-foot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 1.1rem;
+    font-family: $font-sans;
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--nh-code-muted);
+  }
+
+  // -----------------------------------------------------------------------------
+  // News (layout-rendered table, restyled as rule-separated rows)
+  // -----------------------------------------------------------------------------
+}
+
+body:has(.nh-home) .post > article > h2 {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  margin: clamp(2.2rem, 4vw, 3.5rem) 0 clamp(1.4rem, 2.6vw, 2.2rem);
+  padding-top: 1.05rem;
+  border-top: 1px solid var(--nordic-rule-strong);
+  font-family: $font-serif;
+  font-size: clamp(1.7rem, 2.4vw, 2.05rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+
+  a {
+    color: var(--nordic-ink);
+    text-decoration: none;
+    text-transform: capitalize;
+
+    &:hover {
+      color: var(--nordic-teal);
+      text-decoration: none;
+    }
+  }
+}
+
+body:has(.nh-home) .news {
+  margin: 0;
+
+  .table-responsive {
+    max-height: none !important;
+    overflow: visible;
+  }
+
+  table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+  }
+
+  tbody tr {
+    border-top: 1px solid var(--nordic-rule);
+    transition: background 0.3s ease;
+
+    &:last-child {
+      border-bottom: 1px solid var(--nordic-rule);
+    }
+
+    &:hover {
+      background: var(--nordic-row-hover);
+    }
+  }
+
+  tbody th[scope="row"] {
+    width: 130px;
+    padding: 1.15rem 0.75rem 1.15rem 0.4rem;
+    border: 0;
+    font-family: $font-sans;
+    font-weight: 400;
+    font-size: 0.63rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    vertical-align: top;
+    color: var(--nordic-ink-muted);
+  }
+
+  tbody td {
+    padding: 1.15rem 0.4rem;
+    border: 0;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--nordic-ink);
+  }
+
+  a {
+    color: var(--nordic-ink);
+    text-decoration-color: var(--nordic-link-underline);
+
+    &:hover {
+      color: var(--nordic-teal);
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Selected publications (jekyll-scholar list, restyled as editorial rows)
+// -----------------------------------------------------------------------------
+
+body:has(.nh-home) .publications {
+  .bibliography {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--nordic-rule);
+
+    > li {
+      position: relative;
+      margin: 0;
+      padding: clamp(1.2rem, 2.2vw, 1.7rem) 0;
+      border-bottom: 1px solid var(--nordic-rule);
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: var(--nordic-row-hover);
+      }
+    }
+  }
+
+  .row {
+    display: block;
+    margin: 0;
+  }
+
+  .abbr:empty {
+    display: none;
+  }
+
+  .col,
+  [class*="col-sm-"] {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    flex: none;
+  }
+
+  .title {
+    margin-bottom: 0.45rem;
+    font-family: $font-serif;
+    font-size: clamp(1.08rem, 1.5vw, 1.3rem);
+    line-height: 1.35;
+    letter-spacing: -0.005em;
+    color: var(--nordic-ink);
+  }
+
+  .author {
+    font-size: 0.77rem;
+    line-height: 1.65;
+    color: var(--nordic-ink-soft);
+
+    em {
+      font-style: normal;
+      font-weight: 500;
+      color: var(--nordic-ink);
+    }
+  }
+
+  .periodical {
+    margin-top: 0.35rem;
+    font-size: 0.78rem;
+    color: var(--nordic-ink-soft);
+
+    em {
+      font-family: $font-serif;
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--nordic-ink);
+    }
+  }
+
+  ol.bibliography li .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.55rem;
+
+    a.btn {
+      padding: 0.2rem 0.55rem;
+      border: 1px solid var(--nordic-rule-strong);
+      border-radius: 2px;
+      background: transparent;
+      font-family: $font-sans;
+      font-size: 0.57rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--nordic-ink-soft);
+      text-decoration: none;
+      box-shadow: none;
+
+      &:hover {
+        border-color: var(--nordic-teal);
+        background: transparent;
+        color: var(--nordic-teal);
+      }
+    }
+  }
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.55rem;
+
+    img {
+      height: 18px;
+      width: auto;
+    }
+  }
+
+  .more-authors {
+    color: var(--nordic-teal);
+    cursor: pointer;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Contact band (layout-rendered social icons)
+// -----------------------------------------------------------------------------
+
+body:has(.nh-home) .post > article > .social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+  margin-top: clamp(2.2rem, 4vw, 3.25rem);
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--nordic-rule-strong);
+  text-align: left;
+
+  .contact-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    font-size: 1rem;
+
+    a {
+      display: grid;
+      place-items: center;
+      width: 2.15rem;
+      height: 2.15rem;
+      margin: 0;
+      border: 1px solid var(--nordic-rule);
+      border-radius: 50%;
+      color: var(--nordic-ink-soft);
+      text-decoration: none;
+      transition:
+        border-color 0.25s ease,
+        color 0.25s ease,
+        background 0.25s ease;
+
+      &:hover {
+        border-color: var(--nordic-sage);
+        background: var(--nordic-paper-alt);
+        color: var(--nordic-ink);
+      }
+
+      i {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .contact-note {
+    max-width: 48ch;
+    margin: 0;
+    font-size: 0.74rem;
+    line-height: 1.65;
+    color: var(--nordic-ink-muted);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Focus visibility
+// -----------------------------------------------------------------------------
+
+#nordic-home a:focus-visible,
+#nordic-home button:focus-visible,
+body:has(.nh-home) .news a:focus-visible,
+body:has(.nh-home) .publications a:focus-visible {
+  outline: 2px solid var(--nordic-teal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+// -----------------------------------------------------------------------------
+// Responsive
+// -----------------------------------------------------------------------------
+
+@media (max-width: 1080px) {
+  #nordic-home .nh-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    align-items: start;
+  }
+
+  #nordic-home .nh-monogram {
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    text-align: left;
+  }
+
+  #nordic-home .nh-monogram-meta {
+    margin-top: 0;
+  }
+
+  #nordic-home .nh-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #nordic-home .nh-area-index {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    li:nth-child(3) {
+      border-right: 0;
+    }
+
+    li:nth-child(n + 4) {
+      border-top: 1px solid var(--nordic-rule);
+      padding-top: 0.9rem;
+    }
+  }
+
+  #nordic-home .nh-software {
+    grid-template-columns: 1fr;
+  }
+
+  #nordic-home .nh-code {
+    min-height: 8rem;
+  }
+}
+
+@media (max-width: 820px) {
+  #nordic-home .nh-statement {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  #nordic-home .nh-statement-label {
+    padding-top: 0;
+  }
+
+  #nordic-home .nh-statement-text {
+    max-width: none;
+  }
+
+  #nordic-home .nh-sec-note {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  body:has(.nh-home) .news {
+    tbody tr {
+      display: block;
+      padding: 0.9rem 0;
+    }
+
+    tbody th[scope="row"],
+    tbody td {
+      display: block;
+      // The news include sets an inline width (20%) for the date column, which
+      // would squeeze it once rows stack; override it in single-column mode.
+      width: auto !important;
+      padding: 0;
+    }
+
+    tbody th[scope="row"] {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  body:has(.nh-home) .publications .bibliography > li {
+    padding-left: 0;
+    padding-top: 1.5rem;
+
+    &::before {
+      position: static;
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  #nordic-home .nh-hero {
+    padding-top: 1.5rem;
+  }
+
+  #nordic-home .nh-name {
+    font-size: clamp(2.6rem, 15vw, 3.4rem);
+  }
+
+  #nordic-home .nh-monogram-disc {
+    width: 4.75rem;
+    font-size: 1.5rem;
+    box-shadow:
+      inset 0 0 0 4px var(--nordic-paper),
+      inset 0 0 0 5px var(--nordic-rule);
+  }
+
+  #nordic-home .nh-monogram-meta {
+    font-size: 0.52rem;
+  }
+
+  #nordic-home .nh-cards {
+    grid-template-columns: 1fr;
+
+    .nh-card:nth-child(3) {
+      grid-column: auto;
+    }
+  }
+
+  #nordic-home .nh-area-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    li {
+      border-right: 0;
+      border-top: 1px solid var(--nordic-rule);
+      padding-top: 0.85rem;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        border-top: 0;
+      }
+    }
+  }
+
+  #nordic-home .nh-software {
+    padding: 1.25rem 1.1rem;
+  }
+
+  #nordic-home .nh-code {
+    padding: 1rem;
+  }
+
+  #nordic-home .nh-code pre {
+    font-size: 0.66rem;
+
+    code {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+  }
+
+  #nordic-home .nh-viz .latent-dynamics {
+    height: 300px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nh-card,
+  .nh-card::before,
+  .nh-link-arrow,
+  .nh-link-arrow span,
+  .nh-card-foot span,
+  body:has(.nh-home) .news tbody tr,
+  body:has(.nh-home) .publications .bibliography > li {
+    transition: none !important;
+  }
+
+  #nordic-home .nh-card:hover {
+    transform: none;
+  }
+}

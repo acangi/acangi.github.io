@@ -1,0 +1,136 @@
+.highlight-count {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.highlight-list {
+  margin-top: 1rem;
+}
+
+.highlight-card {
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--global-divider-color);
+
+  &:last-child {
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+}
+
+.highlight-card-meta {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.highlight-card-title {
+  margin: 0 0 0.6rem;
+  font-size: 1.35rem;
+  line-height: 1.35;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+.highlight-card-summary {
+  margin-bottom: 0.75rem;
+}
+
+.highlight-card-links,
+.highlight-back-link {
+  font-size: 0.92rem;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.highlight-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+}
+
+.highlight-lead {
+  font-size: 1.12rem;
+  line-height: 1.65;
+  color: var(--global-text-color);
+}
+
+.highlight-publication {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--global-card-bg-color);
+  border-left: 3px solid var(--global-theme-color);
+
+  p {
+    margin: 0 0 0.4rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.highlight-publication-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.highlight-publication-citation {
+  font-weight: 600;
+}
+
+.highlight-publication-doi {
+  font-size: 0.92rem;
+  word-break: break-all;
+}
+
+.highlight-publication-action {
+  margin-top: 0.85rem;
+}
+
+.highlight-doi-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 0.35rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--global-theme-color);
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+
+  &:hover {
+    background-color: var(--global-theme-color);
+    color: var(--global-bg-color);
+    text-decoration: none;
+  }
+}
+
+.highlight-footer {
+  margin-top: 2rem;
+  font-size: 0.92rem;
+
+  p {
+    margin: 0 0 0.5rem;
+  }
+}

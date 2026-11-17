@@ -1,0 +1,15 @@
+---
+layout: page
+---
+{% comment %}
+  Markdown CV layout.
+
+  Unlike the theme's structured `cv` layout (which renders _data/cv or a
+  resume, and ignores the page body), this keeps the page's own Markdown and
+  only adds a wrapper, so _sass/_cv.scss can apply CV-only table rules —
+  notably horizontal scrolling for the wide tables on small screens —
+  without affecting tables on any other page.
+{% endcomment %}
+<div class="cv-page">
+  {{ content }}
+</div>

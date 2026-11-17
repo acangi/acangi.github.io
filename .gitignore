@@ -12,3 +12,6 @@ node_modules/
 vendor
 .idea
 .venv
+__pycache__/
+*.pyc
+HERMES_HANDOFF.md

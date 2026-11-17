@@ -151,6 +151,25 @@ td.list-group-link {
 }
 
 /*****************************
+ * CV MARKDOWN TABLES
+ *****************************/
+
+// _pages/cv.md is written as plain Markdown pipe tables, rendered by the
+// `cv-page` layout into `.cv-page`. On phones the four-column teaching table
+// is wider than the viewport (its min-content width is set by long words such
+// as "Nanostructured"), which would otherwise give the whole page a horizontal
+// scrollbar. Making the table itself the scroll container keeps the column
+// layout intact and confines the scrolling to the table.
+.cv-page table {
+  @media (max-width: 767.98px) {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/*****************************
  * CV TOC styles
  *****************************/
 

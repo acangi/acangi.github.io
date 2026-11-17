@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<div class="post highlight-page">
+  <header class="post-header">
+    <p class="highlight-kicker">Research highlight</p>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.journal }}{% if page.journal and page.citation %} · {% endif %}{{ page.citation }}</p>
+  </header>
+
+  <article>
+    <p class="highlight-lead">{{ page.summary }}</p>
+
+    {{ content }}
+
+    <aside class="highlight-publication" aria-label="Publication details">
+      <p class="highlight-publication-label">Publication</p>
+      <p class="highlight-publication-citation">{{ page.citation }}</p>
+      <p class="highlight-publication-doi">
+        DOI: <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>
+      </p>
+      <p class="highlight-publication-action">
+        <a class="highlight-doi-button" href="https://doi.org/{{ page.doi }}">
+          Read the publication
+          <i class="fa-solid fa-arrow-up-right-from-square fa-xs" aria-hidden="true"></i>
+        </a>
+      </p>
+    </aside>
+
+    <footer class="highlight-footer">
+      {% if page.research_area %}
+        <p>
+          <a href="{{ '/research/' | relative_url }}#{{ page.research_area }}">Related research area</a>
+        </p>
+      {% endif %}
+      <p><a href="{{ '/highlights/' | relative_url }}">← All research highlights</a></p>
+    </footer>
+  </article>
+</div>

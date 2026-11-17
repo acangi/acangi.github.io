@@ -17,6 +17,7 @@ $max-content-width: {{ site.max_width }};
   "tabs",
   "teachings",
   "research",
+  "highlights",
   "team",
   "latent-dynamics",
   "typograms",
@@ -28,5 +29,7 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss",
   // Custom Nordic Academic theme last so it overrides stock palette and type.
-  "custom-theme"
+  "custom-theme",
+  // Homepage composition (scoped to the about page via `body:has(.nh-home)`).
+  "nordic-home"
 ;

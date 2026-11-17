@@ -1,5 +1,17 @@
 ---
 ---
+{% comment %}
+  The publications_bibliography tag (_plugins/publications-policy.rb) already
+  limits the page to journal articles and unpublished preprints. This guard is
+  defense in depth: an explicit publication_page=false written by the importer
+  always wins, also when an entry is rendered through the native bibliography
+  tag somewhere else.
+{% endcomment %}
+{% assign publication_page_visible = true %}
+{% if entry.publication_page == false or entry.publication_page == 'false' %}
+  {% assign publication_page_visible = false %}
+{% endif %}
+{% if publication_page_visible %}
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
@@ -149,45 +161,81 @@
     </div>
 
     <!-- Journal/Book title and date -->
-    {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
-    {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
-    {% if entry.type == 'article' %}
-      {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
-    {% elsif entry.type == 'misc' and entry.journal %}
-      {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
-    {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
-    {% elsif thesis contains entry.type %}
-      {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
-    {% else %}
-      {% capture entrytype %}{% endcapture %}
+    {% comment %}
+      Only journal articles and preprints reach this layout: the
+      publications_bibliography tag filters everything else. Articles show
+      their journal, preprints their preprint server, followed by the year.
+      Entries without a venue render the year only - never "In , 2021".
+    {% endcomment %}
+    {% assign venue_name = entry.journal | default: entry.booktitle | default: entry.school | default: entry.institution | default: entry.publisher | strip %}
+    {% assign venue_lower = venue_name | downcase %}
+    {% assign doi_lower = entry.doi | downcase %}
+    {% assign is_preprint = false %}
+    {% if venue_lower contains 'arxiv' or doi_lower contains '10.48550/arxiv' %}
+      {% assign is_preprint = true %}
     {% endif %}
+
     {% assign entrymonth = '' %}
     {% if entry.month %}
-      {% capture entrymonth %}{{ " " }}{{ entry.month | capitalize }}{% endcapture %}
+      {% assign entrymonth = entry.month | capitalize %}
     {% endif %}
     {% assign entryyear = '' %}
     {% if entry.year %}
-      {% capture entryyear %}{{ " " }}{{ entry.year }}{% endcapture %}
+      {% assign entryyear = entry.year %}
     {% endif %}
+    {% assign periodical_date = entrymonth | append: ' ' | append: entryyear | strip %}
+
+    {% comment %} Optional location / free-form info, separated safely. {% endcomment %}
+    {% assign periodical_extra = '' %}
     {% if entry.location %}
-      {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
-    {% endif -%}
+      {% assign periodical_extra = entry.location | strip %}
+    {% endif %}
     {% if entry.additional_info %}
-      {% capture entrytype %}{{ entrytype }}{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endcapture %}
+      {% assign extra_info = entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' | strip %}
+      {% if periodical_extra != '' %}
+        {% assign periodical_extra = periodical_extra | append: ' ' | append: extra_info %}
+      {% else %}
+        {% assign periodical_extra = extra_info %}
+      {% endif %}
+    {% endif %}
+
+    {% assign periodical_text = '' %}
+    {% if venue_name != '' %}
+      {% capture venue_html %}<em>{{ venue_name }}</em>{% endcapture %}
+      {% assign periodical_text = venue_html %}
+    {% endif %}
+    {% if periodical_extra != '' %}
+      {% if periodical_text != '' %}
+        {% assign periodical_text = periodical_text | append: ', ' | append: periodical_extra %}
+      {% else %}
+        {% assign periodical_text = periodical_extra %}
+      {% endif %}
+    {% endif %}
+    {% if periodical_date != '' %}
+      {% if periodical_text != '' %}
+        {% assign periodical_text = periodical_text | append: ', ' | append: periodical_date %}
+      {% else %}
+        {% assign periodical_text = periodical_date %}
+      {% endif %}
     {% endif %}
     {% capture hook_exists %}{% file_exists _includes/hook/bib.liquid %}{% endcapture %}
     {% if hook_exists == 'true' %}
       {% include hook/bib.liquid %}
     {% endif %}
-    {% assign entrytype_text = entrytype | strip_html | strip %}
-    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
-    <div class="periodical">
-      {{ periodical | strip }}
-    </div>
-    <div class="periodical">
-      {{ entry.note | strip }}
-    </div>
+    {% if periodical_text != '' %}
+      <div class="periodical">
+        {{ periodical_text }}
+      </div>
+    {% endif %}
+    {% assign entry_note = entry.note | strip %}
+    {% if entry_note == '' and is_preprint %}
+      {% assign entry_note = 'Preprint' %}
+    {% endif %}
+    {% if entry_note != '' %}
+      <div class="periodical">
+        {{ entry_note }}
+      </div>
+    {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">
@@ -405,3 +453,4 @@
     {% endif %}
   </div>
 </div>
+{% endif %}

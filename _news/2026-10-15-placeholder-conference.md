@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: "Conference presentation — placeholder news item"
 date: 2026-10-15
 inline: true

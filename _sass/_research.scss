@@ -37,6 +37,38 @@
   }
 }
 
+.research-area-highlights {
+  margin: 1rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--global-text-color-light);
+
+  a {
+    color: var(--global-theme-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom-color: currentColor;
+      text-decoration: none;
+    }
+  }
+}
+
+.research-area-highlights-label {
+  margin-right: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--global-text-color);
+}
+
+.research-area-highlights-sep {
+  margin: 0 0.35rem;
+  color: var(--global-divider-color);
+}
+
 @media (max-width: 575.98px) {
   .research-area {
     grid-template-columns: 1fr;

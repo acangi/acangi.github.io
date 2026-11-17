@@ -1,6 +1,64 @@
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
+{% comment %}
+  Social previews need alt text; metadata.liquid only emits the images. A page
+  may supply its own alt even when the site has no default, so both are
+  resolved independently and the tags are emitted only when an image exists.
+{% endcomment %}
+{% if site.serve_og_meta %}
+  {% assign og_image_path = page.og_image | default: site.og_image %}
+  {% assign og_image_alt = page.og_image_alt | default: site.og_image_alt %}
+  {% if og_image_path and og_image_alt %}
+    <meta property="og:image:alt" content="{{ og_image_alt | escape }}">
+    <meta name="twitter:image:alt" content="{{ og_image_alt | escape }}">
+  {% endif %}
+{% endif %}
+
+{% comment %}
+  Schema.org Person: identity signals (name, role, affiliation, profile links)
+  for the researcher behind the site. Search engines use these to connect the
+  domain with the person; sameAs is built from _data/socials.yml so the links
+  cannot drift from the ones in the footer.
+{% endcomment %}
+{% if site.person_schema.enabled %}
+  {% assign same_as = '' | split: '' %}
+  {% assign socials = site.data.socials %}
+  {% if socials.orcid_id %}
+    {% capture orcid_url %}https://orcid.org/{{ socials.orcid_id }}{% endcapture %}
+    {% assign same_as = same_as | push: orcid_url %}
+  {% endif %}
+  {% if socials.scholar_userid %}
+    {% capture scholar_url %}https://scholar.google.com/citations?user={{ socials.scholar_userid }}{% endcapture %}
+    {% assign same_as = same_as | push: scholar_url %}
+  {% endif %}
+  {% if socials.inspirehep_id %}
+    {% capture inspirehep_url %}https://inspirehep.net/authors/{{ socials.inspirehep_id }}{% endcapture %}
+    {% assign same_as = same_as | push: inspirehep_url %}
+  {% endif %}
+  {% if socials.github_username %}
+    {% capture github_url %}https://github.com/{{ socials.github_username }}{% endcapture %}
+    {% assign same_as = same_as | push: github_url %}
+  {% endif %}
+  {% capture person_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": {{ person_name | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      "jobTitle": {{ site.person_schema.job_title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "affiliation": {
+        "@type": "Organization",
+        "name": {{ site.person_schema.affiliation | jsonify }},
+        "url": {{ site.person_schema.affiliation_url | jsonify }}
+      },
+      "sameAs": {{ same_as | jsonify }}
+    }
+  </script>
+{% endif %}
+
 <!-- Bootstrap & MDB -->
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url | bust_file_cache }}">
 <link
@@ -63,7 +121,15 @@
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+{% comment %}
+  One canonical per page, absolute, without the index.html suffix. The 404 page
+  is a redirect target: it gets no canonical and must not be indexed.
+{% endcomment %}
+{% if page.url == '/404.html' %}
+  <meta name="robots" content="noindex, follow">
+{% else %}
+  <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+{% endif %}
 
 {% if site.enable_darkmode %}
   <!-- Dark Mode -->

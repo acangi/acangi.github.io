@@ -69,9 +69,9 @@ Verbindung zu Servern von Google statt.
 ## Altmetric- und Dimensions-Badges
 
 Auf der Seite [Publications](/publications/) werden zu einzelnen Publikationen Kennzahlen von
-Altmetric und Dimensions als Badges eingebunden. Diese Badges werden erst beim Laden der
-Publikationsseite von den Servern der jeweiligen Anbieter abgerufen
-(badgedata.altmetric.com bzw. app.dimensions.ai). Dabei wird Ihre IP-Adresse an den Anbieter
+Altmetric und Dimensions als Badges eingebunden. Skripte der Anbieter werden auch auf anderen
+Seiten geladen (unter anderem von d1bxh8uas1mnw7.cloudfront.net und badge.dimensions.ai).
+Dabei wird Ihre IP-Adresse an den Anbieter
 übermittelt; die Anbieter können Cookies setzen. Wir haben keinen Einfluss auf diese
 Datenverarbeitung. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an
 der Darstellung von Zitations- und Aufmerksamkeitskennzahlen). Weitere Informationen:
@@ -156,9 +156,9 @@ not used**, and no connection to Google servers is made.
 ## Altmetric and Dimensions badges
 
 On the [Publications](/publications/) page, citation and attention metrics from Altmetric and
-Dimensions are embedded as badges. These badges are fetched from the providers' servers
-(badgedata.altmetric.com and app.dimensions.ai, respectively) only when the publications page is
-loaded. Your IP address is transmitted to those providers, and they may set cookies. We have no
+Dimensions are embedded as badges. Provider scripts are also loaded on other pages, including
+from d1bxh8uas1mnw7.cloudfront.net and badge.dimensions.ai. Your IP address is transmitted
+to those providers, and they may set cookies. We have no
 influence over that processing. The legal basis is Art. 6(1)(f) GDPR (legitimate interest in
 displaying citation and attention metrics). For details see the
 [Altmetric Privacy Policy](https://www.altmetric.com/privacy-policy/) and

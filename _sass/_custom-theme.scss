@@ -9,15 +9,65 @@
  *   paper      #faf8f5   warm off-white
  *   stone      #e8e4df   light stone grey
  *   sage       #a8b5a0   soft sage green
- *   teal       #7a9e9f   muted teal (links, accents)
+ *   teal       #7a9e9f   muted teal (decorative accents only)
+ *   teal ink   #4a6f70   same hue, darkened for link/focus text (5.2:1 on paper)
  *   charcoal   #2d3436   body text
+ *
+ * Anything that has to be *read* uses the darker teal: #7a9e9f on #faf8f5 is
+ * only 2.74:1, below the 4.5:1 AA minimum for body text.
  ******************************************************************************/
 
+// Keyboard bypass for repeated navigation.
+.skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 10000;
+  padding: 0.75rem 1rem;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  border: 2px solid var(--global-theme-color);
+  transform: translateY(-200%);
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
 // Type stacks ----------------------------------------------------------------
+//
+// Two families, both self-hosted (see _fonts.scss):
+//   Inter .............. body, UI, h4-h6, labels
+//   DM Serif Display ... h1-h3, pull quotes, brand mark
+//
+// There is deliberately no third family. Small metadata (dates, kickers, table
+// heads, publication years) used to be JetBrains Mono; that is now Inter at a
+// small size, weight 500 and wide tracking, which is the quieter Scandinavian
+// editorial idiom and saves a font download.
+//
+// $font-mono stays defined because the homepage composition uses it, but it is
+// only the platform mono stack: code renders through it, no webfont is fetched.
 
 $font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 $font-serif: "DM Serif Display", "Iowan Old Style", Georgia, "Times New Roman", serif;
-$font-mono: "JetBrains Mono", ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+$font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+// Shared label scale, so every small caps-and-tracking element matches.
+$label-size: 0.72rem;
+$label-tracking: 0.1em;
+$label-size-sm: 0.7rem;
+
+@mixin label-type($size: $label-size, $tracking: $label-tracking) {
+  font-family: $font-sans;
+  font-size: $size;
+  font-weight: 500;
+  letter-spacing: $tracking;
+  line-height: 1.5;
+  text-transform: uppercase;
+  // Dates and years line up in columns without a mono face.
+  font-variant-numeric: tabular-nums;
+  color: var(--nordic-ink-muted);
+}
 
 // Measure and rhythm ---------------------------------------------------------
 
@@ -33,16 +83,17 @@ $base-line-height: 1.7;
   --global-code-bg-color: #f0ede8;
   --global-text-color: #2d3436;
   --global-text-color-light: #6a7477;
-  --global-theme-color: #7a9e9f;
-  --global-hover-color: #5d8384;
+  // AA-safe teal: 5.21:1 on paper, 4.91:1 on the card tint (was #7a9e9f / 2.74:1)
+  --global-theme-color: #4a6f70;
+  --global-hover-color: #33585a;
   --global-hover-text-color: #faf8f5;
   --global-footer-bg-color: #2d3436;
   --global-footer-text-color: #e8e4df;
   --global-footer-link-color: #a8b5a0;
-  --global-distill-app-color: #7a9e9f;
+  --global-distill-app-color: #4a6f70;
   --global-divider-color: #e8e4df;
   --global-card-bg-color: #f4f1ec;
-  --global-highlight-color: #5d8384;
+  --global-highlight-color: #33585a;
 
   // Local tokens used by the rules below
   --nordic-ink: #2d3436;
@@ -53,7 +104,11 @@ $base-line-height: 1.7;
   --nordic-stone: #e8e4df;
   --nordic-sage: #a8b5a0;
   --nordic-sage-deep: #5f7059;
-  --nordic-teal: #7a9e9f;
+  --nordic-teal: #4a6f70;
+  --nordic-focus: #4a6f70;
+  --nordic-link-underline: rgba(74, 111, 112, 0.5);
+  --nordic-row-hover: rgba(74, 111, 112, 0.09);
+  --nordic-striped: rgba(45, 52, 54, 0.035);
   --nordic-rule: rgba(45, 52, 54, 0.13);
   --nordic-rule-strong: rgba(45, 52, 54, 0.24);
   --nordic-nav-bg: rgba(250, 248, 245, 0.86);
@@ -89,6 +144,10 @@ html[data-theme="dark"] {
   --nordic-sage: #93a48b;
   --nordic-sage-deep: #b6c4ae;
   --nordic-teal: #8fb1b2;
+  --nordic-focus: #a8b5a0;
+  --nordic-link-underline: rgba(168, 181, 160, 0.55);
+  --nordic-row-hover: rgba(168, 181, 160, 0.1);
+  --nordic-striped: rgba(232, 228, 223, 0.045);
   --nordic-rule: rgba(232, 228, 223, 0.15);
   --nordic-rule-strong: rgba(232, 228, 223, 0.28);
   --nordic-nav-bg: rgba(26, 31, 30, 0.86);
@@ -187,16 +246,13 @@ h6 {
 }
 
 h6 {
-  font-family: $font-mono;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--nordic-ink-muted);
+  // Section eyebrow: Inter caps, tracked — no mono face needed.
+  @include label-type(0.8rem, 0.09em);
 }
 
 a {
   color: var(--global-theme-color);
-  text-decoration-color: rgba(122, 158, 159, 0.4);
+  text-decoration-color: var(--nordic-link-underline);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   transition: color 0.25s ease, text-decoration-color 0.25s ease;
@@ -217,8 +273,18 @@ strong {
 }
 
 :focus-visible {
-  outline: 2px solid var(--nordic-teal);
+  outline: 2px solid var(--nordic-focus);
   outline-offset: 3px;
+  border-radius: 2px;
+}
+
+// Keyboard users get an explicit, high-contrast ring on every nav control;
+// mouse users see none (the buttons already have hover states).
+.navbar a:focus-visible,
+.navbar button:focus-visible,
+.navbar .navbar-toggler:focus-visible {
+  outline: 2px solid var(--nordic-focus);
+  outline-offset: 2px;
   border-radius: 2px;
 }
 
@@ -227,7 +293,9 @@ hr {
   margin: 2.5rem 0;
 }
 
-// Monospace metadata accents ------------------------------------------------
+// Metadata labels ------------------------------------------------------------
+// Dates, kickers and captions: Inter caps with tabular figures. This replaced a
+// dedicated mono family, so the page carries two text fonts instead of three.
 
 .post-description,
 .post-header .desc,
@@ -236,11 +304,7 @@ hr {
 .news .date,
 time,
 .badge {
-  font-family: $font-mono;
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--nordic-ink-muted);
+  @include label-type;
 }
 
 .badge {
@@ -312,18 +376,40 @@ table {
   }
 
   th {
-    font-family: $font-mono;
-    font-weight: 400;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--nordic-ink-muted);
+    @include label-type($label-size-sm, 0.1em);
     border-bottom: 1px solid var(--nordic-rule-strong);
     white-space: nowrap;
   }
 
   td {
     border-bottom: 1px solid var(--nordic-rule);
+  }
+}
+
+// Bootstrap 4's .table hard-codes #212529 text and #dee2e6 rules. On the dark
+// paper that is 1.08:1 — effectively invisible — so the striped, hover and
+// header variants are re-pointed at the theme tokens.
+.table {
+  color: var(--global-text-color);
+
+  thead th {
+    border-bottom: 2px solid var(--nordic-rule-strong);
+  }
+
+  td,
+  th {
+    border-color: var(--nordic-rule);
+  }
+
+  &.table-striped tbody tr:nth-of-type(odd) {
+    color: var(--global-text-color);
+    background-color: var(--nordic-striped);
+  }
+
+  &.table-hover tbody tr:hover {
+    // BS4 also sets `color: #212529` here, which is unreadable in dark mode
+    color: var(--global-text-color);
+    background-color: var(--nordic-row-hover);
   }
 }
 
@@ -395,21 +481,40 @@ body.fixed-top-nav {
   backdrop-filter: saturate(140%) blur(10px);
   -webkit-backdrop-filter: saturate(140%) blur(10px);
 
+  // Give the department wordmark and seven navigation items room on desktop.
+  > .container {
+    max-width: 1180px;
+  }
+
   .navbar-brand {
     font-family: $font-serif;
     font-size: 1.2rem;
     line-height: 1.2;
     letter-spacing: 0.01em;
     color: var(--global-text-color);
+    // Never let a long site title squash the menu row
+    flex-shrink: 0;
+  }
+
+  // mdb.min.css sets `transition: .35s` (= all) on nav links, which also
+  // animates outline-width and delays the keyboard focus ring. Pin the
+  // transition to colour so the ring is instant.
+  &.navbar-light .navbar-nav .nav-item .nav-link,
+  &.navbar-light .navbar-nav .nav-item > button.nav-link {
+    transition: color 0.2s ease;
   }
 
   .navbar-nav .nav-item .nav-link {
     font-size: 0.82rem;
     font-weight: 500;
     letter-spacing: 0.045em;
+    white-space: nowrap;
     color: var(--nordic-ink-soft);
     padding-left: 0.7rem;
     padding-right: 0.7rem;
+    // Not `all`: the inherited `transition: all` animated the focus ring
+    // width, so keyboard focus appeared ~350ms late.
+    transition: color 0.2s ease;
 
     &:hover {
       color: var(--global-hover-color);
@@ -419,6 +524,95 @@ body.fixed-top-nav {
   .navbar-nav .nav-item.active > .nav-link {
     color: var(--global-theme-color);
     font-weight: 600;
+  }
+
+  // Dropdown toggles are <button>s so Space works and they are announced as
+  // buttons, not links; strip the UA button chrome so they look identical.
+  .navbar-nav .nav-item > button.nav-link {
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    line-height: inherit;
+    text-align: left;
+    cursor: pointer;
+    color: var(--nordic-ink-soft);
+
+    &:hover,
+    &:focus {
+      color: var(--global-hover-color);
+    }
+  }
+
+  // Icon-only controls: keep a real 32px target and the theme hover colour
+  #light-toggle,
+  #search-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    min-height: 2rem;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+}
+
+// Below lg the eight-item menu cannot fit on one line (it clipped the theme
+// toggle from 576px up), so it collapses into a stacked panel instead.
+@media (max-width: 991.98px) {
+  .navbar {
+    .navbar-collapse {
+      text-align: left;
+      margin-top: 0.55rem;
+      padding: 0.15rem 0 0.3rem;
+      border-top: 1px solid var(--nordic-rule);
+      // Opaque backdrop: the bar itself is translucent over page content
+      background-color: var(--nordic-paper);
+    }
+
+    .navbar-nav {
+      width: 100%;
+    }
+
+    .navbar-nav .nav-item,
+    .navbar-nav .toggle-container {
+      width: 100%;
+    }
+
+    .navbar-nav .nav-item + .nav-item,
+    .navbar-nav .nav-item + .toggle-container {
+      border-top: 1px solid var(--nordic-rule);
+    }
+
+    .navbar-nav .nav-item .nav-link,
+    .navbar-nav .nav-item > button.nav-link {
+      display: block;
+      width: 100%;
+      padding: 0.62rem 0.15rem;
+    }
+
+    // Sub-menus belong inline in a stacked menu, not floating off to the right.
+    // `!important` is needed because mdb.min.css forces
+    // `.navbar .dropdown-menu { position: absolute !important }`.
+    .navbar-nav .dropdown-menu {
+      position: static !important;
+      float: none;
+      width: 100%;
+      margin: 0 0 0.3rem;
+      padding: 0.1rem 0 0.1rem 0.9rem;
+      border: 0;
+      border-left: 1px solid var(--nordic-rule);
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    .navbar-nav .dropdown-item {
+      white-space: normal;
+      padding: 0.4rem 0.15rem;
+    }
+
+    .navbar-nav .toggle-container {
+      padding: 0.35rem 0.15rem 0;
+    }
   }
 }
 
@@ -510,10 +704,12 @@ footer.fixed-bottom {
     padding-top: 1rem;
     margin-top: 2.5rem;
     text-align: left;
-    font-family: $font-mono;
+    font-family: $font-sans;
     font-size: 0.78rem;
+    font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
+    font-variant-numeric: tabular-nums;
 
     span {
       font-size: 0.78rem;
@@ -535,14 +731,31 @@ input.search {
   &:focus {
     outline: none;
     border-color: var(--global-theme-color);
-    box-shadow: 0 0 0 2px rgba(122, 158, 159, 0.18);
+    box-shadow: 0 0 0 2px rgba(74, 111, 112, 0.18);
   }
+
+  // Mouse users keep the quiet border highlight above; keyboard users get a
+  // ring with real contrast against the page (2.4.11 / 2.4.13).
+  &:focus-visible {
+    outline: 2px solid var(--nordic-focus);
+    outline-offset: 2px;
+  }
+}
+
+// Bootstrap strips the focus ring from .btn and Bootstrap fade/dropdown
+// controls; put a visible one back for keyboard users only.
+.btn:focus-visible,
+.dropdown-item:focus-visible,
+.navbar-toggler:focus-visible,
+#back-to-top:focus-visible {
+  outline: 2px solid var(--nordic-focus);
+  outline-offset: 2px;
 }
 
 // Profile block (about page)
 .profile {
   .more-info {
-    font-family: $font-mono;
+    font-family: $font-sans;
     font-size: 0.7rem;
     line-height: 1.7;
     letter-spacing: 0.08em;
@@ -609,9 +822,10 @@ input.search {
     padding-top: 0.65rem;
     padding-bottom: 0.65rem;
 
-    .navbar-nav .nav-item .nav-link {
-      padding-top: 0.45rem;
-      padding-bottom: 0.45rem;
+    .navbar-nav .nav-item .nav-link,
+    .navbar-nav .nav-item > button.nav-link {
+      padding-top: 0.6rem;
+      padding-bottom: 0.6rem;
     }
   }
 

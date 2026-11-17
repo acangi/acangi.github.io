@@ -3,7 +3,8 @@ layout: page
 title: Software
 description: Open-source software for machine learning and electronic-structure theory
 permalink: /software/
-nav: true
+# Kept as a page at /software/ but no longer shown in the navbar.
+nav: false
 nav_order: 4
 ---
 

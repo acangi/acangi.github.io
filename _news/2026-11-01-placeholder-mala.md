@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: "MALA framework update — placeholder news item"
 date: 2026-11-01
 inline: true

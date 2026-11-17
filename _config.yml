@@ -2,19 +2,24 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: "Attila Cangi" # the website title (if blank, full name will be used instead)
+title: "Machine Learning for Materials Design" # the website title (if blank, full name will be used instead)
 first_name: Attila
 middle_name:
 last_name: Cangi
 contact_note: >
   Email is the best way to reach me — for research collaborations, talks, and
   questions about open positions in the group.
-description: "Attila Cangi — Machine Learning for Materials Design, CASUS / Helmholtz-Zentrum Dresden-Rossendorf"
+# One sentence for search results and social previews: who, which department,
+# which institutions. Kept under 160 characters so it is not truncated.
+description: "Attila Cangi leads the Department of Machine Learning for Materials Design at CASUS / Helmholtz-Zentrum Dresden-Rossendorf."
 footer_text: >
 #  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 #  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 #  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: machine learning, materials design, materials science, density functional theory, electronic structure, warm dense matter, physics-informed machine learning, molecular dynamics, computational physics, CASUS, Helmholtz-Zentrum Dresden-Rossendorf, Attila Cangi # add your own keywords or leave empty
+# Search terms the group should be findable for. Distinct phrases only — the
+# meta keywords tag carries no ranking weight, so a longer list would just be
+# stuffing. Page-specific terms belong in each page's own front matter.
+keywords: Attila Cangi, machine learning for materials design, scalable machine learning, electronic structure, representation learning, chemical space, THz-driven systems, density functional theory, CASUS, Helmholtz-Zentrum Dresden-Rossendorf
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -72,7 +77,17 @@ max_width: 930px
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+# Absolute URL: social platforms ignore relative og:image paths.
+og_image: # Set only after an image has been approved for social previews.
+og_image_alt:
+
+# Schema.org Person for the researcher behind the site. Rendered by
+# _includes/head.liquid; sameAs links are taken from _data/socials.yml.
+person_schema:
+  enabled: true
+  job_title: "Head of Department"
+  affiliation: "CASUS / Helmholtz-Zentrum Dresden-Rossendorf"
+  affiliation_url: "https://www.casus.science"
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -164,6 +179,12 @@ newsletter:
 collections:
   books:
     output: true
+  # Research highlights live in _highlights/ as one Markdown file per paper.
+  # They are listed on /highlights/ (_pages/highlights.md), rendered through
+  # _layouts/highlight.liquid, and cross-linked from /research/.
+  highlights:
+    output: true
+    permalink: /highlights/:slug/
   # News items live in _news/ as YYYY-MM-DD-title.md. They are listed on the
   # /news/ page (_pages/news.md) and, optionally, on the homepage through the
   # `announcements` block in the front matter of _pages/about.md.
@@ -194,8 +215,13 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts"]
+include: ["_pages"]
 exclude:
+  - _scripts/
+  - tests/
+  - requirements.txt
+  - CONTENT.md
+  - HERMES_HANDOFF.md
   - bin/
   - CONTRIBUTING.md
   - CUSTOMIZE.md
@@ -246,6 +272,36 @@ plugins:
 defaults:
   - scope:
       path: "assets"
+    values:
+      sitemap: false
+  # Pages without `description:` in their own front matter would otherwise reuse
+  # the site description, so every result snippet would read the same. These
+  # defaults are deliberately page-specific and use `seo_description`, which is
+  # metadata-only: `description` is also printed as the page subtitle by
+  # _layouts/page.liquid, so a default there would leak SEO copy into the page.
+  - scope:
+      path: "_pages/research.md"
+    values:
+      seo_description: "How the department combines quantum-mechanical theory, machine learning, and high-performance computing to study electronic structure and materials."
+  - scope:
+      path: "_pages/publications.md"
+    values:
+      seo_description: "Journal articles and preprints by the Department of Machine Learning for Materials Design."
+  - scope:
+      path: "_pages/teaching.md"
+    values:
+      seo_description: "Courses taught by Attila Cangi and the Department of Machine Learning for Materials Design."
+  - scope:
+      path: "_pages/cv.md"
+    values:
+      seo_description: "Curriculum vitae of Attila Cangi: education, academic career, awards, and professional service."
+  - scope:
+      path: "_pages/impressum.md"
+    values:
+      seo_description: "Legal notice and imprint for the website of the Department of Machine Learning for Materials Design."
+  # The 404 page is a redirect target, not content.
+  - scope:
+      path: "_pages/404.md"
     values:
       sitemap: false
 

@@ -1,0 +1,10 @@
+{%- assign area_highlights = site.highlights | where: 'research_area', include.area | sort: 'order' -%}
+{%- if area_highlights.size > 0 -%}
+  <p class="research-area-highlights">
+    <span class="research-area-highlights-label">Highlights</span>
+    {%- for h in area_highlights -%}
+      <a href="{{ h.url | relative_url }}">{{ h.short_title | default: h.title }}</a>
+      {%- unless forloop.last -%}<span class="research-area-highlights-sep" aria-hidden="true">·</span>{%- endunless -%}
+    {%- endfor -%}
+  </p>
+{%- endif -%}
