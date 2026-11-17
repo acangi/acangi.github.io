@@ -17,7 +17,7 @@ import pathlib
 import json
 import html
 import unicodedata
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, NoReturn, Optional
 from pyiso4.ltwa import Abbreviate
 import re
 import xml.etree.ElementTree as ET
@@ -48,6 +48,30 @@ TIMEOUT = 30
 OPENALEX_MAX_PAGES = int(os.getenv("OPENALEX_MAX_PAGES", "0"))
 OPENALEX_USER_AGENT = os.getenv("OPENALEX_USER_AGENT")
 ORCID_REGEX = re.compile(r"^\d{4}-\d{4}-\d{4}-\d{3}[\dX]$")
+
+ARXIV_API_URL = "https://export.arxiv.org/api/query"
+
+
+# --- FAIL-CLOSED IMPORT ERRORS -----------------------------------------------
+# The scheduled workflow commits whatever this script writes. A failed or
+# unparseable arXiv response, or a missing author name, must therefore abort the
+# run instead of returning an empty list: an empty list silently strips the
+# arXiv-only preprints from papers.bib and _data/*.yml on the next commit.
+class PublicationImportError(RuntimeError):
+    """Base error for an import that cannot be completed safely."""
+
+
+class MissingAuthorConfigError(PublicationImportError):
+    """Raised when ARXIV_AUTHOR_NAME is missing or blank."""
+
+
+class ArxivFetchError(PublicationImportError):
+    """Raised when the arXiv API cannot be queried or its response parsed."""
+
+
+class PreprintLossError(PublicationImportError):
+    """Raised when an import would delete a preprint from the bibliography."""
+
 
 KIND_MAP = {
     "journal-article": "article",
@@ -351,15 +375,38 @@ def fetch_publications(orcid: str) -> List[Dict[str, Any]]:
     return records
 
 
-def fetch_from_arxiv(author_name: str) -> List[Dict[str, Any]]:
-    """Fetch preprints for a given author from the arXiv API."""
-    if not author_name:
-        return []
-    author_query = author_name.strip().replace('"', "")
-    if not author_query:
-        return []
+def ensure_arxiv_author_configured(author_name: Optional[str] = None) -> str:
+    """Return the arXiv author query, or fail closed when none is configured.
 
-    base_url = "http://export.arxiv.org/api/query"
+    ``ARXIV_AUTHOR_NAME`` used to make ``fetch_from_arxiv`` return an empty
+    list, which let the importer rewrite the bibliography without any of the
+    arXiv-only preprints. A missing name is a configuration error, not an
+    empty result.
+    """
+    raw = ARXIV_AUTHOR_NAME if author_name is None else author_name
+    query = normalize_whitespace((raw or "").replace('"', ""))
+    if not query:
+        raise MissingAuthorConfigError(
+            "ARXIV_AUTHOR_NAME is missing or blank; refusing to run the "
+            "publication import without an arXiv author query."
+        )
+    return query
+
+
+def fetch_from_arxiv(author_name: str) -> List[Dict[str, Any]]:
+    """Fetch preprints for a given author from the arXiv API.
+
+    Raises
+    ------
+    MissingAuthorConfigError
+        If no author name is configured.
+    ArxivFetchError
+        If the request fails or the response cannot be parsed. Returning an
+        empty list here would be indistinguishable from "this author has no
+        preprints" and would silently drop the arXiv-only records.
+    """
+    author_query = ensure_arxiv_author_configured(author_name)
+
     params = {
         "search_query": f'au:"{author_query}"',
         "sortBy": "submittedDate",
@@ -370,26 +417,50 @@ def fetch_from_arxiv(author_name: str) -> List[Dict[str, Any]]:
 
     print(f"Fetching publications from arXiv for author '{author_name}'...")
     try:
-        response = requests.get(base_url, params=params, timeout=TIMEOUT)
+        response = requests.get(ARXIV_API_URL, params=params, timeout=TIMEOUT)
         response.raise_for_status()
-        root = ET.fromstring(response.content)
-
-        ns = {"atom": "http://www.w3.org/2005/Atom"}
-        entries = root.findall("atom:entry", ns)
-
-        records = []
-        for entry in entries:
-            records.append(format_arxiv_entry(entry))
-
-        print(f"Fetched {len(records)} records from arXiv.")
-        return records
-
     except requests.exceptions.RequestException as exc:
-        print(f"Error fetching data from arXiv: {exc}", file=sys.stderr)
-        return []
+        raise ArxivFetchError(
+            f"arXiv request to {ARXIV_API_URL} failed: {exc}"
+        ) from exc
+
+    try:
+        root = ET.fromstring(response.content)
     except ET.ParseError as exc:
-        print(f"Error parsing arXiv response: {exc}", file=sys.stderr)
-        return []
+        raise ArxivFetchError(
+            f"arXiv returned a response that is not valid XML: {exc}"
+        ) from exc
+
+    ns = {"atom": "http://www.w3.org/2005/Atom"}
+    entries = root.findall("atom:entry", ns)
+
+    try:
+        records = [format_arxiv_entry(entry) for entry in entries]
+    except (AttributeError, TypeError, ValueError) as exc:
+        raise ArxivFetchError(f"arXiv returned an entry that cannot be parsed: {exc}") from exc
+
+    # A record without a title or identifier would be written as an empty
+    # bibliography entry, so treat it as a parse failure rather than importing
+    # an incomplete record.
+    for record in records:
+        if not record.get("title") or not record.get("href"):
+            raise ArxivFetchError(
+                "arXiv returned an entry without a title or identifier; "
+                "refusing to import an incomplete record."
+            )
+
+    # An empty feed is legitimate (a renamed author, for example), so it is not
+    # fatal - but it is reported, because it is also what an upstream change
+    # looks like.
+    if not records:
+        print(
+            f"Warning: arXiv returned no entries for '{author_name}'. "
+            "Continuing with the OpenAlex records only.",
+            file=sys.stderr,
+        )
+
+    print(f"Fetched {len(records)} records from arXiv.")
+    return records
 
 
 def format_arxiv_entry(entry: ET.Element) -> Dict[str, Any]:
@@ -1658,6 +1729,202 @@ def write_bibtex_file(records: List[Dict[str, Any]]) -> None:
         )
 
 
+# --- LOSS PREVENTION ---------------------------------------------------------
+# papers.bib is the editorial record of everything this site knows about. The
+# scheduled import must never delete a preprint just because an upstream fetch
+# was empty, partial or reworded: five preprints disappeared from the
+# bibliography that way. Before anything is written, every preprint the current
+# bibliography lists must still be present *as a preprint* among the formatted
+# records. Neither a matching journal article nor a curated
+# ``superseded_preprints`` entry is accepted as a substitute: those records stay
+# in papers.bib until a human removes them. Anything less blocks the update and
+# names the entries that need review.
+
+BIBTEX_TYPE_KINDS = {
+    "article": "article",
+    "inproceedings": "proceedings",
+    "incollection": "chapter",
+    "techreport": "report",
+    "book": "book",
+    "phdthesis": "thesis",
+    "mastersthesis": "thesis",
+}
+
+
+def record_arxiv_ids(record: Dict[str, Any]) -> set:
+    """Return every arXiv identifier a record carries."""
+    identifiers = set(record.get("arxiv_ids") or [])
+    single = arxiv_id(record)
+    if single:
+        identifiers.add(single)
+    return identifiers
+
+
+def bibliography_preprints(path: Optional[pathlib.Path] = None) -> List[Dict[str, Any]]:
+    """Return the preprints the current bibliography lists.
+
+    Entries are shaped like importer records and classified with
+    ``effective_kind``, so a legacy ``@article`` at an arXiv venue counts as a
+    preprint too. An unreadable bibliography is a fatal condition: without it
+    the loss check cannot run, and writing anyway could drop records.
+    """
+    path = path or BIBLIOGRAPHY_FILE
+    if not path.exists():
+        return []
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError as exc:
+        raise PreprintLossError(
+            f"cannot read {path} to verify that no preprint is lost: {exc}"
+        ) from exc
+
+    preprints: List[Dict[str, Any]] = []
+    for entry in parse_bibtex_entries(text):
+        fields = entry["fields"]
+        record = {
+            "key": entry["key"],
+            "title": fields.get("title"),
+            "author": (fields.get("author") or "").replace(" and ", "; "),
+            "year": fields.get("year"),
+            "journal": fields.get("journal"),
+            "booktitle": fields.get("booktitle"),
+            "doi": fields.get("doi"),
+            "href": fields.get("url"),
+            "kind": BIBTEX_TYPE_KINDS.get(entry["type"], "other"),
+        }
+        if effective_kind(record) == "preprint":
+            preprints.append(record)
+    return preprints
+
+
+def _identity_index(records: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Index records by normalized DOI, arXiv identifier and title/author."""
+    index: Dict[str, Any] = {"dois": set(), "arxiv_ids": set(), "titles": {}}
+    for record in records:
+        doi = normalize_doi(record.get("doi"))
+        if doi:
+            index["dois"].add(doi)
+        index["arxiv_ids"].update(record_arxiv_ids(record))
+        title = normalize_title(record.get("title"))
+        if title:
+            index["titles"].setdefault(title, set()).add(
+                first_author_surname(record.get("author"))
+            )
+    return index
+
+
+def _identity_matches(record: Dict[str, Any], index: Dict[str, Any]) -> Optional[str]:
+    """Return the kind of evidence matching ``record`` to the index, or None.
+
+    A DOI or arXiv identifier is conclusive. A title match additionally
+    requires the same first author when both sides name one, so an unrelated
+    same-titled paper cannot excuse a lost preprint.
+    """
+    doi = normalize_doi(record.get("doi"))
+    if doi and doi in index["dois"]:
+        return "DOI"
+    if record_arxiv_ids(record) & index["arxiv_ids"]:
+        return "arXiv identifier"
+    title = normalize_title(record.get("title"))
+    if title and title in index["titles"]:
+        surname = first_author_surname(record.get("author"))
+        if not surname or surname in index["titles"][title]:
+            return "title"
+    return None
+
+
+def find_missing_preprints(
+    records: List[Dict[str, Any]],
+    prior_preprints: List[Dict[str, Any]],
+) -> List[Dict[str, Any]]:
+    """Return prior preprints that are not fetched again as preprints.
+
+    Only a record that is itself a preprint counts as evidence. A journal
+    article, even one sharing the DOI or arXiv identifier, and a curated
+    ``superseded_preprints`` entry are deliberately *not* substitutes: the
+    editorial decision is that these preprint records stay in papers.bib until
+    a human removes them. Conservation beats completeness here.
+    """
+    preprint_index = _identity_index(
+        [record for record in records if effective_kind(record) == "preprint"]
+    )
+    return [
+        prior
+        for prior in prior_preprints
+        if not _identity_matches(prior, preprint_index)
+    ]
+
+
+def describe_preprints(preprints: List[Dict[str, Any]]) -> str:
+    """Format preprints as a reviewable list of keys, identifiers and titles."""
+    lines = []
+    for record in preprints:
+        identifiers = []
+        arxiv_identifier = arxiv_id(record)
+        if arxiv_identifier:
+            identifiers.append(f"arXiv:{arxiv_identifier}")
+        doi = normalize_doi(record.get("doi"))
+        if doi and not arxiv_identifier:
+            identifiers.append(f"doi:{doi}")
+        detail = f" ({', '.join(identifiers)})" if identifiers else ""
+        lines.append(f"  - {record.get('key')}{detail}: {record.get('title')!r}")
+    return "\n".join(lines)
+
+
+def ensure_no_preprint_loss(
+    records: List[Dict[str, Any]],
+    arxiv_records: List[Dict[str, Any]],
+    bibliography_path: Optional[pathlib.Path] = None,
+) -> None:
+    """Abort when the import would drop a preprint from the bibliography.
+
+    An empty arXiv feed is never trusted while the bibliography lists
+    preprints: it is what an upstream query change or outage looks like, and it
+    cannot be distinguished from a legitimate "no preprints" answer without
+    deleting records. A preprint that is no longer fetched as a preprint also
+    blocks the update, whether or not a journal article or a curated override
+    points at its published version. Both failures name the entries that need
+    manual review.
+    """
+    path = bibliography_path or BIBLIOGRAPHY_FILE
+    prior_preprints = bibliography_preprints(path)
+    if not prior_preprints:
+        return
+
+    if not arxiv_records:
+        raise PreprintLossError(
+            f"arXiv returned no entries while {path.name} lists "
+            f"{len(prior_preprints)} preprint(s); an empty feed is treated as an "
+            "upstream failure, not as an empty result:\n"
+            f"{describe_preprints(prior_preprints)}"
+        )
+
+    missing = find_missing_preprints(records, prior_preprints)
+    if missing:
+        raise PreprintLossError(
+            f"{len(missing)} preprint(s) in {path.name} were not fetched again "
+            "as preprints:\n"
+            f"{describe_preprints(missing)}\n"
+            "Refusing to rewrite the bibliography, because that would delete "
+            "them. A matching journal article or a superseded_preprints entry "
+            "is not accepted as a replacement: these records are kept until "
+            "they are removed by hand. Restore the arXiv/OpenAlex fetch (check "
+            "ARXIV_AUTHOR_NAME, the arXiv feed and OpenAlex coverage), or edit "
+            "papers.bib manually, then rerun."
+        )
+
+
+def abort_import(exc: PublicationImportError) -> NoReturn:
+    """Report an import error and exit non-zero before any file is written."""
+    print(f"Error: {exc}", file=sys.stderr)
+    print(
+        "Aborting the publications import before writing _data/*.yml and "
+        "_bibliography/papers.bib.",
+        file=sys.stderr,
+    )
+    sys.exit(1)
+
+
 def main() -> None:
     """Fetch, classify, and write publications."""
     if os.getenv("SKIP_OPENALEX", "").lower() in {"1", "true", "yes"}:
@@ -1673,15 +1940,23 @@ def main() -> None:
 
     print(f"Using ORCID_ID={ORCID_ID}")
 
-    # Fetch from OpenAlex
-    openalex_publications = fetch_publications(ORCID_ID)
-    formatted_publications = [
-        classify_and_format_publication(publication)
-        for publication in openalex_publications
-    ]
+    # Fail closed: every fetch must succeed before anything is written. A
+    # failed arXiv request used to return an empty list, so the scheduled
+    # import would commit a bibliography stripped of the arXiv-only preprints.
+    # Validate the author configuration before the first network call, too.
+    try:
+        ensure_arxiv_author_configured()
+        # Fetch from OpenAlex
+        openalex_publications = fetch_publications(ORCID_ID)
+        formatted_publications = [
+            classify_and_format_publication(publication)
+            for publication in openalex_publications
+        ]
 
-    # Fetch from arXiv and combine
-    arxiv_publications = fetch_from_arxiv(ARXIV_AUTHOR_NAME)
+        # Fetch from arXiv and combine
+        arxiv_publications = fetch_from_arxiv(ARXIV_AUTHOR_NAME)
+    except PublicationImportError as exc:
+        abort_import(exc)
 
     # Deduplicate arXiv publications against OpenAlex publications. A dropped
     # arXiv record still donates its journal_ref to the retained preprint.
@@ -1695,6 +1970,15 @@ def main() -> None:
         print(f"Matched {matched} publications to Google Scholar IDs.")
 
     mark_publication_page_records(formatted_publications)
+
+    # Last gate before any write: every preprint already in the bibliography
+    # must still be fetched as a preprint. Empty or partial feeds fail closed
+    # instead of silently deleting existing preprint records.
+    try:
+        ensure_no_preprint_loss(formatted_publications, arxiv_publications)
+    except PublicationImportError as exc:
+        abort_import(exc)
+
     write_yaml_files(formatted_publications)
     write_bibtex_file(formatted_publications)
     articles = [record for record in formatted_publications if record.get("kind") == "article"]
