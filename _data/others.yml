@@ -4,41 +4,65 @@
   year: 2026
   date: '2026-11-02'
   journal: Zenodo (CERN Eur. Organ. Nucl. Res.)
+  booktitle: null
+  note: Technical report
+  source_type: repository
   doi: https://doi.org/10.5281/zenodo.23881020
   href: https://doi.org/10.5281/zenodo.23881020
   pdf: https://doi.org/10.5281/zenodo.23881020
   path: https://doi.org/10.5281/zenodo.23881020
   kind: report
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Large Language Models at Helmholtz-Zentrum Dresden-Rossendorf
   author: Peter Steinbach; Attila Cangi; Uwe Konrad
   year: 2026
   date: '2026-11-02'
   journal: Zenodo (CERN Eur. Organ. Nucl. Res.)
+  booktitle: null
+  note: Technical report
+  source_type: repository
   doi: https://doi.org/10.5281/zenodo.23880571
   href: https://doi.org/10.5281/zenodo.23880571
   pdf: https://doi.org/10.5281/zenodo.23880571
   path: https://doi.org/10.5281/zenodo.23880571
   kind: report
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: 'Fe–Ni MACE-sqs: model, DFT training data and analysis files'
   author: Kushal Ramakrishna; Mani Lokamani; Attila Cangi
   year: 2026
   date: '2026-10-19'
   journal: Zenodo (CERN Eur. Organ. Nucl. Res.)
+  booktitle: null
+  note: Dataset
+  source_type: repository
   doi: https://doi.org/10.5281/zenodo.23484910
   href: https://doi.org/10.5281/zenodo.23484910
   pdf: https://doi.org/10.5281/zenodo.23484910
   path: https://doi.org/10.5281/zenodo.23484910
   kind: dataset
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Fundamentals in Solid-State Physics – Thermal Properties
   author: Attila Cangi
   year: 2026
   date: '2026-06-17'
   journal: Zenodo (CERN Eur. Organ. Nucl. Res.)
+  booktitle: null
+  note: Software
+  source_type: repository
   doi: https://doi.org/10.5281/zenodo.20733046
   href: https://doi.org/10.5281/zenodo.20733046
   pdf: https://doi.org/10.5281/zenodo.20733046
   path: https://doi.org/10.5281/zenodo.20733046
   kind: software
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: 'Data publication: Scalable Machine Learning Model for Energy Decomposition
     Analysis in Aqueous Systems'
   author: Tahmasbi, Hossein; Beerbaum, Michael; Brzoza, Bartosz; Attila Cangi; Thomas
@@ -46,11 +70,17 @@
   year: 2025
   date: '2025-12-02'
   journal: null
+  booktitle: null
+  note: Dataset
+  source_type: null
   doi: https://doi.org/10.14278/rodare.4169
   href: https://doi.org/10.14278/rodare.4169
   pdf: https://rodare.hzdr.de/record/4170
   path: https://doi.org/10.14278/rodare.4169
   kind: dataset
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Scalable Machine Learning Model for Energy Decomposition Analysis in Aqueous
     Systems
   author: Tahmasbi, Hossein; Beerbaum, Michael; Thomas D. Kühne; Brzoza, Bartosz;
@@ -58,33 +88,51 @@
   year: 2025
   date: '2025-01-01'
   journal: AIP Publ.
+  booktitle: null
+  note: Other research output
+  source_type: repository
   doi: https://doi.org/10.60893/figshare.jcp.c.8144699
   href: https://doi.org/10.60893/figshare.jcp.c.8144699
   pdf: https://doi.org/10.60893/figshare.jcp.c.8144699
   path: https://doi.org/10.60893/figshare.jcp.c.8144699
   kind: other
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:nZcligLrVowC
+  publication_page: false
 - title: Supplementary materials
   author: Admin, AIP; Tahmasbi, Hossein; Beerbaum, Michael; Brzoza, Bartosz; Attila
     Cangi; Thomas D. Kühne
   year: 2025
   date: '2025-01-01'
   journal: AIP Publ.
+  booktitle: null
+  note: Supplementary material
+  source_type: repository
   doi: https://doi.org/10.60893/figshare.jcp.30606164
   href: https://doi.org/10.60893/figshare.jcp.30606164
   pdf: https://doi.org/10.60893/figshare.jcp.30606164
   path: https://doi.org/10.60893/figshare.jcp.30606164
   kind: supplementary-materials
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Towards all-electron treatment in electronic structure machine learning
   author: Johannes Wasmer; Philipp Rüßmann; Stefano Sanvito; Attila Cangi; Ira Assent
   year: 2025
   date: '2025-01-01'
   journal: JuSER (Forschungszentrum Jül.)
+  booktitle: JuSER (Forschungszentrum Jülich)
+  note: Conference paper
+  source_type: repository
   doi: https://doi.org/10.34734/fzj-2026-01614
   href: https://doi.org/10.34734/fzj-2026-01614
-  pdf: https://juser.fz-juelich.de/record/1053929
+  pdf: https://juser.fz-juelich.de/search?p=id:%22FZJ-2026-01613%22
   path: https://doi.org/10.34734/fzj-2026-01614
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: A Vision for a World-Leading Research Software Ecosystem for the Helmholtz
     Association
   author: René Caspart; Bernadette Fritzsch; Peter Baumgärtel; Tobias Becher; Julian
@@ -101,44 +149,52 @@
   year: 2025
   date: '2025-01-01'
   journal: JuSER (Forschungszentrum Jül.)
+  booktitle: null
+  note: Technical report
+  source_type: repository
   doi: null
   href: https://openalex.org/W7133437402
   pdf: null
   path: null
   kind: report
-- title: Bridging the gap in electronic structure calculations via machine learning
-  author: Attila Cangi
-  year: 2024
-  date: '2024-10-10'
-  journal: Nat. Comput. Sci.
-  doi: https://doi.org/10.1038/s43588-024-00707-3
-  href: https://doi.org/10.1038/s43588-024-00707-3
-  pdf: null
-  path: https://doi.org/10.1038/s43588-024-00707-3
-  kind: other
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Machine-Learning for Static and Dynamic Electronic Structure Theory
   author: Lenz Fiedler; Karan Shah; Attila Cangi
   year: 2023
   date: '2023-10-01'
   journal: Chall. adv. comput. chem. phys.
+  booktitle: Challenges and advances in computational chemistry and physics
+  note: Book chapter
+  source_type: book series
   doi: https://doi.org/10.1007/978-3-031-37196-7_5
   href: https://doi.org/10.1007/978-3-031-37196-7_5
   pdf: https://doi.org/10.1007/978-3-031-37196-7_5
   path: https://doi.org/10.1007/978-3-031-37196-7_5
   kind: chapter
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:sNmaIFBj_lkC
+  publication_page: false
 - title: Random Quantum Neural Networks for Noisy Image Recognition
   author: Debanjan Konar; Erol Gelenbe A; Soham Bhandary; Aditya Das Sarma; Attila
     Cangi
   year: 2023
   date: '2023-09-17'
   journal: IEEE Int. Conf. Quantum Comput. Eng. (QCE)
+  booktitle: IEEE International Conference on Quantum Computing and Engineering (QCE)
+  note: Conference paper
+  source_type: conference
   doi: https://doi.org/10.1109/qce57702.2023.10240
   href: https://doi.org/10.1109/qce57702.2023.10240
   pdf: null
   path: https://doi.org/10.1109/qce57702.2023.10240
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:IRz6iEL74y4C
+  publication_page: false
 - title: Leveraging Data Driven Frameworks to Build Transferable Interatomic Potentials
   author: Svetoslav V. Nikolov; John H. Carpenter; Mitchell A. Wood; Julien Tranchida;
     Kyle Cochrane; Normand A. Modine; Aidan P. Thompson; Attila Cangi; Kushal Ramakrishna;
@@ -146,48 +202,74 @@
   year: 2023
   date: '2023-08-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: OSTI OAI (U.S. Department of Energy Office of Scientific and Technical
+    Information)
+  note: Conference paper
+  source_type: repository
   doi: https://doi.org/10.2172/2430436
   href: https://doi.org/10.2172/2430436
   pdf: http://dx.doi.org/10.2172/2430436
   path: https://doi.org/10.2172/2430436
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:yMeIxYmEMEAC
+  publication_page: false
 - title: Deep Spiking Quantum Neural Network for Noisy Image Classification
   author: Debanjan Konar; Vaneet Aggarwal; Aditya Das Sarma; Soham Bhandary; Siddhartha
     Bhattacharyya; Attila Cangi
   year: 2023
   date: '2023-06-18'
   journal: Int. Jt. Conf. Neural Netw. (IJCNN)
+  booktitle: International Joint Conference on Neural Networks (IJCNN)
+  note: Conference paper
+  source_type: conference
   doi: https://doi.org/10.1109/ijcnn54540.2023.10191509
   href: https://doi.org/10.1109/ijcnn54540.2023.10191509
   pdf: null
   path: https://doi.org/10.1109/ijcnn54540.2023.10191509
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:XvxMoLDsR5gC
+  publication_page: false
 - title: Examining the Alpha-Epsilon Transition in Iron Using Molecular-spin Dynamics
   author: Svetoslav Nikolov; Julien Tranchida; Aidan P. Thompson; Attila Cangi; Kushal
     Ramakrishna; Andrew Rohskopf; Mitchell A. Wood
   year: 2023
   date: '2023-03-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: OSTI OAI (U.S. Department of Energy Office of Scientific and Technical
+    Information)
+  note: Conference paper
+  source_type: repository
   doi: https://doi.org/10.2172/2431651
   href: https://doi.org/10.2172/2431651
   pdf: http://dx.doi.org/10.2172/2431651
   path: https://doi.org/10.2172/2431651
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:3htObqc8RwsC
+  publication_page: false
 - title: Predicting the Electronic Structure of Matter on Ultra-Large Scales
   author: Lenz Fiedler; Normand A. Modine; Steve Schmerler; Dayton J. Vogel; Gabriel
     A Popoola; Aidan P. Thompson; Sivasankaran Rajamanickam; Attila Cangi
   year: 2022
   date: '2022-10-20'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Technical report
+  source_type: repository
   doi: https://doi.org/10.2172/1895024
   href: https://doi.org/10.2172/1895024
   pdf: https://www.osti.gov/biblio/1895024
   path: https://doi.org/10.2172/1895024
   kind: report
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:ruyezt5ZtCIC
+  publication_page: false
 - title: Quantum-Accurate Multiscale Modeling of Shock Hugoniots, Ramp Compression
     Paths, Structural and Magnetic Phase Transitions, and Transport Properties in
     Highly Compressed Metals
@@ -196,12 +278,18 @@
   year: 2022
   date: '2022-09-21'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Technical report
+  source_type: repository
   doi: https://doi.org/10.2172/1898251
   href: https://doi.org/10.2172/1898251
   pdf: https://www.osti.gov/biblio/1898251
   path: https://doi.org/10.2172/1898251
   kind: report
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:hCrLmN-GePgC
+  publication_page: false
 - title: Improving Predictive Capability in REHEDS Simulations with Fast, Accurate,
     and Consistent Non-Equilibrium Material Properties
   author: Stephanie B. Hansen; Andrew Baczewski; Thomas Gomez; Thomas Hentschel; Christopher
@@ -210,48 +298,73 @@
   year: 2022
   date: '2022-09-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Technical report
+  source_type: repository
   doi: https://doi.org/10.2172/1890268
   href: https://doi.org/10.2172/1890268
   pdf: https://www.osti.gov/servlets/purl/1890268
   path: https://doi.org/10.2172/1890268
   kind: report
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:PVjk1bu6vJQC
+  publication_page: false
 - title: Accelerating Multiscale Materials Modeling with Machine Learning
   author: Normand A. Modine; John Stephens; Laura Painton Swiler; Aidan P. Thompson;
     Dayton J. Vogel; Lenz Feilder; Attila Cangi; Sivasankaran Rajamanickam
   year: 2022
   date: '2022-09-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Technical report
+  source_type: repository
   doi: https://doi.org/10.2172/1889336
   href: https://doi.org/10.2172/1889336
   pdf: https://www.osti.gov/servlets/purl/1889336
   path: https://doi.org/10.2172/1889336
   kind: report
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:FPJr55Dyh1AC
+  publication_page: false
 - title: Examining the shock response of iron using molecular-spin dynamics
   author: Svetoslav Nikolov; Julien Tranchida; Kushal Ramakrishna; Attila Cangi; Mitchell
     A. Wood
   year: 2022
   date: '2022-07-07'
   journal: null
+  booktitle: null
+  note: Other research output
+  source_type: null
   doi: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
   href: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
   pdf: null
   path: https://doi.org/10.26226/m.62a9d1f09deaf4fdb6b3ff1e
   kind: other
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
+  publication_page: false
 - title: Examining the shock response of iron using molecular-spin dynamics.
   author: Svetoslav Nikolov; Julien Tranchida; Attila Cangi; Kushal Ramakrishna; Mani
     Lokamani; Mitchell A. Wood
   year: 2022
   date: '2022-07-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: OSTI OAI (U.S. Department of Energy Office of Scientific and Technical
+    Information)
+  note: Conference paper
+  source_type: repository
   doi: https://doi.org/10.2172/2003857
   href: https://doi.org/10.2172/2003857
   pdf: http://dx.doi.org/10.2172/2003857
   path: https://doi.org/10.2172/2003857
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
+  publication_page: false
 - title: A machine learning surrogate for density functional theory based on the local
     density of state.
   author: Normand A. Modine; Lenz Fiedler; Dayton J. Vogel; Aidan P. Thompson; Austin
@@ -259,35 +372,55 @@
   year: 2022
   date: '2022-05-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: OSTI OAI (U.S. Department of Energy Office of Scientific and Technical
+    Information)
+  note: Conference paper
+  source_type: repository
   doi: https://doi.org/10.2172/2003393
   href: https://doi.org/10.2172/2003393
   pdf: http://dx.doi.org/10.2172/2003393
   path: https://doi.org/10.2172/2003393
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Finding Electronic Structure Machine Learning Surrogates without Training
   author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel A Popoola; Tamar Yovell;
     Vladyslav Oles; J. Ellis; Sivasankaran Rajamanickam; Attila Cangi
   year: 2022
   date: '2022-02-24'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Technical report
+  source_type: repository
   doi: https://doi.org/10.2172/1891948
   href: https://doi.org/10.2172/1891948
   pdf: https://www.osti.gov/servlets/purl/1891948
   path: https://doi.org/10.2172/1891948
   kind: report
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:5qfkUJPXOUwC
+  publication_page: false
 - title: Effects of electron-ion collisions on stopping powers in warm dense matter.
   author: Thomas Hentschel; Alina Kononov; Andrew Baczewski; Attila Cangi; Stephanie
     B. Hansen
   year: 2022
   date: '2022-02-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: OSTI OAI (U.S. Department of Energy Office of Scientific and Technical
+    Information)
+  note: Conference paper
+  source_type: repository
   doi: https://doi.org/10.2172/2001867
   href: https://doi.org/10.2172/2001867
   pdf: http://dx.doi.org/10.2172/2001867
   path: https://doi.org/10.2172/2001867
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:ClCfbGk0d_YC
+  publication_page: false
 - title: Probing Structural and Magnetic Phase Changes in the Shock Response of Iron
     with Molecular Dynamics.
   author: Svetoslav Nikolov; Julien Tranchida; Attila Cangi; Kushal Ramakrishna; Mani
@@ -295,79 +428,127 @@
   year: 2022
   date: '2022-02-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: OSTI OAI (U.S. Department of Energy Office of Scientific and Technical
+    Information)
+  note: Conference paper
+  source_type: repository
   doi: https://doi.org/10.2172/2002085
   href: https://doi.org/10.2172/2002085
   pdf: http://dx.doi.org/10.2172/2002085
   path: https://doi.org/10.2172/2002085
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: 'atoMEC: An open-source average-atom Python code'
   author: Timothy J. Callow; Daniel Kotik; Eli Kraisler; Attila Cangi
   year: 2022
   date: '2022-01-01'
   journal: Proc. Python Sci. Conf.
+  booktitle: Proceedings of the Python in Science Conferences
+  note: Conference paper
+  source_type: conference
   doi: https://doi.org/10.25080/majora-212e5952-006
   href: https://doi.org/10.25080/majora-212e5952-006
   pdf: http://conference.scipy.org/proceedings/scipy2022/pdfs/Timothy_Callow.pdf
   path: https://doi.org/10.25080/majora-212e5952-006
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids:
+  - '2206.01074'
   google_scholar_id: M84yoJgAAAAJ:i2xiXl-TujoC
+  publication_page: false
 - title: Eﬀects of electron-ion collisions on stopping powers in warm dense matter.
   author: Thomas Hentschel; Alina Kononov; Andrew Baczewski; Attila Cangi; Stephanie
     B. Hansen
   year: 2021
   date: '2021-11-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: OSTI OAI (U.S. Department of Energy Office of Scientific and Technical
+    Information)
+  note: Conference paper
+  source_type: repository
   doi: https://doi.org/10.2172/1897018
   href: https://doi.org/10.2172/1897018
   pdf: https://www.osti.gov/servlets/purl/1897018
   path: https://doi.org/10.2172/1897018
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:ClCfbGk0d_YC
+  publication_page: false
 - title: An Introduction to the Materials Learning Algorithms Package (MALA).
   author: Lenz Fiedler; Austin Ellis; Sivasankaran Rajamanickam; Attila Cangi
   year: 2021
   date: '2021-05-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: OSTI OAI (U.S. Department of Energy Office of Scientific and Technical
+    Information)
+  note: Conference paper
+  source_type: repository
   doi: https://doi.org/10.2172/1867139
   href: https://doi.org/10.2172/1867139
   pdf: https://www.osti.gov/servlets/purl/1867139
   path: https://doi.org/10.2172/1867139
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:-FonjvnnhkoC
+  publication_page: false
 - title: Comparison of DFT-based methods for electronic stopping in warm dense aluminum.
   author: Alina Kononov; Thomas Hentschel; Attila Cangi; Andrew Baczewski; Stephanie
     B. Hansen
   year: 2021
   date: '2021-03-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: OSTI OAI (U.S. Department of Energy Office of Scientific and Technical
+    Information)
+  note: Conference paper
+  source_type: repository
   doi: https://doi.org/10.2172/1855327
   href: https://doi.org/10.2172/1855327
   pdf: https://www.osti.gov/servlets/purl/1855327
   path: https://doi.org/10.2172/1855327
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Accelerating Multiscale Materials Modeling with Machine Learning.
   author: J. Ellis; Sivasankaran Rajamanickam; Normand A. Modine; Aidan P. Thompson;
     John Stephens; Attila Cangi
   year: 2021
   date: '2021-03-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: OSTI OAI (U.S. Department of Energy Office of Scientific and Technical
+    Information)
+  note: Conference paper
+  source_type: repository
   doi: https://doi.org/10.2172/1853873
   href: https://doi.org/10.2172/1853873
   pdf: https://www.osti.gov/servlets/purl/1787726
   path: https://doi.org/10.2172/1853873
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:FPJr55Dyh1AC
+  publication_page: false
 - title: First-principles Modeling of Warm Dense Matter.
   author: Attila Cangi
   year: 2021
   date: '2021-02-15'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Other research output
+  source_type: repository
   doi: null
   href: https://openalex.org/W4287873620
   pdf: https://www.osti.gov/biblio/1765305
   path: null
-  kind: talk
+  kind: other
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:0CzhzZyukY4C
+  publication_page: false
 - title: 'Collisions and Correlations in Warm Dense Matter: effects on electronic
     stopping.'
   author: Thomas Hentschel; Stephanie B. Hansen; Attila Cangi; Alina Kononov; Andrew
@@ -375,12 +556,19 @@
   year: 2020
   date: '2020-11-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: OSTI OAI (U.S. Department of Energy Office of Scientific and Technical
+    Information)
+  note: Conference paper
+  source_type: repository
   doi: https://doi.org/10.2172/1830065
   href: https://doi.org/10.2172/1830065
   pdf: https://www.osti.gov/servlets/purl/1830065
   path: https://doi.org/10.2172/1830065
-  kind: conference-paper
+  kind: proceedings
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:EYYDruWGBe4C
+  publication_page: false
 - title: Accelerating Finite-temperature Kohn-Sham Density Functional Theory\ with
     Deep Neural Networks
   author: Sandia National Laboratories (SNL-NM), Albuquerque, NM (United States);
@@ -390,35 +578,53 @@
   year: 2020
   date: '2020-10-13'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Technical report
+  source_type: repository
   doi: https://doi.org/10.2172/1677521
   href: https://doi.org/10.2172/1677521
   pdf: https://www.osti.gov/biblio/1677521
   path: https://doi.org/10.2172/1677521
   kind: report
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:1yQoGdGgb4wC
+  publication_page: false
 - title: An exchange-correlation functional capturing bulk surface and confinement
     physics.
-  author: Attila Cangi
+  author: Attila Cangi; Francisca Sagredo; Elizabeth Decolvenaere; Ann Elisabet Mattsson
   year: 2020
   date: '2020-07-23'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Other research output
+  source_type: repository
   doi: null
   href: https://openalex.org/W4288548898
   pdf: https://www.osti.gov/servlets/purl/1639309
   path: null
-  kind: talk
+  kind: other
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:ZuybSZzF8UAC
+  publication_page: false
 - title: Collisions and Correlation Effects in Warm Dense Matter
   author: Thomas Hentschel; Attila Cangi; Andrew Baczewski; Stephanie B. Hansen
   year: 2020
   date: '2020-01-01'
   journal: APS Div. Plasma Phys. Meet. Abstr.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W3183220772
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:-_dYPAW6P2MC
+  publication_page: false
 - title: Semi-local Density Functional Approximations for Bulk, Surface, and Confinement
     Physics
   author: Sandia National Laboratories (SNL), Albuquerque, NM (United States). New
@@ -428,24 +634,36 @@
   year: 2019
   date: '2019-09-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Technical report
+  source_type: repository
   doi: https://doi.org/10.2172/1569522
   href: https://doi.org/10.2172/1569522
   pdf: https://www.osti.gov/biblio/1569522
   path: https://doi.org/10.2172/1569522
   kind: report
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:5awf1xo2G04C
+  publication_page: false
 - title: Modeling Materials at Extreme Conditions for High Energy-Density Science
   author: Stephanie B. Hansen; Taisuke Nagayama; Andrew Baczewski; Attila Cangi; Thomas
     Gomez
   year: 2019
   date: '2019-03-07'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Other research output
+  source_type: repository
   doi: null
   href: https://openalex.org/W2925181260
   pdf: https://www.osti.gov/servlets/purl/1639295
   path: null
-  kind: talk
+  kind: other
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:N5tVd3kTz84C
+  publication_page: false
 - title: Magnetostriction and Long-Range Interactions in Coupled Spin and Lattice
     Dynamics
   author: Julien Tranchida; Mitchell A. Wood; Attila Cangi; Stan Moore; Pascal Thibaudeau;
@@ -453,21 +671,33 @@
   year: 2019
   date: '2019-03-06'
   journal: Bull. Am. Phys. Soc.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W2923868490
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Modifying the Random Phase Approximation for the Average Atom
   author: Thomas Hentschel; Stephanie B. Hansen; Attila Cangi; Andrew Baczewski
   year: 2019
   date: '2019-01-01'
   journal: APS
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W3017649132
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: 'Summer Proceedings 2018: The Center for Computing Research at Sandia National
     Laboratories'
   author: Sandia National Labs., Albuquerque, NM (United States); Attila Cangi; USDOE
@@ -475,22 +705,34 @@
   year: 2018
   date: '2018-12-06'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Technical report
+  source_type: repository
   doi: https://doi.org/10.2172/1762384
   href: https://doi.org/10.2172/1762384
   pdf: https://www.osti.gov/biblio/1762384
   path: https://doi.org/10.2172/1762384
   kind: report
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:z_wVstp3MssC
+  publication_page: false
 - title: First-principles Stopping Power in Warm Dense Matter.
-  author: Attila Cangi
+  author: Attila Cangi; Jensen, Daniel Spencer; Baczewski, Andrew David
   year: 2018
   date: '2018-08-22'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Other research output
+  source_type: repository
   doi: null
   href: https://openalex.org/W4297732077
   pdf: https://www.osti.gov/servlets/purl/1465022
   path: null
-  kind: talk
+  kind: other
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: An Exchange-Correlation Functional Capturing Bulk Surface and Confinement
     Physics
   author: Sandia National Labs., Albuquerque, NM (United States); Attila Cangi; USDOE
@@ -498,205 +740,301 @@
   year: 2018
   date: '2018-07-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Technical report
+  source_type: repository
   doi: https://doi.org/10.2172/1530147
   href: https://doi.org/10.2172/1530147
   pdf: https://www.osti.gov/biblio/1530147
   path: https://doi.org/10.2172/1530147
   kind: report
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:ZuybSZzF8UAC
+  publication_page: false
 - title: Computing Optical Conductivities of Warm Dense Matter with Time-Dependent
     Density Functional Theory
   author: Daniel S. Jensen; Andrew Baczewski; Attila Cangi; Stephanie B. Hansen
   year: 2018
   date: '2018-03-09'
   journal: Bull. Am. Phys. Soc.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W2903317593
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Spin-lattice simulations of cobalt and iron-cobalt alloys with LAMMPS
   author: Julien Tranchida; A.L. Thompson; Pascal Thibaudeau; Attila Cangi; Todd Monson;
     Eric Donald Langlois; Jamin Ryan Pillars
   year: 2018
   date: '2018-03-07'
   journal: Bull. Am. Phys. Soc.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W2782728547
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: ECP-copa/ExaMiniMD
   author: Aidan P. Thompson; Attila Cangi; Christian Robert Trott; Christoph Junghans;
     Stan Moore; Timothy Clark Germann
   year: 2018
   date: '2018-01-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Other research output
+  source_type: repository
   doi: https://doi.org/10.11578/dc.20201102.5
   href: https://doi.org/10.11578/dc.20201102.5
   pdf: https://www.osti.gov/biblio/1696908
   path: https://doi.org/10.11578/dc.20201102.5
-  kind: talk
+  kind: other
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:W5xh706n7nkC
+  publication_page: false
 - title: Developing Consistent Models for Matter in Extreme Conditions
   author: Stephanie B. Hansen; Taisuke Nagayama; Thomas Gomez; Andrew Baczewski; Attila
     Cangi
   year: 2018
   date: '2018-01-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Other research output
+  source_type: repository
   doi: null
   href: https://openalex.org/W3090318926
   pdf: https://www.osti.gov/servlets/purl/1569112
   path: null
-  kind: talk
+  kind: other
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:WqliGbK-hY8C
+  publication_page: false
 - title: Stopping Power of Warm Dense Matter from Ehrenfest Molecular Dynamics
   author: Attila Cangi; Daniel S. Jensen; Stephanie B. Hansen; Andrew Baczewski
   year: 2017
   date: '2017-10-25'
   journal: Bull. Am. Phys. Soc.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W2755561050
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Optical conductivity of magnetized warm dense matter using time-dependent
     density functional theory
   author: Daniel S. Jensen; Andrew Baczewski; Attila Cangi; Stephanie B. Hansen
   year: 2017
   date: '2017-10-25'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Other research output
+  source_type: repository
   doi: null
   href: https://openalex.org/W2755757758
   pdf: https://www.osti.gov/servlets/purl/1480198
   path: null
-  kind: talk
+  kind: other
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:VL0QpB8kHFEC
+  publication_page: false
 - title: Progress towards an {\it ab initio} real-time treatment of warm dense matter
   author: Andrew Baczewski; Attila Cangi; Stephanie B. Hansen; Daniel S. Jensen
   year: 2017
   date: '2017-10-24'
   journal: Bull. Am. Phys. Soc.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W2769594595
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Semiclassical potential functionals for semiconductor quantum wells
   author: Attila Cangi
   year: 2016
   date: '2016-03-14'
   journal: Bull. Am. Phys. Soc.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W2590075342
   pdf: null
   path: null
-  kind: conference-abstract
-- title: Corrections to Thomas-Fermi Densities at Turning Points and Beyond
-  author: Raphael F. Ribeiro; Donghyung Lee; Attila Cangi; Peter D. T. A. Elliott;
-    Kieron Burke
-  year: 2015
-  date: '2015-02-04'
-  journal: Phys. Rev. Lett.
-  doi: https://doi.org/10.1103/physrevlett.114.050401
-  href: https://doi.org/10.1103/physrevlett.114.050401
-  pdf: https://arxiv.org/pdf/1409.6802
-  path: https://doi.org/10.1103/physrevlett.114.050401
-  kind: erratum
-  google_scholar_id: M84yoJgAAAAJ:roLk4NBRz8UC
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Semiclassical approach to the exchange energy from potential functional theory
   author: Attila Cangi; Peter D. T. A. Elliott; Stefano Pittalis; Eberhard K. U. Gross;
     Kieron Burke
   year: 2014
   date: '2014-03-05'
   journal: Bull. Am. Phys. Soc.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W2248662928
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Non-Empirical Orbital-Free Approximations from Semiclassical Approaches
   author: Stefano Pittalis; Attila Cangi; César R. Proetto; Eberhard K. U. Gross;
     Kieron Burke
   year: 2013
   date: '2013-03-21'
   journal: Bull. Am. Phys. Soc.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W2241242473
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:VLnqNzywnoUC
+  publication_page: false
 - title: Leading corrections to local approximations and their relevance to Density
     Functional Theory
   author: Attila Cangi
   year: 2011
   date: '2011-01-01'
   journal: PhDT
+  booktitle: null
+  note: Dissertation
+  source_type: repository
   doi: null
   href: https://openalex.org/W2995862921
   pdf: null
   path: null
-  kind: dissertation
+  kind: thesis
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: 'The unreasonable accuracy of asymptotic expansions: Why density functional
     theory works'
   author: Kieron Burke; Attila Cangi; Donghyung Lee; Peter D. T. A. Elliott
   year: 2010
   date: '2010-03-01'
   journal: APS March Meet. Abstr.
+  booktitle: null
+  note: Conference abstract
+  source_type: conference
   doi: null
   href: https://openalex.org/W3096111671
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:BUYA1_V_uYcC
+  publication_page: false
 - title: Density Functional Theory and Semiclassical Methods
   author: Peter D. T. A. Elliott; Donghyung Lee; Attila Cangi; Kieron Burke
   year: 2009
   date: '2009-03-17'
   journal: Bull. Am. Phys. Soc.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W1614773731
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Towards a semiclassical theory of electronic structure
   author: Attila Cangi; Donghyung Lee; Peter D. T. A. Elliott; Kieron Burke
   year: 2009
   date: '2009-03-16'
   journal: Bull. Am. Phys. Soc.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W142907370
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Semiclassics in Density Functional Theory
   author: Donghyung Lee; Attila Cangi; Peter D. T. A. Elliott; Kieron Burke
   year: 2009
   date: '2009-03-16'
   journal: Bull. Am. Phys. Soc.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W1658238708
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Semiclassical Approaches in Density Functional Theory
   author: Peter D. T. A. Elliott; Attila Cangi; Donghyung Lee; Kieron Burke
   year: 2008
   date: '2008-03-11'
   journal: Bull. Am. Phys. Soc.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W105216034
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: A new approach to density functional theory
   author: Kieron Burke; Peter D. T. A. Elliott; Attila Cangi; Donghyung Lee
   year: 2008
   date: '2008-03-11'
   journal: Bull. Am. Phys. Soc.
+  booktitle: null
+  note: Conference abstract
+  source_type: journal
   doi: null
   href: https://openalex.org/W21397216
   pdf: null
   path: null
-  kind: conference-abstract
+  kind: talk
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false

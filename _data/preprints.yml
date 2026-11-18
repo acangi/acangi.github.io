@@ -6,11 +6,17 @@
   year: 2026
   date: '2026-07-27'
   journal: arXiv (Cornell Univ.)
+  booktitle: null
+  note: Preprint
+  source_type: repository
   doi: https://doi.org/10.48550/arxiv.2607.24997
   href: https://doi.org/10.48550/arxiv.2607.24997
   pdf: https://arxiv.org/pdf/2607.24997
   path: https://doi.org/10.48550/arxiv.2607.24997
   kind: preprint
+  journal_ref: null
+  arxiv_ids:
+  - '2607.24997'
   google_scholar_id: M84yoJgAAAAJ:6yz0xqPARnAC
   unpublished_preprint: true
   publication_page: true
@@ -25,20 +31,26 @@
   pdf: http://arxiv.org/pdf/2605.28395v1.pdf
   path: http://arxiv.org/abs/2605.28395v1
   kind: preprint
+  journal_ref: null
   google_scholar_id: M84yoJgAAAAJ:F1b5ZUV5XREC
-  unpublished_preprint: true
-  publication_page: true
+  publication_page: false
 - title: 'Thermal PBE in warm dense matter: Does it matter and is it accurate?'
   author: Kushal Ramakrishna; Mani Lokamani; Zhandos A. Moldabekov; Tobias Dornheim;
     Kieron Burke; Attila Cangi
   year: 2026
   date: '2026-05-24'
   journal: arXiv (Cornell Univ.)
+  booktitle: null
+  note: Preprint
+  source_type: repository
   doi: https://doi.org/10.48550/arxiv.2605.25270
   href: https://doi.org/10.48550/arxiv.2605.25270
   pdf: https://arxiv.org/pdf/2605.25270
   path: https://doi.org/10.48550/arxiv.2605.25270
   kind: preprint
+  journal_ref: null
+  arxiv_ids:
+  - '2605.25270'
   google_scholar_id: M84yoJgAAAAJ:LgRImbQfgY4C
   unpublished_preprint: true
   publication_page: true
@@ -48,11 +60,17 @@
   year: 2026
   date: '2026-05-07'
   journal: arXiv (Cornell Univ.)
+  booktitle: null
+  note: Preprint
+  source_type: repository
   doi: https://doi.org/10.48550/arxiv.2605.06303
   href: https://doi.org/10.48550/arxiv.2605.06303
   pdf: https://arxiv.org/pdf/2605.06303
   path: https://doi.org/10.48550/arxiv.2605.06303
   kind: preprint
+  journal_ref: null
+  arxiv_ids:
+  - '2605.06303'
   google_scholar_id: M84yoJgAAAAJ:Ak0FvsSvgGUC
   unpublished_preprint: true
   publication_page: true
@@ -64,11 +82,17 @@
   year: 2025
   date: '2025-11-20'
   journal: arXiv (Cornell Univ.)
+  booktitle: null
+  note: Preprint
+  source_type: repository
   doi: https://doi.org/10.48550/arxiv.2511.16263
   href: https://doi.org/10.48550/arxiv.2511.16263
   pdf: https://arxiv.org/pdf/2511.16263
   path: https://doi.org/10.48550/arxiv.2511.16263
   kind: preprint
+  journal_ref: null
+  arxiv_ids:
+  - '2511.16263'
   google_scholar_id: M84yoJgAAAAJ:u-coK7KVo8oC
   unpublished_preprint: true
   publication_page: true
@@ -82,9 +106,9 @@
   pdf: http://arxiv.org/pdf/2407.09628v2.pdf
   path: http://arxiv.org/abs/2407.09628v2
   kind: preprint
+  journal_ref: null
   google_scholar_id: M84yoJgAAAAJ:OR75R8vi5nAC
-  unpublished_preprint: true
-  publication_page: true
+  publication_page: false
 - title: Ultrahigh Resolution X-ray Thomson Scattering Measurements at the European
     XFEL
   author: Thomas Gawne; Zhandos A. Moldabekov; Oliver S. Humphries; Karen Appel; Carsten
@@ -100,9 +124,9 @@
   pdf: http://arxiv.org/pdf/2403.02776v3.pdf
   path: http://arxiv.org/abs/2403.02776v3
   kind: preprint
+  journal_ref: null
   google_scholar_id: M84yoJgAAAAJ:yqoGN6RLRZoC
-  unpublished_preprint: true
-  publication_page: true
+  publication_page: false
 - title: Temperature analysis of X-ray Thomson scattering data
   author: Tobias Dornheim; Maximilian Böhme; Dave Chapman; Dominik Kraus; Thomas R.
     Preston; Zhandos Moldabekov; Niclas Schlünzen; Attila Cangi; Tilo Döppner; Jan
@@ -115,20 +139,26 @@
   pdf: http://arxiv.org/pdf/2212.10510v1.pdf
   path: http://arxiv.org/abs/2212.10510v1
   kind: preprint
+  journal_ref: null
   google_scholar_id: M84yoJgAAAAJ:rmuvC79q63oC
-  unpublished_preprint: true
-  publication_page: true
+  publication_page: false
 - title: Physics-Informed Neural Networks as Solvers for the Time-Dependent Schrödinger
     Equation
   author: Shah, Karan; Patrick Stiller; Nico Hoffmann; Attila Cangi
   year: 2022
   date: '2022-10-22'
   journal: arXiv (Cornell Univ.)
+  booktitle: null
+  note: Preprint
+  source_type: repository
   doi: https://doi.org/10.48550/arxiv.2210.12522
   href: https://doi.org/10.48550/arxiv.2210.12522
   pdf: https://arxiv.org/pdf/2210.12522
   path: https://doi.org/10.48550/arxiv.2210.12522
   kind: preprint
+  journal_ref: null
+  arxiv_ids:
+  - '2210.12522'
   unpublished_preprint: true
   publication_page: true
 - title: A Scalable 5,6-Qubit Grover's Quantum Search Algorithm
@@ -142,6 +172,7 @@
   pdf: http://arxiv.org/pdf/2205.00117v1.pdf
   path: http://arxiv.org/abs/2205.00117v1
   kind: preprint
+  journal_ref: null
   google_scholar_id: M84yoJgAAAAJ:WZBGuue-350C
   unpublished_preprint: true
   publication_page: true
@@ -151,11 +182,17 @@
   year: 2022
   date: '2022-03-03'
   journal: arXiv (Cornell Univ.)
+  booktitle: null
+  note: Preprint
+  source_type: repository
   doi: https://doi.org/10.48550/arxiv.2203.01764
   href: https://doi.org/10.48550/arxiv.2203.01764
   pdf: https://arxiv.org/pdf/2203.01764
   path: https://doi.org/10.48550/arxiv.2203.01764
   kind: preprint
+  journal_ref: null
+  arxiv_ids:
+  - '2203.01764'
   google_scholar_id: M84yoJgAAAAJ:tuHXwOkdijsC
   unpublished_preprint: true
   publication_page: true
@@ -165,11 +202,17 @@
   year: 2021
   date: '2021-04-07'
   journal: arXiv (Cornell Univ.)
+  booktitle: null
+  note: Preprint
+  source_type: repository
   doi: https://doi.org/10.48550/arxiv.2104.02941
   href: https://doi.org/10.48550/arxiv.2104.02941
   pdf: https://arxiv.org/pdf/2104.02941
   path: https://doi.org/10.48550/arxiv.2104.02941
   kind: preprint
+  journal_ref: null
+  arxiv_ids:
+  - '2104.02941'
   google_scholar_id: M84yoJgAAAAJ:JQOojiI6XY0C
   unpublished_preprint: true
   publication_page: true
@@ -179,10 +222,15 @@
   year: 2014
   date: '2014-09-24'
   journal: arXiv (Cornell Univ.)
+  booktitle: null
+  note: Preprint
+  source_type: repository
   doi: null
   href: https://openalex.org/W2521239918
   pdf: https://arxiv.org/pdf/1409.6802
   path: null
   kind: preprint
-  unpublished_preprint: true
-  publication_page: true
+  journal_ref: null
+  arxiv_ids:
+  - '1409.6802'
+  publication_page: false
