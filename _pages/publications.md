@@ -2,7 +2,6 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: "Peer-reviewed journal articles and preprints by the Department of Machine Learning for Materials Design."
 nav: true
 nav_order: 3
 ---

@@ -1,4 +1,4 @@
-// Team page: data-driven member and alumni cards.
+// Team page: portrait cards for current members and an alumni table.
 //
 // Every rule is scoped under .team-page (or the page-level width override)
 // so these styles cannot leak into other pages. The only page-level rule uses
@@ -122,26 +122,133 @@ body:has(.team-page) .post > article {
     text-wrap: pretty;
   }
 
-  // Alumni years: small tabular caps so ranges line up across cards.
-  .team-card-period {
+  // Alumni table -------------------------------------------------------------
+  // Four columns stay legible by scrolling the table inside a keyboard
+  // reachable region instead of collapsing it. Turning the table into blocks
+  // (the usual "responsive table" trick) would cost screen readers the row and
+  // column semantics, so the table keeps its display at every width.
+  .team-table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 3px;
+    // Scroll shadows: the two `local` layers sit over the shadows while the
+    // table is scrolled to that edge, so the shadow only appears when there is
+    // more table in that direction - the affordance a phone otherwise lacks.
+    background:
+      linear-gradient(to right, var(--global-card-bg-color) 40%, transparent) left center / 3rem 100% no-repeat local,
+      linear-gradient(to left, var(--global-card-bg-color) 40%, transparent) right center / 3rem 100% no-repeat local,
+      radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.16), transparent) left center / 0.85rem 100% no-repeat scroll,
+      radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.16), transparent) right center / 0.85rem 100% no-repeat scroll,
+      var(--global-card-bg-color);
+
+    &:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 2px;
+    }
+  }
+
+  .team-alumni-table {
+    width: 100%;
+    min-width: 40rem;
     margin: 0;
-    font-size: 0.72rem;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    // Fixed layout makes the declared proportions binding; auto layout let the
+    // widest cell starve the role column.
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    caption {
+      padding: 0.7rem 1rem 0.3rem;
+      font-size: 0.82rem;
+      line-height: 1.45;
+      text-align: left;
+      color: var(--global-text-color-light);
+    }
+
+    th,
+    td {
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--nordic-rule, var(--global-divider-color));
+      text-align: left;
+      vertical-align: top;
+    }
+
+    thead th {
+      border-bottom: 1px solid var(--nordic-rule-strong, var(--global-divider-color));
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      white-space: normal;
+      color: var(--global-text-color-light);
+    }
+
+    // Fixed layout needs explicit shares: names and roles get the room, years
+    // only need four characters plus an en dash, and the position takes the
+    // remainder. 16% keeps a full "2020–2025" range inside the column even
+    // when the table is squeezed to its 40rem minimum.
+    thead th:nth-child(1) {
+      width: 22%;
+    }
+
+    thead th:nth-child(2) {
+      width: 29%;
+    }
+
+    thead th:nth-child(3) {
+      width: 16%;
+    }
+
+    thead th:nth-child(4) {
+      width: 33%;
+    }
+
+    // The name is the row header, so it carries the weight of a heading.
+    // It wraps rather than forcing the whole table wider than the viewport.
+    // The global `table th` label styling (uppercase, 0.1em tracking, nowrap)
+    // is meant for column heads only: inherited by row headers, uppercase
+    // tracked names cannot wrap and paint across the role column.
+    tbody th {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: normal;
+      text-transform: none;
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
+
+    tbody tr:last-child th,
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+  }
+
+  // Only rendered when an alumnus/alumna has an email on file.
+  .team-alumni-email {
+    display: block;
+    margin-top: 0.15rem;
+    font-size: 0.82rem;
+    font-weight: 400;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .team-alumni-role {
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  // Years: tabular numerals so the ranges line up down the column.
+  .team-alumni-period {
+    font-size: 0.82rem;
     font-variant-numeric: tabular-nums;
+    white-space: nowrap;
     color: var(--global-text-color-light);
   }
 
-  .team-card-position {
-    margin: 0;
+  .team-alumni-position {
     font-size: 0.88rem;
-    line-height: 1.5;
-  }
-
-  .team-card-label {
-    font-weight: 600;
+    line-height: 1.45;
   }
 
   .team-card-contact {
@@ -202,6 +309,36 @@ body:has(.team-page) .post > article {
     .team-card--head .team-card-photo {
       --team-avatar: 72px;
     }
+
+    // Tighter cells buy back width; the table still scrolls if it must.
+    .team-alumni-table {
+      min-width: 34rem;
+    }
+
+    .team-alumni-table th,
+    .team-alumni-table td {
+      padding: 0.5rem 0.7rem;
+    }
+
+    // Names need room for the longest surname; the destination column gives
+    // some of its width back so no name breaks mid-word.
+    .team-alumni-table thead th:nth-child(1) {
+      width: 30%;
+    }
+
+    .team-alumni-table thead th:nth-child(2) {
+      width: 27%;
+    }
+
+    // A full range like "2020–2025" is ~64px at 0.82rem; 14% of the 34rem
+    // table left only 54px and the nowrap range ran into the next column.
+    .team-alumni-table thead th:nth-child(3) {
+      width: 18%;
+    }
+
+    .team-alumni-table thead th:nth-child(4) {
+      width: 25%;
+    }
   }
 }
 
@@ -213,6 +350,25 @@ body:has(.team-page) .post > article {
 
     .team-card {
       margin-bottom: 0.75rem;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .team-table-scroll {
+      overflow: visible;
+      border: 0;
+      background: none;
+    }
+
+    .team-alumni-table {
+      min-width: 0;
+    }
+
+    .team-alumni-table thead {
+      display: table-header-group;
+    }
+
+    .team-alumni-table tr {
       break-inside: avoid;
       page-break-inside: avoid;
     }

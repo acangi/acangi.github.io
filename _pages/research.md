@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Research
-heading: Machine Learning for Materials Design
 permalink: /research/
 nav: true
 nav_order: 2

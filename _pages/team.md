@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Team
-description: People in the Department of Machine Learning for Materials Design
+seo_description: "People in the Department of Machine Learning for Materials Design: current members and alumni of Attila Cangi's group at CASUS and HZDR."
 permalink: /team/
 nav: true
 nav_order: 5
@@ -88,6 +88,15 @@ data file produces one neutral message instead of empty category headings.
 <p class="team-empty">No team members are listed at present.</p>
 {% endif %}
 
+{% comment %}
+One section per category, in data order: the template never sorts, because the
+data file is already ordered (current members by surname, alumni by end year).
+Current members keep the portrait grid. Alumni render as one table with a row
+header per person and no photos: a portrait adds nothing once someone has left,
+and the table lets a reader scan names, years and destinations in one pass.
+The scroll wrapper keeps the four columns legible on a phone without changing
+the table's display, which would cost screen readers the row/column semantics.
+{% endcomment %}
 {% for category in site.data.team %}
 {% assign category_title = category.title | default: "Team" | strip %}
 {% assign section_id = "team-section-" | append: forloop.index %}
@@ -119,16 +128,31 @@ data file produces one neutral message instead of empty category headings.
 {% unless section_open %}
 <section class="team-section" aria-labelledby="{{ section_id }}">
 <h2 class="team-section-title" id="{{ section_id }}">{{ category_title | escape }}</h2>
+{% if is_alumni %}
+<div class="team-table-scroll" role="region" aria-labelledby="{{ section_id }}-caption" tabindex="0">
+<table class="team-alumni-table">
+<caption id="{{ section_id }}-caption">Former members, most recent first.</caption>
+<thead>
+<tr>
+<th scope="col">Name</th>
+<th scope="col">Role</th>
+<th scope="col">Years</th>
+<th scope="col">Last known position</th>
+</tr>
+</thead>
+<tbody>
+{% else %}
 <div class="team-grid">
+{% endif %}
 {% assign section_open = true %}
 {% endunless %}
 
-{% assign photo = person.photo | default: "" | strip %}
 {% assign role = person.role | default: "" | strip %}
 {% assign email = person.email | default: "" | strip %}
 {% assign last_position = person.last_position | default: "" | strip %}
-{% assign period = "" %}
+
 {% if is_alumni %}
+{% assign period = "" %}
 {% assign start_year = person.start_year | default: "" | append: "" | strip %}
 {% assign end_year = person.end_year | default: "" | append: "" | strip %}
 {% if start_year != "" and end_year != "" %}
@@ -142,7 +166,15 @@ data file produces one neutral message instead of empty category headings.
 {% elsif end_year != "" %}
 {% assign period = end_year %}
 {% endif %}
-{% endif %}
+
+<tr class="team-alumni-row">
+<th scope="row" class="team-alumni-name">{{ person.name | escape }}{% if email != "" %}<a class="team-alumni-email" href="mailto:{{ email | escape }}">{{ email | escape }}</a>{% endif %}</th>
+<td class="team-alumni-role">{{ role | escape }}</td>
+<td class="team-alumni-period">{{ period }}</td>
+<td class="team-alumni-position">{% if last_position != "" %}{{ last_position | escape }}{% endif %}</td>
+</tr>
+{% else %}
+{% assign photo = person.photo | default: "" | strip %}
 
 <article class="team-card">
 <div class="team-card-head">
@@ -159,23 +191,22 @@ data file produces one neutral message instead of empty category headings.
 </div>
 </div>
 
-{% if is_alumni and period != "" %}
-<p class="team-card-period">{{ period }}</p>
-{% endif %}
-
-{% if is_alumni and last_position != "" %}
-<p class="team-card-position"><span class="team-card-label">Last known position:</span> {{ last_position | escape }}</p>
-{% endif %}
-
 {% if email != "" %}
 <p class="team-card-contact"><a href="mailto:{{ email | escape }}">{{ email | escape }}</a></p>
 {% endif %}
 </article>
+{% endif %}
 {% endunless %}
 {% endfor %}
 
 {% if section_open %}
+{% if is_alumni %}
+</tbody>
+</table>
 </div>
+{% else %}
+</div>
+{% endif %}
 </section>
 {% endif %}
 {% endif %}

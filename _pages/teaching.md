@@ -52,5 +52,3 @@ nav_order: 6
     </tbody>
   </table>
 </div>
-
-The teaching material can be accessed on my <a href="https://www.casus.science/?page_id=4660" target="_blank">institutional website</a>.

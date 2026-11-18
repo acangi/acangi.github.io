@@ -1,12 +1,11 @@
 ---
 layout: page
 title: Research Highlights
-description: Research outputs from the department, each linked to its publication.
+seo_description: Research outputs from the department, each linked to its publication.
 permalink: /highlights/
 ---
 
 {% assign highlights = site.highlights | sort: 'order' %}
-<p class="highlight-count">{{ highlights.size }} highlights, newest first.</p>
 
 <div class="highlight-list">
 {% for h in highlights %}

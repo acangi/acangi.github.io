@@ -1,4 +1,4 @@
-"""Layout contract for the team cards: names line up across a grid row.
+"""Layout contracts for the team page: card alignment and the alumni table.
 
 The team grid puts a portrait beside a name/role stack inside every card.  If
 that stack is centred against the portrait, its height - and therefore the
@@ -11,7 +11,9 @@ These checks read ``_sass/_team.scss`` through a small SCSS rule parser, so
 they assert the declarations that produce that geometry rather than grepping
 for a formatted snippet.  A rendering check (when ``python-liquid`` is
 installed) confirms the template itself puts the name first in the stack, so
-no markup depends on the role's height.
+no markup depends on the role's height.  The alumni table has its own layout
+contract: it keeps table display at every width, scrolls inside a focusable
+region, and states column shares so no single cell starves another.
 
 Run with::
 
@@ -375,14 +377,12 @@ class TeamMarkupStructureTests(unittest.TestCase):
     def test_name_and_role_are_siblings_in_the_identity_stack(self):
         team = [
             {
-                "title": "Alumni",
+                "title": "Current members",
                 "members": [
                     {
-                        "name": "Dr. Former",
+                        "name": "Dr. Current",
                         "role": "Doctoral researcher",
-                        "start_year": 2018,
-                        "end_year": 2021,
-                        "last_position": "Scientist",
+                        "email": "current@example.org",
                     }
                 ],
             }
@@ -395,9 +395,163 @@ class TeamMarkupStructureTests(unittest.TestCase):
             identity.index('class="team-card-name"'),
             identity.index('class="team-card-role"'),
         )
-        # Alumni material sits after the head, so it never enters the stack
-        # whose height decides where the name starts.
-        self.assertGreater(identity.index("team-card-period"), identity.index("team-card-role"))
+        # Years and last position belong to alumni, who render as table rows,
+        # so nothing else may enter the stack whose height decides the name.
+        self.assertNotIn("team-card-period", identity)
+
+
+class TeamAlumniTableLayoutTests(unittest.TestCase):
+    """The alumni table must stay a table and stay usable when it overflows."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.rules = parse_scss(TEAM_SASS.read_text(encoding="utf-8"))
+
+    def test_scroll_container_scrolls_and_shows_focus(self):
+        scroll = declarations(self.rules, ".team-page .team-table-scroll")
+        self.assertEqual(scroll.get("overflow-x"), "auto")
+        focus = declarations(self.rules, ".team-page .team-table-scroll:focus-visible")
+        self.assertIn("outline", focus)
+
+    def test_table_uses_collapsed_borders_and_full_width(self):
+        table = declarations(self.rules, ".team-page .team-alumni-table")
+        self.assertEqual(table.get("width"), "100%")
+        self.assertEqual(table.get("border-collapse"), "collapse")
+        self.assertEqual(table.get("table-layout"), "fixed")
+        self.assertIn("min-width", table)
+
+    def test_table_keeps_table_display_at_every_breakpoint(self):
+        # Switching the table to block (a common "responsive table" trick)
+        # drops its row/column semantics in some screen readers.  The wrapper
+        # owns the scrolling instead.
+        for media, selector, decls in self.rules:
+            if not selector.endswith(".team-alumni-table"):
+                continue
+            with self.subTest(media=media, selector=selector):
+                self.assertNotIn(decls.get("display"), {"block", "flex", "grid"})
+
+    def test_header_cells_are_emphasised_with_rules(self):
+        head = declarations(self.rules, ".team-page .team-alumni-table thead th")
+        self.assertIn("border-bottom", head)
+        self.assertIn("font-size", head)
+        shared = declarations(self.rules, ".team-page .team-alumni-table th")
+        self.assertEqual(shared.get("text-align"), "left")
+
+    def test_cells_carry_generous_touch_padding(self):
+        cell = declarations(self.rules, ".team-page .team-alumni-table td")
+        self.assertIn("padding", cell)
+        self.assertIn("border-bottom", cell)
+
+    def test_name_is_a_bold_row_header_that_wraps(self):
+        name = declarations(self.rules, ".team-page .team-alumni-table tbody th")
+        self.assertEqual(name.get("font-weight"), "600")
+        # Wrapping beats nowrap here: a long name must not widen the table
+        # past the viewport, and the scroll container is the last resort.
+        self.assertNotEqual(name.get("white-space"), "nowrap")
+
+    def test_column_widths_are_proportional_and_sum_to_full_width(self):
+        widths = []
+        for index in range(1, 5):
+            decls = declarations(
+                self.rules,
+                f".team-page .team-alumni-table thead th:nth-child({index})",
+            )
+            self.assertRegex(decls.get("width", ""), r"^\d+%$")
+            widths.append(int(decls["width"].rstrip("%")))
+        self.assertEqual(sum(widths), 100)
+        self.assertGreater(widths[1], widths[2])  # role needs more than years
+
+    def test_years_use_tabular_numerals(self):
+        period = declarations(self.rules, ".team-page .team-alumni-period")
+        self.assertEqual(period.get("font-variant-numeric"), "tabular-nums")
+        self.assertEqual(period.get("white-space"), "nowrap")
+
+    def test_row_header_does_not_inherit_global_label_styling(self):
+        # ``table th`` in _custom-theme.scss is a small-caps label: uppercase,
+        # 0.1em tracking and nowrap.  Alumni names are ``th scope="row"``, so
+        # without an explicit reset they paint as tracked capitals that cannot
+        # wrap and spill out of the fixed-layout name column over the role.
+        name = declarations(self.rules, ".team-page .team-alumni-table tbody th")
+        self.assertEqual(name.get("white-space"), "normal")
+        self.assertEqual(name.get("text-transform"), "none")
+        self.assertEqual(name.get("letter-spacing"), "normal")
+
+    def test_column_headers_may_wrap_instead_of_spilling(self):
+        # The same global nowrap applies to the column headers.  "Last known
+        # position" is wider than its 25-28% column at the mobile table width,
+        # so it must be allowed to wrap rather than paint over "Years".
+        head = declarations(self.rules, ".team-page .team-alumni-table thead th")
+        self.assertEqual(head.get("white-space"), "normal")
+
+    def years_content_width(self, media: str | None = None) -> float:
+        """Content-box width in px of the years column at its minimum table width.
+
+        Worst-case "2000–2020" is nine glyphs at 0.82rem with tabular numerals
+        (measured ~64px in Inter).  If the column is narrower the nowrap range
+        paints into the next column.
+        """
+        table = declarations(self.rules, ".team-page .team-alumni-table", media)
+        cell = declarations(self.rules, ".team-page .team-alumni-table td", media)
+        years = declarations(
+            self.rules, ".team-page .team-alumni-table thead th:nth-child(3)", media
+        )
+        min_width = float(table["min-width"].removesuffix("rem")) * 16
+        padding = cell["padding"].split()
+        inline_padding = 2 * float(padding[1].removesuffix("rem")) * 16
+        share = float(years["width"].removesuffix("%")) / 100
+        return min_width * share - inline_padding
+
+    def test_desktop_years_column_has_room_at_the_minimum_table_width(self):
+        content_width = self.years_content_width()
+        self.assertGreaterEqual(
+            content_width,
+            64.0,
+            f"years column content is only {content_width:.1f}px wide",
+        )
+
+    def test_mobile_years_column_has_room_for_a_full_range(self):
+        content_width = self.years_content_width("media (max-width: 575.98px)")
+        self.assertGreaterEqual(
+            content_width,
+            64.0,
+            f"years column content is only {content_width:.1f}px wide",
+        )
+
+    def test_narrow_screens_tighten_padding_instead_of_dropping_columns(self):
+        mobile = declarations(
+            self.rules, ".team-page .team-alumni-table td", "media (max-width: 575.98px)"
+        )
+        self.assertIn("padding", mobile)
+
+    def test_narrow_screens_rebalance_columns_towards_names(self):
+        widths = []
+        for index in range(1, 5):
+            decls = declarations(
+                self.rules,
+                f".team-page .team-alumni-table thead th:nth-child({index})",
+                "media (max-width: 575.98px)",
+            )
+            widths.append(int(decls["width"].rstrip("%")))
+        self.assertEqual(sum(widths), 100)
+        self.assertGreater(widths[0], 22)  # more than the desktop share
+
+    def test_scroll_container_hints_overflow(self):
+        # Without a shadow or a scrollbar a phone user cannot tell that the
+        # table continues to the right.
+        scroll = declarations(self.rules, ".team-page .team-table-scroll")
+        self.assertIn("no-repeat local", scroll.get("background", ""))
+
+    def test_print_repeats_the_header_and_keeps_rows_whole(self):
+        head = declarations(
+            self.rules,
+            ".team-page .team-alumni-table thead",
+            "media print",
+        )
+        self.assertEqual(head.get("display"), "table-header-group")
+        row = declarations(
+            self.rules, ".team-page .team-alumni-table tr", "media print"
+        )
+        self.assertEqual(row.get("break-inside"), "avoid")
 
 
 if __name__ == "__main__":

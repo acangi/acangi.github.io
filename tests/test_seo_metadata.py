@@ -275,9 +275,17 @@ class SiteConfigTests(unittest.TestCase):
                 )
 
     def test_publication_page_keeps_its_own_description(self):
+        """The page keeps its own search copy, but as a scoped default.
+
+        `page.liquid` renders `page.description` above the article, and the
+        page's subtitle was removed on request.  The scoped `seo_description`
+        default in `_config.yml` still gives the page unique metadata.
+        """
         data = front_matter(PAGES_DIR / "publications.md")
-        self.assertTrue(data.get("description"))
+        self.assertNotIn("description", data)
         self.assertNotIn("seo_description", data)
+        values = defaults_by_scope(load_config()).get("_pages/publications.md", {})
+        self.assertTrue(values.get("seo_description"))
 
     def test_no_blanket_description_default_that_would_hide_page_text(self):
         """A global default would make every page look identical to crawlers."""
