@@ -1,60 +1,70 @@
-"""Tests for the all-links-open-in-new-tabs policy.
+"""Tests for the context-aware site link policy.
 
-The site-wide policy is implemented by
-``_plugins/open-links-in-new-tabs.rb``: a post-render hook rewrites every
-``<a>``/``<area>`` element with a non-empty ``href`` in rendered pages and
-documents, and injects one small runtime that applies the same rule to anchors
-inserted by client-side JavaScript.
+The policy is implemented by ``_plugins/open-links-in-new-tabs.rb``:
+
+* internal destinations (relative paths, fragments, queries, absolute URLs on
+  the configured site origin) navigate in the same browsing context, so they
+  must not carry ``target="_blank"``;
+* external HTTP(S) destinations, including protocol-relative URLs, open in a
+  new tab with both ``noopener`` and ``noreferrer`` while keeping any existing
+  ``rel`` tokens;
+* non-navigation destinations (``javascript:``, ``mailto:``, ``tel:``,
+  ``sms:``, ``data:``, ``blob:`` and links with ``download``) keep the browser
+  default: no target is added and ``mailto:`` is not forced into a new tab.
 
 Run the integration half against a built site::
 
     SITE_DIR=/tmp/site python -m pytest tests/test_all_links_new_tabs.py -v
 
-There are three groups of tests:
+There are several groups of tests:
 
-* :class:`RenderedLinkTests` inspects the actual built HTML and fails if any
-  rendered link with a non-empty ``href`` is missing ``target="_blank"`` or
-  either ``noopener``/``noreferrer``.
+* :class:`RenderedLinkTests` inspects the actual built HTML: no internal link
+  may still carry ``target="_blank"``, every external link must be secured,
+  and the skip link must navigate within the page again.
 * :class:`PluginTransformTests` unit-tests the Ruby transformer on fixtures,
-  including markup that must be preserved byte-for-byte (scripts, comments,
-  raw-text elements, quoted ``>`` characters, entities, and anchor-like text
-  inside another tag's quoted attribute value).
-* :class:`DynamicAnchorRuntimeTests` runs the injected runtime under Node with
-  a minimal DOM to prove that client-inserted anchors and late ``href``
-  changes are secured too.
-
-The policy is literal: same-document fragments (the skip link, table-of-contents
-links), ``mailto:``/``tel:``/``sms:``, ``data:``/``blob:`` URLs, and links with
-the ``download`` attribute all get ``target="_blank"`` plus both security
-tokens.  ``mailto:``/``tel:`` still hand off to the browser's protocol handler
-and ``download`` still hands off to the browser's download manager; the plugin
-keeps those schemes/attributes intact rather than replacing them.  The only
-exception is ``javascript:`` pseudo-links, which are UI controls, not
-navigations, and are left byte-for-byte unchanged.  A ``javascript:`` scheme
-spelled with character references (``href="&#106;avascript&#58;..."``) or split
-by ASCII tab/newline is recognised as a pseudo-link too, because browsers
-decode and normalize attribute URLs before parsing the scheme.
+  including deceptive look-alike hosts, credentials, ports, configured site
+  origins, escaping, protected regions and idempotency.  The static transform
+  never trusts ``localhost`` unless it is the configured site host.
+* :class:`DynamicAnchorRuntimeTests` runs the runtime generated from the
+  current plugin source under Node with a minimal DOM to prove that
+  client-inserted anchors and late ``href`` changes follow the same policy,
+  including WHATWG backslash-authority resolution.
+* :class:`BrowserMutationObserverTests` runs that same source runtime in real
+  Chromium with a real ``MutationObserver``, an actual preview HTTP origin and
+  a timer, to prove that observer writes are idempotent (no mutation feedback
+  loop), that backslash-deceptive hosts match the browser in both directions,
+  and that the runtime matches the browser's current origin rather than
+  trusting ``localhost`` by name.
+* ``RenderedLinkTests.test_injected_runtime_matches_current_plugin_source``
+  compares the runtime in the built pages with the source, so a stale build is
+  reported instead of silently passing the runtime tests.
 """
 
 from __future__ import annotations
 
 import html as html_module
+import http.server
 import json
 import os
 from pathlib import Path
 import re
 import shutil
 import subprocess
+import tempfile
+import threading
 import unittest
 from html.parser import HTMLParser
 from typing import Any
+from urllib.parse import urljoin, urlsplit
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PLUGIN_PATH = REPO_ROOT / "_plugins" / "open-links-in-new-tabs.rb"
 SITE_DIR = Path(os.environ.get("SITE_DIR", REPO_ROOT / "_site"))
 
-PSEUDO_SCHEMES = ("javascript:",)
+SITE_URL = "https://acangi.github.io"
+SITE_HOST = "acangi.github.io"
 SECURITY_TOKENS = ("noopener", "noreferrer")
+NON_NAVIGATION_SCHEMES = ("javascript", "mailto", "tel", "sms", "data", "blob")
 
 
 class AnchorCollector(HTMLParser):
@@ -79,18 +89,50 @@ def rel_tokens(anchor: dict[str, str | None]) -> list[str]:
     return (anchor.get("rel") or "").lower().split()
 
 
-def is_pseudo_link(anchor: dict[str, str | None]) -> bool:
-    """UI controls that are not navigations and stay untouched."""
+def normalize_href(href: str | None) -> str:
+    """Drop ASCII controls and surrounding whitespace like a URL parser."""
 
-    href = (anchor.get("href") or "").strip()
-    return href.lower().startswith(PSEUDO_SCHEMES)
+    return re.sub(r"[\t\n\r]", "", href or "").strip()
 
 
-def is_targeted(anchor: dict[str, str | None]) -> bool:
-    """An anchor/area with a non-empty, non-javascript href."""
+def link_kind(anchor: dict[str, str | None]) -> str:
+    """Classify an anchor as ``internal``, ``external`` or ``other``.
 
-    href = (anchor.get("href") or "").strip()
-    return bool(href) and not is_pseudo_link(anchor)
+    ``other`` covers missing/empty hrefs and browser-default destinations
+    (pseudo schemes, ``download`` links), which the policy leaves alone.
+    """
+
+    href = normalize_href(anchor.get("href"))
+    if not href or "download" in anchor:
+        return "other"
+
+    try:
+        parsed = urlsplit(href)
+    except ValueError:
+        return "external"
+
+    scheme = parsed.scheme.lower()
+    if scheme and scheme not in ("http", "https"):
+        return "other"
+
+    try:
+        absolute = urlsplit(urljoin(SITE_URL + "/", href))
+    except ValueError:
+        return "external"
+
+    if absolute.scheme not in ("http", "https") or not absolute.hostname:
+        return "other"
+
+    host = absolute.hostname.lower().rstrip(".")
+    if host != SITE_HOST:
+        return "external"
+
+    port = absolute.port
+    if port is None or (absolute.scheme == "https" and port == 443) or (
+        absolute.scheme == "http" and port == 80
+    ):
+        return "internal"
+    return "external"
 
 
 def rendered_pages(site: Path) -> list[Path]:
@@ -111,64 +153,80 @@ class RenderedLinkTests(unittest.TestCase):
         if not cls.pages:
             raise unittest.SkipTest(f"no rendered HTML under {SITE_DIR}")
 
-    def test_every_rendered_link_opens_in_a_new_tab(self) -> None:
+    def test_external_links_open_in_a_new_tab_with_security_tokens(self) -> None:
         checked = 0
         failures: list[str] = []
         for path in self.pages:
             page = path.relative_to(SITE_DIR)
             for anchor in collect_anchors(path.read_text(encoding="utf-8")):
-                if not is_targeted(anchor):
+                if link_kind(anchor) != "external":
                     continue
                 checked += 1
                 if anchor.get("target") != "_blank":
-                    failures.append(f"{page}: {anchor}")
-        self.assertGreater(checked, 400, "the rendered site should contain many links")
-        self.assertEqual([], failures, "links missing target=_blank")
+                    failures.append(f"{page}: missing target=_blank: {anchor}")
+                    continue
+                missing = [t for t in SECURITY_TOKENS if t not in rel_tokens(anchor)]
+                if missing:
+                    failures.append(f"{page}: missing {missing}: {anchor}")
+        self.assertGreater(checked, 20, "expected many external links")
+        self.assertEqual([], failures, "external links must open in a new tab")
 
-    def test_every_link_has_both_security_tokens(self) -> None:
-        failures: list[str] = []
+    def test_internal_links_navigate_in_the_same_tab(self) -> None:
         checked = 0
+        failures: list[str] = []
         for path in self.pages:
             page = path.relative_to(SITE_DIR)
             for anchor in collect_anchors(path.read_text(encoding="utf-8")):
-                if not is_targeted(anchor):
+                if link_kind(anchor) != "internal":
                     continue
                 checked += 1
-                tokens = rel_tokens(anchor)
-                missing = [token for token in SECURITY_TOKENS if token not in tokens]
-                if missing:
-                    failures.append(f"{page}: missing {missing}: {anchor}")
-        self.assertGreater(checked, 400)
-        self.assertEqual([], failures, "links missing noopener/noreferrer")
+                if anchor.get("target") is not None:
+                    failures.append(f"{page}: internal link has target: {anchor}")
+                leftover = [t for t in SECURITY_TOKENS if t in rel_tokens(anchor)]
+                if leftover:
+                    failures.append(f"{page}: internal link has {leftover}: {anchor}")
+        self.assertGreater(checked, 50, "expected many internal links")
+        self.assertEqual([], failures, "internal links must stay in the same tab")
+
+    def test_absolute_canonical_site_links_stay_in_the_same_tab(self) -> None:
+        canonical = []
+        for path in self.pages:
+            canonical.extend(
+                anchor
+                for anchor in collect_anchors(path.read_text(encoding="utf-8"))
+                if normalize_href(anchor.get("href")).startswith(SITE_URL)
+            )
+        self.assertTrue(canonical, "expected absolute canonical site links")
+        for anchor in canonical:
+            with self.subTest(href=anchor.get("href")):
+                self.assertIsNone(anchor.get("target"))
+                self.assertFalse(set(SECURITY_TOKENS) & set(rel_tokens(anchor)))
+
+    def test_no_rendered_link_has_an_unwanted_blank_target(self) -> None:
+        failures: list[str] = []
+        for path in self.pages:
+            page = path.relative_to(SITE_DIR)
+            for anchor in collect_anchors(path.read_text(encoding="utf-8")):
+                if anchor.get("target") != "_blank":
+                    continue
+                kind = link_kind(anchor)
+                if kind != "external":
+                    failures.append(f"{page}: unwanted target=_blank ({kind}): {anchor}")
+        self.assertEqual([], failures)
 
     def test_every_blank_target_is_secure(self) -> None:
         failures: list[str] = []
         for path in self.pages:
             page = path.relative_to(SITE_DIR)
             for anchor in collect_anchors(path.read_text(encoding="utf-8")):
-                if is_pseudo_link(anchor) or anchor.get("target") != "_blank":
+                if anchor.get("target") != "_blank":
                     continue
-                tokens = rel_tokens(anchor)
-                missing = [token for token in SECURITY_TOKENS if token not in tokens]
+                missing = [t for t in SECURITY_TOKENS if t not in rel_tokens(anchor)]
                 if missing:
                     failures.append(f"{page}: target=_blank missing {missing}: {anchor}")
         self.assertEqual([], failures)
 
-    def test_internal_navigation_links_are_included(self) -> None:
-        index = (SITE_DIR / "index.html").read_text(encoding="utf-8")
-        internal = [
-            anchor
-            for anchor in collect_anchors(index)
-            if (anchor.get("href") or "").startswith(("/", "./", "../"))
-            and not (anchor.get("href") or "").startswith("//")
-        ]
-        self.assertTrue(internal, "expected internal links on the homepage")
-        for anchor in internal:
-            with self.subTest(anchor=anchor.get("href")):
-                self.assertEqual("_blank", anchor.get("target"))
-                self.assertTrue(set(SECURITY_TOKENS).issubset(rel_tokens(anchor)))
-
-    def test_skip_link_also_opens_in_a_new_tab(self) -> None:
+    def test_skip_link_restores_same_page_navigation(self) -> None:
         index = (SITE_DIR / "index.html").read_text(encoding="utf-8")
         skip_links = [
             anchor
@@ -178,30 +236,42 @@ class RenderedLinkTests(unittest.TestCase):
         self.assertTrue(skip_links, "missing skip link")
         for anchor in skip_links:
             self.assertTrue((anchor.get("href") or "").startswith("#"))
-            self.assertEqual("_blank", anchor.get("target"))
-            self.assertTrue(set(SECURITY_TOKENS).issubset(rel_tokens(anchor)))
+            self.assertIsNone(anchor.get("target"))
+            self.assertFalse(set(SECURITY_TOKENS) & set(rel_tokens(anchor)))
 
-    def test_email_and_telephone_links_keep_their_scheme(self) -> None:
-        mailtos: list[dict[str, str | None]] = []
+    def test_email_and_telephone_links_are_not_forced_into_a_new_tab(self) -> None:
+        contacts: list[dict[str, str | None]] = []
         for path in self.pages:
             for anchor in collect_anchors(path.read_text(encoding="utf-8")):
-                href = (anchor.get("href") or "").lower()
+                href = normalize_href(anchor.get("href")).lower()
                 if href.startswith(("mailto:", "tel:")):
-                    mailtos.append(anchor)
-        self.assertTrue(mailtos, "expected at least one email link")
-        for anchor in mailtos:
+                    contacts.append(anchor)
+        self.assertTrue(contacts, "expected at least one email link")
+        for anchor in contacts:
             with self.subTest(href=anchor.get("href")):
-                self.assertTrue((anchor.get("href") or "").lower().startswith(("mailto:", "tel:")))
-                self.assertEqual("_blank", anchor.get("target"))
-                self.assertTrue(set(SECURITY_TOKENS).issubset(rel_tokens(anchor)))
+                self.assertIsNone(anchor.get("target"))
+                self.assertFalse(set(SECURITY_TOKENS) & set(rel_tokens(anchor)))
+
+    def test_javascript_pseudo_links_are_left_unchanged(self) -> None:
+        for path in self.pages:
+            for anchor in collect_anchors(path.read_text(encoding="utf-8")):
+                if not normalize_href(anchor.get("href")).lower().startswith("javascript:"):
+                    continue
+                self.assertIsNone(anchor.get("target"))
+                self.assertIsNone(anchor.get("rel"))
 
     def test_no_link_forces_the_opener_relationship(self) -> None:
         for path in self.pages:
             for anchor in collect_anchors(path.read_text(encoding="utf-8")):
-                if is_pseudo_link(anchor):
+                if link_kind(anchor) == "other" and normalize_href(
+                    anchor.get("href")
+                ).lower().startswith("javascript:"):
                     continue
-                self.assertNotIn("opener", rel_tokens(anchor),
-                                 f"{path}: rel=opener is unsafe")
+                self.assertNotIn(
+                    "opener",
+                    rel_tokens(anchor),
+                    f"{path}: rel=opener is unsafe",
+                )
 
     def test_dynamic_runtime_is_injected_once_per_page(self) -> None:
         for path in self.pages:
@@ -215,6 +285,23 @@ class RenderedLinkTests(unittest.TestCase):
                 self.assertEqual(1, len(runtimes), "expected exactly one runtime")
                 self.assertIn("MutationObserver", runtimes[0])
                 self.assertIn("querySelectorAll", runtimes[0])
+                self.assertIn(SITE_HOST, runtimes[0])
+
+    def test_injected_runtime_matches_current_plugin_source(self) -> None:
+        # Runtime behaviour tests must not silently exercise an old build.
+        source = source_runtime()
+        if source is None:
+            self.skipTest("ruby is not available to derive the runtime from source")
+        for path in self.pages:
+            with self.subTest(page=path.relative_to(SITE_DIR)):
+                built = extract_runtime(path.read_text(encoding="utf-8"))
+                self.assertIsNotNone(built, "runtime missing from built page")
+                self.assertEqual(
+                    source,
+                    built,
+                    "built runtime differs from the current plugin source; "
+                    "rebuild the site before trusting rendered results",
+                )
 
 
 def _ruby_command() -> list[str] | None:
@@ -263,6 +350,85 @@ def _ruby_command() -> list[str] | None:
     ]
 
 
+def _chrome_command() -> list[str] | None:
+    """Return a real Chromium/Chrome binary for browser-level tests."""
+
+    candidates = []
+    configured = os.environ.get("CHROME_BIN")
+    if configured:
+        candidates.append(configured)
+    for name in (
+        "chromium",
+        "chromium-browser",
+        "google-chrome",
+        "google-chrome-stable",
+        "chrome",
+    ):
+        found = shutil.which(name)
+        if found:
+            candidates.append(found)
+    candidates.extend(
+        sorted(str(path) for path in Path.home().glob(".hermes/tools/chromium-*/chrome-linux64/chrome"))
+    )
+
+    for candidate in candidates:
+        if candidate and Path(candidate).is_file() and os.access(candidate, os.X_OK):
+            return [str(candidate)]
+    return None
+
+
+RUNTIME_PATTERN = re.compile(
+    r"<script\b[^>]*\bdata-all-links-new-tab\b[^>]*>(.*?)</script>",
+    re.S | re.I,
+)
+
+
+def extract_runtime(markup: str) -> str | None:
+    """Return the injected runtime body, or ``None`` when it is absent."""
+
+    match = RUNTIME_PATTERN.search(markup)
+    return html_module.unescape(match.group(1)) if match else None
+
+
+def plugin_argument(ruby: list[str]) -> str:
+    """Path to the plugin as seen by the Ruby process (or container)."""
+
+    return str(PLUGIN_PATH) if ruby[0] == "ruby" else (
+        f"/work/{PLUGIN_PATH.relative_to(REPO_ROOT)}"
+    )
+
+
+def source_runtime() -> str | None:
+    """Generate the runtime from the *current* plugin source.
+
+    The built site may lag behind the plugin (or a previous build may still be
+    on disk).  Runtime tests must exercise the source, and a separate test
+    compares the built page against this value so a stale build is reported
+    instead of silently passing.
+    """
+
+    ruby = _ruby_command()
+    if ruby is None:
+        return None
+    markup = "<!doctype html><html><body></body></html>"
+    code = (
+        "STDOUT.write(Jekyll::AllLinksInNewTabs.transform("
+        f"{json.dumps(markup)}))"
+    )
+    result = subprocess.run(
+        ruby + ["-r", plugin_argument(ruby), "-e", code],
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(result.stderr)
+    runtime = extract_runtime(result.stdout)
+    if runtime is None:
+        raise RuntimeError("plugin did not inject a runtime")
+    return runtime
+
+
 @unittest.skipUnless(PLUGIN_PATH.is_file(), "plugin not implemented yet")
 class PluginTransformTests(unittest.TestCase):
     @classmethod
@@ -277,12 +443,16 @@ class PluginTransformTests(unittest.TestCase):
             else f"/work/{PLUGIN_PATH.relative_to(REPO_ROOT)}"
         )
 
-    def transform(self, markup: str) -> str:
+    def transform(self, markup: str, site_url: str | None = None) -> str:
+        call = "Jekyll::AllLinksInNewTabs.transform(STDIN.read"
+        if site_url is not None:
+            call += f", site_url: {json.dumps(site_url)}"
+        call += ")"
         command = self.ruby + [
             "-r",
             self.plugin_arg,
             "-e",
-            "STDOUT.write(Jekyll::AllLinksInNewTabs.transform(STDIN.read))",
+            f"STDOUT.write({call})",
         ]
         result = subprocess.run(
             command, input=markup, text=True, capture_output=True, check=False
@@ -290,34 +460,271 @@ class PluginTransformTests(unittest.TestCase):
         self.assertEqual(0, result.returncode, result.stderr)
         return result.stdout
 
-    def test_external_and_internal_links_are_rewritten(self) -> None:
-        output = self.transform(
-            '<p>Hi</p><a href="https://example.org">out</a>'
-            '<a href="/team/">in</a>'
+    def anchor(self, markup: str, site_url: str | None = None) -> dict[str, str | None]:
+        return collect_anchors(self.transform(markup, site_url))[0]
+
+    def test_external_destinations_open_in_a_new_tab(self) -> None:
+        cases = (
+            "https://example.org",
+            "http://example.org/path",
+            "//cdn.example.org/lib.js",
+            "https://example.org/?next=https://acangi.github.io/",
+            "https://example.org/acangi.github.io/",
         )
-        self.assertIn(
-            '<a href="https://example.org" target="_blank" rel="noopener noreferrer">out</a>',
-            output,
+        for href in cases:
+            with self.subTest(href=href):
+                anchor = self.anchor(f'<a href="{href}">x</a>')
+                self.assertEqual("_blank", anchor["target"])
+                self.assertTrue(set(SECURITY_TOKENS).issubset(rel_tokens(anchor)))
+
+    def test_internal_destinations_stay_in_the_same_tab(self) -> None:
+        cases = (
+            "/team/",
+            "team/",
+            "./team/",
+            "../team/",
+            "/research/#quantum",
+            "#main-content",
+            "?page=2",
+            "https://acangi.github.io/",
+            "https://acangi.github.io/team/",
+            "https://acangi.github.io./team/",
+            "https://acangi.github.io:443/team/",
+            "http://acangi.github.io/team/",
+            "//acangi.github.io/team/",
         )
-        self.assertIn(
-            '<a href="/team/" target="_blank" rel="noopener noreferrer">in</a>',
-            output,
+        for href in cases:
+            with self.subTest(href=href):
+                anchor = self.anchor(f'<a href="{href}">x</a>')
+                self.assertIsNone(anchor.get("target"))
+                self.assertIsNone(anchor.get("rel"))
+
+    def test_look_alike_hosts_are_external(self) -> None:
+        cases = (
+            "https://acangi.github.io.evil.example/team/",
+            "https://www.acangi.github.io/team/",
+            "https://acangi.github.io:8443/team/",
+            "https://acangi.github.io.evil.example:443/",
+            "https://user:secret@evil.example/acangi.github.io/",
+            "https://user@attacker.example/team/",
+            "http://localhost.evil.example/team/",
+            "https://evil.example/?host=acangi.github.io",
         )
+        for href in cases:
+            with self.subTest(href=href):
+                anchor = self.anchor(f'<a href="{href}">x</a>')
+                self.assertEqual("_blank", anchor["target"])
+                self.assertTrue(set(SECURITY_TOKENS).issubset(rel_tokens(anchor)))
+
+    def test_backslash_in_special_url_authority_matches_browser(self) -> None:
+        # WHATWG treats "\" as "/" for special schemes before the authority
+        # is parsed, so the host the browser visits can differ from the text
+        # after the last "@".  A substring search or a split on "/?#" alone
+        # would invert both of these cases.
+        external = (
+            r"https://attacker.example\@acangi.github.io/team/",
+            r"https://evil.example\/@acangi.github.io/",
+            r"https:///evil.example/team/",
+            r"https:\\evil.example\path",
+            r"\\evil.example\team/",
+            r"/\evil.example/team/",
+        )
+        for href in external:
+            with self.subTest(href=href):
+                anchor = self.anchor(f'<a href="{href}">x</a>')
+                self.assertEqual("_blank", anchor["target"], href)
+                self.assertTrue(set(SECURITY_TOKENS).issubset(rel_tokens(anchor)))
+
+        internal = (
+            r"https://acangi.github.io\@evil.example/team/",
+            r"https://acangi.github.io\/@evil.example/team/",
+            r"\\acangi.github.io\team\/",
+        )
+        for href in internal:
+            with self.subTest(href=href):
+                anchor = self.anchor(f'<a href="{href}">x</a>')
+                self.assertIsNone(anchor.get("target"), href)
+                self.assertIsNone(anchor.get("rel"), href)
+
+    def test_same_scheme_relative_urls_match_browser_resolution(self) -> None:
+        # A special URL whose scheme equals the base scheme and that does not
+        # start with "//" (or "\\") is resolved relative to the current page,
+        # not as an absolute URL with that host.
+        internal = (
+            "https:acangi.github.io/team",
+            "https:evil.example/team",
+            "https:/evil.example/team",
+            "https:\\evil.example/team",
+        )
+        for href in internal:
+            with self.subTest(href=href):
+                anchor = self.anchor(f'<a href="{href}">x</a>')
+                self.assertIsNone(anchor.get("target"), href)
+
+        external = (
+            "https://evil.example/team",
+            r"https:\\evil.example\team",
+            r"\\evil.example\team",
+        )
+        for href in external:
+            with self.subTest(href=href):
+                anchor = self.anchor(f'<a href="{href}">x</a>')
+                self.assertEqual("_blank", anchor["target"], href)
+
+    def test_invalid_configured_site_url_falls_back_to_production_origin(self) -> None:
+        # A malformed site_url must not become a host (or scheme) that no
+        # browser can visit; fall back to the production origin instead.
+        markup = (
+            '<!doctype html><html><body>'
+            '<a href="https://acangi.github.io/team/">internal</a>'
+            '<a href="https://example.org/team/">external</a>'
+            "</body></html>"
+        )
+        for bad in (
+            "not a url",
+            "https://",
+            "https://exa mple.com",
+            "https://-bad-.example",
+            "https://acangi.github.io:99999",
+            "https://acangi.github.io:notaport",
+            "https:acangi.github.io",
+            "ftp://example.test",
+        ):
+            with self.subTest(site_url=bad):
+                output = self.transform(markup, site_url=bad)
+                anchors = collect_anchors(output)
+                self.assertIsNone(anchors[0].get("target"), "fallback host")
+                self.assertEqual("_blank", anchors[1]["target"])
+                runtime = extract_runtime(output) or ""
+                self.assertIn('"acangi.github.io"', runtime)
+                self.assertIn('"https"', runtime)
+                self.assertNotIn('"not a url"', runtime)
+                self.assertNotIn('"exa mple.com"', runtime)
+                self.assertNotIn('"ftp"', runtime)
+
+    def test_credentials_on_the_canonical_host_still_reach_the_canonical_host(self) -> None:
+        anchor = self.anchor('<a href="https://user:secret@acangi.github.io/team/">x</a>')
+        self.assertIsNone(anchor.get("target"))
+
+    def test_configured_site_url_defines_the_internal_host(self) -> None:
+        internal = self.anchor(
+            '<a href="https://example.test/team/">x</a>',
+            site_url="https://example.test",
+        )
+        self.assertIsNone(internal.get("target"))
+
+        external = self.anchor(
+            '<a href="https://acangi.github.io/team/">x</a>',
+            site_url="https://example.test",
+        )
+        self.assertEqual("_blank", external["target"])
+
+    def test_configured_site_url_port_is_part_of_the_origin(self) -> None:
+        same_origin = self.anchor(
+            '<a href="https://example.test:8443/team/">x</a>',
+            site_url="https://example.test:8443",
+        )
+        self.assertIsNone(same_origin.get("target"))
+
+        default_port = self.anchor(
+            '<a href="https://example.test/team/">x</a>',
+            site_url="https://example.test:8443",
+        )
+        self.assertEqual("_blank", default_port["target"])
+
+        different_port = self.anchor(
+            '<a href="https://example.test:8443/team/">x</a>',
+            site_url="https://example.test",
+        )
+        self.assertEqual("_blank", different_port["target"])
+
+        scheme_less = self.anchor(
+            '<a href="https://example.test:8443/team/">x</a>',
+            site_url="example.test:8443",
+        )
+        self.assertIsNone(scheme_less.get("target"))
+
+    def test_local_preview_hosts_are_external_on_the_production_origin(self) -> None:
+        # The static build runs on acangi.github.io; localhost is a different
+        # host there and must not be trusted just because it is a preview name.
+        cases = (
+            "http://localhost:4000/team/",
+            "http://127.0.0.1:4000/team/",
+            "//localhost:4000/team/",
+            "http://localhost.evil.example/team/",
+        )
+        for href in cases:
+            with self.subTest(href=href):
+                anchor = self.anchor(f'<a href="{href}">x</a>')
+                self.assertEqual("_blank", anchor["target"])
+                self.assertTrue(set(SECURITY_TOKENS).issubset(rel_tokens(anchor)))
+
+    def test_configured_local_preview_origin_is_internal(self) -> None:
+        same_origin = self.anchor(
+            '<a href="http://localhost:4000/team/">x</a>',
+            site_url="http://localhost:4000",
+        )
+        self.assertIsNone(same_origin.get("target"))
+
+        different_host = self.anchor(
+            '<a href="http://127.0.0.1:4000/team/">x</a>',
+            site_url="http://localhost:4000",
+        )
+        self.assertEqual("_blank", different_host["target"])
+
+        different_port = self.anchor(
+            '<a href="http://localhost:5000/team/">x</a>',
+            site_url="http://localhost:4000",
+        )
+        self.assertEqual("_blank", different_port["target"])
+
+    def test_non_navigation_schemes_keep_the_browser_default(self) -> None:
+        cases = (
+            '<a href="mailto:a@example.org">m</a>',
+            '<a href="tel:+123">t</a>',
+            '<a href="sms:+123">s</a>',
+            '<a href="data:text/plain,hello">d</a>',
+            '<a href="blob:https://acangi.github.io/id">b</a>',
+            '<a href="/paper.pdf" download>pdf</a>',
+            '<a href="https://example.org/paper.pdf" download>pdf</a>',
+        )
+        for markup in cases:
+            with self.subTest(markup=markup):
+                self.assertEqual(markup, self.transform(markup))
 
     def test_existing_rel_is_merged_and_opener_is_removed(self) -> None:
-        output = self.transform(
+        anchor = self.anchor(
             '<a href="https://example.org" rel="external nofollow opener">x</a>'
         )
-        self.assertIn(
-            'rel="external nofollow noopener noreferrer"', output
-        )
-        self.assertNotIn("opener", rel_tokens(collect_anchors(output)[0]))
-
-    def test_existing_target_is_normalized(self) -> None:
-        output = self.transform('<a href="/team/" target="_self">x</a>')
-        anchor = collect_anchors(output)[0]
-        self.assertEqual("_blank", anchor["target"])
+        self.assertEqual("external nofollow", " ".join(rel_tokens(anchor)[:2]))
+        self.assertNotIn("opener", rel_tokens(anchor))
         self.assertTrue(set(SECURITY_TOKENS).issubset(rel_tokens(anchor)))
+
+    def test_unwanted_internal_blank_is_removed_even_from_earlier_output(self) -> None:
+        cases = (
+            '<a href="/team/" target="_blank" rel="noopener noreferrer">x</a>',
+            "<a href='#main-content' target='_blank' rel='noopener noreferrer'>x</a>",
+            '<a href="https://acangi.github.io/team/" target="_blank" '
+            'rel="noopener noreferrer external">x</a>',
+            '<a href="/team/" target="_blank">x</a>',
+        )
+        for markup in cases:
+            with self.subTest(markup=markup):
+                anchor = self.anchor(markup)
+                self.assertIsNone(anchor.get("target"))
+                if "external" in markup:
+                    self.assertEqual(["external"], rel_tokens(anchor))
+                else:
+                    self.assertIsNone(anchor.get("rel"))
+
+    def test_internal_links_keep_unrelated_rel_tokens(self) -> None:
+        anchor = self.anchor('<a href="/team/" rel="me nofollow">x</a>')
+        self.assertEqual(["me", "nofollow"], rel_tokens(anchor))
+        self.assertIsNone(anchor.get("target"))
+
+    def test_explicit_self_target_on_internal_link_is_preserved(self) -> None:
+        markup = '<a href="/team/" target="_self">x</a>'
+        self.assertEqual(markup, self.transform(markup))
 
     def test_body_text_inside_a_script_does_not_receive_the_runtime(self) -> None:
         markup = (
@@ -329,26 +736,6 @@ class PluginTransformTests(unittest.TestCase):
         self.assertIn("<script>var closing = '</body>';</script>", output)
         self.assertEqual(1, output.count("data-all-links-new-tab"))
         self.assertLess(output.index("data-all-links-new-tab"), output.rindex("</body>"))
-
-    def test_fragments_email_telephone_download_and_data_links_are_targeted(self) -> None:
-        cases = (
-            ('<a class="skip-link" href="#main-content">Skip</a>', "#main-content"),
-            ('<a href="mailto:a@example.org">mail</a>', "mailto:a@example.org"),
-            ('<a href="tel:+123">phone</a>', "tel:+123"),
-            ('<a href="sms:+123">sms</a>', "sms:+123"),
-            ('<a href="data:text/plain,hello">data</a>', "data:text/plain,hello"),
-            ('<a href="blob:https://example.org/id">blob</a>', "blob:https://example.org/id"),
-            ('<a href="/paper.pdf" download>pdf</a>', "/paper.pdf"),
-        )
-        for markup, href in cases:
-            with self.subTest(href=href):
-                output = self.transform(markup)
-                anchor = collect_anchors(output)[0]
-                self.assertEqual(href, anchor["href"])
-                self.assertEqual("_blank", anchor["target"])
-                self.assertTrue(set(SECURITY_TOKENS).issubset(rel_tokens(anchor)))
-                if "download" in markup:
-                    self.assertIn("download", anchor)
 
     def test_javascript_pseudo_links_are_left_alone(self) -> None:
         links = (
@@ -407,12 +794,6 @@ class PluginTransformTests(unittest.TestCase):
         self.assertEqual(1, output.count("data-all-links-new-tab"))
 
     def test_anchor_markup_inside_a_quoted_attribute_is_preserved(self) -> None:
-        """Literal ``<a>`` text inside another tag's attribute is not markup.
-
-        Only real anchor start tags may be rewritten; a quoted attribute value
-        must stay byte-for-byte intact even when it contains anchor-like text.
-        """
-
         markup = (
             '<div title="a > b" data-html="<a href=\'/x\'>n</a>">'
             "<a href=\"/real\">real</a></div>"
@@ -423,11 +804,10 @@ class PluginTransformTests(unittest.TestCase):
             '<div title="a > b" data-html="<a href=\'/x\'>n</a>">', output
         )
         self.assertIn('<div data-html=\'<a href="/y">m</a>\'>', output)
-        self.assertEqual(1, output.count("target="))
+        self.assertEqual(0, output.count("target="))
         anchors = collect_anchors(output)
         self.assertEqual(["/real"], [anchor["href"] for anchor in anchors])
-        self.assertEqual("_blank", anchors[0]["target"])
-        self.assertTrue(set(SECURITY_TOKENS).issubset(rel_tokens(anchors[0])))
+        self.assertIsNone(anchors[0].get("target"))
 
     def test_entity_escaped_attribute_text_is_preserved(self) -> None:
         markup = (
@@ -445,7 +825,7 @@ class PluginTransformTests(unittest.TestCase):
         output = self.transform(markup)
         self.assertIn('<title><a href="/t">t</a></title>', output)
         self.assertIn('<xmp><a href="/x">x</a></xmp>', output)
-        self.assertEqual(1, output.count("target="))
+        self.assertEqual(0, output.count("target="))
         self.assertEqual(1, output.count('href="/real"'))
 
     def test_entity_encoded_javascript_pseudo_links_are_left_alone(self) -> None:
@@ -464,14 +844,12 @@ class PluginTransformTests(unittest.TestCase):
                 self.assertEqual(link, self.transform(link))
 
         encoded_url = '<a href="https://example.org/?a=1&amp;b=2">x</a>'
-        anchor = collect_anchors(self.transform(encoded_url))[0]
+        anchor = self.anchor(encoded_url)
         # HTMLParser decodes character references in attribute values.
         self.assertEqual("https://example.org/?a=1&b=2", anchor["href"])
         self.assertEqual("_blank", anchor["target"])
 
     def test_end_tags_and_declarations_are_copied_as_a_unit(self) -> None:
-        """Only real anchor start tags count; tag syntax is never re-entered."""
-
         markup = (
             "<!doctype html><html><body>"
             '<div data-x="<a href=\'/bad\'>">x</div>'
@@ -483,13 +861,14 @@ class PluginTransformTests(unittest.TestCase):
         self.assertIn('<div data-x="<a href=\'/bad\'>">x</div>', output)
         self.assertIn('</div data-y="<a href=\'/bad2\'>">', output)
         self.assertIn('<?xml-stylesheet href="<a href=\'/bad\'>"?>', output)
-        self.assertEqual(1, output.count("target="))
+        self.assertEqual(0, output.count("target="))
 
     def test_transform_is_idempotent(self) -> None:
         markup = (
             "<!doctype html><html><body>"
             '<a href="https://example.org" rel="noopener">x</a>'
             '<a href="/team/">in</a>'
+            '<a href="/team/" target="_blank" rel="noopener noreferrer">old</a>'
             "</body></html>"
         )
         once = self.transform(markup)
@@ -498,39 +877,40 @@ class PluginTransformTests(unittest.TestCase):
         self.assertEqual(1, twice.count("data-all-links-new-tab"))
 
     def test_area_elements_are_links_too(self) -> None:
-        output = self.transform('<map><area href="/team/" alt="team"></map>')
-        anchor = collect_anchors(output)[0]
-        self.assertEqual("_blank", anchor["target"])
-        self.assertTrue(set(SECURITY_TOKENS).issubset(rel_tokens(anchor)))
+        internal = self.anchor('<map><area href="/team/" alt="team"></map>')
+        self.assertIsNone(internal.get("target"))
+
+        external = self.anchor('<map><area href="https://example.org/" alt="x"></map>')
+        self.assertEqual("_blank", external["target"])
+        self.assertTrue(set(SECURITY_TOKENS).issubset(rel_tokens(external)))
 
     def test_self_closing_and_unquoted_values_keep_their_urls(self) -> None:
         output = self.transform(
             '<map><area href="/team/"/>'
-            '<area href="/team/" /></map><a href=/team/>x</a>'
+            '<area href="https://example.org/" /></map><a href=/team/>x</a>'
         )
         anchors = collect_anchors(output)
-        self.assertEqual(["/team/", "/team/", "/team/"], [a["href"] for a in anchors])
-        for anchor in anchors:
-            self.assertEqual("_blank", anchor["target"])
-            self.assertTrue(set(SECURITY_TOKENS).issubset(rel_tokens(anchor)))
+        self.assertEqual(
+            ["/team/", "https://example.org/", "/team/"],
+            [a["href"] for a in anchors],
+        )
+        self.assertIsNone(anchors[0].get("target"))
+        self.assertEqual("_blank", anchors[1]["target"])
+        self.assertIsNone(anchors[2].get("target"))
 
 
-@unittest.skipUnless(SITE_DIR.is_dir(), "build the site or set SITE_DIR")
 class DynamicAnchorRuntimeTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         if not shutil.which("node"):
             raise unittest.SkipTest("node is not available")
-        index = SITE_DIR / "index.html"
-        markup = index.read_text(encoding="utf-8")
-        match = re.search(
-            r"<script\b[^>]*\bdata-all-links-new-tab\b[^>]*>(.*?)</script>",
-            markup,
-            re.S | re.I,
-        )
-        if not match:
-            raise unittest.SkipTest("runtime not injected into the built site")
-        cls.runtime = html_module.unescape(match.group(1))
+        # Always exercise the runtime generated from the current plugin source;
+        # test_injected_runtime_matches_current_plugin_source() reports when the
+        # built site has not caught up with it.
+        runtime = source_runtime()
+        if runtime is None:
+            raise unittest.SkipTest("ruby is not available to derive the runtime")
+        cls.runtime = runtime
 
     def run_runtime(self, anchors: list[dict[str, object]]) -> dict[str, Any]:
         """Evaluate the runtime against fake anchors and return their state."""
@@ -538,16 +918,19 @@ class DynamicAnchorRuntimeTests(unittest.TestCase):
         harness = r"""
 const vm = require("vm");
 
-const anchors = JSON.parse(process.argv[1]).map((spec) => {
-  const attrs = Object.assign({}, spec.attrs);
+function element(spec, attrs) {
   return {
+    nodeType: 1,
     tagName: (spec.tag || "A").toUpperCase(),
-    getAttribute(name) { return Object.prototype.hasOwnProperty.call(attrs, name) ? attrs[name] : null; },
-    setAttribute(name, value) { attrs[name] = String(value); },
-    hasAttribute(name) { return Object.prototype.hasOwnProperty.call(attrs, name); },
     attrs,
+    getAttribute(name) { return Object.prototype.hasOwnProperty.call(this.attrs, name) ? this.attrs[name] : null; },
+    setAttribute(name, value) { this.attrs[name] = String(value); },
+    removeAttribute(name) { delete this.attrs[name]; },
+    hasAttribute(name) { return Object.prototype.hasOwnProperty.call(this.attrs, name); },
   };
-});
+}
+
+const anchors = JSON.parse(process.argv[1]).map((spec) => element(spec, Object.assign({}, spec.attrs)));
 let observerCallback = null;
 class FakeMutationObserver {
   constructor(callback) { observerCallback = callback; }
@@ -555,6 +938,7 @@ class FakeMutationObserver {
 }
 const document = {
   readyState: "complete",
+  baseURI: "https://acangi.github.io/",
   documentElement: {},
   addEventListener() {},
   querySelectorAll(selector) {
@@ -563,34 +947,30 @@ const document = {
     );
   },
 };
-const sandbox = { document, window: { MutationObserver: FakeMutationObserver }, console };
+const window = {
+  MutationObserver: FakeMutationObserver,
+  location: { href: "https://acangi.github.io/", hostname: "acangi.github.io", protocol: "https:", port: "" },
+};
+const sandbox = { document, window, console, URL };
 vm.runInNewContext(process.argv[2], sandbox);
 
-const dynamic = {
-  nodeType: 1,
-  tagName: "A",
-  getAttribute(name) { return Object.prototype.hasOwnProperty.call(this.attrs, name) ? this.attrs[name] : null; },
-  setAttribute(name, value) { this.attrs[name] = String(value); },
-  hasAttribute(name) { return Object.prototype.hasOwnProperty.call(this.attrs, name); },
-  attrs: { href: "https://dynamic.example/path" },
-};
-observerCallback([{ type: "childList", addedNodes: [dynamic] }]);
+const dynamicExternal = element({}, { href: "https://dynamic.example/path" });
+observerCallback([{ type: "childList", addedNodes: [dynamicExternal] }]);
 
-const late = {
-  nodeType: 1,
-  tagName: "A",
-  getAttribute(name) { return Object.prototype.hasOwnProperty.call(this.attrs, name) ? this.attrs[name] : null; },
-  setAttribute(name, value) { this.attrs[name] = String(value); },
-  hasAttribute(name) { return Object.prototype.hasOwnProperty.call(this.attrs, name); },
-  attrs: {},
-};
+const dynamicInternal = element({}, { href: "/team/" });
+observerCallback([{ type: "childList", addedNodes: [dynamicInternal] }]);
+
+const late = element({}, {});
 observerCallback([{ type: "childList", addedNodes: [late] }]);
 late.attrs.href = "https://late.example/";
+observerCallback([{ type: "attributes", target: late }]);
+late.attrs.href = "/team/";
 observerCallback([{ type: "attributes", target: late }]);
 
 process.stdout.write(JSON.stringify({
   static: anchors.map((anchor) => anchor.attrs),
-  dynamic: dynamic.attrs,
+  dynamicExternal: dynamicExternal.attrs,
+  dynamicInternal: dynamicInternal.attrs,
   late: late.attrs,
 }));
 """
@@ -604,39 +984,255 @@ process.stdout.write(JSON.stringify({
         self.assertEqual(0, result.returncode, result.stderr)
         return json.loads(result.stdout)
 
-    def test_static_dynamic_and_late_links_are_all_secured(self) -> None:
+    def test_static_links_follow_the_context_aware_policy(self) -> None:
         result = self.run_runtime(
             [
                 {"attrs": {"href": "https://static.example"}},
+                {"attrs": {"href": "//cdn.example/lib.js"}},
+                {"attrs": {"href": "https://acangi.github.io.evil.example/x"}},
                 {"attrs": {"href": "/internal/"}},
                 {"attrs": {"href": "#main-content", "class": "skip-link"}},
+                {
+                    "attrs": {
+                        "href": "/stale/",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                    }
+                },
+                {"attrs": {"href": "https://acangi.github.io/team/"}},
                 {"attrs": {"href": "mailto:a@example.org"}},
                 {"attrs": {"href": "/paper.pdf", "download": ""}},
                 {"attrs": {"href": "tel:+123"}},
                 {"attrs": {"href": "javascript:void(0)"}},
                 {"attrs": {"href": "java\tscript:void(0)"}},
+                {"attrs": {"href": "https://acangi.github.io:8443/x"}},
             ]
         )
         static = result["static"]
-        for index in range(6):
+        for index in range(3):
             with self.subTest(anchor=static[index]):
                 self.assertEqual("_blank", static[index]["target"])
                 self.assertIn("noopener", static[index]["rel"])
                 self.assertIn("noreferrer", static[index]["rel"])
-        self.assertEqual("mailto:a@example.org", static[3]["href"])
-        self.assertEqual("/paper.pdf", static[4]["href"])
-        self.assertIn("download", static[4])
-        self.assertEqual("tel:+123", static[5]["href"])
-        self.assertNotIn("target", static[6])
-        self.assertNotIn("rel", static[6])
-        # URL parsing drops ASCII tab, so this is a javascript: pseudo-link too.
+        for index in range(3, 7):
+            with self.subTest(anchor=static[index]):
+                self.assertNotIn("target", static[index])
+                self.assertNotIn("rel", static[index])
+        self.assertEqual("mailto:a@example.org", static[7]["href"])
         self.assertNotIn("target", static[7])
-        self.assertNotIn("rel", static[7])
-        self.assertEqual("_blank", result["dynamic"]["target"])
-        self.assertIn("noopener", result["dynamic"]["rel"])
-        self.assertIn("noreferrer", result["dynamic"]["rel"])
-        self.assertEqual("_blank", result["late"]["target"])
-        self.assertIn("noreferrer", result["late"]["rel"])
+        self.assertEqual("/paper.pdf", static[8]["href"])
+        self.assertIn("download", static[8])
+        self.assertNotIn("target", static[8])
+        self.assertEqual("tel:+123", static[9]["href"])
+        self.assertNotIn("target", static[9])
+        self.assertNotIn("target", static[10])
+        self.assertNotIn("rel", static[10])
+        # URL parsing drops ASCII tab, so this is a javascript: pseudo-link too.
+        self.assertNotIn("target", static[11])
+        self.assertNotIn("rel", static[11])
+        # A non-default port on the canonical host is a different origin.
+        self.assertEqual("_blank", static[12]["target"])
+        self.assertIn("noopener", static[12]["rel"])
+        self.assertIn("noreferrer", static[12]["rel"])
+
+    def test_backslash_authorities_match_the_browser(self) -> None:
+        # Native URL parsing (not a /?# split) must decide the host, because
+        # WHATWG turns "\" into "/" for special schemes before parsing the
+        # authority.  Both directions matter: a backslash can hide an external
+        # host behind canonical-looking text, or hide the canonical host
+        # behind external-looking text.
+        result = self.run_runtime(
+            [
+                {"attrs": {"href": r"https://attacker.example\@acangi.github.io/team/"}},
+                {"attrs": {"href": r"https://evil.example\/@acangi.github.io/"}},
+                {"attrs": {"href": r"\\evil.example\team"}},
+                {"attrs": {"href": r"https://acangi.github.io\@attacker.example/team/"}},
+                {"attrs": {"href": r"https://acangi.github.io\/@evil.example/team/"}},
+                {"attrs": {"href": "\\\\acangi.github.io\\team\\"}},
+            ]
+        )
+        static = result["static"]
+        for index in (0, 1, 2):
+            with self.subTest(anchor=static[index]):
+                self.assertEqual("_blank", static[index]["target"])
+                self.assertIn("noopener", static[index]["rel"])
+                self.assertIn("noreferrer", static[index]["rel"])
+        for index in (3, 4, 5):
+            with self.subTest(anchor=static[index]):
+                self.assertNotIn("target", static[index])
+                self.assertNotIn("rel", static[index])
+
+    def test_trailing_dot_host_matches_the_static_policy(self) -> None:
+        # A root dot is not a different DNS owner; native URL parsing keeps it
+        # in hostname/origin, so the runtime normalizes it like the static
+        # transform does.
+        result = self.run_runtime(
+            [
+                {"attrs": {"href": "https://acangi.github.io./team/"}},
+                {"attrs": {"href": "https://attacker.example./team/"}},
+            ]
+        )
+        static = result["static"]
+        self.assertNotIn("target", static[0])
+        self.assertEqual("_blank", static[1]["target"])
+
+    def test_dynamic_and_late_links_follow_the_same_policy(self) -> None:
+        result = self.run_runtime([])
+        self.assertEqual("_blank", result["dynamicExternal"]["target"])
+        self.assertIn("noopener", result["dynamicExternal"]["rel"])
+        self.assertIn("noreferrer", result["dynamicExternal"]["rel"])
+        self.assertNotIn("target", result["dynamicInternal"])
+        self.assertNotIn("rel", result["dynamicInternal"])
+        self.assertNotIn("target", result["late"])
+        self.assertNotIn("rel", result["late"])
+
+
+class _PageHandler(http.server.BaseHTTPRequestHandler):
+    """Serve one already-built HTML page for the browser-level test."""
+
+    def do_GET(self) -> None:  # noqa: N802 - BaseHTTPRequestHandler API
+        body = self.server.page.encode("utf-8")  # type: ignore[attr-defined]
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def log_message(self, format: str, *args: object) -> None:
+        pass
+
+
+class BrowserMutationObserverTests(unittest.TestCase):
+    """Run the injected runtime in real Chromium with a real MutationObserver.
+
+    The Node tests use fake anchors, so they cannot show that the observer's
+    own attribute writes feed back into the observer.  This test inserts
+    anchors after load and proves both that they are rewritten and that a
+    macrotask timer still fires, which fails if secure() keeps re-queueing
+    mutation records.
+    """
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.chrome = _chrome_command()
+        if cls.chrome is None:
+            raise unittest.SkipTest("Chromium/Chrome is not available")
+        runtime = source_runtime()
+        if runtime is None:
+            raise unittest.SkipTest("ruby is not available to derive the runtime")
+        cls.runtime = runtime
+
+    def page(self, port: int) -> str:
+        return f"""<!doctype html>
+<html><head><meta charset="utf-8"><title>observer feedback</title></head>
+<body>
+<a id="same-origin" href="http://127.0.0.1:{port}/team/" target="_blank"
+   rel="noopener noreferrer">same origin</a>
+<a id="other-host" href="http://localhost:{port}/team/">other host</a>
+<a id="other-port" href="http://127.0.0.1:1/team/">other port</a>
+<a id="bs-canonical-external" href="https://attacker.example\\@acangi.github.io/team/">deceptive external</a>
+<a id="bs-canonical-internal" href="https://acangi.github.io\\@evil.example/team/">deceptive internal</a>
+<a id="bs-preview-external" href="http://attacker.example\\@127.0.0.1:{port}/team/">preview external</a>
+<a id="bs-preview-internal" href="http://127.0.0.1:{port}\\@evil.example/team/">preview internal</a>
+<div id="mount"></div>
+<script>
+{self.runtime}
+</script>
+<script>
+(function () {{
+  var mount = document.getElementById("mount");
+  var external = document.createElement("a");
+  external.id = "dynamic-external";
+  external.setAttribute("href", "https://dynamic.example/path");
+  mount.appendChild(external);
+  var internal = document.createElement("a");
+  internal.id = "dynamic-internal";
+  internal.setAttribute("href", "/team/");
+  mount.appendChild(internal);
+  setTimeout(function () {{
+    function value(id, name) {{
+      var found = document.getElementById(id).getAttribute(name);
+      return found === null ? "none" : found;
+    }}
+    document.body.setAttribute("data-timer", "fired");
+    document.body.setAttribute("data-external-target", value("dynamic-external", "target"));
+    document.body.setAttribute("data-external-rel", value("dynamic-external", "rel"));
+    document.body.setAttribute("data-internal-target", value("dynamic-internal", "target"));
+    document.body.setAttribute("data-internal-rel", value("dynamic-internal", "rel"));
+    document.body.setAttribute("data-same-origin-target", value("same-origin", "target"));
+    document.body.setAttribute("data-same-origin-rel", value("same-origin", "rel"));
+    document.body.setAttribute("data-other-host-target", value("other-host", "target"));
+    document.body.setAttribute("data-other-port-target", value("other-port", "target"));
+    document.body.setAttribute("data-bs-canonical-external-target", value("bs-canonical-external", "target"));
+    document.body.setAttribute("data-bs-canonical-internal-target", value("bs-canonical-internal", "target"));
+    document.body.setAttribute("data-bs-preview-external-target", value("bs-preview-external", "target"));
+    document.body.setAttribute("data-bs-preview-internal-target", value("bs-preview-internal", "target"));
+  }}, 100);
+}})();
+</script>
+</body></html>"""
+
+    def test_observer_writes_are_idempotent_and_timers_still_fire(self) -> None:
+        server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), _PageHandler)
+        port = server.server_address[1]
+        server.page = self.page(port)  # type: ignore[attr-defined]
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        result: subprocess.CompletedProcess[str] | None = None
+        chrome = self.chrome
+        assert chrome is not None
+        try:
+            with tempfile.TemporaryDirectory() as profile:
+                command = chrome + [
+                    "--headless=new",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--disable-dev-shm-usage",
+                    f"--user-data-dir={profile}",
+                    "--virtual-time-budget=5000",
+                    "--dump-dom",
+                    f"http://127.0.0.1:{port}/",
+                ]
+                try:
+                    result = subprocess.run(
+                        command, capture_output=True, text=True, timeout=30
+                    )
+                except subprocess.TimeoutExpired:
+                    self.fail(
+                        "browser never yielded to the timer: the MutationObserver "
+                        "is re-triggering itself with identical attribute writes"
+                    )
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join(timeout=5)
+
+        assert result is not None
+        self.assertEqual(0, result.returncode, result.stderr[-3000:])
+        dom = result.stdout
+        # The inserted external anchor was secured...
+        self.assertIn('data-external-target="_blank"', dom)
+        self.assertIn('data-external-rel="noopener noreferrer"', dom)
+        # ...the inserted internal anchor stayed in the same tab...
+        self.assertIn('data-internal-target="none"', dom)
+        self.assertIn('data-internal-rel="none"', dom)
+        # ...and the timer fired, so mutation callbacks do not starve tasks.
+        self.assertIn('data-timer="fired"', dom)
+        # The runtime adapts to the actual preview origin (127.0.0.1:PORT):
+        # its own origin is internal even though the configured site is
+        # acangi.github.io, while localhost is a different host and stays
+        # external.
+        self.assertIn('data-same-origin-target="none"', dom)
+        self.assertIn('data-same-origin-rel="none"', dom)
+        self.assertIn('data-other-host-target="_blank"', dom)
+        self.assertIn('data-other-port-target="_blank"', dom)
+        # The real browser resolves "\" as "/" before the authority.  The
+        # runtime must agree in both directions, on the configured origin and
+        # on the preview origin actually served here.
+        self.assertIn('data-bs-canonical-external-target="_blank"', dom)
+        self.assertIn('data-bs-canonical-internal-target="none"', dom)
+        self.assertIn('data-bs-preview-external-target="_blank"', dom)
+        self.assertIn('data-bs-preview-internal-target="none"', dom)
 
 
 if __name__ == "__main__":

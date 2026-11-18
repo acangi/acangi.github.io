@@ -52,6 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const updateInputField = () => {
     const hashValue = decodeURIComponent(window.location.hash.substring(1)); // Remove the '#' character
+
+    // A hash that names an element on this page is an in-page navigation
+    // target (e.g. the skip link's #main-content), not a publication query.
+    // Leave the current filter state alone and let the browser navigate.
+    if (hashValue && document.getElementById(hashValue)) {
+      return;
+    }
+
     document.getElementById("bibsearch").value = hashValue;
     filterItems(hashValue);
   };
