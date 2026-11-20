@@ -364,6 +364,24 @@
   arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:PoWvk5oyLR8C
   publication_page: false
+- title: Data-Driven Magneto-Elastic Predictions with Scalable Classical Spin-Lattice
+    Dynamics.
+  author: Julien Tranchida; Svetoslav V. Nikolov; Mitchell Wood; Attila Cangi; M.
+    P. Desjarlais; Aidan P. Thompson
+  year: 2022
+  date: '2022-05-30'
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Other research output
+  source_type: repository
+  doi: null
+  href: https://openalex.org/W4287189984
+  pdf: https://www.osti.gov/servlets/purl/1870099
+  path: null
+  kind: other
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: A machine learning surrogate for density functional theory based on the local
     density of state.
   author: Normand A. Modine; Lenz Fiedler; Dayton J. Vogel; Aidan P. Thompson; Austin
@@ -645,6 +663,24 @@
   arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:5awf1xo2G04C
   publication_page: false
+- title: Coupled Magnetic Spin Dynamics and Molecular Dynamics in a Massively Parallel
+    Framework.
+  author: Julien Tranchida; Aidan P. Thompson; Steven J. Plimpton; Jamin Ryan Pillars;
+    Todd Monson; Eric Langlois; Attila Cangi; Pascal Thibaudeau
+  year: 2019
+  date: '2019-04-29'
+  journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
+  booktitle: null
+  note: Other research output
+  source_type: repository
+  doi: null
+  href: https://openalex.org/W4295306977
+  pdf: https://www.osti.gov/servlets/purl/1508693
+  path: null
+  kind: other
+  journal_ref: null
+  arxiv_ids: []
+  publication_page: false
 - title: Modeling Materials at Extreme Conditions for High Energy-Density Science
   author: Stephanie B. Hansen; Taisuke Nagayama; Andrew Baczewski; Attila Cangi; Thomas
     Gomez
@@ -717,7 +753,7 @@
   google_scholar_id: M84yoJgAAAAJ:z_wVstp3MssC
   publication_page: false
 - title: First-principles Stopping Power in Warm Dense Matter.
-  author: Attila Cangi; Jensen, Daniel Spencer; Baczewski, Andrew David
+  author: Attila Cangi; Daniel S. Jensen; Andrew Baczewski
   year: 2018
   date: '2018-08-22'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
