@@ -49,7 +49,7 @@
     simulations
   author: Karan Shah; Attila Cangi
   year: 2026
-  date: '2026-05-05'
+  date: '2026-05-19'
   journal: Mach. Learn. Sci. Technol.
   booktitle: null
   note: null
@@ -114,7 +114,7 @@
     Randolph; Sebastian Schwalbe; Jan Vorberger; U. Zastrau; Tobias Dornheim; Thomas
     R. Preston
   year: 2025
-  date: '2025-03-13'
+  date: '2025-04-04'
   journal: Electron. Struct.
   booktitle: null
   note: null
@@ -152,7 +152,7 @@
     density functional theory
   author: Kushal Ramakrishna; Mani Lokamani; Attila Cangi
   year: 2024
-  date: '2024-11-11'
+  date: '2024-11-20'
   journal: Electron. Struct.
   booktitle: null
   note: null
@@ -305,6 +305,26 @@
   - '2306.17554'
   google_scholar_id: M84yoJgAAAAJ:HtS1dXgVpQUC
   publication_page: true
+- title: 'Impact of electronic correlations on high-pressure iron: insights from time-dependent
+    density functional theory'
+  author: Kushal Ramakrishna; Mani Lokamani; Andrew Baczewski; Jan Vorberger; Attila
+    Cangi
+  year: 2023
+  date: '2023-10-06'
+  journal: Electron. Struct.
+  booktitle: null
+  note: null
+  source_type: journal
+  doi: https://doi.org/10.1088/2516-1075/acfd75
+  href: https://doi.org/10.1088/2516-1075/acfd75
+  pdf: https://doi.org/10.1088/2516-1075/acfd75
+  path: https://doi.org/10.1088/2516-1075/acfd75
+  kind: article
+  journal_ref: null
+  arxiv_ids:
+  - '2210.10132'
+  google_scholar_id: M84yoJgAAAAJ:umqufdRvDiIC
+  publication_page: true
 - title: International Conference on “Strongly Coupled Coulomb Systems” (July 24–29,
     2022, Görlitz, Germany)
   author: Attila Cangi; Zhandos A. Moldabekov; D. Neilson
@@ -340,26 +360,6 @@
   arxiv_ids:
   - '2306.06032'
   google_scholar_id: M84yoJgAAAAJ:NXb4pA-qfm4C
-  publication_page: true
-- title: 'Impact of electronic correlations on high-pressure iron: insights from time-dependent
-    density functional theory'
-  author: Kushal Ramakrishna; Mani Lokamani; Andrew Baczewski; Jan Vorberger; Attila
-    Cangi
-  year: 2023
-  date: '2023-09-26'
-  journal: Electron. Struct.
-  booktitle: null
-  note: null
-  source_type: journal
-  doi: https://doi.org/10.1088/2516-1075/acfd75
-  href: https://doi.org/10.1088/2516-1075/acfd75
-  pdf: https://doi.org/10.1088/2516-1075/acfd75
-  path: https://doi.org/10.1088/2516-1075/acfd75
-  kind: article
-  journal_ref: null
-  arxiv_ids:
-  - '2210.10132'
-  google_scholar_id: M84yoJgAAAAJ:umqufdRvDiIC
   publication_page: true
 - title: Transferable interatomic potential for aluminum from ambient conditions to
     warm dense matter
@@ -459,6 +459,26 @@
   - '2203.06025'
   google_scholar_id: M84yoJgAAAAJ:lmc2jWPfTJgC
   publication_page: true
+- title: Assessing the accuracy of hybrid exchange-correlation functionals for the
+    density response of warm dense electrons
+  author: Zhandos A. Moldabekov; Mani Lokamani; Jan Vorberger; Attila Cangi; Tobias
+    Dornheim
+  year: 2023
+  date: '2023-03-02'
+  journal: J. Chem. Phys.
+  booktitle: null
+  note: null
+  source_type: journal
+  doi: https://doi.org/10.1063/5.0135729
+  href: https://doi.org/10.1063/5.0135729
+  pdf: https://doi.org/10.1063/5.0135729
+  path: https://doi.org/10.1063/5.0135729
+  kind: article
+  journal_ref: null
+  arxiv_ids:
+  - '2211.11688'
+  google_scholar_id: M84yoJgAAAAJ:0N-VGjzr574C
+  publication_page: true
 - title: Electronic density response of warm dense matter
   author: Tobias Dornheim; Zhandos A. Moldabekov; Kushal Ramakrishna; Panagiotis B.
     Tolias; Andrew Baczewski; D. Kraus; Thomas R. Preston; D. A. Chapman; Maximilian
@@ -498,26 +518,6 @@
   arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:8d8msizDQcsC
   publication_page: true
-- title: Assessing the accuracy of hybrid exchange-correlation functionals for the
-    density response of warm dense electrons
-  author: Zhandos A. Moldabekov; Mani Lokamani; Jan Vorberger; Attila Cangi; Tobias
-    Dornheim
-  year: 2023
-  date: '2023-02-02'
-  journal: J. Chem. Phys.
-  booktitle: null
-  note: null
-  source_type: journal
-  doi: https://doi.org/10.1063/5.0135729
-  href: https://doi.org/10.1063/5.0135729
-  pdf: https://doi.org/10.1063/5.0135729
-  path: https://doi.org/10.1063/5.0135729
-  kind: article
-  journal_ref: null
-  arxiv_ids:
-  - '2211.11688'
-  google_scholar_id: M84yoJgAAAAJ:0N-VGjzr574C
-  publication_page: true
 - title: Non-empirical Mixing Coefficient for Hybrid XC Functionals from Analysis
     of the XC Kernel
   author: Zhandos A. Moldabekov; Mani Lokamani; Jan Vorberger; Attila Cangi; Tobias
@@ -556,6 +556,26 @@
   - '2203.05863'
   google_scholar_id: M84yoJgAAAAJ:_FM0Bhl9EiAC
   publication_page: true
+- title: Training-free hyperparameter optimization of neural networks for electronic
+    structures in matter
+  author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel A Popoola; Tamar Yovell;
+    Vladyslav Oles; J Austin Ellis; Sivasankaran Rajamanickam; Attila Cangi
+  year: 2022
+  date: '2022-10-28'
+  journal: Mach. Learn. Sci. Technol.
+  booktitle: null
+  note: null
+  source_type: journal
+  doi: https://doi.org/10.1088/2632-2153/ac9956
+  href: https://doi.org/10.1088/2632-2153/ac9956
+  pdf: https://iopscience.iop.org/article/10.1088/2632-2153/ac9956/pdf
+  path: https://doi.org/10.1088/2632-2153/ac9956
+  kind: article
+  journal_ref: null
+  arxiv_ids:
+  - '2202.09186'
+  google_scholar_id: M84yoJgAAAAJ:HbR8gkJAVGIC
+  publication_page: true
 - title: Accelerating equilibration in first-principles molecular dynamics with orbital-free
     density functional theory
   author: Lenz Fiedler; Zhandos A. Moldabekov; Xuecheng Shao; Kaili Jiang; Tobias
@@ -575,26 +595,6 @@
   arxiv_ids:
   - '2206.03754'
   google_scholar_id: M84yoJgAAAAJ:SpbeaW3--B0C
-  publication_page: true
-- title: Training-free hyperparameter optimization of neural networks for electronic
-    structures in matter
-  author: Lenz Fiedler; Nils Hoffmann; Parvez Mohammed; Gabriel A Popoola; Tamar Yovell;
-    Vladyslav Oles; J Austin Ellis; Sivasankaran Rajamanickam; Attila Cangi
-  year: 2022
-  date: '2022-10-11'
-  journal: Mach. Learn. Sci. Technol.
-  booktitle: null
-  note: null
-  source_type: journal
-  doi: https://doi.org/10.1088/2632-2153/ac9956
-  href: https://doi.org/10.1088/2632-2153/ac9956
-  pdf: https://iopscience.iop.org/article/10.1088/2632-2153/ac9956/pdf
-  path: https://doi.org/10.1088/2632-2153/ac9956
-  kind: article
-  journal_ref: null
-  arxiv_ids:
-  - '2202.09186'
-  google_scholar_id: M84yoJgAAAAJ:HbR8gkJAVGIC
   publication_page: true
 - title: Ab initio study of shock-compressed copper
   author: Maximilian Schörner; B. B. L. Witte; Andrew Baczewski; Attila Cangi; R.

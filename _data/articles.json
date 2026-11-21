@@ -150,6 +150,16 @@
     "pdf": "https://arxiv.org/pdf/2306.17554"
   },
   {
+    "title": "Impact of electronic correlations on high-pressure iron: insights from time-dependent density functional theory",
+    "year": 2023,
+    "authors": "Kushal Ramakrishna, Mani Lokamani, Andrew Baczewski, Jan Vorberger, Attila Cangi",
+    "venue": "Electron. Struct.",
+    "doi": "10.1088/2516-1075/acfd75",
+    "url": "https://doi.org/10.1088/2516-1075/acfd75",
+    "type": "journal",
+    "pdf": "https://doi.org/10.1088/2516-1075/acfd75"
+  },
+  {
     "title": "International Conference on \u201cStrongly Coupled Coulomb Systems\u201d (July 24\u201329, 2022, G\u00f6rlitz, Germany)",
     "year": 2023,
     "authors": "Attila Cangi, Zhandos A. Moldabekov, D. Neilson",
@@ -168,16 +178,6 @@
     "url": "https://doi.org/10.1103/physrevb.108.125146",
     "type": "journal",
     "pdf": "https://arxiv.org/pdf/2306.06032"
-  },
-  {
-    "title": "Impact of electronic correlations on high-pressure iron: insights from time-dependent density functional theory",
-    "year": 2023,
-    "authors": "Kushal Ramakrishna, Mani Lokamani, Andrew Baczewski, Jan Vorberger, Attila Cangi",
-    "venue": "Electron. Struct.",
-    "doi": "10.1088/2516-1075/acfd75",
-    "url": "https://doi.org/10.1088/2516-1075/acfd75",
-    "type": "journal",
-    "pdf": "https://doi.org/10.1088/2516-1075/acfd75"
   },
   {
     "title": "Transferable interatomic potential for aluminum from ambient conditions to warm dense matter",
@@ -230,6 +230,16 @@
     "pdf": "https://arxiv.org/pdf/2203.06025"
   },
   {
+    "title": "Assessing the accuracy of hybrid exchange-correlation functionals for the density response of warm dense electrons",
+    "year": 2023,
+    "authors": "Zhandos A. Moldabekov, Mani Lokamani, Jan Vorberger, Attila Cangi, Tobias Dornheim",
+    "venue": "J. Chem. Phys.",
+    "doi": "10.1063/5.0135729",
+    "url": "https://doi.org/10.1063/5.0135729",
+    "type": "journal",
+    "pdf": "https://doi.org/10.1063/5.0135729"
+  },
+  {
     "title": "Electronic density response of warm dense matter",
     "year": 2023,
     "authors": "Tobias Dornheim, Zhandos A. Moldabekov, Kushal Ramakrishna, Panagiotis B. Tolias, Andrew Baczewski, D. Kraus, Thomas R. Preston, D. A. Chapman, Maximilian B\u00f6hme, T. D\u00f6ppner, Frank R. Graziani, M. B\u00f6nitz, Attila Cangi, Jan Vorberger",
@@ -248,16 +258,6 @@
     "url": "https://doi.org/10.1016/j.asoc.2023.110099",
     "type": "journal",
     "pdf": ""
-  },
-  {
-    "title": "Assessing the accuracy of hybrid exchange-correlation functionals for the density response of warm dense electrons",
-    "year": 2023,
-    "authors": "Zhandos A. Moldabekov, Mani Lokamani, Jan Vorberger, Attila Cangi, Tobias Dornheim",
-    "venue": "J. Chem. Phys.",
-    "doi": "10.1063/5.0135729",
-    "url": "https://doi.org/10.1063/5.0135729",
-    "type": "journal",
-    "pdf": "https://doi.org/10.1063/5.0135729"
   },
   {
     "title": "Non-empirical Mixing Coefficient for Hybrid XC Functionals from Analysis of the XC Kernel",
@@ -280,16 +280,6 @@
     "pdf": "http://link.aps.org/pdf/10.1103/PhysRevResearch.5.013049"
   },
   {
-    "title": "Accelerating equilibration in first-principles molecular dynamics with orbital-free density functional theory",
-    "year": 2022,
-    "authors": "Lenz Fiedler, Zhandos A. Moldabekov, Xuecheng Shao, Kaili Jiang, Tobias Dornheim, Michele Pavanello, Attila Cangi",
-    "venue": "Phys. Rev. Res.",
-    "doi": "10.1103/physrevresearch.4.043033",
-    "url": "https://doi.org/10.1103/physrevresearch.4.043033",
-    "type": "journal",
-    "pdf": "http://link.aps.org/pdf/10.1103/PhysRevResearch.4.043033"
-  },
-  {
     "title": "Training-free hyperparameter optimization of neural networks for electronic structures in matter",
     "year": 2022,
     "authors": "Lenz Fiedler, Nils Hoffmann, Parvez Mohammed, Gabriel A Popoola, Tamar Yovell, Vladyslav Oles, J Austin Ellis, Sivasankaran Rajamanickam, Attila Cangi",
@@ -298,6 +288,16 @@
     "url": "https://doi.org/10.1088/2632-2153/ac9956",
     "type": "journal",
     "pdf": "https://iopscience.iop.org/article/10.1088/2632-2153/ac9956/pdf"
+  },
+  {
+    "title": "Accelerating equilibration in first-principles molecular dynamics with orbital-free density functional theory",
+    "year": 2022,
+    "authors": "Lenz Fiedler, Zhandos A. Moldabekov, Xuecheng Shao, Kaili Jiang, Tobias Dornheim, Michele Pavanello, Attila Cangi",
+    "venue": "Phys. Rev. Res.",
+    "doi": "10.1103/physrevresearch.4.043033",
+    "url": "https://doi.org/10.1103/physrevresearch.4.043033",
+    "type": "journal",
+    "pdf": "http://link.aps.org/pdf/10.1103/PhysRevResearch.4.043033"
   },
   {
     "title": "Ab initio study of shock-compressed copper",
