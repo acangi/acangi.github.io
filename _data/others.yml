@@ -47,6 +47,25 @@
   journal_ref: null
   arxiv_ids: []
   publication_page: false
+- title: 'MANDALA: An E(3)-Equivariant Graph Neural Network Framework for Learning
+    Electronic-Structure Operators with Observable Guidance'
+  author: Bartosz Brzoza; Wiktoria Szopa; Zakaria Elabid; Vincent Martinetto; Varadarajan
+    Rengaraj; Mani Lokamani; Attila Cangi; Thomas D. Kühne
+  year: 2026
+  date: '2026-07-27'
+  journal: RODARE
+  booktitle: null
+  note: Dataset
+  source_type: repository
+  doi: https://doi.org/10.14278/rodare.4815
+  href: https://doi.org/10.14278/rodare.4815
+  pdf: https://doi.org/10.14278/rodare.4815
+  path: https://doi.org/10.14278/rodare.4815
+  kind: dataset
+  journal_ref: null
+  arxiv_ids: []
+  google_scholar_id: M84yoJgAAAAJ:6yz0xqPARnAC
+  publication_page: false
 - title: Fundamentals in Solid-State Physics – Thermal Properties
   author: Attila Cangi
   year: 2026
@@ -828,13 +847,13 @@
   date: '2018-01-01'
   journal: OSTI OAI (U.S. Dep. Energy Off. Sci. Tech. Inf.)
   booktitle: null
-  note: Other research output
+  note: Software
   source_type: repository
   doi: https://doi.org/10.11578/dc.20201102.5
   href: https://doi.org/10.11578/dc.20201102.5
   pdf: https://www.osti.gov/biblio/1696908
   path: https://doi.org/10.11578/dc.20201102.5
-  kind: other
+  kind: software
   journal_ref: null
   arxiv_ids: []
   google_scholar_id: M84yoJgAAAAJ:W5xh706n7nkC
