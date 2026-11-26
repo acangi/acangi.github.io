@@ -1,6 +1,6 @@
 [
   {
-    "title": "Capabilities and limitations of MACE interatomic potentials for Fe-Ni alloys: a systematic benchmark",
+    "title": "Capabilities and limitations of MACE interatomic potentials for Fe\u2013Ni alloys: a systematic benchmark",
     "year": 2026,
     "authors": "Kushal Ramakrishna, Mani Lokamani, Attila Cangi",
     "venue": "Model. Simul. Mater. Sci. Eng.",
@@ -247,7 +247,7 @@
     "doi": "10.1063/5.0138955",
     "url": "https://doi.org/10.1063/5.0138955",
     "type": "journal",
-    "pdf": "https://aip.scitation.org/doi/pdf/10.1063/5.0138955"
+    "pdf": "https://doi.org/10.1063/5.0138955"
   },
   {
     "title": "A shallow hybrid classical\u2013quantum spiking feedforward neural network for noise-robust image classification",
