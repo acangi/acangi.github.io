@@ -327,7 +327,7 @@
   publication_page: true
 - title: International Conference on “Strongly Coupled Coulomb Systems” (July 24–29,
     2022, Görlitz, Germany)
-  author: Attila Cangi; Zhandos A. Moldabekov; D. Neilson
+  author: Attila Cangi; Zhandos A. Moldabekov; David T. Neilson
   year: 2023
   date: '2023-10-01'
   journal: Contrib. Plasma Phys.
@@ -402,7 +402,7 @@
   publication_page: true
 - title: 'Improving dynamic collision frequencies: Impacts on dynamic structure factors
     and stopping powers in warm dense matter'
-  author: Thomas W. Hentschel; Alina Kononov; Alexandra Olmstead; Attila Cangi; Andrew
+  author: Thomas Hentschel; Alina Kononov; Alexandra Olmstead; Attila Cangi; Andrew
     Baczewski; Stephanie B. Hansen
   year: 2023
   date: '2023-06-01'
@@ -491,7 +491,7 @@
   source_type: journal
   doi: https://doi.org/10.1063/5.0138955
   href: https://doi.org/10.1063/5.0138955
-  pdf: https://doi.org/10.1063/5.0138955
+  pdf: https://aip.scitation.org/doi/pdf/10.1063/5.0138955
   path: https://doi.org/10.1063/5.0138955
   kind: article
   journal_ref: null

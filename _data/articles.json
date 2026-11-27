@@ -162,7 +162,7 @@
   {
     "title": "International Conference on \u201cStrongly Coupled Coulomb Systems\u201d (July 24\u201329, 2022, G\u00f6rlitz, Germany)",
     "year": 2023,
-    "authors": "Attila Cangi, Zhandos A. Moldabekov, D. Neilson",
+    "authors": "Attila Cangi, Zhandos A. Moldabekov, David T. Neilson",
     "venue": "Contrib. Plasma Phys.",
     "doi": "10.1002/ctpp.202300110",
     "url": "https://doi.org/10.1002/ctpp.202300110",
@@ -202,7 +202,7 @@
   {
     "title": "Improving dynamic collision frequencies: Impacts on dynamic structure factors and stopping powers in warm dense matter",
     "year": 2023,
-    "authors": "Thomas W. Hentschel, Alina Kononov, Alexandra Olmstead, Attila Cangi, Andrew Baczewski, Stephanie B. Hansen",
+    "authors": "Thomas Hentschel, Alina Kononov, Alexandra Olmstead, Attila Cangi, Andrew Baczewski, Stephanie B. Hansen",
     "venue": "Phys. Plasmas",
     "doi": "10.1063/5.0143738",
     "url": "https://doi.org/10.1063/5.0143738",
@@ -247,7 +247,7 @@
     "doi": "10.1063/5.0138955",
     "url": "https://doi.org/10.1063/5.0138955",
     "type": "journal",
-    "pdf": "https://doi.org/10.1063/5.0138955"
+    "pdf": "https://aip.scitation.org/doi/pdf/10.1063/5.0138955"
   },
   {
     "title": "A shallow hybrid classical\u2013quantum spiking feedforward neural network for noise-robust image classification",
